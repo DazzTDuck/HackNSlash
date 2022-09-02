@@ -18,7 +18,7 @@ public class CamFollowPlayer : MonoBehaviour
         Vector3 move = Vector3.Lerp(transform.position, player.position, followspeed * Time.deltaTime);
         transform.position = move;
         //Vector3 look = Vector3.Lerp(transform.rotation.eulerAngles, player.rotation.eulerAngles, followspeed * Time.deltaTime);
-        Quaternion look = Quaternion.Slerp(transform.rotation, player.rotation, followspeed * Time.deltaTime);
+        Quaternion look = Quaternion.Slerp(transform.rotation, Quaternion.Euler(player.eulerAngles + new Vector3(pl.udRot, 0, 0)), followspeed * Time.deltaTime);
         transform.rotation = look;
 
     }

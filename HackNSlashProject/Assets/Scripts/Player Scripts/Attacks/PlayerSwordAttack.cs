@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerSwordAttack : MonoBehaviour
 {
     public float attackDuration;
-    public float attackDelay;
     public float qTime;
     public int damage;
     public Animator animator;

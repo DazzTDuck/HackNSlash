@@ -23,10 +23,6 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
         rb.drag = 6;
     }
-    //public void SwitchDevice(InputDeviceChange playerDevice)
-    //{
-    //    if (playerDevice.Equals()
-    //}
 
     public void OnMove(InputAction.CallbackContext callbackContext)
     {

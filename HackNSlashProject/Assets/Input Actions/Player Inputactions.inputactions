@@ -15,9 +15,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Look",
+                    "name": "Look(mouse)",
                     "type": "Value",
                     "id": "c38e0958-463a-46d9-a88f-f02b1a14ae2e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look(controller)",
+                    "type": "Value",
+                    "id": "9a8ad8ac-b05e-40aa-96d5-74f34e852e24",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -102,28 +111,6 @@
                 },
                 {
                     "name": "",
-                    "id": "224f0068-4adb-41f4-a697-e3e187ba1629",
-                    "path": "<Mouse>/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2c67d863-55be-4a0a-8cf4-3bc252e2b94f",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "8c7eee17-8adc-4859-b504-28b3ce2badf7",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -141,6 +128,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4526889c-9cbf-4081-9776-29144dc44852",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look(controller)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "224f0068-4adb-41f4-a697-e3e187ba1629",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look(mouse)",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

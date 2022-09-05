@@ -13,7 +13,7 @@ public class CharacterHealth : MonoBehaviour
     }
     public void TakeDamage(int damageToDo)
     {
-        //EventsManager.instance.OnTakeDamage(characterId, damageToDo);
+        EventsManager.instance.OnTakeDamage(characterId, damageToDo);
 
         if (currentHP - damageToDo <= 0)
         {
@@ -26,7 +26,7 @@ public class CharacterHealth : MonoBehaviour
     }
     public virtual void Death()
     {
-        //EventsManager.instance.OnDeath(characterId);
+        EventsManager.instance.OnDeath(characterId);
         Destroy(gameObject);
     }
 }

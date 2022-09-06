@@ -11,6 +11,7 @@ public class PlayerSwordAttack : MonoBehaviour
     public Animator animator;
     bool canAttack = true;
     bool attackQ;
+    
 
     public void OnAttack(InputAction.CallbackContext callbackContext)
     {
@@ -35,8 +36,10 @@ public class PlayerSwordAttack : MonoBehaviour
     IEnumerator Swinging()
     {
         canAttack = false;
+        GetComponentInParent<Rigidbody>().isKinematic = true;
         animator.SetTrigger("whack");
         yield return new WaitForSeconds(attackDuration);
+        GetComponentInParent<Rigidbody>().isKinematic = false;
         canAttack = true;
     }
 

@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 147996371}
   - component: {fileID: 147996370}
   - component: {fileID: 147996369}
+  - component: {fileID: 147996375}
   m_Layer: 0
   m_Name: testEnemy (1)
   m_TagString: Untagged
@@ -314,8 +315,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 3
-  maxWaitTime: 8
+  minWaitTime: 0.5
+  maxWaitTime: 2
   wpDeviation: 4
 --- !u!195 &147996370
 NavMeshAgent:
@@ -411,13 +412,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147996368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.4, y: 1, z: 0}
+  m_LocalPosition: {x: 20.4, y: 1, z: 1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &147996375
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147996368}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &262304890
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746daef87ee9f994d923f7e09c2d5d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseWeight: 10
+  baseWeight: 4
   actualWeight: 0
   playerWeight: 5
   playerRadius: 5
@@ -1958,6 +1975,7 @@ GameObject:
   - component: {fileID: 1551209372}
   - component: {fileID: 1551209371}
   - component: {fileID: 1551209370}
+  - component: {fileID: 1551209376}
   m_Layer: 0
   m_Name: testEnemy (3)
   m_TagString: Untagged
@@ -1990,8 +2008,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 3
-  maxWaitTime: 8
+  minWaitTime: 0.5
+  maxWaitTime: 2
   wpDeviation: 4
 --- !u!195 &1551209371
 NavMeshAgent:
@@ -2087,13 +2105,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551209369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -18.2}
+  m_LocalPosition: {x: -5.3, y: 1, z: -18.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1551209376
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551209369}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1615603994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,6 +2142,7 @@ GameObject:
   - component: {fileID: 1615603997}
   - component: {fileID: 1615603996}
   - component: {fileID: 1615603995}
+  - component: {fileID: 1615604001}
   m_Layer: 0
   m_Name: testEnemy (2)
   m_TagString: Untagged
@@ -2140,8 +2175,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 3
-  maxWaitTime: 8
+  minWaitTime: 0.5
+  maxWaitTime: 2
   wpDeviation: 4
 --- !u!195 &1615603996
 NavMeshAgent:
@@ -2237,13 +2272,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615603994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.8, y: 1, z: 0}
+  m_LocalPosition: {x: -22.8, y: 1, z: -3.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1615604001
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615603994}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1684533085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,6 +2309,7 @@ GameObject:
   - component: {fileID: 1684533088}
   - component: {fileID: 1684533087}
   - component: {fileID: 1684533086}
+  - component: {fileID: 1684533092}
   m_Layer: 0
   m_Name: testEnemy
   m_TagString: Untagged
@@ -2290,8 +2342,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 3
-  maxWaitTime: 8
+  minWaitTime: 0.5
+  maxWaitTime: 2
   wpDeviation: 4
 --- !u!195 &1684533087
 NavMeshAgent:
@@ -2387,13 +2439,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684533085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 18.2}
+  m_LocalPosition: {x: -2.8, y: 1, z: 18.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1684533092
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684533085}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1732613772
 GameObject:
   m_ObjectHideFlags: 0

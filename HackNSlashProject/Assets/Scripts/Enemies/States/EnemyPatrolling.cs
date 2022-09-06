@@ -15,7 +15,6 @@ public class EnemyPatrolling : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        FindWaypoint();
     }
 
     public void FindWaypoint()

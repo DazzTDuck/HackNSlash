@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -298,8 +298,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &52904158
 MonoBehaviour:
@@ -320,6 +320,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &52904159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,8 +631,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &114159354
 MonoBehaviour:
@@ -650,6 +653,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &114159355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,7 +783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 143362116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +872,7 @@ GameObject:
   - component: {fileID: 262304893}
   - component: {fileID: 262304892}
   - component: {fileID: 262304891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,8 +966,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262304890}
   m_LocalRotation: {x: -0, y: -0.035069082, z: -0, w: 0.99938494}
-  m_LocalPosition: {x: 6.82, y: 1, z: 13.5}
-  m_LocalScale: {x: 15, y: 2, z: 1}
+  m_LocalPosition: {x: 6.82, y: 4, z: 13.5}
+  m_LocalScale: {x: 15, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1012,7 +1018,7 @@ GameObject:
   - component: {fileID: 280362294}
   - component: {fileID: 280362293}
   - component: {fileID: 280362292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1106,8 +1112,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280362291}
   m_LocalRotation: {x: -0, y: 0.66590047, z: -0, w: 0.74604064}
-  m_LocalPosition: {x: -14.73, y: 1, z: 2.61}
-  m_LocalScale: {x: 30, y: 2, z: 1}
+  m_LocalPosition: {x: -14.73, y: 4, z: 2.61}
+  m_LocalScale: {x: 30, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1576,8 +1582,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &371246054
 MonoBehaviour:
@@ -1598,6 +1604,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &371246055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1891,8 +1900,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &410155474
 MonoBehaviour:
@@ -1913,6 +1922,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &410155475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2922,8 +2934,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &636968015
 MonoBehaviour:
@@ -2944,6 +2956,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &636968016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3297,7 +3312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853518880}
   - component: {fileID: 853518881}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: swingpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3518,8 +3533,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &966944970
 MonoBehaviour:
@@ -3540,6 +3555,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &966944971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3675,7 +3693,7 @@ GameObject:
   - component: {fileID: 983280348}
   - component: {fileID: 983280355}
   - component: {fileID: 983280356}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3808,7 +3826,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 2
   m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!136 &983280351
@@ -3883,7 +3901,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983280347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 46, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4296,8 +4314,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &1087935392
 MonoBehaviour:
@@ -4318,6 +4336,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &1087935393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4739,8 +4760,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &1209531679
 MonoBehaviour:
@@ -4761,6 +4782,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &1209531680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4972,7 +4996,7 @@ GameObject:
   - component: {fileID: 1274279298}
   - component: {fileID: 1274279297}
   - component: {fileID: 1274279296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5066,8 +5090,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274279295}
   m_LocalRotation: {x: -0, y: 0.23790152, z: -0, w: 0.97128934}
-  m_LocalPosition: {x: -0.46985525, y: 1, z: -10.8}
-  m_LocalScale: {x: 12, y: 2, z: 1}
+  m_LocalPosition: {x: -0.46985525, y: 4, z: -10.8}
+  m_LocalScale: {x: 12, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5446,7 +5470,7 @@ GameObject:
   - component: {fileID: 1368087212}
   - component: {fileID: 1368087211}
   - component: {fileID: 1368087210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5540,8 +5564,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368087209}
   m_LocalRotation: {x: -0, y: 0.68648255, z: -0, w: 0.7271462}
-  m_LocalPosition: {x: 12.89, y: 1, z: -1.1}
-  m_LocalScale: {x: 15, y: 2, z: 1}
+  m_LocalPosition: {x: 12.89, y: 4, z: -1.1}
+  m_LocalScale: {x: 15, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5868,7 +5892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444178507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -3}
+  m_LocalPosition: {x: 0, y: 1, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6519,8 +6543,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &1546330810
 MonoBehaviour:
@@ -6541,6 +6565,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &1546330811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6959,8 +6986,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!195 &1684533087
 NavMeshAgent:
@@ -7096,6 +7123,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &1684533095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7436,7 +7466,7 @@ GameObject:
   - component: {fileID: 1750722319}
   - component: {fileID: 1750722318}
   - component: {fileID: 1750722317}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7470,12 +7500,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b79983688f8847a414da427ba0f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDuration: 0.4
+  attackDuration: 0.25
   qTime: 0.3
   damage: 4
   animator: {fileID: 853518881}
   holyPower: {fileID: 983280356}
-  powerConsumption: 10
+  powerConsumption: 8
 --- !u!136 &1750722318
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7571,6 +7601,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 983280354}
   followspeed: 12
+  camPos: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &1757064501
 Transform:
   m_ObjectHideFlags: 0
@@ -8263,7 +8297,7 @@ GameObject:
   - component: {fileID: 1898881699}
   - component: {fileID: 1898881698}
   - component: {fileID: 1898881697}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8864,8 +8898,8 @@ MonoBehaviour:
   - {fileID: 1946227865}
   - {fileID: 650845453}
   dstToWait: 1.5
-  minWaitTime: 0.5
-  maxWaitTime: 2
+  minWaitTime: 2
+  maxWaitTime: 8
   wpDeviation: 4
 --- !u!114 &2097952965
 MonoBehaviour:
@@ -8886,6 +8920,9 @@ MonoBehaviour:
   attackRange: 1.5
   patrollSpeed: 2.5
   chaseSpeed: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &2097952966
 MonoBehaviour:
   m_ObjectHideFlags: 0

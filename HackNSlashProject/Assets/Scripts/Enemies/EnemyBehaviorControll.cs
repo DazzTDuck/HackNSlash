@@ -20,6 +20,7 @@ public class EnemyBehaviorControll : MonoBehaviour
     EnemyAttacking attacking;
     //EnemyStunned stunned;
     //EnemyStaggered staggered;
+    public LayerMask layerMask;
 
     private void Awake()
     {
@@ -71,7 +72,7 @@ public class EnemyBehaviorControll : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) < sightRange && Vector3.Dot(transform.forward, player.position - transform.position) > (1 - (sightAngle / 180f)))
         {
             Vector3 dir = player.position - transform.position;
-            if (Physics.Raycast(transform.position, dir.normalized, out RaycastHit hit, sightRange))
+            if (Physics.Raycast(transform.position, dir.normalized, out RaycastHit hit, sightRange, layerMask))
             {
                 if (hit.collider.transform == player)
                 {

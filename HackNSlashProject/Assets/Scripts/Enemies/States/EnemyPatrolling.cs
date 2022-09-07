@@ -22,16 +22,16 @@ public class EnemyPatrolling : MonoBehaviour
         int totalWeight = 0;
         for (int i = 0; i < patrolWaypoints.Length; i++)
             totalWeight += patrolWaypoints[i].actualWeight;
-        Debug.Log(totalWeight + "total wight");
+        //Debug.Log(totalWeight + "total wight");
         int weight = Random.Range(0, totalWeight);
-        Debug.Log(weight + "current wight");
+        //Debug.Log(weight + "current wight");
         int w = 0;
         for (int i = 0; i < patrolWaypoints.Length; i++)
         {
             w += patrolWaypoints[i].actualWeight;
             if (weight <= w)
             {
-                Debug.Log(i + "waypoint");
+                //Debug.Log(i + "waypoint");
                 GoToWaypoint(i);
                 break;
             }
@@ -52,7 +52,7 @@ public class EnemyPatrolling : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
             f += 0.25f;
         }
-        Debug.Log("Arrived at Waypoint");
+        //Debug.Log("Arrived at Waypoint");
         float wait = Random.Range(minWaitTime, maxWaitTime);
         yield return new WaitForSeconds(wait);
         FindWaypoint();

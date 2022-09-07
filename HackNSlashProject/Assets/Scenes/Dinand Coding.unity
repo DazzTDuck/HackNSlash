@@ -245,7 +245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &52904155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &114159351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1523,7 +1523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &371246051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,7 +1838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &410155471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2869,7 +2869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &636968012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3465,7 +3465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &966944967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3674,6 +3674,7 @@ GameObject:
   - component: {fileID: 983280349}
   - component: {fileID: 983280348}
   - component: {fileID: 983280355}
+  - component: {fileID: 983280356}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3817,7 +3818,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983280347}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d3755209161af534abb118f0114c13dc, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -3906,6 +3907,22 @@ MonoBehaviour:
   maxHP: 0
   currentHP: 0
   characterId: 0
+--- !u!114 &983280356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983280347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38797cb0e8475c249bca9b4009eac13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHolyPower: 100
+  currentHolyPower: 0
+  powerRegenSpeed: 20
+  powerRegenDelay: 0.75
 --- !u!1 &1024263365
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,7 +4243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1087935389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4669,7 +4686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1209531676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6449,7 +6466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1546330807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7453,10 +7470,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b79983688f8847a414da427ba0f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDuration: 0.5
+  attackDuration: 0.4
   qTime: 0.3
   damage: 4
   animator: {fileID: 853518881}
+  holyPower: {fileID: 983280356}
+  powerConsumption: 10
 --- !u!136 &1750722318
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8792,7 +8811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2097952962
 MonoBehaviour:
   m_ObjectHideFlags: 0

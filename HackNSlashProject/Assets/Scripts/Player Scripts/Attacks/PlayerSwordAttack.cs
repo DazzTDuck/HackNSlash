@@ -11,6 +11,8 @@ public class PlayerSwordAttack : MonoBehaviour
     public Animator animator;
     bool canAttack = true;
     bool attackQ;
+    public HolyPower holyPower;
+    public int powerConsumption;
     
 
     public void OnAttack(InputAction.CallbackContext callbackContext)
@@ -23,8 +25,9 @@ public class PlayerSwordAttack : MonoBehaviour
         attackQ = true;
         for (float f = 0; f < qTime; f+= Time.deltaTime)
         {
-            if (canAttack)
+            if (canAttack && holyPower.currentHolyPower >= powerConsumption)
             {
+                holyPower.UseHolyPower(powerConsumption);
                 StartCoroutine(Swinging());
                 break;
             }

@@ -13,11 +13,11 @@ public class EnemyChasing : MonoBehaviour
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
     }
 
     public void StartChasing(Transform player_, EnemyBehaviorControll behaviorControll_)
     {
+        agent = GetComponent<NavMeshAgent>();
         player = player_;
         behaviorControll = behaviorControll_;
         agent.destination = player.position;
@@ -27,7 +27,7 @@ public class EnemyChasing : MonoBehaviour
     {
         if (behaviorControll.playerInSight)
             chasePos = player.position;
-        else if (Vector3.Distance(transform.position, agent.destination) < 1f)
+        else if (Vector3.Distance(transform.position, agent.destination) < 1.5f)
             behaviorControll.ChaseFailed();
         agent.destination = chasePos;
         if (Vector3.Distance(transform.position, player.position) <= behaviorControll.attackRange && behaviorControll.playerInSight)

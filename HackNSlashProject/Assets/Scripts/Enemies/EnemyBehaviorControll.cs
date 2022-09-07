@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyBehaviorControll : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class EnemyBehaviorControll : MonoBehaviour
     public AiState currentState;
     public bool playerInSight;
     public float attackRange;
+    public float patrollSpeed;
+    public float chaseSpeed;
+    NavMeshAgent agent;
     Transform player;
     int id;
     EnemyPatrolling patrolling;
@@ -17,24 +21,32 @@ public class EnemyBehaviorControll : MonoBehaviour
     //EnemyStunned stunned;
     //EnemyStaggered staggered;
 
-    private void Start()
+    private void Awake()
     {
         player = FindObjectOfType<PlayerMovement>().transform;
         id = GetComponent<CharacterHealth>().characterId;
         patrolling = GetComponent<EnemyPatrolling>();
         chasing = GetComponent<EnemyChasing>();
         attacking = GetComponent<EnemyAttacking>();
+        agent = GetComponent<NavMeshAgent>();
         currentState = AiState.Patrolling;
         patrolling.enabled = true;
         chasing.enabled = false;
         attacking.enabled = false;
-        patrolling.Invoke("FindWaypoint", 1);
+        agent.speed = patrollSpeed;
+        StartCoroutine(StartBehavior());
+    }
+    IEnumerator StartBehavior()
+    {
+        yield return null;
+        patrolling.FindWaypoint();
     }
 
     public void ChaseFailed()
     {
         chasing.enabled = false;
         currentState = AiState.Patrolling;
+        agent.speed = patrollSpeed;
         patrolling.enabled = true;
         patrolling.FindWaypoint();
     }
@@ -69,6 +81,7 @@ public class EnemyBehaviorControll : MonoBehaviour
                         patrolling.StopAllCoroutines();
                         patrolling.enabled = false;
                         currentState = AiState.Chasing;
+                        agent.speed = chaseSpeed;
                         chasing.enabled = true;
                         chasing.StartChasing(player, this);
                     }

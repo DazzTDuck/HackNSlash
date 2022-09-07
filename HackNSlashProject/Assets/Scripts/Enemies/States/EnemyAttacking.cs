@@ -14,11 +14,11 @@ public class EnemyAttacking : MonoBehaviour
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
     }
 
     public void Attack(Transform player_, EnemyBehaviorControll behaviorControll_)
     {
+        agent = GetComponent<NavMeshAgent>();
         player = player_;
         behaviorControll = behaviorControll_;
         transform.LookAt(player.position, Vector3.up);

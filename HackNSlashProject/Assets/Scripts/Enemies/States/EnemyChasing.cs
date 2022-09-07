@@ -27,10 +27,10 @@ public class EnemyChasing : MonoBehaviour
     {
         if (behaviorControll.playerInSight)
             chasePos = player.position;
-        else if (Vector3.Distance(transform.position, agent.destination) < 1)
+        else if (Vector3.Distance(transform.position, agent.destination) < 1f)
             behaviorControll.ChaseFailed();
         agent.destination = chasePos;
-        if (Vector3.Distance(transform.position, player.position) <= behaviorControll.attackRange)
+        if (Vector3.Distance(transform.position, player.position) <= behaviorControll.attackRange && behaviorControll.playerInSight)
         {
             behaviorControll.ChaseSuccess();
         }

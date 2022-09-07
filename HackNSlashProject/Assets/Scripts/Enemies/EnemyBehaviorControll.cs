@@ -13,7 +13,7 @@ public class EnemyBehaviorControll : MonoBehaviour
     int id;
     EnemyPatrolling patrolling;
     EnemyChasing chasing;
-    //EnemyAttacking attacking;
+    EnemyAttacking attacking;
     //EnemyStunned stunned;
     //EnemyStaggered staggered;
 
@@ -23,9 +23,11 @@ public class EnemyBehaviorControll : MonoBehaviour
         id = GetComponent<CharacterHealth>().characterId;
         patrolling = GetComponent<EnemyPatrolling>();
         chasing = GetComponent<EnemyChasing>();
+        attacking = GetComponent<EnemyAttacking>();
         currentState = AiState.Patrolling;
         patrolling.enabled = true;
         chasing.enabled = false;
+        attacking.enabled = false;
         patrolling.Invoke("FindWaypoint", 1);
     }
 
@@ -40,8 +42,16 @@ public class EnemyBehaviorControll : MonoBehaviour
     {
         chasing.enabled = false;
         currentState = AiState.Attacking;
-        //attacking.enabled = true;
-        //attacking.Attack(player);
+        attacking.enabled = true;
+        attacking.Attack(player, this);
+    }
+
+    public void AttackFinished()
+    {
+        attacking.enabled = false;
+        currentState = AiState.Chasing;
+        chasing.enabled = true;
+        chasing.StartChasing(player, this);
     }
 
     private void FixedUpdate()
@@ -56,6 +66,7 @@ public class EnemyBehaviorControll : MonoBehaviour
                     playerInSight = true;
                     if (currentState == AiState.Patrolling)
                     {
+                        patrolling.StopAllCoroutines();
                         patrolling.enabled = false;
                         currentState = AiState.Chasing;
                         chasing.enabled = true;

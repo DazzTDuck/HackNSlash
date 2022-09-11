@@ -11,6 +11,7 @@ public class CamFollowPlayer : MonoBehaviour
     float camDst;
     PlayerMovement pl;
     public LayerMask layerMask;
+    public Vector3 camOffset;
 
     private void Start()
     {
@@ -21,11 +22,11 @@ public class CamFollowPlayer : MonoBehaviour
 
     void Update()
     {
-        Vector3 move = Vector3.Lerp(transform.position, player.position, followspeed * Time.deltaTime);
+        Vector3 move = Vector3.Lerp(transform.position, player.position + camOffset, followspeed * Time.deltaTime);
         transform.position = move;
         Quaternion look = Quaternion.Slerp(transform.rotation, Quaternion.Euler(player.eulerAngles + new Vector3(pl.udRot, 0, 0)), followspeed * Time.deltaTime);
         transform.rotation = look;
-
+        
         camDir = camPos.position - transform.position;
         if (Physics.Raycast(transform.position, camDir.normalized, out RaycastHit hit, camDst, layerMask))
             camPos.position = hit.point - (camDir.normalized * 0.1f);

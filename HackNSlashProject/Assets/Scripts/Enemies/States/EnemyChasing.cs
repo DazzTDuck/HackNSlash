@@ -11,10 +11,6 @@ public class EnemyChasing : MonoBehaviour
     NavMeshAgent agent;
     //Vector3 chaseDev;
 
-    private void Start()
-    {
-    }
-
     public void StartChasing(Transform player_, EnemyBehaviorControll behaviorControll_)
     {
         agent = GetComponent<NavMeshAgent>();

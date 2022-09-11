@@ -12,10 +12,6 @@ public class EnemyAttacking : MonoBehaviour
     NavMeshAgent agent;
     public Animator animator;
 
-    private void Start()
-    {
-    }
-
     public void Attack(Transform player_, EnemyBehaviorControll behaviorControll_)
     {
         agent = GetComponent<NavMeshAgent>();

@@ -18,7 +18,7 @@ public class EnemyBehaviorControll : MonoBehaviour
     EnemyPatrolling patrolling;
     EnemyChasing chasing;
     EnemyAttacking attacking;
-    //EnemyStunned stunned;
+    EnemyStunned stunned;
     //EnemyStaggered staggered;
     public LayerMask layerMask;
 
@@ -30,10 +30,12 @@ public class EnemyBehaviorControll : MonoBehaviour
         chasing = GetComponent<EnemyChasing>();
         attacking = GetComponent<EnemyAttacking>();
         agent = GetComponent<NavMeshAgent>();
+        stunned = GetComponent<EnemyStunned>();
         currentState = AiState.Patrolling;
         patrolling.enabled = true;
         chasing.enabled = false;
         attacking.enabled = false;
+        stunned.enabled = false;
         agent.speed = patrollSpeed;
         StartCoroutine(StartBehavior());
     }
@@ -67,6 +69,15 @@ public class EnemyBehaviorControll : MonoBehaviour
         chasing.StartChasing(player, this);
     }
 
+    public void GetStunned(float stunDuration)
+    {
+
+    }
+    public void ReturnFromStunned()
+    {
+
+    }
+
     private void FixedUpdate()
     {
         if (Vector3.Distance(transform.position, player.position) < sightRange && Vector3.Dot(transform.forward, player.position - transform.position) > (1 - (sightAngle / 180f)))
@@ -86,21 +97,14 @@ public class EnemyBehaviorControll : MonoBehaviour
                         chasing.enabled = true;
                         chasing.StartChasing(player, this);
                     }
+                    return;
                 }
-                else
-                {
-                    playerInSight = false;
-                }
+                
             }
-            else
-            {
-                playerInSight = false;
-            }
+            
         }
-        else
-        {
-            playerInSight = false;
-        }
+        playerInSight = false;
+        
     }
 }
 public enum AiState

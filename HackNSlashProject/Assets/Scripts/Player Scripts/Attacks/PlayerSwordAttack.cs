@@ -48,9 +48,6 @@ public class PlayerSwordAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<CharacterHealth>())
-        {
-            other.GetComponent<CharacterHealth>().TakeDamage(damage);
-        }
+        other.GetComponent<CharacterHealth>()?.TakeDamage(damage);
     }
 }

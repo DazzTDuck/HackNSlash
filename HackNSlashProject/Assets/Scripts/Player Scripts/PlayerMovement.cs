@@ -12,9 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public float rotSpeedMouse;
     public float rotSpeedController;
     public float udRot;
+    bool useController;
     public float minCamAngle = 0;
     public float maxCamAngle = 30;
-    bool useController;
 
     private void Start()
     {
@@ -42,16 +42,9 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddRelativeForce(moveVector.x * moveSpeed, 0, moveVector.y * moveSpeed, ForceMode.Acceleration);
-        if (!useController)
-        {
-            transform.Rotate(0, lookVector.x * rotSpeedMouse, 0);
-            udRot -= lookVector.y * rotSpeedMouse;
-        }
-        else
-        {
-            transform.Rotate(0, lookVector.x * rotSpeedController, 0);
-            udRot -= lookVector.y * rotSpeedController;
-        }
+        float rotSpeed = useController ? rotSpeedController : rotSpeedMouse;
+        transform.Rotate(0, lookVector.x * rotSpeed, 0);
+        udRot -= lookVector.y * rotSpeed;
         udRot = Mathf.Clamp(udRot, minCamAngle, maxCamAngle);
     }
 }

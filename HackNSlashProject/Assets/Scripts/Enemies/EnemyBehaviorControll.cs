@@ -71,11 +71,30 @@ public class EnemyBehaviorControll : MonoBehaviour
 
     public void GetStunned(float stunDuration)
     {
-
+        if (currentState == AiState.Attacking)
+        {
+            attacking.StopAllCoroutines();
+            attacking.enabled = false;
+        }
+        else if (currentState == AiState.Chasing)
+        {
+            chasing.enabled = false;
+        }
+        else if (currentState == AiState.Patrolling)
+        {
+            patrolling.StopAllCoroutines();
+            patrolling.enabled = false;
+        }
+        currentState = AiState.Stunned;
+        stunned.enabled = true;
+        stunned.GetStunned(this, stunDuration);
     }
     public void ReturnFromStunned()
     {
-
+        stunned.enabled = false;
+        currentState = AiState.Chasing;
+        chasing.enabled = true;
+        chasing.StartChasing(player, this);
     }
 
     private void FixedUpdate()

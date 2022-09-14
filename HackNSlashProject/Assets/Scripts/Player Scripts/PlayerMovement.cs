@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveAnim;
     Vector3 moveDir;
     public Transform lookDir;
+    public float camFollowSpeed;
 
     public float maxSpeed;
 
@@ -52,11 +53,17 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.AddRelativeForce(0, 0, moveVector.magnitude * moveSpeed, ForceMode.Acceleration);
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+
         float rotSpeed = useController ? rotSpeedController : rotSpeedMouse;
         //transform.Rotate(0, lookVector.x * rotSpeed, 0);
         camRot.x -= lookVector.y * rotSpeed;
         camRot.x = Mathf.Clamp(camRot.x, minCamAngle, maxCamAngle);
+        camRot.z = 0;
         camRot += new Vector3(0, lookVector.x * rotSpeed, 0);
+        if (camRot.y >= 180)
+            camRot.y -= 360;
+        else if (camRot.y < -180)
+            camRot.y += 360;
 
         moveAnim = Vector2.Lerp(moveAnim, moveVector, Time.fixedDeltaTime * animationSmoothing);
         animator.SetFloat("Blend", moveAnim.magnitude);
@@ -68,9 +75,21 @@ public class PlayerMovement : MonoBehaviour
         {
             //camAngle = camAngle.normalized;
             camAngle.y = 0;
-            moveDir = Vector3.Lerp(moveDir, lookDir.TransformDirection(new Vector3(moveVector.x, 0, moveVector.y)), Time.deltaTime * playerRotSpeed);
+            moveDir = Vector3.Lerp(moveDir, lookDir.TransformDirection(new Vector3(moveVector.x, 0, moveVector.y)), Time.fixedDeltaTime * playerRotSpeed);
+
+            if (lookVector.magnitude == 0 && Vector3.Dot(transform.forward, lookDir.forward) > -0.7f)
+            {
+                if (transform.eulerAngles.y - camRot.y < 180 && transform.eulerAngles.y - camRot.y > -180)
+                    camRot = Vector3.Lerp(camRot, transform.eulerAngles + new Vector3(camRot.x, 0, 0), Time.fixedDeltaTime * camFollowSpeed);
+                else if (transform.eulerAngles.y - camRot.y > 180)
+                    camRot = Vector3.Lerp(camRot, transform.eulerAngles - new Vector3(-camRot.x, 360, 0), Time.fixedDeltaTime * camFollowSpeed);
+                else if (transform.eulerAngles.y - camRot.y < -180)
+                    camRot = Vector3.Lerp(camRot, transform.eulerAngles + new Vector3(camRot.x, 360, 0), Time.fixedDeltaTime * camFollowSpeed);
+
+            }
         }
 
         transform.LookAt(transform.position + moveDir, Vector3.up);
+
     }
 }

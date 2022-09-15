@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 91.59412, g: 159.68604, b: 343.8921, a: 1}
+  m_IndirectSpecularColor: {r: 92.65967, g: 165.00366, b: 377.937, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14724,6 +14724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5057585776204136407, guid: 48bcb505c3a11d24da10bc5edc4e538e,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057585776204136407, guid: 48bcb505c3a11d24da10bc5edc4e538e,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -15294,6 +15299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5057585777289135949, guid: 48bcb505c3a11d24da10bc5edc4e538e,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057585777289135949, guid: 48bcb505c3a11d24da10bc5edc4e538e,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -15466,6 +15476,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057585777668824430, guid: 48bcb505c3a11d24da10bc5edc4e538e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5057585777668824430, guid: 48bcb505c3a11d24da10bc5edc4e538e,
         type: 3}
@@ -31447,7 +31462,7 @@ MonoBehaviour:
   useMultithreading: 1
   previousSelection: {fileID: 0}
   unloaded: 1
-  sceneChanging: 0
+  sceneChanging: 1
   waitForPrevious: 0
   previousVolume: {fileID: 0}
   optimizeForMixedLighting: 0
@@ -31480,8 +31495,8 @@ MonoBehaviour:
   - {fileID: 1614023191}
   prefabStage: {fileID: 0}
   quickEditingComponent: {fileID: 1953079680}
-  dataPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets
-  workPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
+  dataPath: C:/Github Repository/HackNSlash/HackNSlash Unity/HackNSlash/HackNSlashProject/Assets
+  workPath: C:/Github Repository/HackNSlash/HackNSlash Unity/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
     Light Probes
   workPathFound: 1
   localFinishedPositions:
@@ -38041,7 +38056,7 @@ MonoBehaviour:
   - {x: -5.7373295, y: 1.7548816, z: -39.253883}
   - {x: -5.2373295, y: 0.25488162, z: -41.253883}
   - {x: -4.2373295, y: 0.25488162, z: -40.753883}
-  assetEditorPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
+  assetEditorPath: C:/Github Repository/HackNSlash/HackNSlash Unity/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
     Light Probes/Editor/
   parentVolume: {fileID: 0}
   localOperationalDataLost: 1
@@ -54276,7 +54291,7 @@ MonoBehaviour:
   useMultithreading: 1
   previousSelection: {fileID: 0}
   unloaded: 1
-  sceneChanging: 0
+  sceneChanging: 1
   waitForPrevious: 0
   previousVolume: {fileID: 0}
   optimizeForMixedLighting: 0
@@ -54308,8 +54323,8 @@ MonoBehaviour:
   - {fileID: 1614023191}
   prefabStage: {fileID: 0}
   quickEditingComponent: {fileID: 558725902}
-  dataPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets
-  workPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
+  dataPath: C:/Github Repository/HackNSlash/HackNSlash Unity/HackNSlash/HackNSlashProject/Assets
+  workPath: C:/Github Repository/HackNSlash/HackNSlash Unity/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
     Light Probes
   workPathFound: 1
   localFinishedPositions:
@@ -57095,7 +57110,7 @@ MonoBehaviour:
   - {x: -8.383341, y: 2.7617197, z: -7.255246}
   - {x: -7.3833404, y: 2.7617197, z: -9.755246}
   - {x: -10.550024, y: 0.2617197, z: -6.255246}
-  assetEditorPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
+  assetEditorPath: C:/Github Repository/HackNSlash/HackNSlash Unity/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
     Light Probes/Editor/
   parentVolume: {fileID: 0}
   localOperationalDataLost: 1

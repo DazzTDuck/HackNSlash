@@ -142,6 +142,8 @@ GameObject:
   - component: {fileID: 52904156}
   - component: {fileID: 52904155}
   - component: {fileID: 52904165}
+  - component: {fileID: 52904166}
+  - component: {fileID: 52904167}
   m_Layer: 0
   m_Name: testEnemy (3)
   m_TagString: Untagged
@@ -226,6 +228,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &52904159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +361,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &52904166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52904153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &52904167
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52904153}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &85528319
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +527,8 @@ GameObject:
   - component: {fileID: 114159352}
   - component: {fileID: 114159351}
   - component: {fileID: 114159361}
+  - component: {fileID: 114159362}
+  - component: {fileID: 114159363}
   m_Layer: 0
   m_Name: testEnemy (2)
   m_TagString: Untagged
@@ -580,6 +613,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &114159355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +746,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &114159362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114159349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &114159363
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114159349}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &132058391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1637,8 @@ GameObject:
   - component: {fileID: 371246052}
   - component: {fileID: 371246051}
   - component: {fileID: 371246061}
+  - component: {fileID: 371246062}
+  - component: {fileID: 371246063}
   m_Layer: 0
   m_Name: testEnemy (7)
   m_TagString: Untagged
@@ -1659,6 +1723,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &371246055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1791,6 +1856,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &371246062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371246049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &371246063
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371246049}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &386262171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +2001,8 @@ GameObject:
   - component: {fileID: 410155472}
   - component: {fileID: 410155471}
   - component: {fileID: 410155481}
+  - component: {fileID: 410155482}
+  - component: {fileID: 410155483}
   m_Layer: 0
   m_Name: testEnemy (6)
   m_TagString: Untagged
@@ -1992,6 +2087,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &410155475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2124,6 +2220,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &410155482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410155469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &410155483
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410155469}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &435419311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,6 +3081,8 @@ GameObject:
   - component: {fileID: 636968013}
   - component: {fileID: 636968012}
   - component: {fileID: 636968022}
+  - component: {fileID: 636968023}
+  - component: {fileID: 636968024}
   m_Layer: 0
   m_Name: testEnemy (4)
   m_TagString: Untagged
@@ -3041,6 +3167,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &636968016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3173,6 +3300,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &636968023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636968010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &636968024
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636968010}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &650845452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,6 +3620,8 @@ GameObject:
   - component: {fileID: 966944968}
   - component: {fileID: 966944967}
   - component: {fileID: 966944977}
+  - component: {fileID: 966944978}
+  - component: {fileID: 966944979}
   m_Layer: 0
   m_Name: testEnemy (9)
   m_TagString: Untagged
@@ -3549,6 +3706,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &966944971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3681,6 +3839,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &966944978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966944965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &966944979
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966944965}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!4 &983280354 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7257331348801718743, guid: 9a47b4f5436d19a4a947d11763e44e11,
@@ -3905,6 +4091,8 @@ GameObject:
   - component: {fileID: 1087935390}
   - component: {fileID: 1087935389}
   - component: {fileID: 1087935399}
+  - component: {fileID: 1087935400}
+  - component: {fileID: 1087935401}
   m_Layer: 0
   m_Name: testEnemy (5)
   m_TagString: Untagged
@@ -3989,6 +4177,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &1087935393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4121,6 +4310,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &1087935400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087935387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1087935401
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087935387}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1118581143
 GameObject:
   m_ObjectHideFlags: 0
@@ -4366,6 +4583,8 @@ GameObject:
   - component: {fileID: 1209531677}
   - component: {fileID: 1209531676}
   - component: {fileID: 1209531686}
+  - component: {fileID: 1209531687}
+  - component: {fileID: 1209531688}
   m_Layer: 0
   m_Name: testEnemy (8)
   m_TagString: Untagged
@@ -4450,6 +4669,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &1209531680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4582,6 +4802,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &1209531687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209531674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1209531688
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209531674}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1245628010
 GameObject:
   m_ObjectHideFlags: 0
@@ -5955,6 +6203,8 @@ GameObject:
   - component: {fileID: 1546330808}
   - component: {fileID: 1546330807}
   - component: {fileID: 1546330817}
+  - component: {fileID: 1546330818}
+  - component: {fileID: 1546330819}
   m_Layer: 0
   m_Name: testEnemy (10)
   m_TagString: Untagged
@@ -6039,6 +6289,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &1546330811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6171,6 +6422,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &1546330818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546330805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1546330819
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546330805}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1575153314
 GameObject:
   m_ObjectHideFlags: 0
@@ -6421,6 +6700,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1708327334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1440447151541862224, guid: aca86195e9addc549b7006ab5b66434a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1440447149992562701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1708327335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708327334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1708327347
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708327334}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1732613772
 GameObject:
   m_ObjectHideFlags: 0
@@ -7808,6 +8121,8 @@ GameObject:
   - component: {fileID: 2097952963}
   - component: {fileID: 2097952962}
   - component: {fileID: 2097952972}
+  - component: {fileID: 2097952973}
+  - component: {fileID: 2097952974}
   m_Layer: 0
   m_Name: testEnemy (1)
   m_TagString: Untagged
@@ -7892,6 +8207,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  stunnedAfterStagger: 0
 --- !u!114 &2097952966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8024,6 +8340,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunResist: 0
   animator: {fileID: 0}
+--- !u!114 &2097952973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097952960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5740e1a02c98a4448dda5709e8ab5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &2097952974
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097952960}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &2115762599
 GameObject:
   m_ObjectHideFlags: 0

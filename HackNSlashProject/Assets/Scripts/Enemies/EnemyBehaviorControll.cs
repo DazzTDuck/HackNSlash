@@ -69,7 +69,7 @@ public class EnemyBehaviorControll : MonoBehaviour
         chasing.StartChasing(player, this);
     }
 
-    public void GetStunned(float stunDuration, float staggerDistance, float staggerDuration)
+    public void GetStunned(float stunDuration, float stunPower = 0)
     {
         if (currentState == AiState.Attacking)
         {
@@ -85,9 +85,11 @@ public class EnemyBehaviorControll : MonoBehaviour
             patrolling.StopAllCoroutines();
             patrolling.enabled = false;
         }
+        else if (currentState == AiState.Stunned)
+            stunned.StopAllCoroutines();
         currentState = AiState.Stunned;
         stunned.enabled = true;
-        stunned.GetStunned(this, stunDuration, staggerDistance, staggerDuration, player);
+        stunned.GetStunned(this, stunDuration, stunPower, player);
     }
     public void ReturnFromStunned()
     {

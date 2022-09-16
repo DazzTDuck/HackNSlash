@@ -19,8 +19,8 @@ public class EnemyBehaviorControll : MonoBehaviour
     EnemyChasing chasing;
     EnemyAttacking attacking;
     EnemyStunned stunned;
-    //EnemyStaggered staggered;
     public LayerMask layerMask;
+    public float stunnedAfterStagger;
 
     private void Awake()
     {
@@ -69,7 +69,7 @@ public class EnemyBehaviorControll : MonoBehaviour
         chasing.StartChasing(player, this);
     }
 
-    public void GetStunned(float stunDuration)
+    public void GetStunned(float stunDuration, float stunPower = 0)
     {
         if (currentState == AiState.Attacking)
         {
@@ -85,9 +85,11 @@ public class EnemyBehaviorControll : MonoBehaviour
             patrolling.StopAllCoroutines();
             patrolling.enabled = false;
         }
+        else if (currentState == AiState.Stunned)
+            stunned.StopAllCoroutines();
         currentState = AiState.Stunned;
         stunned.enabled = true;
-        stunned.GetStunned(this, stunDuration);
+        stunned.GetStunned(this, stunDuration, stunPower, player);
     }
     public void ReturnFromStunned()
     {
@@ -132,6 +134,5 @@ public enum AiState
     Chasing,
     Attacking,
     Stunned,
-    Staggered,
     Dead
 }

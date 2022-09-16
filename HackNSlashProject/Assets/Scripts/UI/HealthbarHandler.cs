@@ -1,29 +1,39 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HealthbarHandler : MonoBehaviour
 {
-    public float reductionSpeed = 0.5f;
-    public float reductionDelay = 1.5f;
-    
+    public float reductionSpeed = 1f;
+    public float reductionDelay = 1.25f;
+
+    [Header("Fade")]
+    public bool fadeInAndOut = false;
+    public float fadeSpeed;
+    public CanvasGroup canvasGroup;
+
     [Header("References")]
     public SlicedFilledImage mainBar;
     public SlicedFilledImage reductionBar;
+    public TMP_Text damageAmountText;
 
     private double currentPercentage;
     private double reductionBarPercentage;
-    private float newValue;
-    private float maxValue;
-    private float minValue;
+    private int newValue = 100;
+    private int maxValue;
+    private int minValue;
+    private int lastHealthAmount;
+    private int damageDone = 0;
 
-    private void Start()
+    private void Awake()
     {
-        UpdateBar(50, 0, 100);
+        HealthbarAlpha(0f);
     }
 
-    public void UpdateBar(float newValue, float minValue, float maxValue)
+    public void UpdateBar(int newValue, int minValue, int maxValue)
     {
         //to make sure the value never goes below the minimum
         if(newValue < minValue)
@@ -33,25 +43,75 @@ public class HealthbarHandler : MonoBehaviour
         this.minValue = minValue;
         this.maxValue = maxValue;
         
+        //fade in healthbar
+        HealthbarAlpha(1f);
+
         currentPercentage = GetPercentage01(newValue, minValue, maxValue);
         mainBar.fillAmount = (float)currentPercentage;
         
+        //this will only activate at the beginning so every value is set correctly 
+        if (reductionBarPercentage <= 0)
+        {
+            reductionBarPercentage = GetPercentage01(this.maxValue, minValue, maxValue);
+            lastHealthAmount = this.maxValue;    
+        }
+
+        damageDone = lastHealthAmount - newValue;
+
+        if (damageAmountText)
+            damageAmountText.text = damageDone.ToString();
+
+        StopCoroutine(nameof(UpdateDelay));
         StartCoroutine(nameof(UpdateDelay));
     }
     
     private IEnumerator UpdateDelay()
     {
         yield return new WaitForSeconds(reductionDelay);
+
+            //set text to nothing so you cannot see it anymore and reset damage done
+            if (damageAmountText)
+                damageAmountText.text = "";
+
+            damageDone = 0;
+            lastHealthAmount = newValue;
+
+        while (Math.Abs(reductionBarPercentage - currentPercentage) > 0)
+        {
+            reductionBarPercentage = Mathf.MoveTowards((float)reductionBarPercentage, (float)currentPercentage, Time.deltaTime * reductionSpeed);
+            reductionBar.fillAmount = (float)reductionBarPercentage;
+
+            yield return null;
+        }
+
+        //wait the same delay for the healthbar to disappear
+        yield return new WaitForSeconds(reductionDelay);
+
+        //if healthbar is empty after it is all reduced, set alpha to 0.
+        if(currentPercentage >= 0)
+            HealthbarAlpha(0);
         
-        //change this later to lerp to the current value; 
-        reductionBarPercentage = GetPercentage01(newValue, minValue, maxValue);
-        reductionBar.fillAmount = (float)reductionBarPercentage;
+        //make sure the Coroutine stopped
+        StopCoroutine(nameof(UpdateDelay));
     }
-    
-    private double GetPercentage01(float input, float min, float max)
+
+    private void HealthbarAlpha(float alpha)
     {
-        //(currentValue - minValue) / (maxValue - minValue);
-        double value = (input - min) / (max - min);
+        if(fadeInAndOut)
+            StartCoroutine(FadeInOrOut(alpha));
+    }
+    private IEnumerator FadeInOrOut(float valueTo)
+    {
+        while (Math.Abs(canvasGroup.alpha - valueTo) > 0)
+        {
+            canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, valueTo, Time.deltaTime * fadeSpeed);
+            yield return null;    
+        }
+    }
+
+    private static double GetPercentage01(int input, int min, int max)
+    {
+        double value = (float)(input - min) / (max - min);
         //rounds off to 3 digits
         return Math.Round(value, 3); 
     }

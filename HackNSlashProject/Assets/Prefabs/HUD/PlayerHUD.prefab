@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1418430312109926248}
+  - component: {fileID: 335632699}
   m_Layer: 5
   m_Name: --HealthBar--
   m_TagString: Untagged
@@ -36,6 +37,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &335632699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418430312109926251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0714f08bcd8e944ba00a6b39bfd9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reductionSpeed: 1
+  reductionDelay: 1.25
+  fadeInAndOut: 0
+  fadeSpeed: 0
+  canvasGroup: {fileID: 0}
+  mainBar: {fileID: 1418430312775709307}
+  reductionBar: {fileID: 1418430313396612739}
+  damageAmountText: {fileID: 0}
 --- !u!1 &1418430312144730378
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.69803923, g: 0.49411765, b: 0.31764707, a: 1}
+  m_Color: {r: 1, g: 0.5686275, b: 0.16470589, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -346,7 +367,7 @@ MonoBehaviour:
   m_FillAmount: 0.465
   m_FillCenter: 1
   m_PreserveBorder: 1
-  m_PixelsPerUnitMultiplier: 7.5
+  m_PixelsPerUnitMultiplier: 4.5
 --- !u!1 &1418430312772859879
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8867924, g: 0.4308473, b: 0.4308473, a: 1}
+  m_Color: {r: 0.9150943, g: 0.20201136, b: 0.20201136, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -519,7 +540,7 @@ MonoBehaviour:
   m_FillAmount: 0.578
   m_FillCenter: 1
   m_PreserveBorder: 1
-  m_PixelsPerUnitMultiplier: 9
+  m_PixelsPerUnitMultiplier: 4.5
 --- !u!1 &1418430312900904344
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8307333, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.8313726, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -591,7 +612,7 @@ MonoBehaviour:
   m_FillAmount: 0.413
   m_FillCenter: 1
   m_PreserveBorder: 1
-  m_PixelsPerUnitMultiplier: 7.5
+  m_PixelsPerUnitMultiplier: 4.5
 --- !u!1 &1418430312990489351
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +760,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillCenter: 1
   m_PreserveBorder: 1
-  m_PixelsPerUnitMultiplier: 9
+  m_PixelsPerUnitMultiplier: 4.5
 --- !u!1 &1418430313352305204
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +832,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillCenter: 1
   m_PreserveBorder: 1
-  m_PixelsPerUnitMultiplier: 7.5
+  m_PixelsPerUnitMultiplier: 4.5
 --- !u!1 &1418430313396612741
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6981132, g: 0.49558482, b: 0.31941974, a: 1}
+  m_Color: {r: 1, g: 0.6002817, b: 0.22600001, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -883,7 +904,7 @@ MonoBehaviour:
   m_FillAmount: 0.77
   m_FillCenter: 1
   m_PreserveBorder: 1
-  m_PixelsPerUnitMultiplier: 9
+  m_PixelsPerUnitMultiplier: 4.5
 --- !u!1 &1418430313794319962
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1418430313794319963}
+  - component: {fileID: 1014910703}
   m_Layer: 5
   m_Name: --HolyPowerBar--
   m_TagString: Untagged
@@ -920,3 +942,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1014910703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418430313794319962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0714f08bcd8e944ba00a6b39bfd9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reductionSpeed: 1
+  reductionDelay: 1.25
+  fadeInAndOut: 0
+  fadeSpeed: 0
+  canvasGroup: {fileID: 0}
+  mainBar: {fileID: 1418430312900904342}
+  reductionBar: {fileID: 1418430312219358424}
+  damageAmountText: {fileID: 0}

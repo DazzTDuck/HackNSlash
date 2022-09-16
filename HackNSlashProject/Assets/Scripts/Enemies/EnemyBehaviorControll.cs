@@ -19,7 +19,6 @@ public class EnemyBehaviorControll : MonoBehaviour
     EnemyChasing chasing;
     EnemyAttacking attacking;
     EnemyStunned stunned;
-    EnemyStaggered staggered;
     public LayerMask layerMask;
     public float stunnedAfterStagger;
 
@@ -32,13 +31,11 @@ public class EnemyBehaviorControll : MonoBehaviour
         attacking = GetComponent<EnemyAttacking>();
         agent = GetComponent<NavMeshAgent>();
         stunned = GetComponent<EnemyStunned>();
-        staggered = GetComponent<EnemyStaggered>();
         currentState = AiState.Patrolling;
         patrolling.enabled = true;
         chasing.enabled = false;
         attacking.enabled = false;
         stunned.enabled = false;
-        staggered.enabled = false;
         agent.speed = patrollSpeed;
         StartCoroutine(StartBehavior());
     }
@@ -72,7 +69,7 @@ public class EnemyBehaviorControll : MonoBehaviour
         chasing.StartChasing(player, this);
     }
 
-    public void GetStunned(float stunDuration)
+    public void GetStunned(float stunDuration, float staggerDistance, float staggerDuration)
     {
         if (currentState == AiState.Attacking)
         {
@@ -90,7 +87,7 @@ public class EnemyBehaviorControll : MonoBehaviour
         }
         currentState = AiState.Stunned;
         stunned.enabled = true;
-        stunned.GetStunned(this, stunDuration);
+        stunned.GetStunned(this, stunDuration, staggerDistance, staggerDuration, player);
     }
     public void ReturnFromStunned()
     {
@@ -98,39 +95,6 @@ public class EnemyBehaviorControll : MonoBehaviour
         currentState = AiState.Chasing;
         chasing.enabled = true;
         chasing.StartChasing(player, this);
-    }
-
-    public void GetStaggered(float knockBack)
-    {
-        if (currentState == AiState.Attacking)
-        {
-            attacking.StopAllCoroutines();
-            attacking.enabled = false;
-        }
-        else if (currentState == AiState.Chasing)
-        {
-            chasing.enabled = false;
-        }
-        else if (currentState == AiState.Patrolling)
-        {
-            patrolling.StopAllCoroutines();
-            patrolling.enabled = false;
-        }
-        else if (currentState == AiState.Stunned)
-        {
-            stunned.StopAllCoroutines();
-            patrolling.enabled = false;
-        }
-        currentState = AiState.Staggered;
-        staggered.enabled = true;
-        staggered.GetStaggered(this, knockBack, player);
-    }
-    public void ReturnFromStaggered()
-    {
-        staggered.enabled = false;
-        currentState = AiState.Stunned;
-        stunned.enabled = true;
-        stunned.GetStunned(this, stunnedAfterStagger);
     }
 
     private void FixedUpdate()
@@ -168,6 +132,5 @@ public enum AiState
     Chasing,
     Attacking,
     Stunned,
-    Staggered,
     Dead
 }

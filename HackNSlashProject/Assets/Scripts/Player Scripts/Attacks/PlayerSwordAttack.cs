@@ -49,6 +49,6 @@ public class PlayerSwordAttack : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<CharacterHealth>()?.TakeDamage(damage);
-        other.GetComponent<EnemyBehaviorControll>()?.GetStaggered(20f);
+        other.GetComponent<EnemyBehaviorControll>()?.GetStunned(1, 5, 0.5f);
     }
 }

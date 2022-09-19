@@ -9,22 +9,27 @@ public class EnemyStunned : MonoBehaviour
     EnemyBehaviorControll behaviorControll;
     NavMeshAgent agent;
     public Animator animator;
+    Rigidbody rb;
 
-    public void GetStunned(EnemyBehaviorControll behaviorControll_, float stunDuration)
+    public void GetStunned(EnemyBehaviorControll behaviorControll_, float stunDuration, float stunPower, Transform player)
     {
+        rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         behaviorControll = behaviorControll_;
-        agent.SetDestination(transform.position);
-        StartCoroutine(OhNoImStunned(stunDuration));
-        //animator.SetBool("IsStunned", true);
-        //animator.SetTrigger("GetStunned");
-
+        agent.isStopped = true;
+        Vector3 staggerDir = (transform.position - player.position).normalized;
+        StartCoroutine(IsStunned(stunDuration, stunPower, staggerDir));
     }
 
-    IEnumerator OhNoImStunned(float stunduration)
+    IEnumerator IsStunned(float stunDuration, float stunPower, Vector3 staggerDir)
     {
-        yield return new WaitForSeconds(stunduration * ((100f - stunResist) / 100f));
-        //animator.SetBool("IsStunned", false);
+
+        //animator.SetBool("IsStunned", true);
+        //animator.SetTrigger("GetStunned");
+        rb.AddForce(staggerDir * stunPower, ForceMode.Impulse);
+        yield return new WaitForSeconds(stunDuration);
+        agent.isStopped = false;
+        agent.destination = transform.position;
         behaviorControll.ReturnFromStunned();
     }
 }

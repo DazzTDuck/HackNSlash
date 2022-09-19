@@ -11,22 +11,27 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float rotSpeedMouse;
     public float rotSpeedController;
-    public float udRot;
+    public float playerRotSpeed;
     bool useController;
     public float minCamAngle = 0;
     public float maxCamAngle = 30;
     public Animator animator;
-    public Transform model;
     public float animationSmoothing = 1;
-    Vector3 toLook;
+    public Transform cam;
+    public Vector3 camRot;
+    Vector2 moveAnim;
+    Vector3 moveDir;
+    public Transform lookDir;
+    public float camFollowSpeed;
+
+    public float maxSpeed;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        rb.drag = 6;
-        toLook = model.forward;
+        moveDir = transform.forward;
     }
 
     public void OnMove(InputAction.CallbackContext callbackContext)
@@ -46,17 +51,45 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddRelativeForce(moveVector.x * moveSpeed, 0, moveVector.y * moveSpeed, ForceMode.Acceleration);
-        float rotSpeed = useController ? rotSpeedController : rotSpeedMouse;
-        transform.Rotate(0, lookVector.x * rotSpeed, 0);
-        udRot -= lookVector.y * rotSpeed;
-        udRot = Mathf.Clamp(udRot, minCamAngle, maxCamAngle);
+        rb.AddRelativeForce(0, 0, moveVector.magnitude * moveSpeed, ForceMode.Acceleration);
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 
-        Vector3 forLook = new Vector3(moveVector.x, 0, moveVector.y);
-        //model.TransformDirection(forLook);
-        //toLook = Vector3.Lerp(toLook, new Vector3(forLook.x + toLook.x, forLook.y + toLook.y, forLook.z + toLook.z), animationSmoothing * Time.fixedDeltaTime);
-        toLook = Vector3.Lerp(toLook, forLook, animationSmoothing * Time.fixedDeltaTime);
-        animator.SetFloat("Blend", toLook.magnitude);
-        model.LookAt(model.position + transform.TransformDirection(toLook), Vector3.up);
+        float rotSpeed = useController ? rotSpeedController : rotSpeedMouse;
+        //transform.Rotate(0, lookVector.x * rotSpeed, 0);
+        camRot.x -= lookVector.y * rotSpeed;
+        camRot.x = Mathf.Clamp(camRot.x, minCamAngle, maxCamAngle);
+        camRot.z = 0;
+        camRot += new Vector3(0, lookVector.x * rotSpeed, 0);
+        if (camRot.y >= 180)
+            camRot.y -= 360;
+        else if (camRot.y < -180)
+            camRot.y += 360;
+
+        moveAnim = Vector2.Lerp(moveAnim, moveVector, Time.fixedDeltaTime * animationSmoothing);
+        animator.SetFloat("Blend", moveAnim.magnitude);
+
+        Vector3 camAngle = cam.forward;
+        lookDir.LookAt(lookDir.position + new Vector3(camAngle.x, 0, camAngle.z));
+
+        if (moveVector.magnitude > 0)
+        {
+            //camAngle = camAngle.normalized;
+            camAngle.y = 0;
+            moveDir = Vector3.Lerp(moveDir, lookDir.TransformDirection(new Vector3(moveVector.x, 0, moveVector.y)), Time.fixedDeltaTime * playerRotSpeed);
+
+            if (lookVector.magnitude == 0 && Vector3.Dot(transform.forward, lookDir.forward) > -0.7f)
+            {
+                if (transform.eulerAngles.y - camRot.y < 180 && transform.eulerAngles.y - camRot.y > -180)
+                    camRot = Vector3.Lerp(camRot, transform.eulerAngles + new Vector3(camRot.x, 0, 0), Time.fixedDeltaTime * camFollowSpeed);
+                else if (transform.eulerAngles.y - camRot.y > 180)
+                    camRot = Vector3.Lerp(camRot, transform.eulerAngles - new Vector3(-camRot.x, 360, 0), Time.fixedDeltaTime * camFollowSpeed);
+                else if (transform.eulerAngles.y - camRot.y < -180)
+                    camRot = Vector3.Lerp(camRot, transform.eulerAngles + new Vector3(camRot.x, 360, 0), Time.fixedDeltaTime * camFollowSpeed);
+
+            }
+        }
+
+        transform.LookAt(transform.position + moveDir, Vector3.up);
+
     }
 }

@@ -109,6 +109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -239,6 +244,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 628735033590822652, guid: 126ef157dcdb8594fb03949ee74830d2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801769701064983089, guid: 126ef157dcdb8594fb03949ee74830d2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126ef157dcdb8594fb03949ee74830d2, type: 3}
 --- !u!4 &284403534761218903 stripped
@@ -258,6 +273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Support Beam (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
@@ -334,6 +354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -408,6 +433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Support Beam (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
@@ -484,6 +514,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -558,6 +593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Support Beam
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
@@ -634,6 +674,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -708,6 +753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Support Beam (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
@@ -784,6 +834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FancyWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 7467084138112313542, guid: 4b5631142d34bad43bec0dbc3969ccba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7848571123767915132, guid: 4b5631142d34bad43bec0dbc3969ccba,
         type: 3}
       propertyPath: m_RootOrder
@@ -859,6 +914,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FancyWindow (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7467084138112313542, guid: 4b5631142d34bad43bec0dbc3969ccba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7848571123767915132, guid: 4b5631142d34bad43bec0dbc3969ccba,
         type: 3}
       propertyPath: m_RootOrder
@@ -933,6 +993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -1159,6 +1224,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FancyWindow (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7467084138112313542, guid: 4b5631142d34bad43bec0dbc3969ccba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7848571123767915132, guid: 4b5631142d34bad43bec0dbc3969ccba,
         type: 3}
       propertyPath: m_RootOrder
@@ -1233,6 +1303,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FancyWindow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467084138112313542, guid: 4b5631142d34bad43bec0dbc3969ccba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7848571123767915132, guid: 4b5631142d34bad43bec0dbc3969ccba,
         type: 3}
@@ -1364,6 +1439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NormalWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 4276627922531514732, guid: 61b46545eb0273b4f9ce2b2094f627b5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61b46545eb0273b4f9ce2b2094f627b5, type: 3}
 --- !u!4 &543450651945282448 stripped
@@ -1383,6 +1463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DiagonalWoodBeam (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5961277071980868247, guid: 105c8f59d7dfc5647bdebc2a32b567d7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6481072686623221805, guid: 105c8f59d7dfc5647bdebc2a32b567d7,
         type: 3}
@@ -1459,6 +1544,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -1533,6 +1623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Support Beam (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
@@ -1609,6 +1704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -1683,6 +1783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -1759,6 +1864,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -1834,6 +1944,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -1908,6 +2023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Support Beam (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
@@ -2064,6 +2184,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -2139,6 +2264,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -2213,6 +2343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -2369,6 +2504,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -2443,6 +2583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -2519,6 +2664,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -2593,6 +2743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DiagonalWoodBeam (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5961277071980868247, guid: 105c8f59d7dfc5647bdebc2a32b567d7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6481072686623221805, guid: 105c8f59d7dfc5647bdebc2a32b567d7,
         type: 3}
@@ -2669,6 +2824,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -2743,6 +2903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -2819,6 +2984,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -2894,6 +3064,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -2968,6 +3143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Support Beam (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
@@ -3124,6 +3304,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -3198,6 +3383,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Support Beam (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
@@ -3274,6 +3464,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -3348,6 +3543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -3504,6 +3704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -3578,6 +3783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -3734,6 +3944,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -3889,6 +4104,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiagonalWoodBeam (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5961277071980868247, guid: 105c8f59d7dfc5647bdebc2a32b567d7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6481072686623221805, guid: 105c8f59d7dfc5647bdebc2a32b567d7,
         type: 3}
       propertyPath: m_RootOrder
@@ -3963,6 +4183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -4039,6 +4264,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -4113,6 +4343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -4269,6 +4504,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support Beam (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2408532531151204584, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3037400046687300178, guid: 080485830f75ebf4cb63b0b3e56a6f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -4399,6 +4639,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NormalWindow (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4276627922531514732, guid: 61b46545eb0273b4f9ce2b2094f627b5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61b46545eb0273b4f9ce2b2094f627b5, type: 3}
 --- !u!4 &8444384494858296775 stripped
@@ -4418,6 +4663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -4494,6 +4744,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfWall (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
       propertyPath: m_RootOrder
@@ -4568,6 +4823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HalfWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433304857278246334, guid: dae7050b6a9d5b04886dad1323be9111,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9098061498019034884, guid: dae7050b6a9d5b04886dad1323be9111,
         type: 3}
@@ -4652,17 +4912,17 @@ PrefabInstance:
     - target: {fileID: 9078720836184591800, guid: 4144d1cdf4240c14f92e0abf00920bef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.029
+      value: -0.044
       objectReference: {fileID: 0}
     - target: {fileID: 9078720836184591800, guid: 4144d1cdf4240c14f92e0abf00920bef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.292
+      value: 1.294
       objectReference: {fileID: 0}
     - target: {fileID: 9078720836184591800, guid: 4144d1cdf4240c14f92e0abf00920bef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.738
+      value: 0.743
       objectReference: {fileID: 0}
     - target: {fileID: 9078720836184591800, guid: 4144d1cdf4240c14f92e0abf00920bef,
         type: 3}
@@ -4948,6 +5208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DiagonalWoodBeam (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5961277071980868247, guid: 105c8f59d7dfc5647bdebc2a32b567d7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6481072686623221805, guid: 105c8f59d7dfc5647bdebc2a32b567d7,
         type: 3}

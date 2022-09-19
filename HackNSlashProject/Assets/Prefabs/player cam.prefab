@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  followspeed: 12
+  followspeed: 10
   camPos: {fileID: 0}
   layerMask:
     serializedVersion: 2

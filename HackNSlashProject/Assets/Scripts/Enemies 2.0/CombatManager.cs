@@ -40,6 +40,14 @@ public class CombatManager : MonoBehaviour
             }
         }
     }
+
+    public void FallBack(EnemyActor actor)
+    {
+        if (backupEnemies.Count != 0)
+        {
+
+        }
+    }
 }
 
 public enum Enemystates

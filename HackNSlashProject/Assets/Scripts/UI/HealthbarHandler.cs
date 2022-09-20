@@ -33,6 +33,18 @@ public class HealthbarHandler : MonoBehaviour
         HealthbarAlpha(0f);
     }
 
+    private void Start()
+    {
+        EventsManager.instance.OnDamageEvent += OnDamageEvent;
+    }
+    private void OnDamageEvent(object sender, OnDamageArgs e)
+    {
+        if(e.objectFrom == gameObject)
+            UpdateBar(e.currentAmount, e.minAmount, e.maxAmount);
+
+        Debug.Log(e.objectFrom);
+    }
+
     public void UpdateBar(int newValue, int minValue, int maxValue)
     {
         //to make sure the value never goes below the minimum

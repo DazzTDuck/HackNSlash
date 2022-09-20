@@ -30,14 +30,11 @@ Material:
   - _ALPHATEST_ON
   - _DISABLE_DECALS
   - _DISABLE_SSR_TRANSPARENT
-  - _DOUBLESIDED_ON
   - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords:
-  - _NORMALMAP_TANGENT_SPACE
-  - _TERRAIN_INSTANCED_PERPIXEL_NORMAL
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 1
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
@@ -154,7 +151,7 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
-    - _Alpha: 0.25
+    - _Alpha: 0.17
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
@@ -168,10 +165,10 @@ Material:
     - _BlendMode: 0
     - _CoatMask: 0
     - _ConservativeDepthOffsetEnable: 0
-    - _CullMode: 0
-    - _CullModeForward: 0
+    - _CullMode: 2
+    - _CullModeForward: 2
     - _Cutoff: 0.5
-    - _CutoffHeight: 0.6
+    - _CutoffHeight: 1.12
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
     - _DetailNormalScale: 1
@@ -182,7 +179,7 @@ Material:
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
     - _DissolveValue: 1
-    - _DoubleSidedEnable: 1
+    - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 1
     - _DstBlend: 10
@@ -197,8 +194,10 @@ Material:
     - _EnableHeightBlend: 0
     - _EnableInstancedPerPixelNormal: 1
     - _EnergyConservingSpecularColor: 1
-    - _FrenelPower: 1.8
+    - _FrenelPower: 0.77
     - _Frenel_Power: 3
+    - _GlowSpread: 0.55
+    - _GlowStrength: 0.16
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -231,6 +230,7 @@ Material:
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
+    - _Refraction: 0.54
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
@@ -276,15 +276,16 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - ObjectColor: {r: 0, g: 1, b: 0, a: 0}
-    - _BaseColor: {r: 1, g: 0.71739125, b: 0, a: 1}
+    - _BaseColor: {r: 1, g: 0.71739125, b: 0, a: 0}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 0.71739125, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.71739125, b: 0, a: 0}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 6135.9688, g: 3855.0588, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
+    - _GlowCenter: {r: 0, g: 0.02, b: 0, a: 0}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

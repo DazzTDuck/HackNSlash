@@ -33,12 +33,22 @@ public class HealthbarHandler : MonoBehaviour
         HealthbarAlpha(0f);
     }
 
+    private void Start()
+    {
+        EventsManager.instance.OnBarUpdateEvent += OnBarUpdateEvent;
+    }
+    private void OnBarUpdateEvent(object sender, OnBarArgs e)
+    {
+        if((GameObject)sender == gameObject)
+            UpdateBar(e.currentAmount, e.minAmount, e.maxAmount);
+    }
+
     public void UpdateBar(int newValue, int minValue, int maxValue)
     {
         //to make sure the value never goes below the minimum
         if(newValue < minValue)
             newValue = minValue;
-        
+
         this.newValue = newValue;
         this.minValue = minValue;
         this.maxValue = maxValue;
@@ -56,10 +66,11 @@ public class HealthbarHandler : MonoBehaviour
             lastHealthAmount = this.maxValue;    
         }
 
-        damageDone = lastHealthAmount - newValue;
-
         if (damageAmountText)
+        {
+            damageDone = lastHealthAmount - newValue;
             damageAmountText.text = damageDone.ToString();
+        }
 
         StopCoroutine(nameof(UpdateDelay));
         StartCoroutine(nameof(UpdateDelay));

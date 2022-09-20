@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class OnDamageArgs : EventArgs
+public class OnBarArgs : EventArgs
 {
     public int currentAmount;
     public int minAmount;
     public int maxAmount;
-    public GameObject objectFrom;
 }
 
 public class EventsManager : MonoBehaviour
@@ -20,10 +19,10 @@ public class EventsManager : MonoBehaviour
         instance = this;
     }
 
-    public event EventHandler<OnDamageArgs> OnDamageEvent;
-    public void InvokeOnDamageEvent(int currentAmount, int minAmount, int maxAmount, GameObject objectFrom)
+    public event EventHandler<OnBarArgs> OnBarUpdateEvent;
+    public void InvokeOnBarEvent(int currentAmount, int minAmount, int maxAmount, object sender)
     {
-        OnDamageEvent?.Invoke(this, new OnDamageArgs{currentAmount = currentAmount, minAmount = minAmount, maxAmount = maxAmount, objectFrom = objectFrom});
+        OnBarUpdateEvent?.Invoke(sender, new OnBarArgs{currentAmount = currentAmount, minAmount = minAmount, maxAmount = maxAmount});
     }
 
     // public event Action<int> onDeath;

@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-
-
 public class CharacterHealth : MonoBehaviour
 {
     public int maxHP;
@@ -22,12 +20,13 @@ public class CharacterHealth : MonoBehaviour
         {
             //death
             currentHP = 0;
-            Death();
+            if(!gameObject.CompareTag("Player"))
+                Death();
         }
         else
             currentHP -= damageToDo;
 
-        EventsManager.instance.InvokeOnDamageEvent(currentHP, 0, maxHP, gameObject);
+        EventsManager.instance.InvokeOnBarEvent(currentHP, 0, maxHP, gameObject);
     }
     protected virtual void Death()
     {

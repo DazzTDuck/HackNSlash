@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1856987411346011995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 583535082898865648}
+  - component: {fileID: 8456174938164990460}
+  - component: {fileID: 7129001222072688064}
+  m_Layer: 7
+  m_Name: HolyPower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &583535082898865648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856987411346011995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4107335096402957392}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8456174938164990460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856987411346011995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38797cb0e8475c249bca9b4009eac13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHolyPower: 100
+  currentHolyPower: 0
+  powerRegenSpeed: 10
+  powerRegenDelay: 2
+--- !u!114 &7129001222072688064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856987411346011995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0714f08bcd8e944ba00a6b39bfd9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reductionSpeed: 1
+  reductionDelay: 1.25
+  fadeInAndOut: 0
+  fadeSpeed: 0
+  canvasGroup: {fileID: 0}
+  mainBar: {fileID: 0}
+  reductionBar: {fileID: 0}
+  damageAmountText: {fileID: 0}
 --- !u!1 &4107335095563056881
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,10 +148,10 @@ GameObject:
   - component: {fileID: 4107335096402957423}
   - component: {fileID: 4107335096402957422}
   - component: {fileID: 4107335096402957393}
-  - component: {fileID: 4107335096402957398}
+  - component: {fileID: 1411503222}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +163,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4107335096402957417}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35.24, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -102,6 +171,7 @@ Transform:
   - {fileID: 4107335096541107346}
   - {fileID: 4506580401001672263}
   - {fileID: 4107335095819662250}
+  - {fileID: 583535082898865648}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -317,10 +387,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6d5afcf4000be419c1b18d7e14b054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
+  maxHP: 300
   currentHP: 0
   characterId: 0
---- !u!114 &4107335096402957398
+--- !u!114 &1411503222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,13 +399,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4107335096402957417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38797cb0e8475c249bca9b4009eac13a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a0714f08bcd8e944ba00a6b39bfd9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHolyPower: 100
-  currentHolyPower: 0
-  powerRegenSpeed: 20
-  powerRegenDelay: 0.75
+  reductionSpeed: 1
+  reductionDelay: 1.25
+  fadeInAndOut: 0
+  fadeSpeed: 0
+  canvasGroup: {fileID: 0}
+  mainBar: {fileID: 0}
+  reductionBar: {fileID: 0}
+  damageAmountText: {fileID: 0}
 --- !u!1 &4107335096541107373
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,8 +578,8 @@ MonoBehaviour:
   qTime: 0.3
   damage: 4
   animator: {fileID: 4107335096541107347}
-  holyPower: {fileID: 4107335096402957398}
-  powerConsumption: 8
+  holyPower: {fileID: 0}
+  powerConsumption: 7
 --- !u!1001 &4107335095819192748
 PrefabInstance:
   m_ObjectHideFlags: 0

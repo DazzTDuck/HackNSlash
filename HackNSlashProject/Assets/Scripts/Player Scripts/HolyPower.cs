@@ -18,14 +18,15 @@ public class HolyPower : MonoBehaviour
 
     public void UseHolyPower(int powerUsed)
     {
-
         currentHolyPower -= powerUsed;
         regenDelay = powerRegenDelay;
         if (!isRegening)
-            StartCoroutine(RegenningHolyPower());
+            StartCoroutine(RegenHolyPower());
+
+        EventsManager.instance.InvokeOnBarEvent(currentHolyPower, 0, maxHolyPower, gameObject);
     }
 
-    IEnumerator RegenningHolyPower()
+    private IEnumerator RegenHolyPower()
     {
         isRegening = true;
         while (currentHolyPower < maxHolyPower)
@@ -37,6 +38,8 @@ public class HolyPower : MonoBehaviour
             }
             yield return new WaitForSeconds(1f / powerRegenSpeed);
             currentHolyPower++;
+
+            EventsManager.instance.InvokeOnBarEvent(currentHolyPower, 0, maxHolyPower, gameObject);
         }
         isRegening = false;
     }

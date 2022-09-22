@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyActor : MonoBehaviour
 {
     [Header("General")]
-    public CombatManager manager;
     public EnemyType enemyType;
     public Enemystates state;
     public int priority = 1;
@@ -25,29 +24,34 @@ public class EnemyActor : MonoBehaviour
     {
         EventsManager.instance.OnBarUpdateEvent += CheckToBackoff;
     }
+    private void OnDestroy()
+    {
+        EventsManager.instance.OnBarUpdateEvent -= CheckToBackoff;
+        CombatManager.combatManager.RemoveFromCombat(this);
+    }
     void CheckToBackoff(object sender = null, OnBarArgs e = null)
     {
-        if (e?.currentAmount <= 0)
+        if ((GameObject)sender == gameObject && e?.currentAmount <= 0)
         {
-            manager.RemoveFromCombat(this);
+            CombatManager.combatManager.RemoveFromCombat(this);
         }
         else if (state == Enemystates.Partoling)
         {
-            manager.EnemyJoinsFight(this);
+            CombatManager.combatManager.EnemyJoinsFight(this);
         }
         else if (state == Enemystates.Engaged)
         {
             bool backingOff = false;
-            if (e != null && (GameObject)sender == gameObject && !backedOff)
+            if ((GameObject)sender == gameObject && !backedOff)
             {
                 if (e.currentAmount <= hpThreshold)
                 {
-                    backingOff = manager.CheckToFallBack(this);
+                    backingOff = CombatManager.combatManager.CheckToFallBack(this);
                 }
             }
             else if (currentAttacks >= attackThreshold)
             {
-                backingOff = manager.CheckToFallBack(this);
+                backingOff = CombatManager.combatManager.CheckToFallBack(this);
                 if (backingOff)
                     currentAttacks = 0;
             }
@@ -60,14 +64,16 @@ public class EnemyActor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Vector3.Distance(transform.position, manager.player.position) < visionRadius && Vector3.Dot(transform.forward, manager.player.position - transform.position) > (1 - (visionConeWidth / 180f)))
+        if (Vector3.Distance(transform.position, CombatManager.combatManager.player.position) < visionRadius && Vector3.Dot(transform.forward, CombatManager.combatManager.player.position - transform.position) > (1 - (visionConeWidth / 180f)))
         {
-            Vector3 dir = manager.player.position - transform.position;
+            Vector3 dir = CombatManager.combatManager.player.position - transform.position;
             if (Physics.Raycast(transform.position, dir.normalized, out RaycastHit hit, visionRadius, layerMask))
             {
-                if (hit.collider.transform == manager.player)
+                if (hit.collider.transform == CombatManager.combatManager.player)
                 {
                     playerInSight = true;
+                    if (state == Enemystates.Partoling)
+                        CombatManager.combatManager.EnemyJoinsFight(this);
                     return;
                 }
 

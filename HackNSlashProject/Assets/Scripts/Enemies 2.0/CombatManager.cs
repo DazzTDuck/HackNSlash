@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
+    public static CombatManager combatManager;
     public Transform player;
     public int engagedMaxValue;
     public List<EnemyActor> engagedEnemies = new List<EnemyActor>();
     public int backupMaxValue;
     public List<EnemyActor> backupEnemies = new List<EnemyActor>();
     public List<EnemyActor> rangedEnemies = new List<EnemyActor>();
+
+    private void Awake()
+    {
+        combatManager = this;
+    }
 
     public void EnemyJoinsFight(EnemyActor actor)
     {
@@ -32,11 +38,13 @@ public class CombatManager : MonoBehaviour
             }
             if (currentEngagedEnemies + actor.occupySpace <= engagedMaxValue)
             {
-
+                engagedEnemies.Add(actor);
+                actor.state = Enemystates.Engaged;
             }
             else if (currentBackupEnemies + actor.occupySpace <= backupMaxValue)
             {
-
+                backupEnemies.Add(actor);
+                actor.state = Enemystates.BackUp;
             }
         }
     }

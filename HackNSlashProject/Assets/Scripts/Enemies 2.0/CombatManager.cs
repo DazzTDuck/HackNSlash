@@ -92,6 +92,8 @@ public class CombatManager : MonoBehaviour
         replacementActor.state = Enemystates.Engaged;
         backupEnemies.Add(actor);
         actor.state = Enemystates.BackUp;
+        if (replacementActor.occupySpace < actor.occupySpace)
+            FillFrontLine(actor.occupySpace - replacementActor.occupySpace);
     }
 
     void OverTakePosition()
@@ -101,7 +103,6 @@ public class CombatManager : MonoBehaviour
         {
             if (!VIP)
                 VIP = actor;
-            Debug.Log(0);
             if (ActualPriority(VIP) < ActualPriority(actor))
                 VIP = actor;
         }
@@ -111,7 +112,6 @@ public class CombatManager : MonoBehaviour
         EnemyActor dmy3 = null;
         for (int i = 0; i < engagedEnemies.Count; i++)
         {
-            Debug.Log(1);
             if (!dmy1)
                 dmy1 = engagedEnemies[i];
             else if (ActualPriority(dmy1) > ActualPriority(engagedEnemies[i]))
@@ -121,7 +121,6 @@ public class CombatManager : MonoBehaviour
         {
             for (int i = 0; i < engagedEnemies.Count; i++)
             {
-                Debug.Log(2);
                 if (!dmy2 && dmy1 != engagedEnemies[i])
                     dmy2 = engagedEnemies[i];
                 else if (dmy2 &&ActualPriority(dmy2) > ActualPriority(engagedEnemies[i]) && dmy1 != engagedEnemies[i])
@@ -133,7 +132,6 @@ public class CombatManager : MonoBehaviour
         {
             for (int i = 0; i < engagedEnemies.Count; i++)
             {
-                Debug.Log(3);
                 if (!dmy3 && dmy1 != engagedEnemies[i] && dmy2 != engagedEnemies[i])
                     dmy3 = engagedEnemies[i];
                 else if (dmy3 && ActualPriority(dmy3) > ActualPriority(engagedEnemies[i]) && dmy1 != engagedEnemies[i] && dmy2 != engagedEnemies[i])
@@ -146,6 +144,7 @@ public class CombatManager : MonoBehaviour
                 engagedEnemies.RemoveAt(i);
         }
         backupEnemies.Add(dmy1);
+        dmy1.state = Enemystates.BackUp;
         fillSpace += dmy1.occupySpace;
         if (dmy2)
         {
@@ -156,6 +155,7 @@ public class CombatManager : MonoBehaviour
             }
             backupEnemies.Add(dmy2);
             fillSpace += dmy2.occupySpace;
+            dmy2.state = Enemystates.BackUp;
         }
         if (dmy3)
         {
@@ -165,6 +165,7 @@ public class CombatManager : MonoBehaviour
                     engagedEnemies.RemoveAt(i);
             }
             backupEnemies.Add(dmy3);
+            dmy3.state = Enemystates.BackUp;
             fillSpace += dmy3.occupySpace;
         }
         for (int i = 0; i < backupEnemies.Count; i++)
@@ -172,7 +173,7 @@ public class CombatManager : MonoBehaviour
             if (backupEnemies[i] == VIP)
                 backupEnemies.RemoveAt(i);
         }
-
+        VIP.state = Enemystates.Engaged;
         engagedEnemies.Add(VIP);
         if (fillSpace >0)
         {
@@ -199,7 +200,6 @@ public class CombatManager : MonoBehaviour
                 {
                     VIP = actor;
                 }
-                Debug.Log(4);
                 if (ActualPriority(VIP) < ActualPriority(actor) && actor.occupySpace <= spaceLeft)
                 {
                     VIP = actor;
@@ -209,12 +209,14 @@ public class CombatManager : MonoBehaviour
             if (VIP)
             {
                 spaceLeft -= VIP.occupySpace;
+                VIP.state = Enemystates.Engaged;
                 engagedEnemies.Add(VIP);
                 for (int ii = 0; ii < backupEnemies.Count; ii++)
                 {
                     if (VIP == backupEnemies[ii])
                         backupEnemies.RemoveAt(ii);
                 }
+                VIP = null;
             }
         }
     }

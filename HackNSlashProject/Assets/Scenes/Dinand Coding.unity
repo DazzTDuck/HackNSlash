@@ -616,11 +616,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 0
   state: 0
-  priority: 1
+  priority: 2
   occupySpace: 1
   playerInSight: 0
-  visionRadius: 5
-  visionConeWidth: 45
+  visionRadius: 4
+  visionConeWidth: 20
   layerMask:
     serializedVersion: 2
     m_Bits: 192
@@ -699,7 +699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340602975}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 20, y: 1, z: 0}
+  m_LocalPosition: {x: 20, y: 1, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -760,8 +760,8 @@ MonoBehaviour:
   priority: 1
   occupySpace: 1
   playerInSight: 0
-  visionRadius: 5
-  visionConeWidth: 45
+  visionRadius: 4
+  visionConeWidth: 20
   layerMask:
     serializedVersion: 2
     m_Bits: 192
@@ -998,8 +998,8 @@ MonoBehaviour:
   priority: 1
   occupySpace: 1
   playerInSight: 0
-  visionRadius: 5
-  visionConeWidth: 45
+  visionRadius: 4
+  visionConeWidth: 20
   layerMask:
     serializedVersion: 2
     m_Bits: 192
@@ -1084,7 +1084,7 @@ Transform:
   m_Children:
   - {fileID: 766091183}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &455473134
 GameObject:
@@ -1733,9 +1733,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 983280354}
-  engagedMaxValue: 1
+  engagedMaxValue: 2
   engagedEnemies: []
-  backupMaxValue: 2
+  backupMaxValue: 4
   backupEnemies: []
   rangedEnemies: []
 --- !u!4 &1025255141
@@ -1751,7 +1751,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045798758
 GameObject:
@@ -2602,11 +2602,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 0
   state: 0
-  priority: 1
-  occupySpace: 1
+  priority: 2
+  occupySpace: 2
   playerInSight: 0
-  visionRadius: 5
-  visionConeWidth: 45
+  visionRadius: 4
+  visionConeWidth: 20
   layerMask:
     serializedVersion: 2
     m_Bits: 192
@@ -2685,7 +2685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931796510}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 20, y: 1, z: 0}
+  m_LocalPosition: {x: 20, y: 1, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

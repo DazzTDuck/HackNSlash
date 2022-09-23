@@ -35,7 +35,7 @@ public class EnemyActor : MonoBehaviour
         {
             CombatManager.combatManager.RemoveFromCombat(this);
         }
-        else if (state == Enemystates.Partoling)
+        else if (state == Enemystates.Partoling && (GameObject)sender == gameObject)
         {
             CombatManager.combatManager.EnemyJoinsFight(this);
         }

@@ -136,7 +136,7 @@ MonoBehaviour:
     m_Value: 3
   groundTint:
     m_OverrideState: 1
-    m_Value: {r: 0.26762193, g: 0.39393806, b: 0.5849056, a: 1}
+    m_Value: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
   groundColorTexture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -631,7 +631,7 @@ MonoBehaviour:
     m_Value: 0
   cloudPreset:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 4
   cumulusMap:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -662,7 +662,7 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: -0.15000153
         value: 0
         inSlope: 0
         outSlope: 0
@@ -671,7 +671,7 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.2
+        time: 0.008334354
         value: 1
         inSlope: 0
         outSlope: 0
@@ -680,8 +680,8 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
-        value: 0.7
+        time: 0.4958333
+        value: 0.5633423
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -689,7 +689,7 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.8
+        time: 1.0333374
         value: 1
         inSlope: 0
         outSlope: 0
@@ -698,7 +698,7 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1
+        time: 1.1041565
         value: 0
         inSlope: 0
         outSlope: 0
@@ -799,16 +799,16 @@ MonoBehaviour:
     m_Value: 0.5
   densityMultiplier:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.685
   shapeFactor:
     m_OverrideState: 1
     m_Value: 0.75
   shapeScale:
     m_OverrideState: 1
-    m_Value: 2.5
+    m_Value: 2.3
   shapeOffset:
     m_OverrideState: 1
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 0.04, y: -1.2, z: 0}
   erosionFactor:
     m_OverrideState: 1
     m_Value: 0.5
@@ -830,14 +830,14 @@ MonoBehaviour:
   globalWindSpeed:
     m_OverrideState: 1
     m_Value:
-      mode: 1
-      customValue: 100
+      mode: 0
+      customValue: 0
       additiveValue: 0
       multiplyValue: 1
   orientation:
     m_OverrideState: 1
     m_Value:
-      mode: 1
+      mode: 0
       customValue: 0
       additiveValue: 0
       multiplyValue: 1

@@ -359,7 +359,6 @@ GameObject:
   - component: {fileID: 1418430312772859874}
   - component: {fileID: 1418430312772859877}
   - component: {fileID: 1418430312772859876}
-  - component: {fileID: 597764530}
   m_Layer: 5
   m_Name: PlayerHUD
   m_TagString: Untagged
@@ -449,26 +448,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &597764530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418430312772859879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0714f08bcd8e944ba00a6b39bfd9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reductionSpeed: 0.5
-  reductionDelay: 15
-  fadeInAndOut: 0
-  fadeSpeed: 0
-  canvasGroup: {fileID: 0}
-  mainBar: {fileID: 1418430312775709307}
-  reductionBar: {fileID: 1418430313396612739}
-  damageAmountText: {fileID: 0}
 --- !u!1 &1418430312775709309
 GameObject:
   m_ObjectHideFlags: 0

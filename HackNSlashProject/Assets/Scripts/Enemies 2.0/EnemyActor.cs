@@ -9,6 +9,7 @@ public class EnemyActor : MonoBehaviour
     public Enemystates state;
     public int priority = 1;
     public int occupySpace = 1;
+    public Transform model;
     [Header("Line of sight")]
     public bool playerInSight;
     public float visionRadius;
@@ -18,11 +19,19 @@ public class EnemyActor : MonoBehaviour
     public int hpThreshold;
     public int attackThreshold;
     int currentAttacks;
-    public bool backedOff;
+    bool backedOff;
+    public bool backoff = false;
+
+    ActorPatrolling patrolling;
+    ActorEngaged engaged;
 
     private void Start()
     {
         EventsManager.instance.OnBarUpdateEvent += CheckToBackoff;
+        patrolling = GetComponent<ActorPatrolling>();
+        patrolling.StartPatrolling();
+        engaged = GetComponent<ActorEngaged>();
+        engaged.enabled = false;
     }
     private void OnDestroy()
     {
@@ -39,7 +48,7 @@ public class EnemyActor : MonoBehaviour
         {
             CombatManager.combatManager.EnemyJoinsFight(this);
         }
-        else if (state == Enemystates.Engaged)
+        else if (state == Enemystates.Engaged || state == Enemystates.Attacking)
         {
             bool backingOff = false;
             if ((GameObject)sender == gameObject && !backedOff)
@@ -58,6 +67,7 @@ public class EnemyActor : MonoBehaviour
             if (backingOff)
             {
                 backedOff = true;
+                backoff = true;
             }
         }
     }
@@ -82,8 +92,73 @@ public class EnemyActor : MonoBehaviour
         }
         playerInSight = false;
 
+        //if (state == Enemystates.Engaged || state == Enemystates.Engaged)
+        //    model.LookAt(CombatManager.combatManager.player);
+        //else
+        //    model.LookAt(transform.position + transform.forward);
+    }
+    public void EngagePlayer()
+    {
+        if (state == Enemystates.Partoling)
+        {
+            patrolling.StopAllCoroutines();
+            patrolling.enabled = false;
+        }
+        else if (state == Enemystates.BackUp)
+        {
+
+        }
+        else if (state == Enemystates.Attacking)
+        {
+
+        }
+        state = Enemystates.Engaged;
+        engaged.enabled = true;
+        engaged.Engage();        
+        if (backoff)
+        {
+            GoBackup();
+        }
+    }
+    public void GoBackup()
+    {
+        backoff = false;
+        if (state == Enemystates.Partoling)
+        {
+            patrolling.StopAllCoroutines();
+            patrolling.enabled = false;
+        }
+        else if (state == Enemystates.Engaged)
+        {
+            engaged.Disengage();
+            engaged.enabled = false;
+        }
+        state = Enemystates.BackUp;
+    }
+    public void RangedEngage()
+    {
+
     }
     public void ReturnToPatrol()
+    {
+        if (state == Enemystates.BackUp)
+        {
+
+        }
+        else if (state == Enemystates.Engaged)
+        {
+            engaged.Disengage();
+            engaged.enabled = false;
+        }
+        state = Enemystates.Partoling;
+        patrolling.enabled = true;
+        patrolling.StartPatrolling();
+    }
+    public void MeleeAttack()
+    {
+
+    }
+    public void RangedAttack()
     {
 
     }

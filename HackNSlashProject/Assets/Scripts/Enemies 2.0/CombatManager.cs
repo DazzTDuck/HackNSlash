@@ -12,9 +12,16 @@ public class CombatManager : MonoBehaviour
     public List<EnemyActor> backupEnemies = new List<EnemyActor>();
     public List<EnemyActor> rangedEnemies = new List<EnemyActor>();
 
+    [Header("Attack Timers")]
+    public float minMeleeAttackTimer;
+    public float maxMeleeAttackTimer;
+    public float minRangedAttackTimer;
+    public float maxRangedAttackTimer;
+
     private void Awake()
     {
         combatManager = this;
+
     }
 
     public void EnemyJoinsFight(EnemyActor actor)
@@ -22,7 +29,7 @@ public class CombatManager : MonoBehaviour
         if (actor.enemyType == EnemyType.Ranged)
         {
             rangedEnemies.Add(actor);
-            actor.state = Enemystates.Engaged;
+            actor.RangedEngage();
         }
         else
         {
@@ -39,12 +46,12 @@ public class CombatManager : MonoBehaviour
             if (currentEngagedEnemies + actor.occupySpace <= engagedMaxValue)
             {
                 engagedEnemies.Add(actor);
-                actor.state = Enemystates.Engaged;
+                actor.EngagePlayer();
             }
             else if (currentBackupEnemies + actor.occupySpace <= backupMaxValue)
             {
                 backupEnemies.Add(actor);
-                actor.state = Enemystates.BackUp;
+                actor.GoBackup();
                 if (actor.priority > 1)
                     OverTakePosition();
             }
@@ -55,20 +62,12 @@ public class CombatManager : MonoBehaviour
     {
         if (backupEnemies.Count != 0)
         {
-            int p = actor.priority;
+            
             int s = actor.occupySpace;
 
             for (int i = 0; i < backupEnemies.Count; i++)
             {
-                if (backupEnemies[i].occupySpace <= s && backupEnemies[i].priority <= p && !backupEnemies[i].backedOff)
-                {
-                    FallingBack(actor, i);
-                    return true;
-                }
-            }
-            for (int i = 0; i < backupEnemies.Count; i++)
-            {
-                if (backupEnemies[i].occupySpace <= s && backupEnemies[i].priority <= p)
+                if (backupEnemies[i].occupySpace <= s && ActualPriority(backupEnemies[i]) > ActualPriority(actor))
                 {
                     FallingBack(actor, i);
                     return true;
@@ -89,9 +88,9 @@ public class CombatManager : MonoBehaviour
             }
         }
         engagedEnemies.Add(replacementActor);
-        replacementActor.state = Enemystates.Engaged;
+        replacementActor.EngagePlayer();
         backupEnemies.Add(actor);
-        actor.state = Enemystates.BackUp;
+        actor.GoBackup();
         if (replacementActor.occupySpace < actor.occupySpace)
             FillFrontLine(actor.occupySpace - replacementActor.occupySpace);
     }
@@ -144,7 +143,7 @@ public class CombatManager : MonoBehaviour
                 engagedEnemies.RemoveAt(i);
         }
         backupEnemies.Add(dmy1);
-        dmy1.state = Enemystates.BackUp;
+        dmy1.GoBackup();
         fillSpace += dmy1.occupySpace;
         if (dmy2)
         {
@@ -155,7 +154,7 @@ public class CombatManager : MonoBehaviour
             }
             backupEnemies.Add(dmy2);
             fillSpace += dmy2.occupySpace;
-            dmy2.state = Enemystates.BackUp;
+            dmy2.GoBackup();
         }
         if (dmy3)
         {
@@ -165,7 +164,7 @@ public class CombatManager : MonoBehaviour
                     engagedEnemies.RemoveAt(i);
             }
             backupEnemies.Add(dmy3);
-            dmy3.state = Enemystates.BackUp;
+            dmy3.GoBackup();
             fillSpace += dmy3.occupySpace;
         }
         for (int i = 0; i < backupEnemies.Count; i++)
@@ -173,7 +172,7 @@ public class CombatManager : MonoBehaviour
             if (backupEnemies[i] == VIP)
                 backupEnemies.RemoveAt(i);
         }
-        VIP.state = Enemystates.Engaged;
+        VIP.EngagePlayer();
         engagedEnemies.Add(VIP);
         if (fillSpace >0)
         {
@@ -209,7 +208,7 @@ public class CombatManager : MonoBehaviour
             if (VIP)
             {
                 spaceLeft -= VIP.occupySpace;
-                VIP.state = Enemystates.Engaged;
+                VIP.EngagePlayer();
                 engagedEnemies.Add(VIP);
                 for (int ii = 0; ii < backupEnemies.Count; ii++)
                 {
@@ -271,7 +270,14 @@ public class CombatManager : MonoBehaviour
                     backupEnemies.RemoveAt(i);
             }
         }
+        if (actor.GetComponent<CharacterHealth>().currentHP != 0)
+            actor.ReturnToPatrol();
     }
+
+    //IEnumerator MeleeAttackTimer()
+    //{
+    //    while 
+    //}
 }
 
 public enum Enemystates

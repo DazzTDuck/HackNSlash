@@ -33,10 +33,10 @@ public class ActorEngaged : MonoBehaviour
         {
             int i = Random.Range(0, validPoints.Count);
             engagementPoint = validPoints[i];
-            timeToMove = Random.Range(5, 7);
+            timeToMove = 5;
         }
         else
-            timeToMove = Random.Range(3, 5);
+            timeToMove = 1;
     }
 
     private void FixedUpdate()

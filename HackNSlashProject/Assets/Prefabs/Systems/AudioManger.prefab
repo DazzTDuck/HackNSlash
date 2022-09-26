@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8825515784804275685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8825515784804275683}
+  - component: {fileID: 8825515784804275684}
+  - component: {fileID: 8825515784804275682}
+  m_Layer: 0
+  m_Name: AudioManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8825515784804275683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825515784804275685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8825515784804275684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825515784804275685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0979f4b0deab4e242b6e262881ca0d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: PlayerWalking
+    clips:
+    - {fileID: 8300000, guid: e119777e577e4d24c9f0cdde4dd74c80, type: 3}
+    - {fileID: 8300000, guid: 5a5be17d9522c554bae77f01aa462c25, type: 3}
+    - {fileID: 8300000, guid: 5912349f777e40a488223ce4571ce837, type: 3}
+    - {fileID: 8300000, guid: 41df3b53bd605ba499739edd61e36ddf, type: 3}
+    - {fileID: 8300000, guid: 2469366c9cb9c7145b9bf26be07e2999, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    playOnStart: 0
+    playRandomClip: 1
+    source: {fileID: 0}
+  - name: PlayerWalking
+    clips:
+    - {fileID: 8300000, guid: 7b285de773447fe4a9b6ade21405e8a0, type: 3}
+    - {fileID: 8300000, guid: 9f1a27890ac865f468a846e463d63762, type: 3}
+    - {fileID: 8300000, guid: 53cfca385edaada4fa3a1c7abc270d33, type: 3}
+    - {fileID: 8300000, guid: edc335e4b2795ca449d350f6806521f9, type: 3}
+    - {fileID: 8300000, guid: 5f2b0d373e1396e44bf1b73c3083a474, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    playOnStart: 0
+    playRandomClip: 1
+    source: {fileID: 0}
+--- !u!114 &8825515784804275682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825515784804275685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8261e6f2e5fac44da64da2b23939e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorDefault: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  colorSelected: {r: 0.25, g: 0.65, b: 0.8, a: 1}

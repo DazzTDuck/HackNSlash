@@ -29,9 +29,14 @@ public class ActorEngaged : MonoBehaviour
             if (!point.occupied && Vector3.Distance(transform.position, point.transform.position) < 5)
                 validPoints.Add(point);
         }
-        int i = Random.Range(0, validPoints.Count);
-        engagementPoint = validPoints[i];
-        timeToMove = 5;
+        if (validPoints.Count > 0)
+        {
+            int i = Random.Range(0, validPoints.Count);
+            engagementPoint = validPoints[i];
+            timeToMove = Random.Range(5, 7);
+        }
+        else
+            timeToMove = Random.Range(3, 5);
     }
 
     private void FixedUpdate()
@@ -41,7 +46,7 @@ public class ActorEngaged : MonoBehaviour
         else
             Engage();
 
-        if (timeToMove > 0 && Vector3.Distance(transform.position, agent.destination) < 2f)
+        if (timeToMove > 0)
             timeToMove -= Time.fixedDeltaTime;
         else if (timeToMove <= 0)
             Flank();

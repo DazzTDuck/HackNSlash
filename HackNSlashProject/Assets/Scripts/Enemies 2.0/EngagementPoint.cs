@@ -8,11 +8,13 @@ public class EngagementPoint : MonoBehaviour
     public float occupiedRad;
     public LayerMask enemyLayer;
     public LayerMask wallLayer;
+    public Transform rayOrigin;
 
     private void FixedUpdate()
     {
         Collider[] enemies = Physics.OverlapSphere(transform.position, occupiedRad, enemyLayer);
-        if (enemies.Length > 0)
+        Physics.Raycast(rayOrigin.position, rayOrigin.forward, out RaycastHit hit, Vector3.Distance(transform.position, rayOrigin.position), wallLayer);
+        if (enemies.Length > 0 || hit.collider)
             occupied = true;
         else 
             occupied = false;

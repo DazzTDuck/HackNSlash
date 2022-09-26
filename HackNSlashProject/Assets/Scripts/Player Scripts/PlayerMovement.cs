@@ -19,12 +19,15 @@ public class PlayerMovement : MonoBehaviour
     public float animationSmoothing = 1;
     public Transform cam;
     public Vector3 camRot;
-    Vector2 moveAnim;
+    Vector3 moveAnim;
     Vector3 moveDir;
     public Transform lookDir;
     public float camFollowSpeed;
 
     public float maxSpeed;
+
+    public bool lockedOn;
+    public Transform lockonTarget;
 
     private void Start()
     {
@@ -48,14 +51,39 @@ public class PlayerMovement : MonoBehaviour
         lookVector = callbackContext.ReadValue<Vector2>();
         useController = true;
     }
+    public void OnLockOn(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.started)
+        {
+            if (lockedOn)
+                lockedOn = false;
+            else
+                lockedOn = true;
+        }
+    }
+    public void OnLockonSwitch(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.started && lockedOn && CombatManager.combatManager.engagedEnemies.Count > 0)
+        {
+            for (int i = 0; i < CombatManager.combatManager.engagedEnemies.Count; i++)
+            {
+                if (lockonTarget != CombatManager.combatManager.engagedEnemies[i].transform)
+                {
+                    lockonTarget = CombatManager.combatManager.engagedEnemies[i].transform;
+                    break;
+                }
+            }
+        }
+    }
 
     private void FixedUpdate()
     {
         rb.AddRelativeForce(0, 0, moveVector.magnitude * moveSpeed, ForceMode.Acceleration);
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 
+        
+
         float rotSpeed = useController ? rotSpeedController : rotSpeedMouse;
-        //transform.Rotate(0, lookVector.x * rotSpeed, 0);
         camRot.x -= lookVector.y * rotSpeed;
         camRot.x = Mathf.Clamp(camRot.x, minCamAngle, maxCamAngle);
         camRot.z = 0;
@@ -65,8 +93,8 @@ public class PlayerMovement : MonoBehaviour
         else if (camRot.y < -180)
             camRot.y += 360;
 
-        moveAnim = Vector2.Lerp(moveAnim, moveVector, Time.fixedDeltaTime * animationSmoothing);
-        animator.SetFloat("Blend", moveAnim.magnitude);
+        moveAnim = Vector3.Lerp(moveAnim, rb.velocity, Time.fixedDeltaTime * animationSmoothing);
+        animator.SetFloat("Blend", moveAnim.magnitude / maxSpeed);
 
         Vector3 camAngle = cam.forward;
         lookDir.LookAt(lookDir.position + new Vector3(camAngle.x, 0, camAngle.z));
@@ -77,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
             camAngle.y = 0;
             moveDir = Vector3.Lerp(moveDir, lookDir.TransformDirection(new Vector3(moveVector.x, 0, moveVector.y)), Time.fixedDeltaTime * playerRotSpeed);
 
-            if (lookVector.magnitude == 0 && Vector3.Dot(transform.forward, lookDir.forward) > -0.7f)
+            if (lookVector.magnitude == 0 && Vector3.Dot(transform.forward, lookDir.forward) > -0.7f && !(lockedOn && lockonTarget))
             {
                 if (transform.eulerAngles.y - camRot.y < 180 && transform.eulerAngles.y - camRot.y > -180)
                     camRot = Vector3.Lerp(camRot, transform.eulerAngles + new Vector3(camRot.x, 0, 0), Time.fixedDeltaTime * camFollowSpeed);

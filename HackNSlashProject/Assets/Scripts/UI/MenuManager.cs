@@ -5,16 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    private void OpenSettings()
-    {
-        
-    }
-
+    public float loadingDelay = 2f;
     public void LoadScene(int i)
     {
-        StartCoroutine(SceneLoader(i, 2f));
+        StartCoroutine(SceneLoader(i, loadingDelay));
         //activate black screen
-        StartCoroutine(LoadingScreenManager.instance.StartLoadingSequence(2f));
+        LoadingScreenManager.instance.StartLoadingSequence(loadingDelay);
     }
 
     private IEnumerator SceneLoader(int i, float delay)

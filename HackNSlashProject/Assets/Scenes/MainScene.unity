@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 577.9131, g: 548.2119, b: 581.1221, a: 1}
+  m_IndirectSpecularColor: {r: 589.9717, g: 575.93555, b: 675.4453, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10320,6 +10320,7 @@ Transform:
   - {fileID: 182560855}
   - {fileID: 58031794}
   - {fileID: 1778707678}
+  - {fileID: 1861009936}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12008,6 +12009,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5057585777415198274, guid: 48bcb505c3a11d24da10bc5edc4e538e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057585777425948972, guid: 48bcb505c3a11d24da10bc5edc4e538e,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -31969,8 +31975,8 @@ MonoBehaviour:
   - {fileID: 1614023191}
   prefabStage: {fileID: 0}
   quickEditingComponent: {fileID: 1953079680}
-  dataPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets
-  workPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
+  dataPath: D:/Medieval HackN Slash/HackNSlash/HackNSlashProject/Assets
+  workPath: D:/Medieval HackN Slash/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
     Light Probes
   workPathFound: 1
   localFinishedPositions:
@@ -37648,7 +37654,7 @@ MonoBehaviour:
   - {x: -5.7373295, y: 2.182423, z: -38.753883}
   - {x: -5.2373295, y: 4.182423, z: -39.253883}
   - {x: -4.2373295, y: 1.1824231, z: -39.253883}
-  assetEditorPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
+  assetEditorPath: D:/Medieval HackN Slash/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
     Light Probes/Editor/
   parentVolume: {fileID: 0}
   localOperationalDataLost: 1
@@ -58656,8 +58662,8 @@ MonoBehaviour:
   - {fileID: 1614023191}
   prefabStage: {fileID: 0}
   quickEditingComponent: {fileID: 558725902}
-  dataPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets
-  workPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
+  dataPath: D:/Medieval HackN Slash/HackNSlash/HackNSlashProject/Assets
+  workPath: D:/Medieval HackN Slash/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
     Light Probes
   workPathFound: 1
   localFinishedPositions:
@@ -61544,7 +61550,7 @@ MonoBehaviour:
   - {x: -8.383341, y: 2.7617197, z: -7.255246}
   - {x: -7.3833404, y: 2.7617197, z: -9.755246}
   - {x: -10.550024, y: 0.2617197, z: -6.255246}
-  assetEditorPath: F:/Data/GithubGroupProjects/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
+  assetEditorPath: D:/Medieval HackN Slash/HackNSlash/HackNSlashProject/Assets\AssetStore\Magic
     Light Probes/Editor/
   parentVolume: {fileID: 0}
   localOperationalDataLost: 1
@@ -72595,6 +72601,81 @@ LightProbeGroup:
   - {x: -7.3833404, y: 2.7617197, z: -9.755246}
   - {x: -10.550024, y: 0.2617197, z: -6.255246}
   m_Dering: 1
+--- !u!1001 &1861009935
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 380162382}
+    m_Modifications:
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.22238147
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834086780895902467, guid: 5697957c4a82616448fdc15a40b86637,
+        type: 3}
+      propertyPath: m_Name
+      value: Gallows + Bodies
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5697957c4a82616448fdc15a40b86637, type: 3}
+--- !u!4 &1861009936 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1834086780895902466, guid: 5697957c4a82616448fdc15a40b86637,
+    type: 3}
+  m_PrefabInstance: {fileID: 1861009935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1864553910 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5961277071874836974, guid: d7e786576c418044ebb7581952880f6c,

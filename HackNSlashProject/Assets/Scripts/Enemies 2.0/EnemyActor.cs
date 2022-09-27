@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyActor : MonoBehaviour
 {
@@ -21,22 +22,35 @@ public class EnemyActor : MonoBehaviour
     int currentAttacks;
     bool backedOff;
     public bool backoff = false;
+    [Header("Attacking")]
+    public float minAttackTime;
+    public float maxAttackTime;
+    public int attackDamage;
+    public float attackDuration;
+    public float attackRange;
+    float attackTiming;
+
+    NavMeshAgent agent;
 
     ActorPatrolling patrolling;
     ActorEngaged engaged;
+    ActorAttacking attacking;
 
     private void Start()
     {
         EventsManager.instance.OnBarUpdateEvent += CheckToBackoff;
+        agent = GetComponent<NavMeshAgent>();
         patrolling = GetComponent<ActorPatrolling>();
         patrolling.StartPatrolling();
         engaged = GetComponent<ActorEngaged>();
         engaged.enabled = false;
+        attacking = GetComponent<ActorAttacking>();
+        attacking.enabled = false;
     }
     private void OnDestroy()
     {
-        EventsManager.instance.OnBarUpdateEvent -= CheckToBackoff;
         CombatManager.combatManager.RemoveFromCombat(this);
+        EventsManager.instance.OnBarUpdateEvent -= CheckToBackoff;
     }
     void CheckToBackoff(object sender = null, OnBarArgs e = null)
     {
@@ -74,6 +88,21 @@ public class EnemyActor : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (state == Enemystates.Engaged || state == Enemystates.BackUp)
+        {
+            agent.updateRotation = false;
+            transform.LookAt(CombatManager.combatManager.player);
+        }
+        else
+            agent.updateRotation = true;
+
+        if (attackTiming > 0 && Vector3.Distance(transform.position, agent.destination) < 2 && state == Enemystates.Engaged)
+            attackTiming -= Time.fixedDeltaTime;
+        else if (attackTiming <= 0 && state == Enemystates.Engaged)
+        {
+            Attack();
+        }
+
         if (Vector3.Distance(transform.position, CombatManager.combatManager.player.position) < visionRadius && Vector3.Dot(transform.forward, CombatManager.combatManager.player.position - transform.position) > (1 - (visionConeWidth / 180f)))
         {
             Vector3 dir = CombatManager.combatManager.player.position - transform.position;
@@ -91,11 +120,6 @@ public class EnemyActor : MonoBehaviour
 
         }
         playerInSight = false;
-
-        //if (state == Enemystates.Engaged || state == Enemystates.Engaged)
-        //    model.LookAt(CombatManager.combatManager.player);
-        //else
-        //    model.LookAt(transform.position + transform.forward);
     }
     public void EngagePlayer()
     {
@@ -110,11 +134,14 @@ public class EnemyActor : MonoBehaviour
         }
         else if (state == Enemystates.Attacking)
         {
-
+            attacking.enabled = false;
+            currentAttacks++;
+            CheckToBackoff();
         }
+        attackTiming = Random.Range(minAttackTime, maxAttackTime);
         state = Enemystates.Engaged;
         engaged.enabled = true;
-        engaged.Engage();        
+        engaged.Engage();
         if (backoff)
         {
             GoBackup();
@@ -154,13 +181,20 @@ public class EnemyActor : MonoBehaviour
         patrolling.enabled = true;
         patrolling.StartPatrolling();
     }
-    public void MeleeAttack()
+    public void Attack()
     {
+        if (enemyType == EnemyType.Ranged)
+        {
 
-    }
-    public void RangedAttack()
-    {
-
+        }
+        else
+        {
+            engaged.StopAllCoroutines();
+            engaged.enabled = false;
+        }
+        state = Enemystates.Attacking;
+        attacking.enabled = true;
+        attacking.Attack(this, attackDamage, attackRange, attackDuration);
     }
 }
 

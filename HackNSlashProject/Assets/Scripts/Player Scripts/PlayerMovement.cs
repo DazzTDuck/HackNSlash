@@ -29,12 +29,21 @@ public class PlayerMovement : MonoBehaviour
     public bool lockedOn;
     public Transform lockonTarget;
 
+    public bool canAct = true;
+    PlayerSwordAttack swordAttack;
+    PlayerHolyWater holyWater;
+    public HolyPower holyPower;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         moveDir = transform.forward;
+        swordAttack = GetComponentInChildren<PlayerSwordAttack>();
+        holyWater = GetComponentInChildren<PlayerHolyWater>();
+        holyPower = GetComponentInChildren<HolyPower>();
+        canAct = true;
     }
 
     public void OnMove(InputAction.CallbackContext callbackContext)
@@ -74,6 +83,17 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void OnAttack(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.started)
+            swordAttack.Attack(this);
+    }
+    public void OnHolyWater(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.started)
+            holyWater.UseHolyWater(this);
     }
 
     private void FixedUpdate()

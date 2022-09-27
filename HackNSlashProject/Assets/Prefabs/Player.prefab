@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 4107335096402957422}
   - component: {fileID: 4107335096402957393}
   - component: {fileID: 1411503222}
+  - component: {fileID: 5178249521022387282}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -280,6 +281,10 @@ MonoBehaviour:
   lookDir: {fileID: 4107335095819662250}
   camFollowSpeed: 0.5
   maxSpeed: 7
+  lockedOn: 0
+  lockonTarget: {fileID: 0}
+  canAct: 1
+  holyPower: {fileID: 0}
 --- !u!114 &4107335096402957422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,8 +345,8 @@ MonoBehaviour:
     m_ActionName: Main/Look[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4107335097170368959}
-        m_TargetAssemblyTypeName: PlayerSwordAttack, Assembly-CSharp
+      - m_Target: {fileID: 4107335096402957423}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnAttack
         m_Mode: 0
         m_Arguments:
@@ -370,6 +375,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9a8ad8ac-b05e-40aa-96d5-74f34e852e24
     m_ActionName: Main/Look(controller)
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4107335096402957423}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnLockOn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 355276d3-d887-4a25-be8b-c9c23e1f4fba
+    m_ActionName: Main/LockOn[/XInputControllerWindows/leftStickPress,/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4107335096402957423}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnLockonSwitch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 80502b70-16ed-46f9-b2d2-03a23b77c784
+    m_ActionName: Main/SwitchLockOn[/Keyboard/e,/XInputControllerWindows/rightStickPress]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4107335096402957423}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnHolyWater
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d9c4aecc-7b1b-4a4d-9d95-1ea6499c8fdf
+    m_ActionName: Main/Holy Water[/Keyboard/1]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -410,6 +463,30 @@ MonoBehaviour:
   mainBar: {fileID: 0}
   reductionBar: {fileID: 0}
   damageAmountText: {fileID: 0}
+--- !u!114 &5178249521022387282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107335096402957417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb3cffe82b0904449a01cef1684b76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.7
+  knockBack: 10
+  duration: 7
+  MaxUses: 3
+  remainingUses: 3
+  radius: 5
+  enemylayer:
+    serializedVersion: 2
+    m_Bits: 256
+  animator: {fileID: 0}
+  powerConsumption: 0
+  qTime: 0.3
 --- !u!1 &4107335096541107373
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +655,6 @@ MonoBehaviour:
   qTime: 0.3
   damage: 4
   animator: {fileID: 4107335096541107347}
-  holyPower: {fileID: 0}
   powerConsumption: 7
 --- !u!1001 &4107335095819192748
 PrefabInstance:

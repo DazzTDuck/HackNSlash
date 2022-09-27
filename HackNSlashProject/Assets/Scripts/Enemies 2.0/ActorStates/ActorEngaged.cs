@@ -8,6 +8,7 @@ public class ActorEngaged : MonoBehaviour
     EngagementPoint engagementPoint;
     NavMeshAgent agent;
     float timeToMove;
+
     public void Engage()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -17,7 +18,7 @@ public class ActorEngaged : MonoBehaviour
             if (!point.occupied && (!engagementPoint || Vector3.Distance(transform.position, point.transform.position) < Vector3.Distance(transform.position, engagementPoint.transform.position)))
                 engagementPoint = point;
         }
-        timeToMove = 5;
+        timeToMove = Random.Range(4, 6);
     }
 
     void Flank()
@@ -33,7 +34,7 @@ public class ActorEngaged : MonoBehaviour
         {
             int i = Random.Range(0, validPoints.Count);
             engagementPoint = validPoints[i];
-            timeToMove = 5;
+            timeToMove = Random.Range(4, 6);
         }
         else
             timeToMove = 1;

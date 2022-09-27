@@ -274,10 +274,6 @@ public class CombatManager : MonoBehaviour
             actor.ReturnToPatrol();
     }
 
-    //IEnumerator MeleeAttackTimer()
-    //{
-    //    while 
-    //}
 }
 
 public enum Enemystates

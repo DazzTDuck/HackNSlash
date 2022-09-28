@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 367836682786383989}
   - component: {fileID: 3653837765958182864}
   - component: {fileID: 1536287533192237850}
-  - component: {fileID: -116419978544058945}
+  - component: {fileID: 2283479663388962510}
   m_Layer: 0
   m_Name: Wood Fence Broken Bloody
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-116419978544058945
-MeshCollider:
+--- !u!65 &2283479663388962510
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8077629322580143808, guid: c10361405f459e849926f0269bbc9e02, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.7486773, y: 1.2015395, z: 0.9710491}
+  m_Center: {x: -0.0033519864, y: 0.5992384, z: -0.4083907}

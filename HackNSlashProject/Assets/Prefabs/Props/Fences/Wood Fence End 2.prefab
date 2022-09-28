@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2884084005800963586}
   - component: {fileID: 2281504813234119079}
   - component: {fileID: 4057039318051001709}
-  - component: {fileID: -4414335598710064305}
+  - component: {fileID: 7360840350943980108}
   m_Layer: 0
   m_Name: Wood Fence End 2
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-4414335598710064305
-MeshCollider:
+--- !u!65 &7360840350943980108
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5576257679592598601, guid: 98cc0016dd224c94492a3e37751d2fcf, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.6049957, y: 1.2, z: 0.15828836}
+  m_Center: {x: -0.06848884, y: 0.5999999, z: 0.0020098947}

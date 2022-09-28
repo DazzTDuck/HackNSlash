@@ -120,9 +120,9 @@ public class HealthbarHandler : MonoBehaviour
         }
     }
 
-    private static double GetPercentage01(int input, int min, int max)
+    public static double GetPercentage01(float input, float min, float max)
     {
-        double value = (float)(input - min) / (max - min);
+        double value = (input - min) / (max - min);
         //rounds off to 3 digits
         return Math.Round(value, 3); 
     }

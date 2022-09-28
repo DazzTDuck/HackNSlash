@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 590.0996, g: 576.1455, b: 675.81445, a: 1}
+  m_IndirectSpecularColor: {r: 455.6905, g: 406.24, b: 374.69464, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12968,7 +12968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &481932170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17573,7 +17573,7 @@ PrefabInstance:
     - target: {fileID: 1745263267334663013, guid: 134e50eaca9a80d40bdacb327ab0c715,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1745263267334663013, guid: 134e50eaca9a80d40bdacb327ab0c715,
         type: 3}
@@ -31976,7 +31976,6 @@ MonoBehaviour:
   combinedVolumeComponent: {fileID: 357565702}
   allVolumes:
   - {fileID: 1103289838}
-  - {fileID: 1614023191}
   - {fileID: 1614023191}
   prefabStage: {fileID: 0}
   quickEditingComponent: {fileID: 1953079680}
@@ -52868,7 +52867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1488454772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58665,6 +58664,7 @@ MonoBehaviour:
   allVolumes:
   - {fileID: 1103289838}
   - {fileID: 1614023191}
+  - {fileID: 1103289838}
   prefabStage: {fileID: 0}
   quickEditingComponent: {fileID: 558725902}
   dataPath: D:/Medieval HackN Slash/HackNSlash/HackNSlashProject/Assets
@@ -82775,7 +82775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2049914470
 Transform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4355708975782378462}
   - component: {fileID: 854924893059429499}
   - component: {fileID: 3186783685972246705}
+  - component: {fileID: 3183880945652879484}
   m_Layer: 0
   m_Name: Spike Barricade
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3183880945652879484
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979289334289097060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4345013422601838305, guid: d4d2206c84816f040aa5cb04b7347773, type: 3}

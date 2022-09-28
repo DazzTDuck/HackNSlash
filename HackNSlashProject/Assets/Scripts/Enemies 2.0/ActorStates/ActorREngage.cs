@@ -13,7 +13,7 @@ public class ActorREngage : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         actor = GetComponent<EnemyActor>();
     }
-    void Update()
+    void FixedUpdate()
     {
         Vector3 dir = transform.position - CombatManager.combatManager.player.position;
         float dst = actor.attackRange;

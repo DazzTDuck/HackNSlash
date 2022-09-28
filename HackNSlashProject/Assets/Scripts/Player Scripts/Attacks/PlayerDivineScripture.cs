@@ -2,31 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHolyWater : MonoBehaviour
+public class PlayerDivineScripture : MonoBehaviour
 {
-    public float delay;
-    public float lockoutAfter;
     public float knockBack;
     public float duration;
-    public int MaxUses;
-    public int remainingUses;
-    public int radius;
-    public LayerMask enemylayer;
-    public Animator animator;
-    PlayerMovement player;
-    public int powerConsumption;
+    public float delay;
+    public float lockoutAfter;
+    public LayerMask enemyLayer;
+    public float radius;
+    public float angle;
 
     public float qTime;
+    public Animator animator;
     bool attackQ;
+    public int powerConsumption;
+    PlayerMovement player;
 
-    private void Start()
-    {
-        remainingUses = MaxUses;
-    }
-    public void UseHolyWater(PlayerMovement player_)
+
+    public void ReadScripture(PlayerMovement player_)
     {
         player = player_;
-        if (remainingUses > 0 && !attackQ)
+        if (!attackQ)
             StartCoroutine(AttackQueue());
     }
     IEnumerator AttackQueue()
@@ -37,24 +33,25 @@ public class PlayerHolyWater : MonoBehaviour
             if (player.canAct && player.holyPower.currentHolyPower >= powerConsumption)
             {
                 player.holyPower.UseHolyPower(powerConsumption);
-                StartCoroutine(HolyWaterSplash());
+                StartCoroutine(Begone());
                 break;
             }
             yield return new WaitForFixedUpdate();
         }
         attackQ = false;
     }
-    IEnumerator HolyWaterSplash()
+
+    IEnumerator Begone()
     {
         player.canAct = false;
         //animator.SetTrigger();
         yield return new WaitForSeconds(delay);
-        Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemylayer);
+        Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemyLayer);
         foreach (Collider enemyColider in enemies)
         {
-            enemyColider.GetComponent<ActorStunned>()?.GetStunned(duration, knockBack, transform);
+            if (Vector3.Dot(transform.forward, enemyColider.transform.position - transform.position) > (1 - (angle / 180f)))
+                enemyColider.GetComponent<ActorStunned>()?.GetStunned(duration, knockBack, transform);
         }
-        remainingUses--;
         yield return new WaitForSeconds(lockoutAfter);
         player.canAct = true;
     }

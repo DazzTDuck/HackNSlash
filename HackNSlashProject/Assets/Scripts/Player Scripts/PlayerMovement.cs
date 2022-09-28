@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canAct = true;
     PlayerSwordAttack swordAttack;
     PlayerHolyWater holyWater;
+    PlayerDivineScripture divineScripture;
     public HolyPower holyPower;
 
     private void Start()
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         swordAttack = GetComponentInChildren<PlayerSwordAttack>();
         holyWater = GetComponentInChildren<PlayerHolyWater>();
         holyPower = GetComponentInChildren<HolyPower>();
+        divineScripture = GetComponent<PlayerDivineScripture>();
         canAct = true;
     }
 
@@ -95,11 +97,19 @@ public class PlayerMovement : MonoBehaviour
         if (callbackContext.started)
             holyWater.UseHolyWater(this);
     }
+    public void OnDivineScripture(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.started)
+            divineScripture.ReadScripture(this);
+    }
 
     private void FixedUpdate()
     {
-        rb.AddRelativeForce(0, 0, moveVector.magnitude * moveSpeed, ForceMode.Acceleration);
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        if (canAct)
+        {
+            rb.AddRelativeForce(0, 0, moveVector.magnitude * moveSpeed, ForceMode.Acceleration);
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        }
 
         
 
@@ -119,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 camAngle = cam.forward;
         lookDir.LookAt(lookDir.position + new Vector3(camAngle.x, 0, camAngle.z));
 
-        if (moveVector.magnitude > 0)
+        if (moveVector.magnitude > 0 && canAct)
         {
             //camAngle = camAngle.normalized;
             camAngle.y = 0;

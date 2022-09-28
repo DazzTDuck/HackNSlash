@@ -34,6 +34,7 @@ public class EnemyActor : MonoBehaviour
 
     ActorPatrolling patrolling;
     ActorEngaged engaged;
+    ActorREngage rangeEngage;
     ActorAttacking attacking;
 
     private void Start()
@@ -42,8 +43,16 @@ public class EnemyActor : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         patrolling = GetComponent<ActorPatrolling>();
         patrolling.StartPatrolling();
-        engaged = GetComponent<ActorEngaged>();
-        engaged.enabled = false;
+        if (enemyType == EnemyType.Ranged)
+        {
+            rangeEngage = GetComponent<ActorREngage>();
+            rangeEngage.enabled = false;
+        }
+        else
+        {
+            engaged = GetComponent<ActorEngaged>();
+            engaged.enabled = false;
+        }
         attacking = GetComponent<ActorAttacking>();
         attacking.enabled = false;
     }
@@ -164,7 +173,16 @@ public class EnemyActor : MonoBehaviour
     }
     public void RangedEngage()
     {
-
+        if (state == Enemystates.Partoling)
+        {
+            patrolling.StopAllCoroutines();
+            patrolling.enabled = false;
+        }
+        else if (state == Enemystates.Attacking)
+            attacking.enabled = false;
+        state = Enemystates.Engaged;
+        rangeEngage.enabled = true;
+        attackTiming = Random.Range(minAttackTime, maxAttackTime);
     }
     public void ReturnToPatrol()
     {
@@ -172,10 +190,14 @@ public class EnemyActor : MonoBehaviour
         {
 
         }
-        else if (state == Enemystates.Engaged)
+        else if (state == Enemystates.Engaged && enemyType != EnemyType.Ranged)
         {
             engaged.Disengage();
             engaged.enabled = false;
+        }
+        else if (state == Enemystates.Engaged && enemyType == EnemyType.Ranged)
+        {
+            rangeEngage.enabled = false;
         }
         state = Enemystates.Partoling;
         patrolling.enabled = true;
@@ -185,7 +207,7 @@ public class EnemyActor : MonoBehaviour
     {
         if (enemyType == EnemyType.Ranged)
         {
-
+            rangeEngage.enabled = false;
         }
         else
         {

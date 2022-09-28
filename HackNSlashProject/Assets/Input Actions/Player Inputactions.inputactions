@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Divine Scripture",
+                    "type": "Button",
+                    "id": "123198c3-c6e5-4287-b312-2f63eda2a3f9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -227,7 +236,7 @@
                 {
                     "name": "",
                     "id": "b90ad79f-e62b-46c5-836c-f21fd882a5c8",
-                    "path": "<Keyboard>/1",
+                    "path": "<Keyboard>/t",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -243,6 +252,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Holy Water",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "599cb38b-8bd9-46e3-9990-98c100080495",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Divine Scripture",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0b330c2-7938-4a7e-a92f-f9dd4bfc5395",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Divine Scripture",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

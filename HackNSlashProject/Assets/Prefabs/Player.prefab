@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 4107335096402957393}
   - component: {fileID: 1411503222}
   - component: {fileID: 5178249521022387282}
+  - component: {fileID: 1999507315301634516}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -423,6 +424,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d9c4aecc-7b1b-4a4d-9d95-1ea6499c8fdf
     m_ActionName: Main/Holy Water[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4107335096402957423}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnDivineScripture
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 123198c3-c6e5-4287-b312-2f63eda2a3f9
+    m_ActionName: Main/Divine Scripture[/Mouse/rightButton,/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -476,7 +493,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.7
-  knockBack: 10
+  lockoutAfter: 0.1
+  knockBack: 5
   duration: 7
   MaxUses: 3
   remainingUses: 3
@@ -487,6 +505,30 @@ MonoBehaviour:
   animator: {fileID: 0}
   powerConsumption: 0
   qTime: 0.3
+--- !u!114 &1999507315301634516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107335096402957417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fe5bc7be3ebff43b3d5f261d3334de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBack: 10
+  duration: 2
+  delay: 0.6
+  lockoutAfter: 0.3
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  radius: 7
+  angle: 100
+  qTime: 0.3
+  animator: {fileID: 0}
+  powerConsumption: 60
 --- !u!1 &4107335096541107373
 GameObject:
   m_ObjectHideFlags: 0

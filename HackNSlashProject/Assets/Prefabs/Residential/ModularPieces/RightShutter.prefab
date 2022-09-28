@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9078720836184591800}
   - component: {fileID: 5355276844154700317}
   - component: {fileID: 7905282597677676247}
+  - component: {fileID: -7820323318506364473}
   m_Layer: 0
   m_Name: RightShutter
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-7820323318506364473
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8553963877116155650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1788355270870501120, guid: db79b58c05bdfb74ca27d4ea563f33e6, type: 3}

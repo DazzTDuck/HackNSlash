@@ -12,11 +12,6 @@ public class CombatManager : MonoBehaviour
     public List<EnemyActor> backupEnemies = new List<EnemyActor>();
     public List<EnemyActor> rangedEnemies = new List<EnemyActor>();
 
-    [Header("Attack Timers")]
-    public float minMeleeAttackTimer;
-    public float maxMeleeAttackTimer;
-    public float minRangedAttackTimer;
-    public float maxRangedAttackTimer;
 
     private void Awake()
     {

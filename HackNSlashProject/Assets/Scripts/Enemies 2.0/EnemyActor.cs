@@ -35,6 +35,7 @@ public class EnemyActor : MonoBehaviour
     ActorPatrolling patrolling;
     ActorEngaged engaged;
     ActorREngage rangeEngage;
+    ActorBackup backup;
     ActorAttacking attacking;
 
     private void Start()
@@ -52,6 +53,8 @@ public class EnemyActor : MonoBehaviour
         {
             engaged = GetComponent<ActorEngaged>();
             engaged.enabled = false;
+            backup = GetComponent<ActorBackup>();
+            backup.enabled = false;
         }
         attacking = GetComponent<ActorAttacking>();
         attacking.enabled = false;
@@ -139,7 +142,7 @@ public class EnemyActor : MonoBehaviour
         }
         else if (state == Enemystates.BackUp)
         {
-
+            backup.enabled = false;
         }
         else if (state == Enemystates.Attacking)
         {
@@ -170,6 +173,7 @@ public class EnemyActor : MonoBehaviour
             engaged.enabled = false;
         }
         state = Enemystates.BackUp;
+        backup.enabled = true;
     }
     public void RangedEngage()
     {
@@ -188,7 +192,7 @@ public class EnemyActor : MonoBehaviour
     {
         if (state == Enemystates.BackUp)
         {
-
+            backup.enabled = false;
         }
         else if (state == Enemystates.Engaged && enemyType != EnemyType.Ranged)
         {

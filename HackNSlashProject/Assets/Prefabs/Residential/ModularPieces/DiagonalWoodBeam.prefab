@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6481072686623221805}
   - component: {fileID: 7953003794552776584}
   - component: {fileID: 5312639634561700674}
+  - component: {fileID: 5197645790224980615}
   m_Layer: 0
   m_Name: DiagonalWoodBeam
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5197645790224980615
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5961277071980868247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9011835831072169941, guid: 024c32651a316da4b8cabd07ffe24f58, type: 3}

@@ -286,6 +286,10 @@ MonoBehaviour:
   lockonTarget: {fileID: 0}
   canAct: 1
   holyPower: {fileID: 0}
+  interactRadius: 3
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &4107335096402957422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,6 +444,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 123198c3-c6e5-4287-b312-2f63eda2a3f9
     m_ActionName: Main/Divine Scripture[/Mouse/rightButton,/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4107335096402957423}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 478f38e5-c67c-49ca-98ab-80a8f5847260
+    m_ActionName: Main/Interact[/Keyboard/f,/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main

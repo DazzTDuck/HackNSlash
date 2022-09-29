@@ -1,40 +1,55 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
+    public float moveSpeed;
+    public float moveAccel;
+    public float moveDecel;
+    public float stopVel;
     Rigidbody rb;
     Vector2 moveVector;
     Vector2 lookVector;
-    public float moveSpeed;
+    public float maxSpeed;
+    Vector3 moveDir;
+
+    [HideInInspector] public Vector3 gForceVector = Vector3.zero;
+    [HideInInspector] public bool isStationary;
+    Vector3 velLastFrame;
+    float runSpeedPercent;
+    float inputmagnitude;
+    Vector3 curWorldInput;
+
+    [Header("Rotating")]
     public float rotSpeedMouse;
     public float rotSpeedController;
     public float playerRotSpeed;
     bool useController;
+
+    [Header("Camera")]
     public float minCamAngle = 0;
     public float maxCamAngle = 30;
-    public Animator animator;
-    public float animationSmoothing = 1;
+    public float camFollowSpeed;
+    public Transform lookDir;
     public Transform cam;
     public Vector3 camRot;
+
+    [Header("Animations")]
+    public Animator animator;
+    public float animationSmoothing = 1;
     Vector3 moveAnim;
-    Vector3 moveDir;
-    public Transform lookDir;
-    public float camFollowSpeed;
 
-    public float maxSpeed;
-
+    [Header("Combat")]
     public bool lockedOn;
     public Transform lockonTarget;
-
     public bool canAct = true;
     PlayerSwordAttack swordAttack;
     PlayerHolyWater holyWater;
     PlayerDivineScripture divineScripture;
-    public HolyPower holyPower;
+    [HideInInspector] public HolyPower holyPower;
 
+    [Header("Interactions")]
     public float interactRadius;
     public LayerMask interactLayer;
     Interactable interactable;
@@ -106,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
         if (callbackContext.started)
             divineScripture.ReadScripture(this);
     }
-    
+
     public void OnInteract(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.started && canAct && interactable)
@@ -115,13 +130,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (canAct)
-        {
-            rb.AddRelativeForce(0, 0, moveVector.magnitude * moveSpeed, ForceMode.Acceleration);
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
-        }
+        Movement();
+        GForceCalculation();
 
-        
+
 
         float rotSpeed = useController ? rotSpeedController : rotSpeedMouse;
         camRot.x -= lookVector.y * rotSpeed;
@@ -133,8 +145,8 @@ public class PlayerMovement : MonoBehaviour
         else if (camRot.y < -180)
             camRot.y += 360;
 
-        moveAnim = Vector3.Lerp(moveAnim, rb.velocity, Time.fixedDeltaTime * animationSmoothing);
-        animator.SetFloat("Blend", moveAnim.magnitude / maxSpeed);
+        //moveAnim = Vector3.Lerp(moveAnim, rb.velocity, Time.fixedDeltaTime * animationSmoothing);
+        animator.SetFloat("Blend", rb.velocity.magnitude / moveSpeed);
 
         Vector3 camAngle = cam.forward;
         lookDir.LookAt(lookDir.position + new Vector3(camAngle.x, 0, camAngle.z));
@@ -180,5 +192,54 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("you can interact;");
         }
 
+    }
+
+    void Movement()
+    {
+        curWorldInput = transform.TransformDirection(0, 0, moveVector.normalized.magnitude);
+        inputmagnitude = curWorldInput.magnitude;
+        curWorldInput = new Vector3(curWorldInput.x, 0, curWorldInput.z).normalized;
+
+        float targetSpeed = moveSpeed * inputmagnitude;
+        Vector3 playerVel = rb.velocity;
+        Vector3 velHorizontal = new Vector3(playerVel.x, 0, playerVel.z);
+
+        isStationary = velHorizontal.sqrMagnitude < stopVel && inputmagnitude == 0;
+        if (isStationary || !canAct)
+        {
+            rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(0, rb.velocity.y, 0), 5 * Time.fixedDeltaTime);
+            return;
+        }
+
+        float playerVelMag = playerVel.x * playerVel.x + playerVel.z * playerVel.z;
+
+        if (inputmagnitude > 0)
+            runSpeedPercent = playerVelMag / (targetSpeed * targetSpeed);
+        else
+            runSpeedPercent = 2;
+
+        float overSpeedMult = 0;
+        if (runSpeedPercent > 1)
+        {
+            overSpeedMult = Mathf.Clamp01(runSpeedPercent - 1);
+            runSpeedPercent = Mathf.Clamp01(runSpeedPercent);
+        }
+
+        float velAccelerationMult = 1 - runSpeedPercent;
+        velAccelerationMult *= moveAccel;
+        Vector3 finalForce = curWorldInput * velAccelerationMult + -velHorizontal * overSpeedMult * moveDecel;
+        Vector3 inputCrossVelocity = Vector3.Cross(curWorldInput, velHorizontal.normalized);
+
+        inputCrossVelocity = Quaternion.AngleAxis(90, curWorldInput) * inputCrossVelocity;
+        finalForce += inputCrossVelocity * moveAccel * 0.5f;
+        Debug.Log(finalForce);
+        rb.AddForce(finalForce, ForceMode.Acceleration);
+    }
+    void GForceCalculation()
+    {
+        var playerAccel = (rb.velocity - velLastFrame) / Time.fixedDeltaTime;
+        gForceVector = transform.InverseTransformVector(playerAccel) / -Physics.gravity.y;
+        velLastFrame = rb.velocity;
+        //Debug.Log(gForceVector);
     }
 }

@@ -25,9 +25,10 @@ public class SettingsMenu : MonoBehaviour
     public Slider music;
 
     [Header("Toggles")]
-    public Toggle fullscreenToggle;
-    public Toggle motionBlurToggle;
-    public Toggle bloomToggle;
+    public BetterToggle fullscreenToggle;
+    public BetterToggle vSyncToggle;
+    public BetterToggle motionBlurToggle;
+    public BetterToggle bloomToggle;
 
     [Header("PostFX Profile")]
     public Volume postFx;
@@ -81,6 +82,11 @@ public class SettingsMenu : MonoBehaviour
             SetFullscreen(PlayerPrefs.GetInt("fullscreenBool", 1) != 0);
             fullscreenToggle.isOn = PlayerPrefs.GetInt("fullscreenBool", 1) != 0;
         }
+        if (vSyncToggle)
+        {
+            SetVSync(PlayerPrefs.GetInt("vSyncInt", 1) != 0);
+            vSyncToggle.isOn = PlayerPrefs.GetInt("vSyncInt", 1) != 0;
+        }
         if (bloomToggle)
         {
             SetBloom(PlayerPrefs.GetInt("bloomBool", 1) != 0);
@@ -103,6 +109,7 @@ public class SettingsMenu : MonoBehaviour
         PlayerPrefs.DeleteKey("motionBlurBool");
         PlayerPrefs.DeleteKey("bloomBool");
         PlayerPrefs.DeleteKey("fullscreenBool");
+        PlayerPrefs.DeleteKey("vSyncBool");
 
         LoadSettings();
     }
@@ -117,13 +124,13 @@ public class SettingsMenu : MonoBehaviour
 
         var options = new List<string>();
 
-        foreach (var t in resolutions)
+        foreach (Resolution resolution in resolutions)
         {
-            string option = t.width + "x" + t.height;
+            string option = resolution.width + "x" + resolution.height;
             if (!options.Contains(option))
             {
                 options.Add(option);
-                resolutionsList.Add(t);
+                resolutionsList.Add(resolution);
                 // Debug.Log(option + " " + i);
             }
         }
@@ -139,9 +146,8 @@ public class SettingsMenu : MonoBehaviour
     {
         Resolution res = resolutionsList[resIndex];
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
-        //Screen.SetResolution(1920, 1080, Screen.fullScreen);
 
-        Debug.Log(resIndex + " " + res.width + " " + res.height);
+        //Debug.Log(resIndex + " " + res.width + " " + res.height);
 
         PlayerPrefs.SetInt("resIndex", resIndex);
         PlayerPrefs.Save();
@@ -185,6 +191,16 @@ public class SettingsMenu : MonoBehaviour
         Screen.fullScreen = isFullscreen;
 
         PlayerPrefs.SetInt("fullscreenBool", isFullscreen ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    //toggle the vsync of the game
+    public void SetVSync(bool toggle)
+    {
+        int isVsync = toggle ? 1 : 0;
+        
+        QualitySettings.vSyncCount = isVsync;
+
+        PlayerPrefs.SetInt("vSyncBool", isVsync);
         PlayerPrefs.Save();
     }
     public void SetBloom(bool isBloom)

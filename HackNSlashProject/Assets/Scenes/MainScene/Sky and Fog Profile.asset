@@ -914,7 +914,7 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   enable:
     m_OverrideState: 1
     m_Value: 1
@@ -932,7 +932,7 @@ MonoBehaviour:
     m_Value: 1
   m_MaxRaySteps:
     m_OverrideState: 1
-    m_Value: 64
+    m_Value: 128
   m_DenoiseSS:
     m_OverrideState: 1
     m_Value: 1

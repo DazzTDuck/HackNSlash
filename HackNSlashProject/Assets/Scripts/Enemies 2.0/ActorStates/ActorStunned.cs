@@ -10,6 +10,7 @@ public class ActorStunned : MonoBehaviour
     public void GetStunned(float stunDuration, float stunPower, Transform player)
     {
         rb = GetComponent<Rigidbody>();
+        rb.drag = 2;
         agent = GetComponent<NavMeshAgent>();
         agent.isStopped = true;
         Vector3 staggerDir = (transform.position - player.position).normalized;
@@ -18,11 +19,13 @@ public class ActorStunned : MonoBehaviour
 
     IEnumerator IsStunned(float stunDuration, float stunPower, Vector3 staggerDir)
     {
-
+        rb.isKinematic = false;
         //animator.SetBool("IsStunned", true);
         //animator.SetTrigger("GetStunned");
         rb.AddForce(staggerDir * stunPower, ForceMode.Impulse);
+        Debug.Log(1);
         yield return new WaitForSeconds(stunDuration);
+        rb.isKinematic = true;
         agent.isStopped = false;
         agent.destination = transform.position;
     }

@@ -11,6 +11,7 @@ public class PlayerDivineScripture : MonoBehaviour
     public LayerMask enemyLayer;
     public float radius;
     public float angle;
+    public int damage;
 
     public float qTime;
     public Animator animator;
@@ -50,7 +51,10 @@ public class PlayerDivineScripture : MonoBehaviour
         foreach (Collider enemyColider in enemies)
         {
             if (Vector3.Dot(transform.forward, enemyColider.transform.position - transform.position) > (1 - (angle / 180f)))
-                enemyColider.GetComponent<ActorStunned>()?.GetStunned(duration, knockBack, transform);
+            {
+                enemyColider.GetComponentInParent<ActorStunned>()?.GetStunned(duration, knockBack, transform);
+                enemyColider.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage);
+            }
         }
         yield return new WaitForSeconds(lockoutAfter);
         player.canAct = true;

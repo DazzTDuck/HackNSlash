@@ -32,4 +32,21 @@ public class CharacterHealth : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void ReturnToMaxHP()
+    {
+        StartCoroutine(HealToFull(maxHP - currentHP));
+    }
+    IEnumerator HealToFull(int missingHp)
+    {
+        for (int i = 0; i < missingHp; i++)
+        {
+            yield return new WaitForFixedUpdate();
+            if (currentHP < maxHP)
+            {
+                currentHP++;
+                EventsManager.instance.InvokeOnBarEvent(currentHP, 0, maxHP, gameObject);
+            }
+        }
+    }
 }

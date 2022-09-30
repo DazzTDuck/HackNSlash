@@ -9,15 +9,15 @@ public class PlayerSwordAttack : MonoBehaviour
     public float qTime;
     public int damage;
     public Animator animator;
-    bool canAttack = true;
     bool attackQ;
-    public HolyPower holyPower;
     public int powerConsumption;
+    PlayerMovement player;
     
 
-    public void OnAttack(InputAction.CallbackContext callbackContext)
+    public void Attack(PlayerMovement player_)
     {
-        if (callbackContext.started && !attackQ)
+        player = player_;
+        if (!attackQ)
             StartCoroutine(AttackQueue());
     }
     IEnumerator AttackQueue()
@@ -25,9 +25,9 @@ public class PlayerSwordAttack : MonoBehaviour
         attackQ = true;
         for (float f = 0; f < qTime; f+= Time.deltaTime)
         {
-            if (canAttack && holyPower.currentHolyPower >= powerConsumption)
+            if (player.canAct && player.holyPower.currentHolyPower >= powerConsumption)
             {
-                holyPower.UseHolyPower(powerConsumption);
+                player.holyPower.UseHolyPower(powerConsumption);
                 StartCoroutine(Swinging());
                 break;
             }
@@ -38,17 +38,17 @@ public class PlayerSwordAttack : MonoBehaviour
 
     IEnumerator Swinging()
     {
-        canAttack = false;
+        player.canAct = false;
         GetComponentInParent<Rigidbody>().isKinematic = true;
         animator.SetTrigger("whack");
         yield return new WaitForSeconds(attackDuration);
         GetComponentInParent<Rigidbody>().isKinematic = false;
-        canAttack = true;
+        player.canAct = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<CharacterHealth>()?.TakeDamage(damage);
-        other.GetComponent<EnemyBehaviorControll>()?.GetStunned(5, 5);
+        //other.GetComponent<ActorStunned>()?.GetStunned(5, 5, GetComponentInParent<PlayerMovement>().transform);
     }
 }

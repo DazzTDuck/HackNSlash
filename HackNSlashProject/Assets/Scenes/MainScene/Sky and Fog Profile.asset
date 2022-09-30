@@ -1,5 +1,98 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9028756753776301406
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 384c4d03a551c44448145f4093304119, type: 3}
+  m_Name: ScreenSpaceReflection
+  m_EditorClassIdentifier: 
+  active: 1
+  quality:
+    m_OverrideState: 1
+    m_Value: 2
+  enabled:
+    m_OverrideState: 1
+    m_Value: 1
+  enabledTransparent:
+    m_OverrideState: 1
+    m_Value: 1
+  tracing:
+    m_OverrideState: 1
+    m_Value: 1
+  m_MinSmoothness:
+    m_OverrideState: 1
+    m_Value: 0.9
+  m_SmoothnessFadeStart:
+    m_OverrideState: 1
+    m_Value: 0.9
+  reflectSky:
+    m_OverrideState: 1
+    m_Value: 1
+  usedAlgorithm:
+    m_OverrideState: 1
+    m_Value: 1
+  depthBufferThickness:
+    m_OverrideState: 1
+    m_Value: 0.116
+  screenFadeDistance:
+    m_OverrideState: 1
+    m_Value: 0.2
+  accumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.75
+  m_RayMaxIterations:
+    m_OverrideState: 1
+    m_Value: 64
+  rayMiss:
+    m_OverrideState: 0
+    m_Value: 3
+  lastBounceFallbackHierarchy:
+    m_OverrideState: 0
+    m_Value: 3
+  layerMask:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  textureLodBias:
+    m_OverrideState: 1
+    m_Value: 1
+  m_RayLength:
+    m_OverrideState: 1
+    m_Value: 50
+  m_ClampValue:
+    m_OverrideState: 1
+    m_Value: 1
+  m_Denoise:
+    m_OverrideState: 1
+    m_Value: 1
+  m_DenoiserRadius:
+    m_OverrideState: 1
+    m_Value: 8
+  m_AffectSmoothSurfaces:
+    m_OverrideState: 1
+    m_Value: 0
+  mode:
+    m_OverrideState: 1
+    m_Value: 2
+  m_FullResolution:
+    m_OverrideState: 1
+    m_Value: 0
+  sampleCount:
+    m_OverrideState: 1
+    m_Value: 1
+  bounceCount:
+    m_OverrideState: 1
+    m_Value: 1
+  m_RayMaxIterationsRT:
+    m_OverrideState: 1
+    m_Value: 48
 --- !u!114 &-8529619603271167717
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -392,7 +485,7 @@ MonoBehaviour:
   - {fileID: 5291669507555936282}
   - {fileID: 1586670591712525917}
   - {fileID: -3275319349629296484}
-  - {fileID: 8586032996025762628}
+  - {fileID: -9028756753776301406}
 --- !u!114 &336224510706813955
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -915,7 +1008,7 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   enable:
     m_OverrideState: 1
     m_Value: 1
@@ -933,7 +1026,7 @@ MonoBehaviour:
     m_Value: 1
   m_MaxRaySteps:
     m_OverrideState: 1
-    m_Value: 64
+    m_Value: 128
   m_DenoiseSS:
     m_OverrideState: 1
     m_Value: 1
@@ -1086,7 +1179,7 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.96454895, y: 0.9901332, z: 1, w: -0.054054055}
+    m_Value: {x: 0.96454895, y: 0.9901332, z: 1, w: 0.12155569}
   midtones:
     m_OverrideState: 1
     m_Value: {x: 0.93032837, y: 0.94545275, z: 1, w: 0.03088803}
@@ -1105,49 +1198,3 @@ MonoBehaviour:
   highlightsEnd:
     m_OverrideState: 0
     m_Value: 1
---- !u!114 &8586032996025762628
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf384b154398e341b6b29969c078198, type: 3}
-  m_Name: MotionBlur
-  m_EditorClassIdentifier: 
-  active: 1
-  quality:
-    m_OverrideState: 1
-    m_Value: 2
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.2
-  maximumVelocity:
-    m_OverrideState: 1
-    m_Value: 200
-  minimumVelocity:
-    m_OverrideState: 1
-    m_Value: 2
-  cameraMotionBlur:
-    m_OverrideState: 0
-    m_Value: 1
-  specialCameraClampMode:
-    m_OverrideState: 0
-    m_Value: 0
-  cameraVelocityClamp:
-    m_OverrideState: 0
-    m_Value: 0.05
-  cameraTranslationVelocityClamp:
-    m_OverrideState: 0
-    m_Value: 0.05
-  cameraRotationVelocityClamp:
-    m_OverrideState: 0
-    m_Value: 0.03
-  depthComparisonExtent:
-    m_OverrideState: 0
-    m_Value: 1
-  m_SampleCount:
-    m_OverrideState: 1
-    m_Value: 12

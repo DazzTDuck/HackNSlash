@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3555281981597502569}
   - component: {fileID: 502500682695721932}
   - component: {fileID: 2386286563562141446}
+  - component: {fileID: 2537922828696742951}
   m_Layer: 0
   m_Name: Palisade
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2537922828696742951
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4187563206665246419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5095263, y: 4.520285, z: 0.39501232}
+  m_Center: {x: 0.006134689, y: 2.2601426, z: -0.0042257085}

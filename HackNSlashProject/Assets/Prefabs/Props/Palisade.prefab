@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 502500682695721932}
   - component: {fileID: 2386286563562141446}
   - component: {fileID: 2537922828696742951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Palisade
   m_TagString: Untagged
   m_Icon: {fileID: 0}

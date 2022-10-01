@@ -2,27 +2,45 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class PauseGameHandler : MonoBehaviour
 {
     [Header("References")]
     public GameObject pausePanel;
+    public GameObject settingsPanel;
+    public GameObject firstButtonPauseMenu;
+    public GameObject firstButtonSettingsMenu;
+    public EventSystem eventSystem;
 
     [Header("Input")]
     public InputAction pauseInput;
 
-    private bool isPaused = false;
-    private bool settingsOpen = false;
+    public static bool isPaused = false;
+
+    private void Start()
+    {
+        pauseInput.Enable();
+    }
 
     private void Update()
     {
-        if (pauseInput.WasPressedThisFrame() && !settingsOpen)
-            return;
-
+        if(pauseInput.WasPressedThisFrame())
+        {
+            SwitchPauseMenu();
+        }
+    }
+    
+    public void SwitchPauseMenu()
+    {
+        SetFirstSelectedPauseMenu();
+        
         isPaused = !isPaused;
+        
+        settingsPanel.SetActive(false);
 
-        HandlePauseMenu(isPaused, isPaused ? 1 : 0);
+        HandlePauseMenu(isPaused, isPaused ? 0 : 1);    
     }
 
     private void HandlePauseMenu(bool state, float time)
@@ -30,9 +48,19 @@ public class PauseGameHandler : MonoBehaviour
         Time.timeScale = time;
         pausePanel.SetActive(state);
     }
-
-    public void SetSettingsState(bool state)
+    
+    public void SetFirstSelectedSettingsMenu()
     {
-        settingsOpen = state;
+        eventSystem.SetSelectedGameObject(firstButtonSettingsMenu);
+    }
+    public void SetFirstSelectedPauseMenu()
+    {
+        eventSystem.SetSelectedGameObject(firstButtonPauseMenu);     
+    }
+    
+    public void LoadMainMenu()
+    {
+        SwitchPauseMenu();
+        LoadingScreenManager.instance.StartLoadingSequence(2f, 0);
     }
 }

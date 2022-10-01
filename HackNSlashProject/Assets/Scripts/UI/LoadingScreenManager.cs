@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LoadingScreenManager : MonoBehaviour
@@ -28,12 +29,12 @@ public class LoadingScreenManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     
-    public void StartLoadingSequence(float delay)
+    public void StartLoadingSequence(float delay, int index)
     {
-        StartCoroutine(LoadingSequence(delay));    
+        StartCoroutine(LoadingSequence(delay, index));    
     }
     
-    private IEnumerator LoadingSequence(float delay)
+    private IEnumerator LoadingSequence(float delay, int index)
     {
         //fade in
         while (loadingPanel.color.a < fadeDifference)
@@ -54,6 +55,8 @@ public class LoadingScreenManager : MonoBehaviour
         }
 
         loadingPanel.color = fadeOutColour;
+        
+        SceneManager.LoadScene(index);
         
         yield return new WaitForSeconds(delay / 2);
 

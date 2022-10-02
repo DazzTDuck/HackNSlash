@@ -165,21 +165,21 @@ public class SettingsMenu : MonoBehaviour
     //control the different volume sliders
     public void SetMasterVolume(float volume)
     {
-        masterMixer.SetFloat("MasterVolume", volume);
+        masterMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
 
         PlayerPrefs.SetFloat("masterVolume", volume);
         PlayerPrefs.Save();
     }
     public void SetMusicVolume(float volume)
     {
-        masterMixer.SetFloat("MusicVolume", volume);
+        masterMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
 
         PlayerPrefs.SetFloat("musicVolume", volume);
         PlayerPrefs.Save();
     }
     public void SetSFXVolume(float volume)
     {
-        masterMixer.SetFloat("SFXVolume", volume);
+        masterMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
 
         PlayerPrefs.SetFloat("sfxVolume", volume);
         PlayerPrefs.Save();

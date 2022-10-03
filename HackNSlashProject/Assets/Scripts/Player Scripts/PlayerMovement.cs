@@ -230,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
 
         inputCrossVelocity = Quaternion.AngleAxis(90, curWorldInput) * inputCrossVelocity;
         finalForce += inputCrossVelocity * moveAccel * 0.5f;
-        Debug.Log(finalForce);
+        //Debug.Log(finalForce);
         rb.AddForce(finalForce, ForceMode.Acceleration);
     }
     void GForceCalculation()

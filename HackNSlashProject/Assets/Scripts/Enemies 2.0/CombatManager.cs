@@ -24,7 +24,7 @@ public class CombatManager : MonoBehaviour
         if (actor.enemyType == EnemyType.Ranged)
         {
             rangedEnemies.Add(actor);
-            actor.RangedEngage();
+            actor.EngagePlayer();
         }
         else
         {
@@ -177,8 +177,12 @@ public class CombatManager : MonoBehaviour
 
     float ActualPriority(EnemyActor actor)
     {
-        CharacterHealth actorHP = actor.GetComponent<CharacterHealth>();
-        float truePriority = (actorHP.currentHP / actorHP.maxHP) * actor.priority;
+        CharacterHealth actorHP = null; ;
+        if (actor?.GetComponent<CharacterHealth>())
+            actorHP = actor.GetComponent<CharacterHealth>();
+        float truePriority = 0;
+        if (actorHP)
+            truePriority = (actorHP.currentHP / actorHP.maxHP) * actor.priority;
         return truePriority;
     }
 

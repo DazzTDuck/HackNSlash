@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 527167556049320946}
   - component: {fileID: 527167556049320950}
   - component: {fileID: 527167556049320951}
-  - component: {fileID: 527167556049320948}
   - component: {fileID: 527167556049320949}
   - component: {fileID: 527167556049320954}
   - component: {fileID: 527167556049320955}
   - component: {fileID: 527167556049320952}
   - component: {fileID: 527167556049320953}
   - component: {fileID: 8592667256885950928}
+  - component: {fileID: 8895655545175884005}
   m_Layer: 8
   m_Name: Ranged Enemy
   m_TagString: Untagged
@@ -60,8 +60,9 @@ MonoBehaviour:
   occupySpace: 1
   model: {fileID: 0}
   animator: {fileID: 4318192754932038954}
+  animationSmoothing: 7
   playerInSight: 0
-  visionRadius: 25
+  visionRadius: 20
   visionConeWidth: 50
   layerMask:
     serializedVersion: 2
@@ -73,7 +74,7 @@ MonoBehaviour:
   maxAttackTime: 4.5
   attackDamage: 5
   attackDuration: 0.8
-  attackRange: 20
+  attackRange: 14
 --- !u!114 &527167556049320951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,18 +90,6 @@ MonoBehaviour:
   maxHP: 20
   currentHP: 0
   characterId: 0
---- !u!114 &527167556049320948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527167556049320958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71be8df836e87dd4bbc3a7bdff63489d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &527167556049320949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +114,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 2.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -188,13 +177,26 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527167556049320958}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d3755209161af534abb118f0114c13dc, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8895655545175884005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527167556049320958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7123e9fd5d23fac4b928247af0100dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  engageRangeMinMax: {x: 4, y: 14}
 --- !u!1 &527167556412384313
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527167556412384313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0.6, z: 0}
+  m_LocalPosition: {x: 0.6, y: 0.8, z: 0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -6,19 +6,21 @@ using UnityEngine.AI;
 public class ActorEngaged : MonoBehaviour
 {
     EngagementPoint engagementPoint;
+    EnemyActor actor;
     NavMeshAgent agent;
     float timeToMove;
-
+    public Vector2 engageRangeMinMax;
     public void Engage()
     {
         agent = GetComponent<NavMeshAgent>();
-        EngagementPoint[] points = FindObjectsOfType<EngagementPoint>();
-        foreach (EngagementPoint point in points)
-        {
-            if (!point.occupied && (!engagementPoint || Vector3.Distance(transform.position, point.transform.position) < Vector3.Distance(transform.position, engagementPoint.transform.position)))
-                engagementPoint = point;
-        }
-        timeToMove = Random.Range(4, 6);
+        actor = GetComponent<EnemyActor>();
+        //EngagementPoint[] points = FindObjectsOfType<EngagementPoint>();
+        //foreach (EngagementPoint point in points)
+        //{
+        //    if (!point.occupied && (!engagementPoint || Vector3.Distance(transform.position, point.transform.position) < Vector3.Distance(transform.position, engagementPoint.transform.position)))
+        //        engagementPoint = point;
+        //}
+        //timeToMove = Random.Range(4, 6);
     }
 
     void Flank()
@@ -42,15 +44,25 @@ public class ActorEngaged : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (engagementPoint)
-            agent.SetDestination(engagementPoint.transform.position);
-        else
-            Engage();
+        //if (engagementPoint)
+        //    agent.SetDestination(engagementPoint.transform.position);
+        //else
+        //    Engage();
 
-        if (timeToMove > 0)
-            timeToMove -= Time.fixedDeltaTime;
-        else if (timeToMove <= 0)
-            Flank();
+        //if (timeToMove > 0)
+        //    timeToMove -= Time.fixedDeltaTime;
+        //else if (timeToMove <= 0)
+        //    Flank();
+
+        Vector3 targetPos = CombatManager.combatManager.player.position;
+        Vector3 dir = (transform.position - targetPos).normalized;
+        float dst = Vector3.Distance(transform.position, targetPos);
+        if (dst > engageRangeMinMax.y || !actor.playerInSight)
+            agent.SetDestination(targetPos);
+        else if (dst < engageRangeMinMax.x)
+            agent.SetDestination(targetPos + dir * (dst + 1.5f));
+        else
+            agent.SetDestination(transform.position);
     }
 
     public void Disengage()

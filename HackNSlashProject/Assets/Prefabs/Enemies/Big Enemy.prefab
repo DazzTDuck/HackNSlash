@@ -60,6 +60,7 @@ MonoBehaviour:
   occupySpace: 2
   model: {fileID: 0}
   animator: {fileID: 3479003776381352795}
+  animationSmoothing: 7
   playerInSight: 0
   visionRadius: 10
   visionConeWidth: 50
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7123e9fd5d23fac4b928247af0100dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  engageRangeMinMax: {x: 0.5, y: 4}
 --- !u!114 &6612438804823176727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +199,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6612438804823176748}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d3755209161af534abb118f0114c13dc, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.75

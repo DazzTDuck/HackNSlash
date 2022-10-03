@@ -12,6 +12,8 @@ public class EnemyActor : MonoBehaviour
     public int occupySpace = 1;
     public Transform model;
     public Animator animator;
+    public float animationSmoothing;
+    Vector3 animationVector;
     [Header("Line of sight")]
     public bool playerInSight;
     public float visionRadius;
@@ -45,17 +47,18 @@ public class EnemyActor : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         patrolling = GetComponent<ActorPatrolling>();
         patrolling.StartPatrolling();
-        if (enemyType == EnemyType.Ranged)
-        {
-            rangeEngage = GetComponent<ActorREngage>();
-            rangeEngage.enabled = false;
-        }
-        else
+        //if (enemyType == EnemyType.Ranged)
+        //{
+        //    rangeEngage = GetComponent<ActorREngage>();
+        //    rangeEngage.enabled = false;
+        //}
+        //else
         {
             engaged = GetComponent<ActorEngaged>();
             engaged.enabled = false;
             backup = GetComponent<ActorBackup>();
-            backup.enabled = false;
+            if (backup)
+                backup.enabled = false;
         }
         attacking = GetComponent<ActorAttacking>();
         attacking.enabled = false;
@@ -101,7 +104,8 @@ public class EnemyActor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        animator?.SetFloat("Blend", agent.velocity.magnitude / agent.speed);
+        animationVector = Vector3.Lerp(animationVector, agent.velocity, Time.fixedDeltaTime * animationSmoothing);
+        animator?.SetFloat("Blend", animationVector.magnitude / agent.speed);
 
         if (state == Enemystates.Engaged || state == Enemystates.BackUp)
         {
@@ -113,9 +117,13 @@ public class EnemyActor : MonoBehaviour
 
         if (attackTiming > 0 && Vector3.Distance(transform.position, agent.destination) < 2 && state == Enemystates.Engaged)
         {
+            float dst = Vector3.Distance(transform.position, CombatManager.combatManager.player.position);
             attackTiming -= Time.fixedDeltaTime;
-            if (Vector3.Distance(transform.position, CombatManager.combatManager.player.position) < attackRange && enemyType != EnemyType.Ranged)
-                attackTiming -= Time.fixedDeltaTime * 5;
+            if (dst * 1.5f < attackRange)
+            {
+                float speedMod = ((attackRange - dst * 1.5f) / attackRange) * 3;
+                attackTiming -= Time.fixedDeltaTime * speedMod;
+            }
         }
         else if (attackTiming <= 0 && state == Enemystates.Engaged)
             Attack();
@@ -206,7 +214,7 @@ public class EnemyActor : MonoBehaviour
         }
         else if (state == Enemystates.Engaged && enemyType == EnemyType.Ranged)
         {
-            rangeEngage.enabled = false;
+            //rangeEngage.enabled = false;
         }
         state = Enemystates.Partoling;
         patrolling.enabled = true;
@@ -214,11 +222,11 @@ public class EnemyActor : MonoBehaviour
     }
     public void Attack()
     {
-        if (enemyType == EnemyType.Ranged)
-        {
-            rangeEngage.enabled = false;
-        }
-        else
+        //if (enemyType == EnemyType.Ranged)
+        //{
+        //    rangeEngage.enabled = false;
+        //}
+        //else
         {
             engaged.StopAllCoroutines();
             engaged.enabled = false;

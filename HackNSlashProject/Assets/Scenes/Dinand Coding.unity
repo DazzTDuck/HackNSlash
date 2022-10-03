@@ -530,6 +530,7 @@ MonoBehaviour:
   occupySpace: 1
   model: {fileID: 0}
   animator: {fileID: 0}
+  animationSmoothing: 0
   playerInSight: 0
   visionRadius: 7
   visionConeWidth: 10
@@ -650,6 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7123e9fd5d23fac4b928247af0100dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  engageRangeMinMax: {x: 0, y: 0}
 --- !u!195 &340602984
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -772,6 +774,7 @@ MonoBehaviour:
   occupySpace: 1
   model: {fileID: 0}
   animator: {fileID: 0}
+  animationSmoothing: 0
   playerInSight: 0
   visionRadius: 7
   visionConeWidth: 10
@@ -892,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7123e9fd5d23fac4b928247af0100dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  engageRangeMinMax: {x: 0, y: 0}
 --- !u!195 &366221497
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2700,6 +2704,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 736763277, guid: 9a47b4f5436d19a4a947d11763e44e11, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999201281, guid: 9a47b4f5436d19a4a947d11763e44e11, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4107335096402957392, guid: 9a47b4f5436d19a4a947d11763e44e11,
         type: 3}
       propertyPath: m_RootOrder
@@ -2765,6 +2777,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 102298308}
+    - target: {fileID: 4107335097170368957, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a47b4f5436d19a4a947d11763e44e11, type: 3}
 --- !u!1001 &5371670885773613610

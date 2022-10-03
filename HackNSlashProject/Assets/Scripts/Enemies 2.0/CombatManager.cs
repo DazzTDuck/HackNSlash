@@ -24,7 +24,7 @@ public class CombatManager : MonoBehaviour
         if (actor.enemyType == EnemyType.Ranged)
         {
             rangedEnemies.Add(actor);
-            actor.RangedEngage();
+            actor.EngagePlayer();
         }
         else
         {

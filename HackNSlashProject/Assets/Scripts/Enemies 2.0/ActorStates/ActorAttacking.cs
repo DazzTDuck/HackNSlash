@@ -36,9 +36,9 @@ public class ActorAttacking : MonoBehaviour
 
     protected void AttackFinished()
     {
-        if (actor.enemyType == EnemyType.Ranged)
-            actor.RangedEngage();
-        else
+        //if (actor.enemyType == EnemyType.Ranged)
+        //    actor.RangedEngage();
+        //else
             actor.EngagePlayer();
 
     }

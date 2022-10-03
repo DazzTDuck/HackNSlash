@@ -22,6 +22,9 @@ public class PauseGameHandler : MonoBehaviour
     private void Start()
     {
         pauseInput.Enable();
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
     }
 
     private void Update()

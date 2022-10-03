@@ -57,8 +57,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         moveDir = transform.forward;
         swordAttack = GetComponentInChildren<PlayerSwordAttack>();
         holyWater = GetComponentInChildren<PlayerHolyWater>();
@@ -83,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnLockOn(InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.started)
+        if (callbackContext.started && !PauseGameHandler.isPaused)
         {
             if (lockedOn)
                 lockedOn = false;
@@ -93,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnLockonSwitch(InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.started && lockedOn && CombatManager.combatManager.engagedEnemies.Count > 0)
+        if (callbackContext.started && lockedOn && CombatManager.combatManager.engagedEnemies.Count > 0 && !PauseGameHandler.isPaused)
         {
             for (int i = 0; i < CombatManager.combatManager.engagedEnemies.Count; i++)
             {
@@ -108,23 +106,23 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.started)
+        if (callbackContext.started && !PauseGameHandler.isPaused)
             swordAttack.Attack(this);
     }
     public void OnHolyWater(InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.started)
+        if (callbackContext.started && !PauseGameHandler.isPaused)
             holyWater.UseHolyWater(this);
     }
     public void OnDivineScripture(InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.started)
+        if (callbackContext.started && !PauseGameHandler.isPaused)
             divineScripture.ReadScripture(this);
     }
 
     public void OnInteract(InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.started && canAct && interactable)
+        if (callbackContext.started && canAct && interactable && !PauseGameHandler.isPaused)
             interactable.Interact();
     }
 

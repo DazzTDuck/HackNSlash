@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDuration: 0.25
-  qTime: 0.3
+  qTime: 0.2
   damage: 10
   animator: {fileID: 4107335096541107347}
   powerConsumption: 7

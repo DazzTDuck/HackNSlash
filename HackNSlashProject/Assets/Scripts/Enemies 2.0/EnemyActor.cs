@@ -11,6 +11,7 @@ public class EnemyActor : MonoBehaviour
     public int priority = 1;
     public int occupySpace = 1;
     public Transform model;
+    public Animator animator;
     [Header("Line of sight")]
     public bool playerInSight;
     public float visionRadius;
@@ -100,6 +101,8 @@ public class EnemyActor : MonoBehaviour
 
     private void FixedUpdate()
     {
+        animator?.SetFloat("Blend", agent.velocity.magnitude / agent.speed);
+
         if (state == Enemystates.Engaged || state == Enemystates.BackUp)
         {
             agent.updateRotation = false;
@@ -109,11 +112,13 @@ public class EnemyActor : MonoBehaviour
             agent.updateRotation = true;
 
         if (attackTiming > 0 && Vector3.Distance(transform.position, agent.destination) < 2 && state == Enemystates.Engaged)
-            attackTiming -= Time.fixedDeltaTime;
-        else if (attackTiming <= 0 && state == Enemystates.Engaged)
         {
-            Attack();
+            attackTiming -= Time.fixedDeltaTime;
+            if (Vector3.Distance(transform.position, CombatManager.combatManager.player.position) < attackRange && enemyType != EnemyType.Ranged)
+                attackTiming -= Time.fixedDeltaTime * 5;
         }
+        else if (attackTiming <= 0 && state == Enemystates.Engaged)
+            Attack();
 
         if (Vector3.Distance(transform.position, CombatManager.combatManager.player.position) < visionRadius && Vector3.Dot(transform.forward, CombatManager.combatManager.player.position - transform.position) > (1 - (visionConeWidth / 180f)))
         {

@@ -37,7 +37,10 @@ public class PauseGameHandler : MonoBehaviour
         SetFirstSelectedPauseMenu();
         
         isPaused = !isPaused;
-        
+
+        Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = isPaused;
+
         settingsPanel.SetActive(false);
 
         HandlePauseMenu(isPaused, isPaused ? 0 : 1);    

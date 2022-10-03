@@ -11,10 +11,10 @@ public class PlayerHolyWater : MonoBehaviour
     public int MaxUses;
     public int remainingUses;
     public int radius;
+    public int damage;
     public LayerMask enemylayer;
     public Animator animator;
     PlayerMovement player;
-    public int powerConsumption;
 
     public float qTime;
     bool attackQ;
@@ -34,9 +34,8 @@ public class PlayerHolyWater : MonoBehaviour
         attackQ = true;
         for (float f = 0; f < qTime; f += Time.deltaTime)
         {
-            if (player.canAct && player.holyPower.currentHolyPower >= powerConsumption)
+            if (player.canAct)
             {
-                player.holyPower.UseHolyPower(powerConsumption);
                 StartCoroutine(HolyWaterSplash());
                 break;
             }
@@ -52,7 +51,8 @@ public class PlayerHolyWater : MonoBehaviour
         Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemylayer);
         foreach (Collider enemyColider in enemies)
         {
-            enemyColider.GetComponent<ActorStunned>()?.GetStunned(duration, knockBack, transform);
+            enemyColider.GetComponentInParent<ActorStunned>()?.GetStunned(duration, knockBack, transform);
+            enemyColider.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage);
         }
         remainingUses--;
         yield return new WaitForSeconds(lockoutAfter);

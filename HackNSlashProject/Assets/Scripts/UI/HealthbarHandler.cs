@@ -126,4 +126,9 @@ public class HealthbarHandler : MonoBehaviour
         //rounds off to 3 digits
         return Math.Round(value, 3); 
     }
+
+    private void OnDestroy()
+    {
+        EventsManager.instance.OnBarUpdateEvent -= OnBarUpdateEvent;    
+    }
 }

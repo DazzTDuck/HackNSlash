@@ -177,8 +177,12 @@ public class CombatManager : MonoBehaviour
 
     float ActualPriority(EnemyActor actor)
     {
-        CharacterHealth actorHP = actor.GetComponent<CharacterHealth>();
-        float truePriority = (actorHP.currentHP / actorHP.maxHP) * actor.priority;
+        CharacterHealth actorHP = null; ;
+        if (actor?.GetComponent<CharacterHealth>())
+            actorHP = actor.GetComponent<CharacterHealth>();
+        float truePriority = 0;
+        if (actorHP)
+            truePriority = (actorHP.currentHP / actorHP.maxHP) * actor.priority;
         return truePriority;
     }
 

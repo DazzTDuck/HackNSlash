@@ -18,8 +18,8 @@ namespace MagicLightProbes
         private Quaternion _lastPrefabRotation = Quaternion.identity;
         
 #if UNITY_2020_1_OR_NEWER
-        private UnityEditor.SceneManagement.PrefabStage prefabStage;
-        private UnityEditor.SceneManagement.PrefabStage.Mode prefabStageMode;
+        //private UnityEditor.SceneManagement.PrefabStage prefabStage;
+        //private UnityEditor.SceneManagement.PrefabStage.Mode prefabStageMode;
 #endif
 
 #if UNITY_EDITOR
@@ -48,20 +48,20 @@ namespace MagicLightProbes
                         parent.prefabConnectionObject.transform.rotation, Vector3.one);
                     
 #if UNITY_2020_1_OR_NEWER
-                    prefabStage = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
-
-                    if (prefabStage != null)
-                    {
-                        prefabStageMode = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage().mode;
-                        
-                        position = parent.calculatedFromPrefab ? parent.prefabConnectionObject.transform.position : Vector3.zero;
-                        Gizmos.matrix = prefabStageMode == UnityEditor.SceneManagement.PrefabStage.Mode.InContext ? parentTRS : noTRS;
-                    }
-                    else
-                    {
-                        position = parent.calculatedFromPrefab ? parent.prefabConnectionObject.transform.position : Vector3.zero;
-                        Gizmos.matrix = parent.calculatedFromPrefab ? parentTRS : noTRS;
-                    }
+                    // prefabStage = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
+                    //
+                    // if (prefabStage != null)
+                    // {
+                    //     prefabStageMode = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage().mode;
+                    //     
+                    //     position = parent.calculatedFromPrefab ? parent.prefabConnectionObject.transform.position : Vector3.zero;
+                    //     Gizmos.matrix = prefabStageMode == UnityEditor.SceneManagement.PrefabStage.Mode.InContext ? parentTRS : noTRS;
+                    // }
+                    // else
+                    // {
+                         position = parent.calculatedFromPrefab ? parent.prefabConnectionObject.transform.position : Vector3.zero;
+                         Gizmos.matrix = parent.calculatedFromPrefab ? parentTRS : noTRS;
+                    // }
 #else
                     position = PrefabStageUtility.GetCurrentPrefabStage() != null ? Vector3.zero : 
                         parent.calculatedFromPrefab ? parent.prefabConnectionObject.transform.position : Vector3.zero;

@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2679998263862082084}
   - component: {fileID: 112544237228483652}
+  - component: {fileID: 1487422240388684964}
   m_Layer: 0
   m_Name: BroccoTree_0
   m_TagString: Untagged
@@ -140,6 +141,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4883333372649282713}
   m_Enabled: 1
+--- !u!136 &1487422240388684964
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575801732170747888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 4.39
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.71, z: 0}
 --- !u!1 &7409073673865012149
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Value: 2
   enabled:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   enabledTransparent:
     m_OverrideState: 1
     m_Value: 1
@@ -36,10 +36,10 @@ MonoBehaviour:
     m_Value: 1
   usedAlgorithm:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   depthBufferThickness:
     m_OverrideState: 1
-    m_Value: 0.116
+    m_Value: 0.85
   screenFadeDistance:
     m_OverrideState: 1
     m_Value: 0.2
@@ -387,7 +387,7 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   enabled:
     m_OverrideState: 1
     m_Value: 1
@@ -420,7 +420,7 @@ MonoBehaviour:
     m_Value: 200
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 400
+    m_Value: 350
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -453,10 +453,10 @@ MonoBehaviour:
     m_Value: 64
   m_VolumetricFogBudget:
     m_OverrideState: 1
-    m_Value: 0.75
+    m_Value: 0.25
   m_ResolutionDepthRatio:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.25
   directionalLightsOnly:
     m_OverrideState: 0
     m_Value: 0
@@ -966,7 +966,7 @@ MonoBehaviour:
     m_Value: 1
   shadowResolution:
     m_OverrideState: 1
-    m_Value: 512
+    m_Value: 256
   shadowPlaneHeightOffset:
     m_OverrideState: 1
     m_Value: 0
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   enable:
     m_OverrideState: 1
     m_Value: 1
@@ -1028,7 +1028,7 @@ MonoBehaviour:
     m_Value: 1
   m_MaxRaySteps:
     m_OverrideState: 1
-    m_Value: 128
+    m_Value: 64
   m_DenoiseSS:
     m_OverrideState: 1
     m_Value: 1

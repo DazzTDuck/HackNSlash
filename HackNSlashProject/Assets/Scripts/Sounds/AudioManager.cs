@@ -67,7 +67,6 @@ public class AudioManager : MonoBehaviour
             if (s.playRandomClip)
             {
                 int randomIndex = Random.Range(0, s.clips.Length);
-                Debug.Log(randomIndex);
                 s.source.clip = s.clips[randomIndex];
             }
             s.source.Play();

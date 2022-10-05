@@ -278,7 +278,7 @@ MonoBehaviour:
   isStationary: 0
   rotSpeedMouse: 0.2
   rotSpeedController: 2.5
-  playerRotSpeed: 5
+  playerRotSpeed: 7
   minCamAngle: -10
   maxCamAngle: 30
   camFollowSpeed: 0.5
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6d5afcf4000be419c1b18d7e14b054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 300
+  maxHP: 100
   currentHP: 0
   characterId: 0
 --- !u!114 &5178249521022387282

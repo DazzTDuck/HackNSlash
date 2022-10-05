@@ -44,8 +44,8 @@ public class EnemyActor : MonoBehaviour
     private void Start()
     {
         EventsManager.instance.OnBarUpdateEvent += CheckToBackoff;
-        agent = GetComponent<NavMeshAgent>();
-        patrolling = GetComponent<ActorPatrolling>();
+        agent = GetComponentInChildren<NavMeshAgent>();
+        patrolling = GetComponentInChildren<ActorPatrolling>();
         patrolling.StartPatrolling();
         //if (enemyType == EnemyType.Ranged)
         //{
@@ -54,13 +54,13 @@ public class EnemyActor : MonoBehaviour
         //}
         //else
         {
-            engaged = GetComponent<ActorEngaged>();
+            engaged = GetComponentInChildren<ActorEngaged>();
             engaged.enabled = false;
-            backup = GetComponent<ActorBackup>();
+            backup = GetComponentInChildren<ActorBackup>();
             if (backup)
                 backup.enabled = false;
         }
-        attacking = GetComponent<ActorAttacking>();
+        attacking = GetComponentInChildren<ActorAttacking>();
         attacking.enabled = false;
     }
     private void OnDestroy()
@@ -156,6 +156,7 @@ public class EnemyActor : MonoBehaviour
         else if (state == Enemystates.BackUp)
         {
             backup.enabled = false;
+            Debug.Log(gameObject);
         }
         else if (state == Enemystates.Attacking)
         {
@@ -234,6 +235,15 @@ public class EnemyActor : MonoBehaviour
         state = Enemystates.Attacking;
         attacking.enabled = true;
         attacking.Attack(this, attackDamage, attackRange, attackDuration);
+    }
+
+    public void TurnInactive()
+    {
+
+    }
+    public void TurnActive()
+    {
+
     }
 }
 

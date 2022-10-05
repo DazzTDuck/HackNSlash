@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterHealth : MonoBehaviour
 {
@@ -20,8 +21,7 @@ public class CharacterHealth : MonoBehaviour
         {
             //death
             currentHP = 0;
-            if(!gameObject.CompareTag("Player"))
-                Death();
+            Death();
         }
         else
             currentHP -= damageToDo;
@@ -30,7 +30,10 @@ public class CharacterHealth : MonoBehaviour
     }
     protected virtual void Death()
     {
-        Destroy(gameObject);
+        if (!gameObject.CompareTag("Player"))
+            GetComponent<EnemyActor>().TurnInactive();
+        else
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ReturnToMaxHP()

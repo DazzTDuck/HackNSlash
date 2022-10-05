@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8825515784804275683}
   - component: {fileID: 8825515784804275684}
-  - component: {fileID: 8825515784804275682}
   m_Layer: 0
   m_Name: AudioManger
   m_TagString: Untagged
@@ -56,7 +55,9 @@ MonoBehaviour:
     mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
     volume: 0.2
     pitch: 1
-    loop: 1
+    spacialBlend: 1
+    maxSoundDistance: 100
+    loop: 0
     playOnStart: 0
     playRandomClip: 1
     source: {fileID: 0}
@@ -70,21 +71,49 @@ MonoBehaviour:
     mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
     volume: 0.2
     pitch: 1
-    loop: 1
+    spacialBlend: 1
+    maxSoundDistance: 100
+    loop: 0
     playOnStart: 0
     playRandomClip: 1
     source: {fileID: 0}
---- !u!114 &8825515784804275682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8825515784804275685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8261e6f2e5fac44da64da2b23939e9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorDefault: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  colorSelected: {r: 0.25, g: 0.65, b: 0.8, a: 1}
+  - name: SwordSlash
+    clips:
+    - {fileID: 8300000, guid: 2a1c81307ff81be4db0d03c5b7829b35, type: 3}
+    - {fileID: 8300000, guid: c5660ab4054928c4898e95a4e688f2d2, type: 3}
+    - {fileID: 8300000, guid: e91480c51b97def4faf8c3b850090ff7, type: 3}
+    - {fileID: 8300000, guid: 43bba7152a3729f4f9ec659b9ad456a7, type: 3}
+    - {fileID: 8300000, guid: ef285e808c0da1d4badb50225ee00a94, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.04
+    pitch: 1.5
+    spacialBlend: 0
+    maxSoundDistance: 100
+    loop: 0
+    playOnStart: 0
+    playRandomClip: 1
+    source: {fileID: 0}
+  - name: SwordSlash
+    clips:
+    - {fileID: 8300000, guid: 898aaabdc51a295458bc649fbfdb8a10, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.1
+    pitch: 0.8
+    spacialBlend: 0
+    maxSoundDistance: 100
+    loop: 0
+    playOnStart: 0
+    playRandomClip: 0
+    source: {fileID: 0}
+  - name: BackroundSound
+    clips:
+    - {fileID: 8300000, guid: 9f6c7af5710447e41a6313db8fe8ee33, type: 3}
+    mixer: {fileID: 9083341430800621645, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.05
+    pitch: 1
+    spacialBlend: 0
+    maxSoundDistance: 500
+    loop: 1
+    playOnStart: 1
+    playRandomClip: 0
+    source: {fileID: 0}

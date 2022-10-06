@@ -242,10 +242,22 @@ public class CombatManager : MonoBehaviour
             actor.ReturnToPatrol();
     }
 
+    public void EnemyDied(EnemyActor actor)
+    {
+        livingEnemies.Remove(actor);
+        deadEnemies.Add(actor);
+        RemoveFromCombat(actor);
+    }
 
     public void RezAllEnemies()
     {
-
+        foreach (EnemyActor actor in deadEnemies)
+        {
+            livingEnemies.Add(actor);
+            deadEnemies.Remove(actor);
+            actor.gameObject.SetActive(true);
+            actor.TurnActive();
+        }
     }
 }
 

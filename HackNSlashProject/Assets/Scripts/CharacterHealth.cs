@@ -30,26 +30,15 @@ public class CharacterHealth : MonoBehaviour
     }
     protected virtual void Death()
     {
-        if (!gameObject.CompareTag("Player"))
-            GetComponent<EnemyActor>().TurnInactive();
-        else
+        if (gameObject.CompareTag("Player"))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        else
+            GetComponent<EnemyActor>().TurnInactive();
     }
 
     public void ReturnToMaxHP()
     {
-        StartCoroutine(HealToFull(maxHP - currentHP));
-    }
-    IEnumerator HealToFull(int missingHp)
-    {
-        for (int i = 0; i < missingHp; i++)
-        {
-            yield return new WaitForFixedUpdate();
-            if (currentHP < maxHP)
-            {
-                currentHP++;
-                EventsManager.instance.InvokeOnBarEvent(currentHP, 0, maxHP, gameObject);
-            }
-        }
+        currentHP = maxHP;
+        EventsManager.instance.InvokeOnBarEvent(currentHP, 0, maxHP, gameObject);
     }
 }

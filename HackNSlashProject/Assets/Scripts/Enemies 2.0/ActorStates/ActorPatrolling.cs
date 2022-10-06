@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class ActorPatrolling : MonoBehaviour
 {
-    Vector3 patrolPosition;
+    public Vector3 patrolPosition;
     public float patrolDistance;
     public Vector2 waitTimeMinMax;
     NavMeshAgent agent;

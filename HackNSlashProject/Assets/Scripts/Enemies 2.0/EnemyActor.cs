@@ -72,7 +72,7 @@ public class EnemyActor : MonoBehaviour
     {
         if ((GameObject)sender == gameObject && e?.currentAmount <= 0)
         {
-            CombatManager.combatManager.RemoveFromCombat(this);
+            //TurnInactive();
         }
         else if (state == Enemystates.Partoling && (GameObject)sender == gameObject)
         {
@@ -208,14 +208,15 @@ public class EnemyActor : MonoBehaviour
         {
             backup.enabled = false;
         }
-        else if (state == Enemystates.Engaged && enemyType != EnemyType.Ranged)
+        else if (state == Enemystates.Engaged)
         {
             engaged.Disengage();
             engaged.enabled = false;
         }
-        else if (state == Enemystates.Engaged && enemyType == EnemyType.Ranged)
+        else if (state == Enemystates.Attacking)
         {
-            //rangeEngage.enabled = false;
+            attacking.StopAllCoroutines();
+            attacking.enabled = false;
         }
         state = Enemystates.Partoling;
         patrolling.enabled = true;
@@ -223,15 +224,8 @@ public class EnemyActor : MonoBehaviour
     }
     public void Attack()
     {
-        //if (enemyType == EnemyType.Ranged)
-        //{
-        //    rangeEngage.enabled = false;
-        //}
-        //else
-        {
-            engaged.StopAllCoroutines();
-            engaged.enabled = false;
-        }
+        engaged.StopAllCoroutines();
+        engaged.enabled = false;
         state = Enemystates.Attacking;
         attacking.enabled = true;
         attacking.Attack(this, attackDamage, attackRange, attackDuration);
@@ -239,11 +233,25 @@ public class EnemyActor : MonoBehaviour
 
     public void TurnInactive()
     {
-
+        if (state == Enemystates.Attacking)
+            attacking.StopAllCoroutines();
+        else if (state == Enemystates.Partoling)
+            patrolling.StopAllCoroutines();
+        attacking.enabled = false;
+        engaged.enabled = false;
+        backup.enabled = false;
+        agent.isStopped = true;
+        CombatManager.combatManager.EnemyDied(this);
+        gameObject.SetActive(false);
     }
     public void TurnActive()
     {
-
+        transform.position = patrolling.patrolPosition;
+        agent.isStopped = false;
+        agent.destination = patrolling.patrolPosition;
+        GetComponent<CharacterHealth>()?.ReturnToMaxHP();
+        playerInSight = false;
+        ReturnToPatrol();
     }
 }
 

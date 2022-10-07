@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterHealth : MonoBehaviour
 {
@@ -20,8 +21,7 @@ public class CharacterHealth : MonoBehaviour
         {
             //death
             currentHP = 0;
-            if(!gameObject.CompareTag("Player"))
-                Death();
+            Death();
         }
         else
             currentHP -= damageToDo;
@@ -30,23 +30,15 @@ public class CharacterHealth : MonoBehaviour
     }
     protected virtual void Death()
     {
-        Destroy(gameObject);
+        if (gameObject.CompareTag("Player"))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        else
+            GetComponent<EnemyActor>().TurnInactive();
     }
 
     public void ReturnToMaxHP()
     {
-        StartCoroutine(HealToFull(maxHP - currentHP));
-    }
-    IEnumerator HealToFull(int missingHp)
-    {
-        for (int i = 0; i < missingHp; i++)
-        {
-            yield return new WaitForFixedUpdate();
-            if (currentHP < maxHP)
-            {
-                currentHP++;
-                EventsManager.instance.InvokeOnBarEvent(currentHP, 0, maxHP, gameObject);
-            }
-        }
+        currentHP = maxHP;
+        EventsManager.instance.InvokeOnBarEvent(currentHP, 0, maxHP, gameObject);
     }
 }

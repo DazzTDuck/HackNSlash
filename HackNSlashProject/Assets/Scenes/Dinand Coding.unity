@@ -637,6 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac87fea2f00cd8f4196e73cb0f555443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPosition: {x: 0, y: 0, z: 0}
   patrolDistance: 5
   waitTimeMinMax: {x: 2, y: 6}
 --- !u!114 &340602983
@@ -881,6 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac87fea2f00cd8f4196e73cb0f555443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPosition: {x: 0, y: 0, z: 0}
   patrolDistance: 5
   waitTimeMinMax: {x: 2, y: 6}
 --- !u!114 &366221496
@@ -1435,6 +1437,8 @@ MonoBehaviour:
   backupMaxValue: 4
   backupEnemies: []
   rangedEnemies: []
+  livingEnemies: []
+  deadEnemies: []
 --- !u!4 &1025255141
 Transform:
   m_ObjectHideFlags: 0
@@ -2771,6 +2775,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
+      value: f04154ee-a5e3-4dd0-ba68-e0bae51deba6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
+      value: Main/Rez[/Keyboard/insert]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1025255140}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RezAllEnemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CombatManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107335096402957422, guid: 9a47b4f5436d19a4a947d11763e44e11,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4107335096402957423, guid: 9a47b4f5436d19a4a947d11763e44e11,
         type: 3}

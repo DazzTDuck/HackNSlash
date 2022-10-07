@@ -14,19 +14,13 @@ public class CleanseCorruption : Interactable
     {
         while (!canInteract && !hasCleansed)
         {
-            CheckForLiveEnemies();
             yield return new WaitForSeconds(0.1f);
+            CheckForLiveEnemies();
         }
     }
     void CheckForLiveEnemies()
     {
-        int i = 0;
-        EnemyActor[] actors = FindObjectsOfType<EnemyActor>();
-        foreach (EnemyActor actor in actors)
-        {
-            i++;
-        }
-        if (i == 0 && !hasCleansed)
+        if (CombatManager.combatManager?.livingEnemies.Count == 0)
         {
             canInteract = true;
             shine.SetActive(true);

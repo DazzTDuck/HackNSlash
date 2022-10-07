@@ -153,7 +153,7 @@ public class EnemyActor : MonoBehaviour
             patrolling.StopAllCoroutines();
             patrolling.enabled = false;
         }
-        else if (state == Enemystates.BackUp)
+        else if (state == Enemystates.BackUp && backup)
         {
             backup.enabled = false;
             Debug.Log(gameObject);
@@ -187,7 +187,8 @@ public class EnemyActor : MonoBehaviour
             engaged.enabled = false;
         }
         state = Enemystates.BackUp;
-        backup.enabled = true;
+        if (backup)
+            backup.enabled = true;
     }
     public void RangedEngage()
     {
@@ -204,7 +205,7 @@ public class EnemyActor : MonoBehaviour
     }
     public void ReturnToPatrol()
     {
-        if (state == Enemystates.BackUp)
+        if (state == Enemystates.BackUp && backup)
         {
             backup.enabled = false;
         }
@@ -239,7 +240,8 @@ public class EnemyActor : MonoBehaviour
             patrolling.StopAllCoroutines();
         attacking.enabled = false;
         engaged.enabled = false;
-        backup.enabled = false;
+        if (backup)
+            backup.enabled = false;
         agent.isStopped = true;
         CombatManager.combatManager.EnemyDied(this);
         gameObject.SetActive(false);

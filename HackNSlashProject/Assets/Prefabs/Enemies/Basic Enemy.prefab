@@ -83,12 +83,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
-  hpThreshold: 10
+  hpThreshold: 50
   attackThreshold: 5
   backoff: 0
-  minAttackTime: 5
-  maxAttackTime: 10
-  attackDamage: 6
+  minAttackTime: 4
+  maxAttackTime: 8
+  attackDamage: 13
   attackDuration: 0.8
   attackRange: 1.5
 --- !u!114 &5371670885630812082
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6d5afcf4000be419c1b18d7e14b054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 20
+  maxHP: 130
   currentHP: 0
   characterId: 0
 --- !u!114 &5371670885630812085
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac87fea2f00cd8f4196e73cb0f555443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPosition: {x: 0, y: 0, z: 0}
   patrolDistance: 5
   waitTimeMinMax: {x: 2, y: 6}
 --- !u!195 &5371670885630812042
@@ -176,7 +177,7 @@ Rigidbody:
   m_GameObject: {fileID: 5371670885630812093}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 1
@@ -208,6 +209,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backupDistance: 7
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  personalSpaceRadius: 5
+  maxMove: 4.5
+  moveTimeMinMax: {x: 5, y: 7}
 --- !u!114 &7180859570735841606
 MonoBehaviour:
   m_ObjectHideFlags: 0

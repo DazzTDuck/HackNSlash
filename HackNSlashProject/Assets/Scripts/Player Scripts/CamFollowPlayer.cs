@@ -25,9 +25,9 @@ public class CamFollowPlayer : MonoBehaviour
     {
         Vector3 move = Vector3.Slerp(transform.position, player.position + camOffset, followspeed * Time.deltaTime);
         transform.position = move;
-        if (pl.lockedOn && pl.lockonTarget)
+        if (pl.lockedOn)
         {
-            transform.LookAt(pl.lockonTarget);
+            transform.LookAt(CombatManager.combatManager.engagedEnemies[pl.lockonTargetIndex].transform);
             transform.Rotate(pl.camRot.x, 0, 0);
         }
         else

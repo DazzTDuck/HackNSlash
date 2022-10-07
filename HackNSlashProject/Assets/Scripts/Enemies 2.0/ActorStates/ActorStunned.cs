@@ -10,7 +10,6 @@ public class ActorStunned : MonoBehaviour
     public void GetStunned(float stunDuration, float stunPower, Transform player)
     {
         rb = GetComponent<Rigidbody>();
-        rb.drag = 2;
         agent = GetComponent<NavMeshAgent>();
         agent.isStopped = true;
         Vector3 staggerDir = (transform.position - player.position).normalized;

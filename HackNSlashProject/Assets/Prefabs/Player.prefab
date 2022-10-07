@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6d5afcf4000be419c1b18d7e14b054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 300
   currentHP: 0
   characterId: 0
 --- !u!114 &5178249521022387282
@@ -504,7 +504,7 @@ MonoBehaviour:
   MaxUses: 3
   remainingUses: 3
   radius: 5
-  damage: 0
+  damage: 50
   enemylayer:
     serializedVersion: 2
     m_Bits: 256
@@ -531,7 +531,7 @@ MonoBehaviour:
     m_Bits: 256
   radius: 7
   angle: 100
-  damage: 0
+  damage: 34
   qTime: 0.3
   animator: {fileID: 0}
   powerConsumption: 60
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDuration: 0.25
   qTime: 0.2
-  damage: 10
+  damage: 25
   animator: {fileID: 4107335096541107347}
   powerConsumption: 7
 --- !u!1001 &389881477

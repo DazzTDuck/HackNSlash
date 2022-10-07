@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Combat")]
     public bool lockedOn;
-    public Transform lockonTarget;
+    public int lockonTargetIndex;
     public bool canAct = true;
     PlayerSwordAttack swordAttack;
     PlayerHolyWater holyWater;
@@ -85,22 +85,20 @@ public class PlayerMovement : MonoBehaviour
         {
             if (lockedOn)
                 lockedOn = false;
-            else
+            else if (CombatManager.combatManager.engagedEnemies.Count > 0)
+            {
                 lockedOn = true;
+                lockonTargetIndex = 0;
+            }
         }
     }
     public void OnLockonSwitch(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.started && lockedOn && CombatManager.combatManager.engagedEnemies.Count > 0 && !PauseGameHandler.isPaused)
         {
-            for (int i = 0; i < CombatManager.combatManager.engagedEnemies.Count; i++)
-            {
-                if (lockonTarget != CombatManager.combatManager.engagedEnemies[i].transform)
-                {
-                    lockonTarget = CombatManager.combatManager.engagedEnemies[i].transform;
-                    break;
-                }
-            }
+            lockonTargetIndex++;
+            if (lockonTargetIndex >= CombatManager.combatManager.engagedEnemies.Count)
+                lockonTargetIndex = 0;
         }
     }
 
@@ -131,7 +129,8 @@ public class PlayerMovement : MonoBehaviour
         Movement();
         GForceCalculation();
 
-
+        if (CombatManager.combatManager.engagedEnemies.Count == 0 && lockedOn)
+            lockedOn = false;
 
         float rotSpeed = useController ? rotSpeedController : rotSpeedMouse;
         camRot.x -= lookVector.y * rotSpeed;
@@ -155,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
             camAngle.y = 0;
             moveDir = Vector3.Lerp(moveDir, lookDir.TransformDirection(new Vector3(moveVector.x, 0, moveVector.y)), Time.fixedDeltaTime * playerRotSpeed);
 
-            if (lookVector.magnitude == 0 && Vector3.Dot(transform.forward, lookDir.forward) > -0.7f && !(lockedOn && lockonTarget))
+            if (lookVector.magnitude == 0 && Vector3.Dot(transform.forward, lookDir.forward) > -0.7f && !lockedOn)
             {
                 if (transform.eulerAngles.y - camRot.y < 180 && transform.eulerAngles.y - camRot.y > -180)
                     camRot = Vector3.Lerp(camRot, transform.eulerAngles + new Vector3(camRot.x, 0, 0), Time.fixedDeltaTime * camFollowSpeed);

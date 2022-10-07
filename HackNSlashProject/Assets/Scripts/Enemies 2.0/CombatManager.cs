@@ -17,7 +17,9 @@ public class CombatManager : MonoBehaviour
     private void Awake()
     {
         combatManager = this;
-
+        EnemyActor[] actors = FindObjectsOfType<EnemyActor>();
+        foreach (EnemyActor actor in actors)
+            livingEnemies.Add(actor);
     }
 
     public void EnemyJoinsFight(EnemyActor actor)

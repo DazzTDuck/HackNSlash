@@ -74,7 +74,7 @@ MonoBehaviour:
   backoff: 0
   minAttackTime: 3
   maxAttackTime: 6
-  attackDamage: 20
+  attackDamage: 17
   attackDuration: 0.8
   attackRange: 14
 --- !u!114 &527167556049320951
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6d5afcf4000be419c1b18d7e14b054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 85
+  maxHP: 110
   currentHP: 0
   characterId: 0
 --- !u!114 &527167556049320949
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ef23ec21f9bd34daad6b3a00c7d988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splashRadius: 4
+  splashRadius: 2
   projectile: {fileID: 4318602938914673989, guid: d34cc09454ed7c843967671049a5168b,
     type: 3}
   throwPosition: {fileID: 527167556412384312}

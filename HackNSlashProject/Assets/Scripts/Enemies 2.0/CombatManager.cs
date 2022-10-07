@@ -11,12 +11,15 @@ public class CombatManager : MonoBehaviour
     public int backupMaxValue;
     public List<EnemyActor> backupEnemies = new List<EnemyActor>();
     public List<EnemyActor> rangedEnemies = new List<EnemyActor>();
-
+    public List<EnemyActor> livingEnemies = new List<EnemyActor>();
+    public List<EnemyActor> deadEnemies = new List<EnemyActor>();
 
     private void Awake()
     {
         combatManager = this;
-
+        EnemyActor[] actors = FindObjectsOfType<EnemyActor>();
+        foreach (EnemyActor actor in actors)
+            livingEnemies.Add(actor);
     }
 
     public void EnemyJoinsFight(EnemyActor actor)
@@ -75,13 +78,7 @@ public class CombatManager : MonoBehaviour
     {
         EnemyActor replacementActor = backupEnemies[replacement];
         backupEnemies.RemoveAt(replacement);
-        for (int i = 0; i < engagedEnemies.Count; i++)
-        {
-            if (engagedEnemies[i] == actor)
-            {
-                engagedEnemies.RemoveAt(i);
-            }
-        }
+        engagedEnemies.Remove(actor);
         engagedEnemies.Add(replacementActor);
         replacementActor.EngagePlayer();
         backupEnemies.Add(actor);
@@ -132,41 +129,25 @@ public class CombatManager : MonoBehaviour
                     dmy3 = engagedEnemies[i];
             }
         }
-        for (int i = 0; i < engagedEnemies.Count; i++)
-        {
-            if (engagedEnemies[i] == dmy1)
-                engagedEnemies.RemoveAt(i);
-        }
+        engagedEnemies.Remove(dmy1);
         backupEnemies.Add(dmy1);
         dmy1.GoBackup();
         fillSpace += dmy1.occupySpace;
         if (dmy2)
         {
-            for (int i = 0; i < engagedEnemies.Count; i++)
-            {
-                if (engagedEnemies[i] == dmy2)
-                    engagedEnemies.RemoveAt(i);
-            }
+            engagedEnemies.Remove(dmy2);
             backupEnemies.Add(dmy2);
             fillSpace += dmy2.occupySpace;
             dmy2.GoBackup();
         }
         if (dmy3)
         {
-            for (int i = 0; i < engagedEnemies.Count; i++)
-            {
-                if (engagedEnemies[i] == dmy3)
-                    engagedEnemies.RemoveAt(i);
-            }
+            engagedEnemies.Remove(dmy3);
             backupEnemies.Add(dmy3);
             dmy3.GoBackup();
             fillSpace += dmy3.occupySpace;
         }
-        for (int i = 0; i < backupEnemies.Count; i++)
-        {
-            if (backupEnemies[i] == VIP)
-                backupEnemies.RemoveAt(i);
-        }
+        backupEnemies.Remove(VIP);
         VIP.EngagePlayer();
         engagedEnemies.Add(VIP);
         if (fillSpace >0)
@@ -209,11 +190,7 @@ public class CombatManager : MonoBehaviour
                 spaceLeft -= VIP.occupySpace;
                 VIP.EngagePlayer();
                 engagedEnemies.Add(VIP);
-                for (int ii = 0; ii < backupEnemies.Count; ii++)
-                {
-                    if (VIP == backupEnemies[ii])
-                        backupEnemies.RemoveAt(ii);
-                }
+                backupEnemies.Remove(VIP);
                 VIP = null;
             }
         }
@@ -246,33 +223,44 @@ public class CombatManager : MonoBehaviour
     {
         if (actor.enemyType == EnemyType.Ranged)
         {
-            for (int i = 0; i < rangedEnemies.Count; i++)
-            {
-                if (rangedEnemies[i] == actor)
-                    rangedEnemies.RemoveAt(i);
-            }
+            rangedEnemies.Remove(actor);
         }
         else if (actor.state == Enemystates.Attacking || actor.state == Enemystates.Engaged)
         {
+            engagedEnemies.Remove(actor);
+            int space = engagedMaxValue;
             for (int i = 0; i < engagedEnemies.Count; i++)
             {
-                FillFrontLine(actor.occupySpace);
-                if (engagedEnemies[i] == actor)
-                    engagedEnemies.RemoveAt(i);
+                space -= engagedEnemies[i].occupySpace;
             }
+            FillFrontLine(space);
+            Debug.Log("space =" + space);
         }
         else if (actor.state == Enemystates.BackUp)
         {
-            for (int i = 0; i < backupEnemies.Count; i++)
-            {
-                if (backupEnemies[i] == actor)
-                    backupEnemies.RemoveAt(i);
-            }
+            backupEnemies.Remove(actor);
         }
         if (actor.GetComponent<CharacterHealth>().currentHP != 0)
             actor.ReturnToPatrol();
     }
 
+    public void EnemyDied(EnemyActor actor)
+    {
+        livingEnemies.Remove(actor);
+        deadEnemies.Add(actor);
+        RemoveFromCombat(actor);
+    }
+
+    public void RezAllEnemies()
+    {
+        foreach (EnemyActor actor in deadEnemies)
+        {
+            livingEnemies.Add(actor);
+            deadEnemies.Remove(actor);
+            actor.gameObject.SetActive(true);
+            actor.TurnActive();
+        }
+    }
 }
 
 public enum Enemystates

@@ -69,12 +69,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
-  hpThreshold: 10
+  hpThreshold: 30
   attackThreshold: 3
   backoff: 0
-  minAttackTime: 2.5
-  maxAttackTime: 4.5
-  attackDamage: 5
+  minAttackTime: 3
+  maxAttackTime: 6
+  attackDamage: 20
   attackDuration: 0.8
   attackRange: 14
 --- !u!114 &527167556049320951
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6d5afcf4000be419c1b18d7e14b054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 20
+  maxHP: 85
   currentHP: 0
   characterId: 0
 --- !u!114 &527167556049320949
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac87fea2f00cd8f4196e73cb0f555443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPosition: {x: 0, y: 0, z: 0}
   patrolDistance: 8
   waitTimeMinMax: {x: 2, y: 6}
 --- !u!195 &527167556049320954

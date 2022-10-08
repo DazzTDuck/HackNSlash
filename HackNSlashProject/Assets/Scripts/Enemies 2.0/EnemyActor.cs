@@ -44,8 +44,8 @@ public class EnemyActor : MonoBehaviour
     private void Start()
     {
         EventsManager.instance.OnBarUpdateEvent += CheckToBackoff;
-        agent = GetComponent<NavMeshAgent>();
-        patrolling = GetComponent<ActorPatrolling>();
+        agent = GetComponentInChildren<NavMeshAgent>();
+        patrolling = GetComponentInChildren<ActorPatrolling>();
         patrolling.StartPatrolling();
         //if (enemyType == EnemyType.Ranged)
         //{
@@ -54,13 +54,13 @@ public class EnemyActor : MonoBehaviour
         //}
         //else
         {
-            engaged = GetComponent<ActorEngaged>();
+            engaged = GetComponentInChildren<ActorEngaged>();
             engaged.enabled = false;
-            backup = GetComponent<ActorBackup>();
+            backup = GetComponentInChildren<ActorBackup>();
             if (backup)
                 backup.enabled = false;
         }
-        attacking = GetComponent<ActorAttacking>();
+        attacking = GetComponentInChildren<ActorAttacking>();
         attacking.enabled = false;
     }
     private void OnDestroy()
@@ -72,7 +72,7 @@ public class EnemyActor : MonoBehaviour
     {
         if ((GameObject)sender == gameObject && e?.currentAmount <= 0)
         {
-            CombatManager.combatManager.RemoveFromCombat(this);
+            //TurnInactive();
         }
         else if (state == Enemystates.Partoling && (GameObject)sender == gameObject)
         {
@@ -153,9 +153,10 @@ public class EnemyActor : MonoBehaviour
             patrolling.StopAllCoroutines();
             patrolling.enabled = false;
         }
-        else if (state == Enemystates.BackUp)
+        else if (state == Enemystates.BackUp && backup)
         {
             backup.enabled = false;
+            Debug.Log(gameObject);
         }
         else if (state == Enemystates.Attacking)
         {
@@ -186,7 +187,8 @@ public class EnemyActor : MonoBehaviour
             engaged.enabled = false;
         }
         state = Enemystates.BackUp;
-        backup.enabled = true;
+        if (backup)
+            backup.enabled = true;
     }
     public void RangedEngage()
     {
@@ -203,18 +205,19 @@ public class EnemyActor : MonoBehaviour
     }
     public void ReturnToPatrol()
     {
-        if (state == Enemystates.BackUp)
+        if (state == Enemystates.BackUp && backup)
         {
             backup.enabled = false;
         }
-        else if (state == Enemystates.Engaged && enemyType != EnemyType.Ranged)
+        else if (state == Enemystates.Engaged)
         {
             engaged.Disengage();
             engaged.enabled = false;
         }
-        else if (state == Enemystates.Engaged && enemyType == EnemyType.Ranged)
+        else if (state == Enemystates.Attacking)
         {
-            //rangeEngage.enabled = false;
+            attacking.StopAllCoroutines();
+            attacking.enabled = false;
         }
         state = Enemystates.Partoling;
         patrolling.enabled = true;
@@ -222,18 +225,35 @@ public class EnemyActor : MonoBehaviour
     }
     public void Attack()
     {
-        //if (enemyType == EnemyType.Ranged)
-        //{
-        //    rangeEngage.enabled = false;
-        //}
-        //else
-        {
-            engaged.StopAllCoroutines();
-            engaged.enabled = false;
-        }
+        engaged.StopAllCoroutines();
+        engaged.enabled = false;
         state = Enemystates.Attacking;
         attacking.enabled = true;
         attacking.Attack(this, attackDamage, attackRange, attackDuration);
+    }
+
+    public void TurnInactive()
+    {
+        if (state == Enemystates.Attacking)
+            attacking.StopAllCoroutines();
+        else if (state == Enemystates.Partoling)
+            patrolling.StopAllCoroutines();
+        attacking.enabled = false;
+        engaged.enabled = false;
+        if (backup)
+            backup.enabled = false;
+        agent.isStopped = true;
+        CombatManager.combatManager.EnemyDied(this);
+        gameObject.SetActive(false);
+    }
+    public void TurnActive()
+    {
+        transform.position = patrolling.patrolPosition;
+        agent.isStopped = false;
+        agent.destination = patrolling.patrolPosition;
+        GetComponent<CharacterHealth>()?.ReturnToMaxHP();
+        playerInSight = false;
+        ReturnToPatrol();
     }
 }
 

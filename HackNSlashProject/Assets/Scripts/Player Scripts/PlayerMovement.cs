@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     Vector2 moveVector;
     Vector2 lookVector;
-    public float maxSpeed;
     Vector3 moveDir;
 
     [HideInInspector] public Vector3 gForceVector = Vector3.zero;
@@ -22,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 curWorldInput;
 
     [Header("Rotating")]
-    public float rotSpeedMouse;
-    public float rotSpeedController;
+    public float mouseSensitivity;
+    public float controllerSinsitivity;
     public float playerRotSpeed;
     bool useController;
 
@@ -132,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
         if (CombatManager.combatManager.engagedEnemies.Count == 0 && lockedOn)
             lockedOn = false;
 
-        float rotSpeed = useController ? rotSpeedController : rotSpeedMouse;
+        float rotSpeed = useController ? controllerSinsitivity : mouseSensitivity;
         camRot.x -= lookVector.y * rotSpeed;
         camRot.x = Mathf.Clamp(camRot.x, minCamAngle, maxCamAngle);
         camRot.z = 0;

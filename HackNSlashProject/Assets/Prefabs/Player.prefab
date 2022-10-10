@@ -276,8 +276,8 @@ MonoBehaviour:
   maxSpeed: 7
   gForceVector: {x: 0, y: 0, z: 0}
   isStationary: 0
-  rotSpeedMouse: 0.2
-  rotSpeedController: 2.5
+  mouseSensitivity: 1
+  controllerSinsitivity: 0.2
   playerRotSpeed: 7
   minCamAngle: -10
   maxCamAngle: 30

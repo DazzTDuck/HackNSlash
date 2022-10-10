@@ -72,11 +72,11 @@ MonoBehaviour:
   hpThreshold: 20
   attackThreshold: 5
   backoff: 0
-  minAttackTime: 5
-  maxAttackTime: 10
-  attackDamage: 28
+  minAttackTime: 3
+  maxAttackTime: 7
+  attackDamage: 24
   attackDuration: 1
-  attackRange: 2.5
+  attackRange: 3
 --- !u!114 &6612438804823176749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6d5afcf4000be419c1b18d7e14b054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 350
+  maxHP: 450
   currentHP: 0
   characterId: 0
 --- !u!114 &6612438804823176724

@@ -288,7 +288,7 @@ MonoBehaviour:
   animator: {fileID: 4107335095594995455}
   animationSmoothing: 10
   lockedOn: 0
-  lockonTarget: {fileID: 0}
+  lockonTargetIndex: 0
   canAct: 1
   holyPower: {fileID: 0}
   interactRadius: 3
@@ -531,10 +531,10 @@ MonoBehaviour:
     m_Bits: 256
   radius: 7
   angle: 100
-  damage: 34
+  damage: 35
   qTime: 0.3
   animator: {fileID: 0}
-  powerConsumption: 60
+  powerConsumption: 45
 --- !u!114 &1999201281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,9 +722,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDuration: 0.25
   qTime: 0.2
-  damage: 25
+  damage: 30
   animator: {fileID: 4107335096541107347}
-  powerConsumption: 7
+  powerConsumption: 12
 --- !u!1001 &389881477
 PrefabInstance:
   m_ObjectHideFlags: 0

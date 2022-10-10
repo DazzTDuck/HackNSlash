@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHolyPower: 100
   currentHolyPower: 0
-  powerRegenSpeed: 10
+  powerRegenSpeed: 12
   powerRegenDelay: 2
 --- !u!114 &736763277
 MonoBehaviour:
@@ -273,11 +273,10 @@ MonoBehaviour:
   moveAccel: 20
   moveDecel: 10
   stopVel: 0.1
-  maxSpeed: 7
   gForceVector: {x: 0, y: 0, z: 0}
   isStationary: 0
-  mouseSensitivity: 1
-  controllerSinsitivity: 0.2
+  mouseSensitivity: 0.5
+  controllerSinsitivity: 1
   playerRotSpeed: 7
   minCamAngle: -10
   maxCamAngle: 30

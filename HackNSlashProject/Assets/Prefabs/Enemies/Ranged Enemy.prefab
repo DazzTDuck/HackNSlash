@@ -69,7 +69,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
-  hpThreshold: 30
+  hpThreshold: 0
   attackThreshold: 3
   backoff: 0
   minAttackTime: 3
@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d3aafc3c50abf4f84e38f724299994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStunned: 0
 --- !u!54 &527167556049320952
 Rigidbody:
   m_ObjectHideFlags: 0

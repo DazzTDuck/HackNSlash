@@ -78,10 +78,10 @@ public class EnemyActor : MonoBehaviour
         {
             CombatManager.combatManager.EnemyJoinsFight(this);
         }
-        else if (state == Enemystates.Engaged || state == Enemystates.Attacking)
+        else if ((state == Enemystates.Engaged || state == Enemystates.Attacking) && !backedOff)
         {
             bool backingOff = false;
-            if ((GameObject)sender == gameObject && !backedOff)
+            if ((GameObject)sender == gameObject)
             {
                 if (e.currentAmount <= hpThreshold)
                 {
@@ -115,7 +115,7 @@ public class EnemyActor : MonoBehaviour
         else
             agent.updateRotation = true;
 
-        if (attackTiming > 0 && Vector3.Distance(transform.position, agent.destination) < 2 && state == Enemystates.Engaged)
+        if (attackTiming > 0 && Vector3.Distance(transform.position, agent.destination) < 2 && state == Enemystates.Engaged && !GetComponent<ActorStunned>().isStunned)
         {
             float dst = Vector3.Distance(transform.position, CombatManager.combatManager.player.position);
             attackTiming -= Time.fixedDeltaTime;
@@ -125,7 +125,7 @@ public class EnemyActor : MonoBehaviour
                 attackTiming -= Time.fixedDeltaTime * speedMod;
             }
         }
-        else if (attackTiming <= 0 && state == Enemystates.Engaged)
+        else if (attackTiming <= 0 && state == Enemystates.Engaged && !GetComponent<ActorStunned>().isStunned)
             Attack();
 
         if (Vector3.Distance(transform.position, CombatManager.combatManager.player.position) < visionRadius && Vector3.Dot(transform.forward, CombatManager.combatManager.player.position - transform.position) > (1 - (visionConeWidth / 180f)))
@@ -156,7 +156,8 @@ public class EnemyActor : MonoBehaviour
         else if (state == Enemystates.BackUp && backup)
         {
             backup.enabled = false;
-            Debug.Log(gameObject);
+            Debug.Log(gameObject.name + " from the back lines");
+            backoff = false;
         }
         else if (state == Enemystates.Attacking)
         {
@@ -170,12 +171,14 @@ public class EnemyActor : MonoBehaviour
         engaged.Engage();
         if (backoff)
         {
+            Debug.Log(gameObject.name + " about to back off");
             GoBackup();
         }
     }
     public void GoBackup()
     {
         backoff = false;
+        Debug.Log(gameObject.name + " backing up");
         if (state == Enemystates.Partoling)
         {
             patrolling.StopAllCoroutines();

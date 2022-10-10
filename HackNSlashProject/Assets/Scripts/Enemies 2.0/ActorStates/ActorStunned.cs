@@ -7,6 +7,7 @@ public class ActorStunned : MonoBehaviour
 {
     NavMeshAgent agent;
     Rigidbody rb;
+    public bool isStunned;
     public void GetStunned(float stunDuration, float stunPower, Transform player)
     {
         rb = GetComponent<Rigidbody>();
@@ -19,6 +20,7 @@ public class ActorStunned : MonoBehaviour
     IEnumerator IsStunned(float stunDuration, float stunPower, Vector3 staggerDir)
     {
         rb.isKinematic = false;
+        isStunned = true;
         //animator.SetBool("IsStunned", true);
         //animator.SetTrigger("GetStunned");
         rb.AddForce(staggerDir * stunPower, ForceMode.Impulse);
@@ -27,5 +29,6 @@ public class ActorStunned : MonoBehaviour
         rb.isKinematic = true;
         agent.isStopped = false;
         agent.destination = transform.position;
+        isStunned = false;
     }
 }

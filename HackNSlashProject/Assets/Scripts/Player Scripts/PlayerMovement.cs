@@ -182,10 +182,10 @@ public class PlayerMovement : MonoBehaviour
             if (Vector3.Distance(interactable.transform.position, transform.position) > interactRadius || interactable.canInteract == false)
             {
                 interactable = null;
-                Debug.Log("you can no longer interact");
+                //Debug.Log("you can no longer interact");
             }
-            else
-                Debug.Log("you can interact;");
+            //else
+                //Debug.Log("you can interact;");
         }
 
     }

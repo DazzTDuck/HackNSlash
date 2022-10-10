@@ -33,14 +33,10 @@ public class CombatManager : MonoBehaviour
         {
             int currentEngagedEnemies = 0;
             foreach (EnemyActor engagedActor in engagedEnemies)
-            {
                 currentEngagedEnemies += engagedActor.occupySpace;
-            }
             int currentBackupEnemies = 0;
             foreach (EnemyActor backupActor in backupEnemies)
-            {
                 currentBackupEnemies += backupActor.occupySpace;
-            }
             if (currentEngagedEnemies + actor.occupySpace <= engagedMaxValue)
             {
                 engagedEnemies.Add(actor);
@@ -60,12 +56,9 @@ public class CombatManager : MonoBehaviour
     {
         if (backupEnemies.Count != 0)
         {
-            
-            int s = actor.occupySpace;
-
             for (int i = 0; i < backupEnemies.Count; i++)
             {
-                if (backupEnemies[i].occupySpace <= s && ActualPriority(backupEnemies[i]) > ActualPriority(actor))
+                if (backupEnemies[i].occupySpace <= actor.occupySpace && ActualPriority(backupEnemies[i]) > ActualPriority(actor))
                 {
                     FallingBack(actor, i);
                     return true;
@@ -151,9 +144,7 @@ public class CombatManager : MonoBehaviour
         VIP.EngagePlayer();
         engagedEnemies.Add(VIP);
         if (fillSpace >0)
-        {
             FillFrontLine(fillSpace);
-        }
     }
 
     float ActualPriority(EnemyActor actor)
@@ -176,14 +167,9 @@ public class CombatManager : MonoBehaviour
             foreach (EnemyActor actor in backupEnemies)
             {
                 if (!VIP && actor.occupySpace <= spaceLeft)
-                {
                     VIP = actor;
-                }
                 if (ActualPriority(VIP) < ActualPriority(actor) && actor.occupySpace <= spaceLeft)
-                {
                     VIP = actor;
-                }
-
             }
             if (VIP)
             {
@@ -222,24 +208,18 @@ public class CombatManager : MonoBehaviour
     public void RemoveFromCombat(EnemyActor actor)
     {
         if (actor.enemyType == EnemyType.Ranged)
-        {
             rangedEnemies.Remove(actor);
-        }
         else if (actor.state == Enemystates.Attacking || actor.state == Enemystates.Engaged)
         {
             engagedEnemies.Remove(actor);
             int space = engagedMaxValue;
             for (int i = 0; i < engagedEnemies.Count; i++)
-            {
                 space -= engagedEnemies[i].occupySpace;
-            }
             FillFrontLine(space);
             Debug.Log("space =" + space);
         }
         else if (actor.state == Enemystates.BackUp)
-        {
             backupEnemies.Remove(actor);
-        }
         if (actor.GetComponent<CharacterHealth>().currentHP != 0)
             actor.ReturnToPatrol();
     }

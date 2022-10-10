@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &36319085193424956
+--- !u!1 &35866925464124019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,104 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 894934995413501800}
-  - component: {fileID: 5755742802765044839}
+  - component: {fileID: 6054456750560086761}
+  m_Layer: 0
+  m_Name: Cape_Middle03.Mid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6054456750560086761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35866925464124019}
+  m_LocalRotation: {x: 0.0036661727, y: -1.0602645e-14, z: -8.740827e-10, w: 0.9999933}
+  m_LocalPosition: {x: 2.7672206e-17, y: 0.0074374233, z: 2.2351741e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7343539565500875311}
+  m_Father: {fileID: 1319949503298324322}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &191750132693672891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8405169908749135787}
+  m_Layer: 0
+  m_Name: Cape_Middle05.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8405169908749135787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191750132693672891}
+  m_LocalRotation: {x: -0.000900486, y: 0.0001802878, z: 0.012336126, w: 0.9999235}
+  m_LocalPosition: {x: -9.0338287e-10, y: 0.007256608, z: -3.358582e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5562332517891667363}
+  m_Father: {fileID: 7997721610436879435}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &386786137204572792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8063869454132761243}
+  m_Layer: 0
+  m_Name: Cape_Middle03.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8063869454132761243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386786137204572792}
+  m_LocalRotation: {x: 0.00026653224, y: 0.000032431006, z: -0.0036563273, w: 0.9999933}
+  m_LocalPosition: {x: 2.1420418e-10, y: 0.007437417, z: 4.5401974e-11}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7997721610436879435}
+  m_Father: {fileID: 801518264215775303}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &871698354902925155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527824566567282137}
+  - component: {fileID: 5606706059319416866}
   m_Layer: 0
   m_Name: Cloak
   m_TagString: Untagged
@@ -17,28 +113,533 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &894934995413501800
+--- !u!4 &527824566567282137
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36319085193424956}
+  m_GameObject: {fileID: 871698354902925155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4742353876572828497}
+  - {fileID: 328191460447319678}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5606706059319416866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871698354902925155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1446143d2dd8ec9418e07f18d96fadd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateTime:
+    updatePerSeccond: 60
+    updateMode: 0
+    updateLocation: 0
+    futurePredictionRate: 1
+    updateBoneScale: 0
+  useFasterWrite: 0
+  OnPreUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPostUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &2122973881693685653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2183206948863331019}
+  m_Layer: 0
+  m_Name: Cape_OldTop.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2183206948863331019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122973881693685653}
+  m_LocalRotation: {x: 0.6816694, y: 0.036974903, z: -0.04202865, w: 0.7295158}
+  m_LocalPosition: {x: 0.005296248, y: -0.0000113617625, z: -0.0015118655}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2753142662330025001}
+  m_Father: {fileID: 328191460447319678}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2279358186411314145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7985627519053119763}
+  m_Layer: 0
+  m_Name: Cape_Middle01.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7985627519053119763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2279358186411314145}
+  m_LocalRotation: {x: -0.025122317, y: 0.00067941257, z: -0.021008594, w: 0.9994634}
+  m_LocalPosition: {x: 1.5948899e-10, y: 0.009794499, z: 2.7939677e-11}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3381375713750304824}
+  m_Father: {fileID: 4664498265526060528}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2576276788499672471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7997721610436879435}
+  m_Layer: 0
+  m_Name: Cape_Middle04.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7997721610436879435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2576276788499672471}
+  m_LocalRotation: {x: -0.00036087123, y: -0.000035716537, z: 0.004951645, w: 0.9999877}
+  m_LocalPosition: {x: 2.8172506e-10, y: 0.00700235, z: -1.7462297e-11}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8405169908749135787}
+  m_Father: {fileID: 8063869454132761243}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2750274055998972309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319949503298324322}
+  m_Layer: 0
+  m_Name: Cape_Middle_02.Mid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1319949503298324322
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2750274055998972309}
+  m_LocalRotation: {x: -0.009907618, y: 3.591599e-14, z: 0.0000000023621596, w: 0.99995095}
+  m_LocalPosition: {x: -8.881784e-18, y: 0.008744755, z: -7.4505804e-11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6054456750560086761}
+  m_Father: {fileID: 1910267873384037442}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3236505430067650636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1810389707045982694}
+  m_Layer: 0
+  m_Name: Cape_Middle04.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1810389707045982694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3236505430067650636}
+  m_LocalRotation: {x: -0.00036087123, y: 0.000035716537, z: -0.004951645, w: 0.9999877}
+  m_LocalPosition: {x: -2.8172506e-10, y: 0.00700235, z: -1.7462297e-11}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 42682004729696109}
+  m_Father: {fileID: 435243329383688357}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3820658188718480165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527037247011130346}
+  m_Layer: 0
+  m_Name: Cape_Top.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1527037247011130346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820658188718480165}
+  m_LocalRotation: {x: 0.13403729, y: 0.9563445, z: -0.24489126, w: 0.08641524}
+  m_LocalPosition: {x: 0.0047997325, y: 0.0011634465, z: -0.003406412}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 328191460447319678}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3874475095357798582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 42682004729696109}
+  m_Layer: 0
+  m_Name: Cape_Middle05.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &42682004729696109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3874475095357798582}
+  m_LocalRotation: {x: -0.000900486, y: -0.0001802878, z: -0.012336126, w: 0.9999235}
+  m_LocalPosition: {x: 9.0338287e-10, y: 0.007256608, z: -3.358582e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2769113247811010921}
+  m_Father: {fileID: 1810389707045982694}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4109363216954976567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2753142662330025001}
+  m_Layer: 0
+  m_Name: Cape_Middle01.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2753142662330025001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109363216954976567}
+  m_LocalRotation: {x: -0.025122317, y: -0.00067941257, z: 0.021008594, w: 0.9994634}
+  m_LocalPosition: {x: -1.5948899e-10, y: 0.009794499, z: 2.7939677e-11}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 801518264215775303}
+  m_Father: {fileID: 2183206948863331019}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4273293331045958778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5562332517891667363}
+  m_Layer: 0
+  m_Name: Cape_Bottem.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5562332517891667363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4273293331045958778}
+  m_LocalRotation: {x: 0.0016016287, y: -0.00005614513, z: -0.021903355, w: 0.99975884}
+  m_LocalPosition: {x: -1.268927e-10, y: 0.009361394, z: 7.337803e-11}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8405169908749135787}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4502947620336391287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353559368408797420}
+  m_Layer: 0
+  m_Name: Cape_Top.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &353559368408797420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502947620336391287}
+  m_LocalRotation: {x: -0.13403729, y: 0.9563445, z: -0.24489126, w: -0.08641524}
+  m_LocalPosition: {x: -0.0047997325, y: 0.0011634465, z: -0.003406412}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 328191460447319678}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4597471895563360754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794428127178814517}
+  m_Layer: 0
+  m_Name: Cape_Top.Mid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &794428127178814517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597471895563360754}
+  m_LocalRotation: {x: 0.70051116, y: 0, z: -0, w: 0.7136415}
+  m_LocalPosition: {x: -0, y: 0.0002158081, z: -0.0016097663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1910267873384037442}
+  m_Father: {fileID: 328191460447319678}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4936777821918040676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7343539565500875311}
+  m_Layer: 0
+  m_Name: Cape_Middle04.Mid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7343539565500875311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936777821918040676}
+  m_LocalRotation: {x: -0.0049648895, y: -1.1040033e-16, z: 0.0000000011837235, w: 0.99998766}
+  m_LocalPosition: {x: -1.04329915e-16, y: 0.0070023495, z: -2.2351741e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6336285622427276886}
+  m_Father: {fileID: 6054456750560086761}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5008810334557551909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801518264215775303}
+  m_Layer: 0
+  m_Name: Cape_Middle_02.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &801518264215775303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008810334557551909}
+  m_LocalRotation: {x: -0.00072132814, y: -0.00016445713, z: 0.009881178, w: 0.99995095}
+  m_LocalPosition: {x: 6.449409e-10, y: 0.008744753, z: -9.61154e-11}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8063869454132761243}
+  m_Father: {fileID: 2753142662330025001}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5483143980308788321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3381375713750304824}
+  m_Layer: 0
+  m_Name: Cape_Middle_02.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3381375713750304824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5483143980308788321}
+  m_LocalRotation: {x: -0.00072132814, y: 0.00016445713, z: -0.009881178, w: 0.99995095}
+  m_LocalPosition: {x: -6.449409e-10, y: 0.008744753, z: -9.61154e-11}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 435243329383688357}
+  m_Father: {fileID: 7985627519053119763}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5564834066326651909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4742353876572828497}
+  - component: {fileID: 169952130775623774}
+  m_Layer: 0
+  m_Name: Cloak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4742353876572828497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564834066326651909}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.0000000037252903, z: -0.000000029802322}
   m_LocalScale: {x: 0.99999976, y: 0.9999997, z: 0.9999997}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5397703512594731488}
+  m_Children:
+  - {fileID: 1924470401980087652}
+  m_Father: {fileID: 527824566567282137}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &5755742802765044839
+--- !u!137 &169952130775623774
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36319085193424956}
+  m_GameObject: {fileID: 5564834066326651909}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -79,34 +680,37 @@ SkinnedMeshRenderer:
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: -7832321027814015958, guid: bea36a637114313459ea186958e21117, type: 3}
   m_Bones:
-  - {fileID: 5097277867250909196}
-  - {fileID: 6285311594083944571}
-  - {fileID: 6911385020945740635}
-  - {fileID: 1855073258076405456}
-  - {fileID: 2905443298285270550}
-  - {fileID: 1897221785063039599}
-  - {fileID: 2031335359509020424}
-  - {fileID: 6380029828967595987}
-  - {fileID: 4564618423089333173}
-  - {fileID: 2237692808251755185}
-  - {fileID: 8526329725277075183}
-  - {fileID: 6417522414427895229}
-  - {fileID: 4084620631352568991}
-  - {fileID: 3539424823318438188}
-  - {fileID: 5283658347275707605}
-  - {fileID: 5116424029927422764}
-  - {fileID: 2957897524632272262}
-  - {fileID: 250903270858682126}
-  - {fileID: 7457375341011206169}
-  - {fileID: 2400151312120826130}
-  - {fileID: 2264742682750291187}
+  - {fileID: 794428127178814517}
+  - {fileID: 1910267873384037442}
+  - {fileID: 1319949503298324322}
+  - {fileID: 6054456750560086761}
+  - {fileID: 7343539565500875311}
+  - {fileID: 6336285622427276886}
+  - {fileID: 5875943682805877553}
+  - {fileID: 2183206948863331019}
+  - {fileID: 2753142662330025001}
+  - {fileID: 801518264215775303}
+  - {fileID: 8063869454132761243}
+  - {fileID: 7997721610436879435}
+  - {fileID: 8405169908749135787}
+  - {fileID: 5562332517891667363}
+  - {fileID: 4664498265526060528}
+  - {fileID: 7985627519053119763}
+  - {fileID: 3381375713750304824}
+  - {fileID: 435243329383688357}
+  - {fileID: 1810389707045982694}
+  - {fileID: 42682004729696109}
+  - {fileID: 2769113247811010921}
+  - {fileID: 4517048396173034527}
+  - {fileID: 353559368408797420}
+  - {fileID: 1527037247011130346}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 5283658347275707605}
+  m_RootBone: {fileID: 4664498265526060528}
   m_AABB:
-    m_Center: {x: 0.011102223, y: 0.027406683, z: -0.0055844085}
-    m_Extent: {x: 0.019994028, y: 0.034749135, z: 0.007699075}
+    m_Center: {x: 0.011091871, y: 0.026428193, z: -0.005004023}
+    m_Extent: {x: 0.019989904, y: 0.03575795, z: 0.009418301}
   m_DirtyAABB: 0
---- !u!1 &45799945521770686
+--- !u!1 &5869782242557605080
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,95 +718,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2264742682750291187}
+  - component: {fileID: 1924470401980087652}
+  - component: {fileID: 2229727714475822840}
   m_Layer: 0
-  m_Name: Cape_Bottem.L
+  m_Name: Magica Capsule Collider (Cloak)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2264742682750291187
+--- !u!4 &1924470401980087652
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45799945521770686}
-  m_LocalRotation: {x: 0.0016016238, y: 0.00005614575, z: 0.021903351, w: 0.99975884}
-  m_LocalPosition: {x: 6.46105e-10, y: 0.009361391, z: -6.406117e-10}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2011620796108397030}
-  m_Father: {fileID: 2400151312120826130}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &560061418043715311
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3539424823318438188}
-  m_Layer: 0
-  m_Name: Cape_Bottem.R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3539424823318438188
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560061418043715311}
-  m_LocalRotation: {x: 0.0016016238, y: -0.00005614575, z: -0.021903351, w: 0.99975884}
-  m_LocalPosition: {x: -6.46105e-10, y: 0.009361391, z: -6.406117e-10}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5979636975520786622}
-  m_Father: {fileID: 4084620631352568991}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &664771736798127709
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2905443298285270550}
-  m_Layer: 0
-  m_Name: Cape_Middle04.Mid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2905443298285270550
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664771736798127709}
-  m_LocalRotation: {x: -0.0049648895, y: -1.6591079e-16, z: 0.0000000011837235, w: 0.99998766}
-  m_LocalPosition: {x: 8.664035e-18, y: 0.0070023495, z: -7.4505804e-11}
+  m_GameObject: {fileID: 5869782242557605080}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.004, y: 0.87100005, z: 0.05950001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1897221785063039599}
-  m_Father: {fileID: 1855073258076405456}
+  m_Children: []
+  m_Father: {fileID: 4742353876572828497}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1266820835275979227
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &2229727714475822840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869782242557605080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ec582e8d6cb504fb1d0160568835a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 0
+  center: {x: 0, y: 0, z: 0}
+  axis: 0
+  length: 0.631
+  startRadius: 0.2
+  endRadius: 0.2
+--- !u!1 &6642789440090656226
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,7 +768,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6285311594083944571}
+  - component: {fileID: 1910267873384037442}
   m_Layer: 0
   m_Name: Cape_Middle01.Mid
   m_TagString: Untagged
@@ -218,24 +776,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6285311594083944571
+--- !u!4 &1910267873384037442
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266820835275979227}
-  m_LocalRotation: {x: -0.021195963, y: -0.000000119182545, z: 0.0000000025267561,
-    w: 0.99977535}
-  m_LocalPosition: {x: -0, y: 0.0097653, z: -4.6566126e-11}
-  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_GameObject: {fileID: 6642789440090656226}
+  m_LocalRotation: {x: -0.044611305, y: -0.000000119090636, z: 0.0000000053180824,
+    w: 0.9990044}
+  m_LocalPosition: {x: -0, y: 0.009817365, z: 9.3132255e-12}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6911385020945740635}
-  m_Father: {fileID: 5097277867250909196}
+  - {fileID: 1319949503298324322}
+  m_Father: {fileID: 794428127178814517}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1388138899327084271
+--- !u!1 &6654048033548714891
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,7 +801,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2031335359509020424}
+  - component: {fileID: 4664498265526060528}
+  m_Layer: 0
+  m_Name: Cape_OldTop.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4664498265526060528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6654048033548714891}
+  m_LocalRotation: {x: 0.6816694, y: -0.036974903, z: 0.04202865, w: 0.7295158}
+  m_LocalPosition: {x: -0.005296248, y: -0.0000113617625, z: -0.0015118655}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7985627519053119763}
+  m_Father: {fileID: 328191460447319678}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6843470201907516118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5875943682805877553}
   m_Layer: 0
   m_Name: Cape_Bottem.Mid
   m_TagString: Untagged
@@ -251,23 +841,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2031335359509020424
+--- !u!4 &5875943682805877553
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388138899327084271}
-  m_LocalRotation: {x: 0.0219617, y: -3.6810875e-15, z: -0.0000000052360773, w: 0.99975884}
-  m_LocalPosition: {x: 1.7436431e-17, y: 0.009361395, z: 0}
+  m_GameObject: {fileID: 6843470201907516118}
+  m_LocalRotation: {x: 0.0219617, y: -3.5700923e-15, z: -0.0000000052360773, w: 0.99975884}
+  m_LocalPosition: {x: 2.1680682e-16, y: 0.009361397, z: 8.9406965e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4585987972012869132}
-  m_Father: {fileID: 1897221785063039599}
+  m_Children: []
+  m_Father: {fileID: 6336285622427276886}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2440718629580643185
+--- !u!1 &7353274026877567979
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,71 +864,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1897221785063039599}
-  m_Layer: 0
-  m_Name: Cape_Middle05.Mid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1897221785063039599
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440718629580643185}
-  m_LocalRotation: {x: -0.0123688225, y: -1.1612542e-16, z: 0.0000000029489573, w: 0.9999235}
-  m_LocalPosition: {x: -1.393341e-17, y: 0.007256615, z: -1.4901161e-10}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2031335359509020424}
-  m_Father: {fileID: 2905443298285270550}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2456981560076999731
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6417522414427895229}
-  m_Layer: 0
-  m_Name: Cape_Middle04.R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6417522414427895229
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2456981560076999731}
-  m_LocalRotation: {x: -0.0003608784, y: -0.000035715948, z: 0.0049516456, w: 0.9999877}
-  m_LocalPosition: {x: -9.103678e-10, y: 0.0070023444, z: 1.2718374e-10}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4084620631352568991}
-  m_Father: {fileID: 8526329725277075183}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2735196077306316284
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 250903270858682126}
+  - component: {fileID: 435243329383688357}
   m_Layer: 0
   m_Name: Cape_Middle03.L
   m_TagString: Untagged
@@ -347,23 +872,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &250903270858682126
+--- !u!4 &435243329383688357
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2735196077306316284}
-  m_LocalRotation: {x: 0.00026653823, y: -0.000032430882, z: 0.0036563338, w: 0.9999933}
-  m_LocalPosition: {x: 4.528556e-10, y: 0.0074374154, z: 4.249159e-11}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_GameObject: {fileID: 7353274026877567979}
+  m_LocalRotation: {x: 0.00026653224, y: -0.000032431006, z: 0.0036563273, w: 0.9999933}
+  m_LocalPosition: {x: -2.1420418e-10, y: 0.007437417, z: 4.5401974e-11}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7457375341011206169}
-  m_Father: {fileID: 2957897524632272262}
+  - {fileID: 1810389707045982694}
+  m_Father: {fileID: 3381375713750304824}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3575505554995954772
+--- !u!1 &7810481672368222024
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -371,31 +896,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2957897524632272262}
+  - component: {fileID: 6336285622427276886}
   m_Layer: 0
-  m_Name: Cape_Middle_02.L
+  m_Name: Cape_Middle05.Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2957897524632272262
+--- !u!4 &6336285622427276886
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3575505554995954772}
-  m_LocalRotation: {x: -0.00072133896, y: 0.0001644573, z: -0.009881192, w: 0.99995095}
-  m_LocalPosition: {x: 6.9732775e-10, y: 0.008744751, z: -2.9867805e-10}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_GameObject: {fileID: 7810481672368222024}
+  m_LocalRotation: {x: -0.0123688225, y: -4.38887e-18, z: 0.0000000029489575, w: 0.9999235}
+  m_LocalPosition: {x: -2.356854e-17, y: 0.007256615, z: -1.4901161e-10}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 250903270858682126}
-  m_Father: {fileID: 5116424029927422764}
+  - {fileID: 5875943682805877553}
+  m_Father: {fileID: 7343539565500875311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4234514991505099548
+--- !u!1 &7829448042334546468
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,7 +928,70 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5275601369349653063}
+  - component: {fileID: 4517048396173034527}
+  m_Layer: 0
+  m_Name: Cape_Top.Mid.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4517048396173034527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7829448042334546468}
+  m_LocalRotation: {x: 0.00000034398641, y: 0.84046954, z: -0.5418588, w: -0.0000005952727}
+  m_LocalPosition: {x: 2.0031379e-19, y: 0.00014950294, z: -0.0025557247}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 328191460447319678}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8077583227221388945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2769113247811010921}
+  m_Layer: 0
+  m_Name: Cape_Bottem.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2769113247811010921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077583227221388945}
+  m_LocalRotation: {x: 0.0016016287, y: 0.00005614513, z: 0.021903355, w: 0.99975884}
+  m_LocalPosition: {x: 1.268927e-10, y: 0.009361394, z: 7.337803e-11}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 42682004729696109}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8610688877090029349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 328191460447319678}
+  - component: {fileID: 1633270193661495295}
   m_Layer: 0
   m_Name: CloakRig
   m_TagString: Untagged
@@ -411,531 +999,1285 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5275601369349653063
+--- !u!4 &328191460447319678
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4234514991505099548}
+  m_GameObject: {fileID: 8610688877090029349}
   m_LocalRotation: {x: 0.7597215, y: 0, z: -0, w: 0.6502486}
   m_LocalPosition: {x: -0, y: 1.5331672, z: -0.14960374}
   m_LocalScale: {x: 18.957258, y: 18.957258, z: 18.957258}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5283658347275707605}
-  - {fileID: 5097277867250909196}
-  - {fileID: 6380029828967595987}
-  m_Father: {fileID: 5397703512594731488}
+  - {fileID: 4664498265526060528}
+  - {fileID: 2183206948863331019}
+  - {fileID: 353559368408797420}
+  - {fileID: 794428127178814517}
+  - {fileID: 4517048396173034527}
+  - {fileID: 1527037247011130346}
+  m_Father: {fileID: 527824566567282137}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4729815432673233754
-GameObject:
+--- !u!114 &1633270193661495295
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5397703512594731488}
-  m_Layer: 0
-  m_Name: Cloak
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5397703512594731488
-Transform:
+  m_GameObject: {fileID: 8610688877090029349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b926eb37fed1d748b80e3b4756bc569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHash: -150030729
+  dataVersion: 7
+  teamData:
+    colliderList:
+    - {fileID: 2229727714475822840}
+    penetrationIgnoreColliderList: []
+    mergeAvatarCollider: 1
+  userBlendWeight: 1
+  updateMode: 0
+  cullingMode: 0
+  skinningMode: 0
+  clothParams:
+    algorithm: 1
+    radius:
+      startValue: 0.015
+      endValue: 0.023
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    mass:
+      startValue: 5
+      endValue: 1
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    useGravity: 1
+    gravity:
+      startValue: 0
+      endValue: -1
+      useEndValue: 0
+      curveValue: 0
+      useCurveValue: 0
+    gravityDirection: {x: 0, y: 1, z: 0}
+    useDrag: 1
+    drag:
+      startValue: 0.03
+      endValue: 0.01
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    useMaxVelocity: 1
+    maxVelocity:
+      startValue: 3
+      endValue: 3
+      useEndValue: 0
+      curveValue: 0
+      useCurveValue: 0
+    influenceTarget: {fileID: 0}
+    maxMoveSpeed: 3
+    maxRotationSpeed: 720
+    worldMoveInfluence:
+      startValue: 0.8
+      endValue: 0.5
+      useEndValue: 0
+      curveValue: 0
+      useCurveValue: 0
+    worldRotationInfluence:
+      startValue: 0.8
+      endValue: 0.5
+      useEndValue: 0
+      curveValue: 0
+      useCurveValue: 0
+    massInfluence: 0.3
+    depthInfluence:
+      startValue: 0.1
+      endValue: 1
+      useEndValue: 1
+      curveValue: 0.5
+      useCurveValue: 1
+    windInfluence: 1
+    windRandomScale: 0.7
+    windSynchronization: 0.6
+    useDistanceDisable: 0
+    disableReferenceObject: {fileID: 0}
+    disableDistance: 20
+    disableFadeDistance: 5
+    useResetTeleport: 0
+    teleportDistance: 0.2
+    teleportRotation: 45
+    teleportMode: 0
+    resetStabilizationTime: 0.1
+    useClampDistanceRatio: 1
+    clampDistanceMinRatio: 0.5
+    clampDistanceMaxRatio: 1.1
+    clampDistanceVelocityInfluence: 0.2
+    useClampPositionLength: 0
+    clampPositionLength:
+      startValue: 0.03
+      endValue: 0.2
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    clampPositionRatioX: 1
+    clampPositionRatioY: 1
+    clampPositionRatioZ: 1
+    clampPositionVelocityInfluence: 0.5
+    useClampRotation: 1
+    clampRotationAngle:
+      startValue: 35
+      endValue: 60
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    clampRotationAngle2:
+      startValue: 35
+      endValue: 60
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    clampRotationVelocityLimit: 1
+    clampRotationVelocityInfluence: 0.2
+    restoreDistanceVelocityInfluence: 1
+    structDistanceStiffness:
+      startValue: 1
+      endValue: 1
+      useEndValue: 0
+      curveValue: 0
+      useCurveValue: 0
+    useBendDistance: 0
+    bendDistanceMaxCount: 2
+    bendDistanceStiffness:
+      startValue: 0.5
+      endValue: 0.5
+      useEndValue: 0
+      curveValue: 0
+      useCurveValue: 0
+    useNearDistance: 0
+    nearDistanceMaxCount: 3
+    nearDistanceMaxDepth: 1
+    nearDistanceLength:
+      startValue: 0.05
+      endValue: 0.05
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    nearDistanceStiffness:
+      startValue: 0.3
+      endValue: 0.3
+      useEndValue: 0
+      curveValue: 0
+      useCurveValue: 0
+    useRestoreRotation: 1
+    restoreRotation:
+      startValue: 0.04
+      endValue: 0.004
+      useEndValue: 0
+      curveValue: 0
+      useCurveValue: 0
+    restoreRotation2:
+      startValue: 0.05
+      endValue: 0.02
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    restoreRotationVelocityInfluence: 0.2
+    restoreRotationVelocityInfluence2: 0.3
+    useSpring: 0
+    springPower: 0.017
+    springRadius: 0.1
+    springScaleX: 1
+    springScaleY: 1
+    springScaleZ: 1
+    springIntensity: 1
+    springDirectionAtten:
+      startValue: 1
+      endValue: 0
+      useEndValue: 1
+      curveValue: 0.234
+      useCurveValue: 1
+    springDistanceAtten:
+      startValue: 1
+      endValue: 0
+      useEndValue: 1
+      curveValue: 0.395
+      useCurveValue: 1
+    adjustMode: 0
+    adjustRotationPower: 0
+    useTriangleBend: 0
+    triangleBend:
+      startValue: 0.03
+      endValue: 0.03
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    triangleBend2:
+      startValue: 0.03
+      endValue: 0.03
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    useTwistCorrection: 0
+    twistRecoveryPower: 0.2
+    useVolume: 0
+    maxVolumeLength: 0.1
+    volumeStretchStiffness:
+      startValue: 0.5
+      endValue: 0.5
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    volumeShearStiffness:
+      startValue: 0.5
+      endValue: 0.5
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    useCollision: 1
+    friction: 0.1
+    staticFriction: 0.03
+    usePenetration: 0
+    penetrationMode: 0
+    penetrationAxis: 5
+    penetrationMaxDepth: 1
+    penetrationConnectDistance:
+      startValue: 0.1
+      endValue: 0.2
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    penetrationDistance:
+      startValue: 0.02
+      endValue: 0.1
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    penetrationRadius:
+      startValue: 0.3
+      endValue: 1
+      useEndValue: 1
+      curveValue: 0
+      useCurveValue: 0
+    useLineAvarageRotation: 1
+    useFixedNonRotation: 0
+  clothParamDataHashList: 000000000000000000000000000000000000000000000000f61b993700000000ec37326f00000000ec37326f00000000000000000000000000000000000000009aaeb8d100000000000000000000000000000000f61b993700000000
+  clothData: {fileID: -7593049062831424236}
+  clothDataHash: 1450076017
+  clothDataVersion: 5
+  clothSelection: {fileID: -2204296538134765708, guid: 399d3e6f5d81c29469bb7e0d33efaef0,
+    type: 3}
+  clothSelectionHash: 393835232
+  clothSelectionVersion: 2
+  cullRendererList:
+  - {fileID: 0}
+  meshData: {fileID: 7316029222065775977}
+  meshDataHash: 600315689
+  meshDataVersion: 2
+  clothTarget:
+    rootList:
+    - {fileID: 4664498265526060528}
+    - {fileID: 7985627519053119763}
+    - {fileID: 3381375713750304824}
+    - {fileID: 435243329383688357}
+    - {fileID: 1810389707045982694}
+    - {fileID: 42682004729696109}
+    - {fileID: 2769113247811010921}
+    - {fileID: 2183206948863331019}
+    - {fileID: 2753142662330025001}
+    - {fileID: 801518264215775303}
+    - {fileID: 8063869454132761243}
+    - {fileID: 7997721610436879435}
+    - {fileID: 8405169908749135787}
+    - {fileID: 5562332517891667363}
+    - {fileID: 353559368408797420}
+    - {fileID: 794428127178814517}
+    - {fileID: 1910267873384037442}
+    - {fileID: 1319949503298324322}
+    - {fileID: 6054456750560086761}
+    - {fileID: 7343539565500875311}
+    - {fileID: 6336285622427276886}
+    - {fileID: 5875943682805877553}
+    - {fileID: 4517048396173034527}
+    - {fileID: 1527037247011130346}
+    connection: 0
+    sameSurfaceAngle: 80
+  useTransformList:
+  - {fileID: 4664498265526060528}
+  - {fileID: 7985627519053119763}
+  - {fileID: 3381375713750304824}
+  - {fileID: 435243329383688357}
+  - {fileID: 1810389707045982694}
+  - {fileID: 42682004729696109}
+  - {fileID: 2769113247811010921}
+  - {fileID: 2183206948863331019}
+  - {fileID: 2753142662330025001}
+  - {fileID: 801518264215775303}
+  - {fileID: 8063869454132761243}
+  - {fileID: 7997721610436879435}
+  - {fileID: 8405169908749135787}
+  - {fileID: 5562332517891667363}
+  - {fileID: 353559368408797420}
+  - {fileID: 794428127178814517}
+  - {fileID: 1910267873384037442}
+  - {fileID: 1319949503298324322}
+  - {fileID: 6054456750560086761}
+  - {fileID: 7343539565500875311}
+  - {fileID: 6336285622427276886}
+  - {fileID: 5875943682805877553}
+  - {fileID: 4517048396173034527}
+  - {fileID: 1527037247011130346}
+  useTransformPositionList:
+  - {x: -0.005296248, y: -0.0000113617625, z: -0.0015118655}
+  - {x: 1.5948899e-10, y: 0.009794499, z: 2.7939677e-11}
+  - {x: -6.449409e-10, y: 0.008744753, z: -9.61154e-11}
+  - {x: -2.1420418e-10, y: 0.007437417, z: 4.5401974e-11}
+  - {x: -2.8172506e-10, y: 0.00700235, z: -1.7462297e-11}
+  - {x: 9.0338287e-10, y: 0.007256608, z: -3.358582e-10}
+  - {x: 1.268927e-10, y: 0.009361394, z: 7.337803e-11}
+  - {x: 0.005296248, y: -0.0000113617625, z: -0.0015118655}
+  - {x: -1.5948899e-10, y: 0.009794499, z: 2.7939677e-11}
+  - {x: 6.449409e-10, y: 0.008744753, z: -9.61154e-11}
+  - {x: 2.1420418e-10, y: 0.007437417, z: 4.5401974e-11}
+  - {x: 2.8172506e-10, y: 0.00700235, z: -1.7462297e-11}
+  - {x: -9.0338287e-10, y: 0.007256608, z: -3.358582e-10}
+  - {x: -1.268927e-10, y: 0.009361394, z: 7.337803e-11}
+  - {x: -0.0047997325, y: 0.0011634465, z: -0.003406412}
+  - {x: -0, y: 0.0002158081, z: -0.0016097663}
+  - {x: -0, y: 0.009817365, z: 9.3132255e-12}
+  - {x: -8.881784e-18, y: 0.008744755, z: -7.4505804e-11}
+  - {x: 2.7672206e-17, y: 0.0074374233, z: 2.2351741e-10}
+  - {x: -1.04329915e-16, y: 0.0070023495, z: -2.2351741e-10}
+  - {x: -2.356854e-17, y: 0.007256615, z: -1.4901161e-10}
+  - {x: 2.1680682e-16, y: 0.009361397, z: 8.9406965e-10}
+  - {x: 2.0031379e-19, y: 0.00014950294, z: -0.0025557247}
+  - {x: 0.0047997325, y: 0.0011634465, z: -0.003406412}
+  useTransformRotationList:
+  - {x: 0.6816694, y: -0.036974903, z: 0.04202865, w: 0.7295158}
+  - {x: -0.025122317, y: 0.00067941257, z: -0.021008594, w: 0.9994634}
+  - {x: -0.00072132814, y: 0.00016445713, z: -0.009881178, w: 0.99995095}
+  - {x: 0.00026653224, y: -0.000032431006, z: 0.0036563273, w: 0.9999933}
+  - {x: -0.00036087123, y: 0.000035716537, z: -0.004951645, w: 0.9999877}
+  - {x: -0.000900486, y: -0.0001802878, z: -0.012336126, w: 0.9999235}
+  - {x: 0.0016016287, y: 0.00005614513, z: 0.021903355, w: 0.99975884}
+  - {x: 0.6816694, y: 0.036974903, z: -0.04202865, w: 0.7295158}
+  - {x: -0.025122317, y: -0.00067941257, z: 0.021008594, w: 0.9994634}
+  - {x: -0.00072132814, y: -0.00016445713, z: 0.009881178, w: 0.99995095}
+  - {x: 0.00026653224, y: 0.000032431006, z: -0.0036563273, w: 0.9999933}
+  - {x: -0.00036087123, y: -0.000035716537, z: 0.004951645, w: 0.9999877}
+  - {x: -0.000900486, y: 0.0001802878, z: 0.012336126, w: 0.9999235}
+  - {x: 0.0016016287, y: -0.00005614513, z: -0.021903355, w: 0.99975884}
+  - {x: -0.13403729, y: 0.9563445, z: -0.24489126, w: -0.08641524}
+  - {x: 0.70051116, y: 0, z: -0, w: 0.7136415}
+  - {x: -0.044611305, y: -0.000000119090636, z: 0.0000000053180824, w: 0.9990044}
+  - {x: -0.009907618, y: 3.591599e-14, z: 0.0000000023621596, w: 0.99995095}
+  - {x: 0.0036661727, y: -1.0602645e-14, z: -8.740827e-10, w: 0.9999933}
+  - {x: -0.0049648895, y: -1.1040033e-16, z: 0.0000000011837235, w: 0.99998766}
+  - {x: -0.0123688225, y: -4.38887e-18, z: 0.0000000029489575, w: 0.9999235}
+  - {x: 0.0219617, y: -3.5700923e-15, z: -0.0000000052360773, w: 0.99975884}
+  - {x: 0.00000034398641, y: 0.84046954, z: -0.5418588, w: -0.0000005952727}
+  - {x: 0.13403729, y: 0.9563445, z: -0.24489126, w: 0.08641524}
+  useTransformScaleList:
+  - {x: 0.99999994, y: 0.99999994, z: 1}
+  - {x: 0.99999994, y: 1, z: 1}
+  - {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  - {x: 0.99999994, y: 1, z: 1}
+  - {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  - {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+  - {x: 1, y: 1, z: 1.0000001}
+  - {x: 0.99999994, y: 0.99999994, z: 1}
+  - {x: 0.99999994, y: 1, z: 1}
+  - {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  - {x: 0.99999994, y: 1, z: 1}
+  - {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  - {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+  - {x: 1, y: 1, z: 1.0000001}
+  - {x: 1, y: 0.99999994, z: 1}
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1.0000001, z: 1.0000001}
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 0.99999994, z: 1}
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1.0000002, z: 0.99999994}
+  - {x: 1, y: 0.99999994, z: 1}
+--- !u!114 &-7593049062831424236
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4729815432673233754}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006, z: 0.0035}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 894934995413501800}
-  - {fileID: 5275601369349653063}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4898249775440982113
-GameObject:
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0548f9dc46468d94c96cbbd1e5c05f74, type: 3}
+  m_Name: BoneClothData_CloakRig
+  m_EditorClassIdentifier: 
+  dataHash: 1450076017
+  dataVersion: 5
+  triangleBendAlgorithm: 1
+  restoreRotationAlgorithm: 1
+  clampRotationAlgorithm: 1
+  useVertexList: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000150000001600000017000000
+  selectionData: 020000000100000001000000010000000100000001000000010000000200000001000000010000000100000001000000010000000100000002000000010000000100000001000000010000000100000001000000020000000200000002000000
+  maxLevel: 7
+  vertexFlagLevelList: 010000000200000003000000040000000500000006000000070001000100000002000000030000000400000005000000060000000700010001000100070001000600000005000000040000000300000002000000010000000100010001000100
+  vertexDepthList:
+  - 0
+  - 0.16666667
+  - 0.33333334
+  - 0.5
+  - 0.6666667
+  - 0.8333333
+  - 1
+  - 0
+  - 0.16666667
+  - 0.33333334
+  - 0.5
+  - 0.6666667
+  - 0.8333333
+  - 1
+  - 0
+  - 1
+  - 0.8333333
+  - 0.6666667
+  - 0.5
+  - 0.33333334
+  - 0.16666667
+  - 0
+  - 0
+  - 0
+  rootList: ffffffff000000000000000000000000000000000000000000000000ffffffff070000000700000007000000070000000700000007000000ffffffff150000001500000015000000150000001500000015000000ffffffffffffffffffffffff
+  parentList: ffffffff000000000100000002000000030000000400000005000000ffffffff0700000008000000090000000a0000000b0000000c000000ffffffff100000001100000012000000130000001400000015000000ffffffffffffffffffffffff
+  structDistanceDataList:
+  - vertexIndex: 0
+    targetVertexIndex: 1
+    length: 0.18567689
+  - vertexIndex: 1
+    targetVertexIndex: 0
+    length: 0.18567689
+  - vertexIndex: 1
+    targetVertexIndex: 2
+    length: 0.16577637
+  - vertexIndex: 2
+    targetVertexIndex: 1
+    length: 0.16577637
+  - vertexIndex: 2
+    targetVertexIndex: 3
+    length: 0.14099313
+  - vertexIndex: 3
+    targetVertexIndex: 2
+    length: 0.14099313
+  - vertexIndex: 3
+    targetVertexIndex: 4
+    length: 0.1327453
+  - vertexIndex: 4
+    targetVertexIndex: 3
+    length: 0.1327453
+  - vertexIndex: 4
+    targetVertexIndex: 5
+    length: 0.13756536
+  - vertexIndex: 5
+    targetVertexIndex: 4
+    length: 0.13756536
+  - vertexIndex: 5
+    targetVertexIndex: 6
+    length: 0.17746645
+  - vertexIndex: 6
+    targetVertexIndex: 5
+    length: 0.17746645
+  - vertexIndex: 7
+    targetVertexIndex: 8
+    length: 0.18567689
+  - vertexIndex: 8
+    targetVertexIndex: 7
+    length: 0.18567689
+  - vertexIndex: 8
+    targetVertexIndex: 9
+    length: 0.16577637
+  - vertexIndex: 9
+    targetVertexIndex: 8
+    length: 0.16577637
+  - vertexIndex: 9
+    targetVertexIndex: 10
+    length: 0.14099313
+  - vertexIndex: 10
+    targetVertexIndex: 9
+    length: 0.14099313
+  - vertexIndex: 10
+    targetVertexIndex: 11
+    length: 0.1327453
+  - vertexIndex: 11
+    targetVertexIndex: 10
+    length: 0.1327453
+  - vertexIndex: 11
+    targetVertexIndex: 12
+    length: 0.13756536
+  - vertexIndex: 12
+    targetVertexIndex: 11
+    length: 0.13756536
+  - vertexIndex: 12
+    targetVertexIndex: 13
+    length: 0.17746645
+  - vertexIndex: 13
+    targetVertexIndex: 12
+    length: 0.17746645
+  - vertexIndex: 15
+    targetVertexIndex: 16
+    length: 0.1861103
+  - vertexIndex: 16
+    targetVertexIndex: 15
+    length: 0.1861103
+  - vertexIndex: 16
+    targetVertexIndex: 17
+    length: 0.16577668
+  - vertexIndex: 17
+    targetVertexIndex: 16
+    length: 0.16577668
+  - vertexIndex: 17
+    targetVertexIndex: 18
+    length: 0.14099322
+  - vertexIndex: 18
+    targetVertexIndex: 17
+    length: 0.14099322
+  - vertexIndex: 18
+    targetVertexIndex: 19
+    length: 0.13274528
+  - vertexIndex: 19
+    targetVertexIndex: 18
+    length: 0.13274528
+  - vertexIndex: 19
+    targetVertexIndex: 20
+    length: 0.13756557
+  - vertexIndex: 20
+    targetVertexIndex: 19
+    length: 0.13756557
+  - vertexIndex: 20
+    targetVertexIndex: 21
+    length: 0.17746657
+  - vertexIndex: 21
+    targetVertexIndex: 20
+    length: 0.17746657
+  structDistanceReferenceList:
+  - startIndex: 0
+    count: 1
+  - startIndex: 1
+    count: 2
+  - startIndex: 3
+    count: 2
+  - startIndex: 5
+    count: 2
+  - startIndex: 7
+    count: 2
+  - startIndex: 9
+    count: 2
+  - startIndex: 11
+    count: 1
+  - startIndex: 12
+    count: 1
+  - startIndex: 13
+    count: 2
+  - startIndex: 15
+    count: 2
+  - startIndex: 17
+    count: 2
+  - startIndex: 19
+    count: 2
+  - startIndex: 21
+    count: 2
+  - startIndex: 23
+    count: 1
+  - startIndex: 24
+    count: 0
+  - startIndex: 24
+    count: 1
+  - startIndex: 25
+    count: 2
+  - startIndex: 27
+    count: 2
+  - startIndex: 29
+    count: 2
+  - startIndex: 31
+    count: 2
+  - startIndex: 33
+    count: 2
+  - startIndex: 35
+    count: 1
+  - startIndex: 36
+    count: 0
+  - startIndex: 36
+    count: 0
+  bendDistanceDataList: []
+  bendDistanceReferenceList: []
+  nearDistanceDataList: []
+  nearDistanceReferenceList: []
+  rootDistanceDataList:
+  - vertexIndex: 1
+    targetVertexIndex: 0
+    length: 0.18567689
+  - vertexIndex: 2
+    targetVertexIndex: 0
+    length: 0.35126534
+  - vertexIndex: 3
+    targetVertexIndex: 0
+    length: 0.49213046
+  - vertexIndex: 4
+    targetVertexIndex: 0
+    length: 0.62482923
+  - vertexIndex: 5
+    targetVertexIndex: 0
+    length: 0.76233673
+  - vertexIndex: 6
+    targetVertexIndex: 0
+    length: 0.9396254
+  - vertexIndex: 8
+    targetVertexIndex: 7
+    length: 0.18567689
+  - vertexIndex: 9
+    targetVertexIndex: 7
+    length: 0.35126534
+  - vertexIndex: 10
+    targetVertexIndex: 7
+    length: 0.49213046
+  - vertexIndex: 11
+    targetVertexIndex: 7
+    length: 0.62482923
+  - vertexIndex: 12
+    targetVertexIndex: 7
+    length: 0.76233673
+  - vertexIndex: 13
+    targetVertexIndex: 7
+    length: 0.9396254
+  - vertexIndex: 15
+    targetVertexIndex: 21
+    length: 0.9396473
+  - vertexIndex: 16
+    targetVertexIndex: 21
+    length: 0.754445
+  - vertexIndex: 17
+    targetVertexIndex: 21
+    length: 0.58871555
+  - vertexIndex: 18
+    targetVertexIndex: 21
+    length: 0.4477271
+  - vertexIndex: 19
+    targetVertexIndex: 21
+    length: 0.31500843
+  - vertexIndex: 20
+    targetVertexIndex: 21
+    length: 0.17746657
+  rootDistanceReferenceList:
+  - startIndex: 0
+    count: 0
+  - startIndex: 0
+    count: 1
+  - startIndex: 1
+    count: 1
+  - startIndex: 2
+    count: 1
+  - startIndex: 3
+    count: 1
+  - startIndex: 4
+    count: 1
+  - startIndex: 5
+    count: 1
+  - startIndex: 6
+    count: 0
+  - startIndex: 6
+    count: 1
+  - startIndex: 7
+    count: 1
+  - startIndex: 8
+    count: 1
+  - startIndex: 9
+    count: 1
+  - startIndex: 10
+    count: 1
+  - startIndex: 11
+    count: 1
+  - startIndex: 12
+    count: 0
+  - startIndex: 12
+    count: 1
+  - startIndex: 13
+    count: 1
+  - startIndex: 14
+    count: 1
+  - startIndex: 15
+    count: 1
+  - startIndex: 16
+    count: 1
+  - startIndex: 17
+    count: 1
+  - startIndex: 18
+    count: 0
+  - startIndex: 18
+    count: 0
+  - startIndex: 18
+    count: 0
+  clampDistance2DataList: []
+  clampDistance2RootInfoList: []
+  restoreRotationDataList: []
+  restoreRotationReferenceList: []
+  clampRotationDataList: []
+  clampRotationRootInfoList: []
+  compositeRotationDataList:
+  - vertexIndex: 1
+    parentVertexIndex: 0
+    localPos:
+      x: 0.000000035214264
+      y: 0.9999998
+      z: 0.00000010013829
+    localRot:
+      value:
+        x: -0.025122289
+        y: 0.0006794103
+        z: -0.021008594
+        w: 0.9994634
+  - vertexIndex: 2
+    parentVertexIndex: 1
+    localPos:
+      x: -0.00000008974627
+      y: 1
+      z: -0.00000007656593
+    localRot:
+      value:
+        x: -0.0007213104
+        y: 0.00016445613
+        z: -0.009881176
+        w: 0.9999509
+  - vertexIndex: 3
+    parentVertexIndex: 2
+    localPos:
+      x: -0.000000011350959
+      y: 1
+      z: 0.00000003445799
+    localRot:
+      value:
+        x: 0.00026658055
+        y: -0.000032433545
+        z: 0.00365632
+        w: 0.99999326
+  - vertexIndex: 4
+    parentVertexIndex: 3
+    localPos:
+      x: -0.00000012399971
+      y: 1.0000001
+      z: -0.00000026273315
+    localRot:
+      value:
+        x: -0.00036091098
+        y: 0.000035718742
+        z: -0.0049516386
+        w: 0.99998766
+  - vertexIndex: 5
+    parentVertexIndex: 4
+    localPos:
+      x: 0.000000078108606
+      y: 1
+      z: 0.000000012482526
+    localRot:
+      value:
+        x: -0.00090048695
+        y: -0.00018028791
+        z: -0.012336134
+        w: 0.9999235
+  - vertexIndex: 6
+    parentVertexIndex: 5
+    localPos:
+      x: 0.0000000016916641
+      y: 1.0000002
+      z: 0.00000006703969
+    localRot:
+      value:
+        x: 0.0016015611
+        y: 0.000056148394
+        z: 0.021903357
+        w: 0.99975884
+  - vertexIndex: 8
+    parentVertexIndex: 7
+    localPos:
+      x: -0.000000035214264
+      y: 0.9999998
+      z: 0.00000010013829
+    localRot:
+      value:
+        x: -0.025122289
+        y: -0.0006794103
+        z: 0.021008594
+        w: 0.9994634
+  - vertexIndex: 9
+    parentVertexIndex: 8
+    localPos:
+      x: 0.00000008974627
+      y: 1
+      z: -0.00000007656593
+    localRot:
+      value:
+        x: -0.0007213104
+        y: -0.00016445613
+        z: 0.009881176
+        w: 0.9999509
+  - vertexIndex: 10
+    parentVertexIndex: 9
+    localPos:
+      x: 0.000000011350959
+      y: 1
+      z: 0.00000003445799
+    localRot:
+      value:
+        x: 0.00026658055
+        y: 0.000032433545
+        z: -0.00365632
+        w: 0.99999326
+  - vertexIndex: 11
+    parentVertexIndex: 10
+    localPos:
+      x: 0.00000012399971
+      y: 1.0000001
+      z: -0.00000026273315
+    localRot:
+      value:
+        x: -0.00036091098
+        y: -0.000035718742
+        z: 0.0049516386
+        w: 0.99998766
+  - vertexIndex: 12
+    parentVertexIndex: 11
+    localPos:
+      x: -0.000000078108606
+      y: 1
+      z: 0.000000012482526
+    localRot:
+      value:
+        x: -0.00090048695
+        y: 0.00018028791
+        z: 0.012336134
+        w: 0.9999235
+  - vertexIndex: 13
+    parentVertexIndex: 12
+    localPos:
+      x: -0.0000000016916641
+      y: 1.0000002
+      z: 0.00000006703969
+    localRot:
+      value:
+        x: 0.0016015611
+        y: -0.000056148394
+        z: -0.021903357
+        w: 0.99975884
+  - vertexIndex: 20
+    parentVertexIndex: 21
+    localPos:
+      x: 0.000000010469665
+      y: -0.9990355
+      z: 0.043912966
+    localRot:
+      value:
+        x: -0.021961737
+        y: 1.607883e-17
+        z: 0.0000000052360853
+        w: 0.99975884
+  - vertexIndex: 19
+    parentVertexIndex: 20
+    localPos:
+      x: -0.000000005897334
+      y: -0.999694
+      z: -0.024735203
+    localRot:
+      value:
+        x: 0.012368849
+        y: -7.115327e-15
+        z: -0.0000000029489629
+        w: 0.9999235
+  - vertexIndex: 18
+    parentVertexIndex: 19
+    localPos:
+      x: -0.0000000023674895
+      y: -0.9999508
+      z: -0.009929988
+    localRot:
+      value:
+        x: 0.004964843
+        y: 1.4186377e-14
+        z: -0.0000000011837124
+        w: 0.9999877
+  - vertexIndex: 17
+    parentVertexIndex: 18
+    localPos:
+      x: 0.0000000017481361
+      y: -0.9999732
+      z: 0.007332208
+    localRot:
+      value:
+        x: -0.003666195
+        y: -7.1275536e-15
+        z: 8.7408786e-10
+        w: 0.9999933
+  - vertexIndex: 16
+    parentVertexIndex: 17
+    localPos:
+      x: -0.0000000047240776
+      y: -0.99980366
+      z: -0.019814223
+    localRot:
+      value:
+        x: 0.009907647
+        y: -2.1295855e-14
+        z: -0.0000000023621665
+        w: 0.99995095
+  - vertexIndex: 15
+    parentVertexIndex: 16
+    localPos:
+      x: -0.000000021251164
+      y: -0.9960198
+      z: -0.08913385
+    localRot:
+      value:
+        x: 0.04461127
+        y: 0.00000011909062
+        z: -0.000000005318077
+        w: 0.9990045
+  compositeRotationRootInfoList:
+  - startIndex: 0
+    dataLength: 6
+  - startIndex: 6
+    dataLength: 6
+  - startIndex: 12
+    dataLength: 6
+  twistDataList: []
+  twistReferenceList: []
+  adjustRotationDataList: []
+  triangleBendDataList: []
+  triangleBendReferenceList: []
+  triangleBendWriteBufferCount: 0
+  volumeDataList: []
+  volumeReferenceList: []
+  volumeWriteBufferCount: 0
+  lineRotationDataList:
+  - vertexIndex: 0
+    childCount: 1
+    childStartDataIndex: 1
+    localPos:
+      x: 0
+      y: 0
+      z: 0
+    localRot:
+      value:
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+  - vertexIndex: 1
+    childCount: 1
+    childStartDataIndex: 2
+    localPos:
+      x: 0.0000000065727717
+      y: 0.18567686
+      z: 0.00000001798449
+    localRot:
+      value:
+        x: -0.025122289
+        y: 0.0006794103
+        z: -0.021008594
+        w: 0.9994634
+  - vertexIndex: 2
+    childCount: 1
+    childStartDataIndex: 3
+    localPos:
+      x: -0.0000000147958135
+      y: 0.16577637
+      z: -0.000000012809933
+    localRot:
+      value:
+        x: -0.0007213104
+        y: 0.00016445613
+        z: -0.009881176
+        w: 0.9999509
+  - vertexIndex: 3
+    childCount: 1
+    childStartDataIndex: 4
+    localPos:
+      x: -0.0000000015197037
+      y: 0.14099313
+      z: 0.0000000046434563
+    localRot:
+      value:
+        x: 0.00026658055
+        y: -0.000032433545
+        z: 0.00365632
+        w: 0.99999326
+  - vertexIndex: 4
+    childCount: 1
+    childStartDataIndex: 5
+    localPos:
+      x: -0.000000016510402
+      y: 0.13274531
+      z: -0.000000034637303
+    localRot:
+      value:
+        x: -0.00036091098
+        y: 0.000035718742
+        z: -0.0049516386
+        w: 0.99998766
+  - vertexIndex: 5
+    childCount: 1
+    childStartDataIndex: 6
+    localPos:
+      x: 0.000000010791295
+      y: 0.13756536
+      z: 0.0000000018745814
+    localRot:
+      value:
+        x: -0.00090048695
+        y: -0.00018028791
+        z: -0.012336134
+        w: 0.9999235
+  - vertexIndex: 6
+    childCount: 0
+    childStartDataIndex: 0
+    localPos:
+      x: 4.785922e-10
+      y: 0.1774665
+      z: 0.000000011930192
+    localRot:
+      value:
+        x: 0.0016015611
+        y: 0.000056148394
+        z: 0.021903357
+        w: 0.99975884
+  - vertexIndex: 7
+    childCount: 1
+    childStartDataIndex: 8
+    localPos:
+      x: 0
+      y: 0
+      z: 0
+    localRot:
+      value:
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+  - vertexIndex: 8
+    childCount: 1
+    childStartDataIndex: 9
+    localPos:
+      x: -0.0000000065727717
+      y: 0.18567686
+      z: 0.00000001798449
+    localRot:
+      value:
+        x: -0.025122289
+        y: -0.0006794103
+        z: 0.021008594
+        w: 0.9994634
+  - vertexIndex: 9
+    childCount: 1
+    childStartDataIndex: 10
+    localPos:
+      x: 0.0000000147958135
+      y: 0.16577637
+      z: -0.000000012809933
+    localRot:
+      value:
+        x: -0.0007213104
+        y: -0.00016445613
+        z: 0.009881176
+        w: 0.9999509
+  - vertexIndex: 10
+    childCount: 1
+    childStartDataIndex: 11
+    localPos:
+      x: 0.0000000015197037
+      y: 0.14099313
+      z: 0.0000000046434563
+    localRot:
+      value:
+        x: 0.00026658055
+        y: 0.000032433545
+        z: -0.00365632
+        w: 0.99999326
+  - vertexIndex: 11
+    childCount: 1
+    childStartDataIndex: 12
+    localPos:
+      x: 0.000000016510402
+      y: 0.13274531
+      z: -0.000000034637303
+    localRot:
+      value:
+        x: -0.00036091098
+        y: -0.000035718742
+        z: 0.0049516386
+        w: 0.99998766
+  - vertexIndex: 12
+    childCount: 1
+    childStartDataIndex: 13
+    localPos:
+      x: -0.000000010791295
+      y: 0.13756536
+      z: 0.0000000018745814
+    localRot:
+      value:
+        x: -0.00090048695
+        y: 0.00018028791
+        z: 0.012336134
+        w: 0.9999235
+  - vertexIndex: 13
+    childCount: 0
+    childStartDataIndex: 0
+    localPos:
+      x: -4.785922e-10
+      y: 0.1774665
+      z: 0.000000011930192
+    localRot:
+      value:
+        x: 0.0016015611
+        y: -0.000056148394
+        z: -0.021903357
+        w: 0.99975884
+  - vertexIndex: 21
+    childCount: 1
+    childStartDataIndex: 15
+    localPos:
+      x: 0
+      y: 0
+      z: 0
+    localRot:
+      value:
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+  - vertexIndex: 20
+    childCount: 1
+    childStartDataIndex: 16
+    localPos:
+      x: 0.0000000018580156
+      y: -0.1772954
+      z: 0.0077930833
+    localRot:
+      value:
+        x: -0.021961737
+        y: 1.607883e-17
+        z: 0.0000000052360853
+        w: 0.99975884
+  - vertexIndex: 19
+    childCount: 1
+    childStartDataIndex: 17
+    localPos:
+      x: -8.112701e-10
+      y: -0.13752347
+      z: -0.0034027123
+    localRot:
+      value:
+        x: 0.012368849
+        y: -7.115327e-15
+        z: -0.0000000029489629
+        w: 0.9999235
+  - vertexIndex: 18
+    childCount: 1
+    childStartDataIndex: 18
+    localPos:
+      x: -3.1427314e-10
+      y: -0.13273875
+      z: -0.0013181593
+    localRot:
+      value:
+        x: 0.004964843
+        y: 1.4186377e-14
+        z: -0.0000000011837124
+        w: 0.9999877
+  - vertexIndex: 17
+    childCount: 1
+    childStartDataIndex: 19
+    localPos:
+      x: 2.4647537e-10
+      y: -0.14098944
+      z: 0.0010337918
+    localRot:
+      value:
+        x: -0.003666195
+        y: -7.1275536e-15
+        z: 8.7408786e-10
+        w: 0.9999933
+  - vertexIndex: 16
+    childCount: 1
+    childStartDataIndex: 20
+    localPos:
+      x: -7.831419e-10
+      y: -0.16574414
+      z: -0.003284736
+    localRot:
+      value:
+        x: 0.009907647
+        y: -2.1295855e-14
+        z: -0.0000000023621665
+        w: 0.99995095
+  - vertexIndex: 15
+    childCount: 0
+    childStartDataIndex: 0
+    localPos:
+      x: -0.0000000039550607
+      y: -0.18536954
+      z: -0.016588727
+    localRot:
+      value:
+        x: 0.04461127
+        y: 0.00000011909062
+        z: -0.000000005318077
+        w: 0.9990045
+  lineRotationRootInfoList:
+  - startIndex: 0
+    dataLength: 7
+  - startIndex: 7
+    dataLength: 7
+  - startIndex: 14
+    dataLength: 7
+  triangleRotationDataList: []
+  triangleRotationIndexList: 
+  edgeCollisionDataList: []
+  edgeCollisionReferenceList: []
+  edgeCollisionWriteBufferCount: 0
+  penetrationDataList: []
+  penetrationReferenceList: []
+  penetrationDirectionDataList: []
+  penetrationMode: 0
+  baseSkinningDataList: []
+  baseSkinningBindPoseList: []
+  initScale: {x: 18.957258, y: 18.95726, z: 18.95726}
+--- !u!114 &7316029222065775977
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2400151312120826130}
-  m_Layer: 0
-  m_Name: Cape_Middle05.L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2400151312120826130
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4898249775440982113}
-  m_LocalRotation: {x: -0.0009004877, y: -0.000180288, z: -0.012336124, w: 0.9999235}
-  m_LocalPosition: {x: -4.4237822e-10, y: 0.0072566103, z: -1.3009412e-10}
-  m_LocalScale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2264742682750291187}
-  m_Father: {fileID: 7457375341011206169}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5072604703042902055
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4084620631352568991}
-  m_Layer: 0
-  m_Name: Cape_Middle05.R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4084620631352568991
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5072604703042902055}
-  m_LocalRotation: {x: -0.0009004877, y: 0.000180288, z: 0.012336124, w: 0.9999235}
-  m_LocalPosition: {x: 4.4237822e-10, y: 0.0072566103, z: -1.3009412e-10}
-  m_LocalScale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3539424823318438188}
-  m_Father: {fileID: 6417522414427895229}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5603647670013431370
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1855073258076405456}
-  m_Layer: 0
-  m_Name: Cape_Middle03.Mid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1855073258076405456
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5603647670013431370}
-  m_LocalRotation: {x: 0.0036661727, y: -1.071364e-14, z: -8.740828e-10, w: 0.9999933}
-  m_LocalPosition: {x: 3.0975085e-17, y: 0.0074374233, z: 2.2351741e-10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2905443298285270550}
-  m_Father: {fileID: 6911385020945740635}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5964439761838460315
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4564618423089333173}
-  m_Layer: 0
-  m_Name: Cape_Middle01.R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4564618423089333173
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5964439761838460315}
-  m_LocalRotation: {x: -0.0015713159, y: -0.0011779605, z: 0.021137772, w: 0.9997747}
-  m_LocalPosition: {x: 7.683411e-10, y: 0.009765297, z: -4.307367e-11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2237692808251755185}
-  m_Father: {fileID: 6380029828967595987}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6156193047755051089
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2011620796108397030}
-  m_Layer: 0
-  m_Name: Cape_Bottem.L_end
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2011620796108397030
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6156193047755051089}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.00883654, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2264742682750291187}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6164738061394824076
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8526329725277075183}
-  m_Layer: 0
-  m_Name: Cape_Middle03.R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8526329725277075183
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6164738061394824076}
-  m_LocalRotation: {x: 0.00026653823, y: 0.000032430882, z: -0.0036563338, w: 0.9999933}
-  m_LocalPosition: {x: -4.528556e-10, y: 0.0074374154, z: 4.249159e-11}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6417522414427895229}
-  m_Father: {fileID: 2237692808251755185}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6317555499806378855
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2237692808251755185}
-  m_Layer: 0
-  m_Name: Cape_Middle_02.R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2237692808251755185
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6317555499806378855}
-  m_LocalRotation: {x: -0.00072133896, y: -0.0001644573, z: 0.009881192, w: 0.99995095}
-  m_LocalPosition: {x: -6.9732775e-10, y: 0.008744751, z: -2.9867805e-10}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8526329725277075183}
-  m_Father: {fileID: 4564618423089333173}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6717866699397196340
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5979636975520786622}
-  m_Layer: 0
-  m_Name: Cape_Bottem.R_end
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5979636975520786622
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6717866699397196340}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.00883654, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3539424823318438188}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7751157527356331436
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6911385020945740635}
-  m_Layer: 0
-  m_Name: Cape_Middle_02.Mid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6911385020945740635
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7751157527356331436}
-  m_LocalRotation: {x: -0.009907618, y: 4.6575804e-14, z: 0.0000000023621594, w: 0.99995095}
-  m_LocalPosition: {x: -1.7763568e-17, y: 0.008744753, z: -1.4901161e-10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1855073258076405456}
-  m_Father: {fileID: 6285311594083944571}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8248003303863266763
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5097277867250909196}
-  m_Layer: 0
-  m_Name: Cape_Top.Mid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5097277867250909196
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8248003303863266763}
-  m_LocalRotation: {x: 0.6836008, y: 0, z: -0, w: 0.72985613}
-  m_LocalPosition: {x: -0, y: -0.00024035375, z: -0.001538502}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6285311594083944571}
-  m_Father: {fileID: 5275601369349653063}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8267628571977828577
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7457375341011206169}
-  m_Layer: 0
-  m_Name: Cape_Middle04.L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7457375341011206169
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8267628571977828577}
-  m_LocalRotation: {x: -0.0003608784, y: 0.000035715948, z: -0.0049516456, w: 0.9999877}
-  m_LocalPosition: {x: 9.103678e-10, y: 0.0070023444, z: 1.2718374e-10}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2400151312120826130}
-  m_Father: {fileID: 250903270858682126}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8342606161391296590
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5283658347275707605}
-  m_Layer: 0
-  m_Name: Cape_Top.L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5283658347275707605
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8342606161391296590}
-  m_LocalRotation: {x: 0.66428983, y: -0.038057737, z: 0.041256186, w: 0.7453647}
-  m_LocalPosition: {x: -0.005296248, y: -0.0004675236, z: -0.0014406013}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5116424029927422764}
-  m_Father: {fileID: 5275601369349653063}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8478138786023411011
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4585987972012869132}
-  m_Layer: 0
-  m_Name: Cape_Bottem.Mid_end
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4585987972012869132
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8478138786023411011}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.008836546, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2031335359509020424}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8700672437162962716
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6380029828967595987}
-  m_Layer: 0
-  m_Name: Cape_Top.R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6380029828967595987
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8700672437162962716}
-  m_LocalRotation: {x: 0.66428983, y: 0.038057737, z: -0.041256186, w: 0.7453647}
-  m_LocalPosition: {x: 0.005296248, y: -0.0004675236, z: -0.0014406013}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4564618423089333173}
-  m_Father: {fileID: 5275601369349653063}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8871587000904266516
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5116424029927422764}
-  m_Layer: 0
-  m_Name: Cape_Middle01.L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5116424029927422764
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8871587000904266516}
-  m_LocalRotation: {x: -0.0015713159, y: 0.0011779605, z: -0.021137772, w: 0.9997747}
-  m_LocalPosition: {x: -7.683411e-10, y: 0.009765297, z: -4.307367e-11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2957897524632272262}
-  m_Father: {fileID: 5283658347275707605}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8ed8fdca875474bbc1b8d6dcfb79bc, type: 3}
+  m_Name: BoneClothMeshData_CloakRig
+  m_EditorClassIdentifier: 
+  dataHash: 600315689
+  dataVersion: 2
+  isSkinning: 0
+  vertexCount: 24
+  vertexInfoList: 000000100100001002000010030000100400001005000010060000100700001008000010090000100a0000100b0000100c0000100d0000100e0000100f0000101000001011000010120000101300001014000010150000101600001017000010
+  vertexWeightList: []
+  vertexHashList: 
+  uvList: []
+  lineCount: 18
+  lineList: 00000000010000000100000002000000020000000300000003000000040000000400000005000000050000000600000007000000080000000800000009000000090000000a0000000a0000000b0000000b0000000c0000000c0000000d0000000f0000001000000010000000110000001100000012000000120000001300000013000000140000001400000015000000
+  triangleCount: 0
+  triangleList: 
+  boneCount: 0
+  vertexToTriangleInfoList: 
+  vertexToTriangleIndexList: 
+  childDataList: []
+  baseScale: {x: 0, y: 0, z: 0}

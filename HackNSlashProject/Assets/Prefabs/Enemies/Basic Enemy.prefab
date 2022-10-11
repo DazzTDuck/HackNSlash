@@ -86,6 +86,8 @@ MonoBehaviour:
   hpThreshold: 50
   attackThreshold: 6
   backoff: 0
+  deAggroDistance: 14
+  maxDeAggroDistance: 21
   minAttackTime: 2
   maxAttackTime: 5
   attackDamage: 12
@@ -168,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d3aafc3c50abf4f84e38f724299994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStunned: 0
 --- !u!54 &5371670885630812043
 Rigidbody:
   m_ObjectHideFlags: 0

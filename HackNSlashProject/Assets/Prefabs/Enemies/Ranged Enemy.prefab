@@ -72,6 +72,8 @@ MonoBehaviour:
   hpThreshold: 0
   attackThreshold: 3
   backoff: 0
+  deAggroDistance: 20
+  maxDeAggroDistance: 33
   minAttackTime: 3
   maxAttackTime: 6
   attackDamage: 17

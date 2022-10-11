@@ -14,7 +14,8 @@ public class HolySwordVisual : MonoBehaviour
     public Vector2 minAndMaxValue;
 
     [Header("Particles")]
-    public VisualEffect[] fullBladeParticles;
+    public VisualEffect bladeParticle;
+    public Vector3 forceValueCastOut;
 
     [Header("References")]
     public MeshRenderer swordMeshRenderer;
@@ -27,8 +28,15 @@ public class HolySwordVisual : MonoBehaviour
         materials = swordMeshRenderer.materials;
         SetCutoffHeight(minAndMaxValue.x - 1);
 
-        SetFullParticles(false);
-        //StartAttackVisual();
+        bladeParticle.Stop();
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            StartAttackVisual();
+        }
     }
 
     public void StartAttackVisual()
@@ -39,11 +47,12 @@ public class HolySwordVisual : MonoBehaviour
     private IEnumerator AttackVisual()
     {
         height = 0;
-        yield return new WaitForSeconds(3f); //debug delay
+        yield return new WaitForSeconds(attackDuration * 2); //debug delay
 
         Debug.Log("Starting Visual");
 
-        SetFullParticles(true);
+        bladeParticle.Play();
+        SetParticleForce(forceValueCastOut);
 
         //show sword
         while (Math.Abs(height - minAndMaxValue.y) > 0)
@@ -63,7 +72,7 @@ public class HolySwordVisual : MonoBehaviour
             yield return null;
         }
 
-        SetFullParticles(false);
+        bladeParticle.Stop();
     }
 
     private void SetCutoffHeight(float value)
@@ -74,14 +83,9 @@ public class HolySwordVisual : MonoBehaviour
         }
     }
 
-    private void SetFullParticles(bool value)
+    private void SetParticleForce(Vector3 value)
     {
-        foreach (var particle in fullBladeParticles)
-        {
-            if(value)
-                particle.Play();
-            else
-                particle.Stop();
-        }
+        bladeParticle.SetVector3("ForceValue", value);
     }
+
 }

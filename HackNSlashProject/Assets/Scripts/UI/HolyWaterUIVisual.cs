@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Animator))]
 public class HolyWaterUIVisual : MonoBehaviour
 {
     public PlayerHolyWater holyWater;
@@ -13,11 +14,14 @@ public class HolyWaterUIVisual : MonoBehaviour
     public Sprite[] sprites;
     
     private int currentIndex;
+    private Animator animator;
 
     private void Start()
     {
         currentIndex = sprites.Length - 1;
         UpdateSprite();
+
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -29,7 +33,7 @@ public class HolyWaterUIVisual : MonoBehaviour
         {
             //holy water has been used
             currentIndex = holyWater.remainingUses;
-            
+            animator.SetTrigger("Used");
             UpdateSprite();
         }        
     }

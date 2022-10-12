@@ -19,12 +19,16 @@ public class PauseGameHandler : MonoBehaviour
 
     public static bool isPaused = false;
 
+    private bool usingController = true;
+
     private void Start()
     {
         pauseInput.Enable();
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
+
+        InputSystem.onDeviceChange += OnDeviceChange;
     }
 
     private void Update()
@@ -33,8 +37,19 @@ public class PauseGameHandler : MonoBehaviour
         {
             SwitchPauseMenu();
         }
+
+        if (!usingController && isPaused)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
-    
+
+    private void OnDeviceChange(InputDevice inputDevice, InputDeviceChange inputDeviceChange)
+    {
+        usingController = inputDevice == Mouse.current; 
+    }
+
     public void SwitchPauseMenu()
     {
         SetFirstSelectedPauseMenu();

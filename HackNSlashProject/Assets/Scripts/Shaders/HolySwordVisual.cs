@@ -33,10 +33,10 @@ public class HolySwordVisual : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            StartAttackVisual();
-        }
+        // if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        // {
+        //     StartAttackVisual();
+        // }
     }
 
     public void StartAttackVisual()

@@ -216,7 +216,6 @@ public class CombatManager : MonoBehaviour
             for (int i = 0; i < engagedEnemies.Count; i++)
                 space -= engagedEnemies[i].occupySpace;
             FillFrontLine(space);
-            Debug.Log("space =" + space);
         }
         else if (actor.state == Enemystates.BackUp)
             backupEnemies.Remove(actor);

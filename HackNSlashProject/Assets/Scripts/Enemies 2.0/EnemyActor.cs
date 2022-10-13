@@ -19,12 +19,16 @@ public class EnemyActor : MonoBehaviour
     public float visionRadius;
     public float visionConeWidth;
     public LayerMask layerMask;
+    bool canSee;
     [Header("Backing off")]
     public int hpThreshold;
     public int attackThreshold;
     int currentAttacks;
     bool backedOff;
     public bool backoff = false;
+
+    public float deAggroDistance;
+    public float maxDeAggroDistance;
     [Header("Attacking")]
     public float minAttackTime;
     public float maxAttackTime;
@@ -62,6 +66,7 @@ public class EnemyActor : MonoBehaviour
         }
         attacking = GetComponentInChildren<ActorAttacking>();
         attacking.enabled = false;
+        canSee = true;
     }
     private void OnDestroy()
     {
@@ -128,6 +133,15 @@ public class EnemyActor : MonoBehaviour
         else if (attackTiming <= 0 && state == Enemystates.Engaged && !GetComponent<ActorStunned>().isStunned)
             Attack();
 
+        if (canSee)
+            CheckInSight();
+        else if (playerInSight)
+            playerInSight = false;
+        if (state != Enemystates.Partoling)
+            CheckAggroDistance();
+    }
+    void CheckInSight()
+    {
         if (Vector3.Distance(transform.position, CombatManager.combatManager.player.position) < visionRadius && Vector3.Dot(transform.forward, CombatManager.combatManager.player.position - transform.position) > (1 - (visionConeWidth / 180f)))
         {
             Vector3 dir = CombatManager.combatManager.player.position - transform.position;
@@ -146,6 +160,14 @@ public class EnemyActor : MonoBehaviour
         }
         playerInSight = false;
     }
+    void CheckAggroDistance()
+    {
+        Transform player = CombatManager.combatManager.player;
+        Vector3 origin = patrolling.patrolPosition;
+        if (Vector3.Distance(player.position, origin) > maxDeAggroDistance || (Vector3.Distance(player.position, origin) > deAggroDistance && !playerInSight))
+            CombatManager.combatManager.RemoveFromCombat(this);
+    }
+
     public void EngagePlayer()
     {
         if (state == Enemystates.Partoling)
@@ -156,7 +178,6 @@ public class EnemyActor : MonoBehaviour
         else if (state == Enemystates.BackUp && backup)
         {
             backup.enabled = false;
-            Debug.Log(gameObject.name + " from the back lines");
             backoff = false;
         }
         else if (state == Enemystates.Attacking)
@@ -171,14 +192,12 @@ public class EnemyActor : MonoBehaviour
         engaged.Engage();
         if (backoff)
         {
-            Debug.Log(gameObject.name + " about to back off");
             GoBackup();
         }
     }
     public void GoBackup()
     {
         backoff = false;
-        Debug.Log(gameObject.name + " backing up");
         if (state == Enemystates.Partoling)
         {
             patrolling.StopAllCoroutines();
@@ -225,7 +244,14 @@ public class EnemyActor : MonoBehaviour
         state = Enemystates.Partoling;
         patrolling.enabled = true;
         patrolling.StartPatrolling();
+        canSee = false;
+        Invoke("CanSee", 1.5f);
     }
+    void CanSee()
+    {
+        canSee = true;
+    }    
+
     public void Attack()
     {
         engaged.StopAllCoroutines();

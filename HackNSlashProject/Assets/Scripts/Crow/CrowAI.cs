@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody))]
 public class CrowAI : MonoBehaviour
 {
     public CrowWaypoint attachedWaypoint;
     Animator animator;
+    Rigidbody rb;
     Vector3 startPos;
     bool idle;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
         CrowWaypoint[] waypoints = FindObjectsOfType<CrowWaypoint>();
         foreach (CrowWaypoint wp in waypoints)
         {
@@ -91,7 +94,7 @@ public class CrowAI : MonoBehaviour
         {
             float x = initialVelocity * t * Mathf.Cos(angle);
             float y = initialVelocity * t * Mathf.Sin(angle) - (1f / 2f) * -Physics.gravity.y * Mathf.Pow(t, 2);
-            transform.position = Vector3.Lerp(transform.position, startPos + dir * x + Vector3.up * y, Time.fixedDeltaTime * 4);
+            rb.MovePosition(Vector3.Lerp(transform.position, startPos + dir * x + Vector3.up * y, Time.fixedDeltaTime * 4));
 
             t += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
@@ -99,7 +102,7 @@ public class CrowAI : MonoBehaviour
         animator.SetTrigger("Landing");
         while (Vector3.Distance(transform.position, attachedWaypoint.transform.position) > 0.1f)
         {
-            transform.position = Vector3.Lerp(transform.position, attachedWaypoint.transform.position, Time.fixedDeltaTime * 4);
+            rb.MovePosition(Vector3.Lerp(transform.position, attachedWaypoint.transform.position, Time.fixedDeltaTime * 4));
             yield return new WaitForFixedUpdate();
         }
         idle = true;

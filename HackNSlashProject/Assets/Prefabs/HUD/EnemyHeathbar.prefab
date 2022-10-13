@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7174915532228130768}
   - component: {fileID: 7174915532228130735}
   - component: {fileID: 7174915532228130734}
-  m_Layer: 5
+  - component: {fileID: 8538451916909850276}
+  m_Layer: 0
   m_Name: EnemyHeathbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +102,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8538451916909850276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174915532228130732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf59747d6e06f4f4496483a8d1a63fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  follow: {fileID: 0}
+  offset: {x: 0, y: 0.52, z: 0}
+  lookAt: {fileID: 0}
 --- !u!1 &7174915532297110995
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +128,7 @@ GameObject:
   - component: {fileID: 7174915532297110996}
   - component: {fileID: 7174915532297110998}
   - component: {fileID: 7174915532297110997}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: HealthbarReduction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +200,7 @@ GameObject:
   - component: {fileID: 7174915532311129675}
   - component: {fileID: 7174915532311129677}
   - component: {fileID: 7174915532311129676}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: HealthbarEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +272,7 @@ GameObject:
   - component: {fileID: 7174915532628505598}
   - component: {fileID: 7174915532628505568}
   - component: {fileID: 7174915532628505599}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: DamageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,10 +408,9 @@ GameObject:
   - component: {fileID: 7174915533021386073}
   - component: {fileID: 7174915533021386076}
   - component: {fileID: 7174915533021386075}
-  - component: {fileID: 7174915533021386074}
   - component: {fileID: 7174915533021386077}
   - component: {fileID: 7174915533021386078}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,19 +479,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7174915533021386074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7174915533021386072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf59747d6e06f4f4496483a8d1a63fac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookAt: {fileID: 0}
 --- !u!114 &7174915533021386077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,7 +522,7 @@ GameObject:
   - component: {fileID: 7174915534021370342}
   - component: {fileID: 7174915534021370344}
   - component: {fileID: 7174915534021370343}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

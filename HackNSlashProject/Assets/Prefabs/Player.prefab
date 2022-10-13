@@ -525,16 +525,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fe5bc7be3ebff43b3d5f261d3334de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockBack: 13
+  knockBack: 9
   duration: 2
   delay: 0.6
   lockoutAfter: 0.3
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
-  radius: 7
-  angle: 100
-  damage: 35
+  radius: 4
+  angle: 40
+  damage: 15
   qTime: 0.3
   animator: {fileID: 0}
   powerConsumption: 45

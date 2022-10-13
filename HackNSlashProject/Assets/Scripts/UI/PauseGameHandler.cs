@@ -19,16 +19,12 @@ public class PauseGameHandler : MonoBehaviour
 
     public static bool isPaused = false;
 
-    private bool usingController = true;
-
     private void Start()
     {
         pauseInput.Enable();
 
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        InputSystem.onDeviceChange += OnDeviceChange;
     }
 
     private void Update()
@@ -38,16 +34,20 @@ public class PauseGameHandler : MonoBehaviour
             SwitchPauseMenu();
         }
 
-        if (!usingController && isPaused)
+        if(!isPaused)
+            return;
+        
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            Cursor.visible = true;        
         }
-    }
-
-    private void OnDeviceChange(InputDevice inputDevice, InputDeviceChange inputDeviceChange)
-    {
-        usingController = inputDevice == Mouse.current; 
+        
+        if(Gamepad.current.leftStick.ReadValue().magnitude > 0.05f || Gamepad.current.dpad.IsPressed())
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;         
+        }
     }
 
     public void SwitchPauseMenu()

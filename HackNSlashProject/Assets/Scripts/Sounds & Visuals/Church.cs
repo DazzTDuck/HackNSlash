@@ -13,22 +13,22 @@ public class Church : MonoBehaviour
     public AudioSource audio2;
 
     private bool loop = true;
+    
+    private static readonly int StopTrigger = Animator.StringToHash("Stop");
+    private static readonly int StartTrigger = Animator.StringToHash("Start");
 
     private void Start()
     {
         if(!activateOnStart)
             return;
 
-        animator.SetTrigger("Start");
+        animator.SetTrigger(StartTrigger);
         StartCoroutine(nameof(StartDelay));
     }
 
     public void StopBell()
     {
         loop = false;
-        audio1.Stop();
-        audio2.Stop();
-        animator.SetTrigger("Stop");
     }
 
     private IEnumerator StartDelay()
@@ -40,5 +40,9 @@ public class Church : MonoBehaviour
 
         if(loop)
             StartCoroutine(nameof(StartDelay));
+        else
+        {
+            animator.SetTrigger(StopTrigger);
+        }
     }
 }

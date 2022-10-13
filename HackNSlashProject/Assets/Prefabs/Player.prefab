@@ -276,7 +276,7 @@ MonoBehaviour:
   gForceVector: {x: 0, y: 0, z: 0}
   isStationary: 0
   mouseSensitivity: 0.2
-  controllerSinsitivity: 1
+  controllerSinsitivity: 2
   playerRotSpeed: 7
   minCamAngle: -10
   maxCamAngle: 30
@@ -532,7 +532,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
-  radius: 4
+  radius: 3.5
   angle: 40
   damage: 15
   qTime: 0.3

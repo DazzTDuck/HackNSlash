@@ -7565,7 +7565,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-0.5,"y":1.0,"z":7.0}}'
+      m_SerializableObject: '{"vector":{"x":-1.0,"y":1.0,"z":6.0}}'
     m_Space: 0
   m_Property:
     name: A
@@ -7735,7 +7735,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":0.5,"y":-1.0,"z":0.0}}'
+      m_SerializableObject: '{"vector":{"x":1.0,"y":-1.0,"z":0.0}}'
     m_Space: 0
   m_Property:
     name: B
@@ -8269,7 +8269,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.TArcCone, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"cone":{"transform":{"position":{"x":-0.0000017852387372840895,"y":0.0,"z":0.44681158661842348},"angles":{"x":-90.0,"y":0.0,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0}},"baseRadius":0.5785032510757446,"topRadius":0.10000000149011612,"height":0.6248463988304138},"arc":6.2831854820251469}'
+      m_SerializableObject: '{"cone":{"transform":{"position":{"x":-0.0000017852387372840895,"y":0.0,"z":0.5265426635742188},"angles":{"x":-90.0,"y":0.0,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0}},"baseRadius":0.5278565883636475,"topRadius":0.10000000149011612,"height":0.7898263931274414},"arc":6.2831854820251469}'
     m_Space: 0
   m_Property:
     name: arcCone

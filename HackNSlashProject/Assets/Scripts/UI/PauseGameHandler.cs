@@ -63,7 +63,7 @@ public class PauseGameHandler : MonoBehaviour
 
         HandlePauseMenu(isPaused, isPaused ? 0 : 1);    
     }
-
+    
     private void HandlePauseMenu(bool state, float time)
     {
         Time.timeScale = time;

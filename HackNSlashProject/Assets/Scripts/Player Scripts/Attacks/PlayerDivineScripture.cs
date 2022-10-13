@@ -10,6 +10,7 @@ public class PlayerDivineScripture : MonoBehaviour
     public float lockoutAfter;
     public LayerMask enemyLayer;
     public float radius;
+    [Range(0, 90)]
     public float angle;
     public int damage;
 
@@ -50,7 +51,9 @@ public class PlayerDivineScripture : MonoBehaviour
         Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemyLayer);
         foreach (Collider enemyColider in enemies)
         {
-            if (Vector3.Dot(transform.forward, enemyColider.transform.position - transform.position) > (1 - (angle / 180f)))
+            float angle_ = Vector3.Angle(enemyColider.transform.position - transform.position, transform.forward);
+            Debug.Log(angle);
+            if (angle_ < angle /2)
             {
                 enemyColider.GetComponentInParent<ActorStunned>()?.GetStunned(duration, knockBack, transform);
                 enemyColider.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage);
@@ -58,5 +61,23 @@ public class PlayerDivineScripture : MonoBehaviour
         }
         yield return new WaitForSeconds(lockoutAfter);
         player.canAct = true;
+    }
+
+    private void FixedUpdate()
+    {
+        Vector2 tri = new Vector2();
+        tri.x = Mathf.Sin(angle / Mathf.Rad2Deg / 2) * radius;
+        tri.y = Mathf.Cos(angle / Mathf.Rad2Deg / 2) * radius;
+        Debug.Log(tri);
+        Debug.DrawLine(transform.position, transform.position + transform.TransformDirection(new Vector3(-tri.x, 0, tri.y)), Color.blue, Time.fixedDeltaTime);
+        Debug.DrawLine(transform.position, transform.position + transform.TransformDirection(new Vector3(+tri.x, 0, tri.y)), Color.red, Time.fixedDeltaTime);
+        Debug.DrawLine(transform.position, transform.position + transform.forward * radius, Color.black, Time.fixedDeltaTime);
+
+
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, radius);
+        //Gizmos.draw
     }
 }

@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6053312224652749670
 Transform:
@@ -169,6 +169,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8047708518660502657, guid: 91f593b47e5fb994f8ca382694e7072f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f593b47e5fb994f8ca382694e7072f, type: 3}
 --- !u!4 &1503928849456296440 stripped
@@ -188,6 +193,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spear (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132170330999160218, guid: 9519ca10d157579489da72b9b062aed2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8903780809742001952, guid: 9519ca10d157579489da72b9b062aed2,
         type: 3}
@@ -319,6 +329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8047708518660502657, guid: 91f593b47e5fb994f8ca382694e7072f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f593b47e5fb994f8ca382694e7072f, type: 3}
 --- !u!4 &1503928850206676482 stripped
@@ -338,6 +353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spear (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132170330999160218, guid: 9519ca10d157579489da72b9b062aed2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8903780809742001952, guid: 9519ca10d157579489da72b9b062aed2,
         type: 3}
@@ -413,6 +433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spear (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132170330999160218, guid: 9519ca10d157579489da72b9b062aed2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8903780809742001952, guid: 9519ca10d157579489da72b9b062aed2,
         type: 3}

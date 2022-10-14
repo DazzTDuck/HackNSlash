@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &758704766767805915
 Transform:
@@ -169,6 +169,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8047708518660502657, guid: 91f593b47e5fb994f8ca382694e7072f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f593b47e5fb994f8ca382694e7072f, type: 3}
 --- !u!4 &5357557051991095091 stripped
@@ -243,6 +248,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047708518660502657, guid: 91f593b47e5fb994f8ca382694e7072f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f593b47e5fb994f8ca382694e7072f, type: 3}
@@ -319,6 +329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8047708518660502657, guid: 91f593b47e5fb994f8ca382694e7072f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f593b47e5fb994f8ca382694e7072f, type: 3}
 --- !u!4 &5357557050694025114 stripped
@@ -394,6 +409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8047708518660502657, guid: 91f593b47e5fb994f8ca382694e7072f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f593b47e5fb994f8ca382694e7072f, type: 3}
 --- !u!4 &5357557051263052769 stripped
@@ -468,6 +488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Axe (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047708518660502657, guid: 91f593b47e5fb994f8ca382694e7072f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f593b47e5fb994f8ca382694e7072f, type: 3}

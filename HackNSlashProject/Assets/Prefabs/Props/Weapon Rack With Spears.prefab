@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2447046239288991228
 Transform:
@@ -114,6 +114,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spear (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132170330999160218, guid: 9519ca10d157579489da72b9b062aed2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8903780809742001952, guid: 9519ca10d157579489da72b9b062aed2,
         type: 3}
       propertyPath: m_RootOrder
@@ -188,6 +193,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spear (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132170330999160218, guid: 9519ca10d157579489da72b9b062aed2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8903780809742001952, guid: 9519ca10d157579489da72b9b062aed2,
         type: 3}
@@ -264,6 +274,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spear (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132170330999160218, guid: 9519ca10d157579489da72b9b062aed2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8903780809742001952, guid: 9519ca10d157579489da72b9b062aed2,
         type: 3}
       propertyPath: m_RootOrder
@@ -339,6 +354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spear
       objectReference: {fileID: 0}
+    - target: {fileID: 8132170330999160218, guid: 9519ca10d157579489da72b9b062aed2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8903780809742001952, guid: 9519ca10d157579489da72b9b062aed2,
         type: 3}
       propertyPath: m_RootOrder
@@ -413,6 +433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spear (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132170330999160218, guid: 9519ca10d157579489da72b9b062aed2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8903780809742001952, guid: 9519ca10d157579489da72b9b062aed2,
         type: 3}

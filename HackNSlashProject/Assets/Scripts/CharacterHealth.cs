@@ -26,7 +26,7 @@ public class CharacterHealth : MonoBehaviour
         else
             currentHP -= damageToDo;
 
-        EventsManager.instance.InvokeOnBarEvent(currentHP, 0, maxHP, gameObject);
+        EventsManager.instance.InvokeHealthUpdateEvent(characterId, currentHP, 0, maxHP, gameObject);
     }
     protected virtual void Death()
     {
@@ -39,6 +39,6 @@ public class CharacterHealth : MonoBehaviour
     public void ReturnToMaxHP()
     {
         currentHP = maxHP;
-        EventsManager.instance.InvokeOnBarEvent(currentHP, 0, maxHP, gameObject);
+        EventsManager.instance.InvokeHealthUpdateEvent(characterId, currentHP, 0, maxHP, gameObject);
     }
 }

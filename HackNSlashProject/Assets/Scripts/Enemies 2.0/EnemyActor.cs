@@ -47,7 +47,7 @@ public class EnemyActor : MonoBehaviour
 
     private void Start()
     {
-        EventsManager.instance.OnBarUpdateEvent += CheckToBackoff;
+        EventsManager.instance.HealthUpdateEvent += CheckToBackoff;
         agent = GetComponentInChildren<NavMeshAgent>();
         patrolling = GetComponentInChildren<ActorPatrolling>();
         patrolling.StartPatrolling();
@@ -71,9 +71,9 @@ public class EnemyActor : MonoBehaviour
     private void OnDestroy()
     {
         CombatManager.combatManager.RemoveFromCombat(this);
-        EventsManager.instance.OnBarUpdateEvent -= CheckToBackoff;
+        EventsManager.instance.HealthUpdateEvent -= CheckToBackoff;
     }
-    void CheckToBackoff(object sender = null, OnBarArgs e = null)
+    void CheckToBackoff(object sender = null, HealthUpdateArgs e = null)
     {
         if ((GameObject)sender == gameObject && e?.currentAmount <= 0)
         {

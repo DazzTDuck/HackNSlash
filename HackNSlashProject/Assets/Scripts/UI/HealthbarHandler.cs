@@ -7,6 +7,10 @@ using UnityEngine.InputSystem;
 
 public class HealthbarHandler : MonoBehaviour
 {
+    [Header("ID")]
+    public int id;
+    
+    [Space]
     public float reductionSpeed = 1f;
     public float reductionDelay = 1.25f;
 
@@ -35,11 +39,11 @@ public class HealthbarHandler : MonoBehaviour
 
     private void Start()
     {
-        EventsManager.instance.OnBarUpdateEvent += OnBarUpdateEvent;
+        EventsManager.instance.HealthUpdateEvent += HealthUpdateEvent;
     }
-    private void OnBarUpdateEvent(object sender, OnBarArgs e)
+    private void HealthUpdateEvent(object sender, HealthUpdateArgs e)
     {
-        if((GameObject)sender == gameObject)
+        if(e.id == id)
             UpdateBar(e.currentAmount, e.minAmount, e.maxAmount);
     }
 
@@ -129,6 +133,6 @@ public class HealthbarHandler : MonoBehaviour
 
     private void OnDestroy()
     {
-        EventsManager.instance.OnBarUpdateEvent -= OnBarUpdateEvent;    
+        EventsManager.instance.HealthUpdateEvent -= HealthUpdateEvent;    
     }
 }

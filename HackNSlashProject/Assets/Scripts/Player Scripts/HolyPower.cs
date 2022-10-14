@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HolyPower : MonoBehaviour
 {
+    [Header("ID")]
+    public int id;
+    [Space]
     public int maxHolyPower = 100;
     public int currentHolyPower;
     public float powerRegenSpeed;
@@ -23,7 +26,7 @@ public class HolyPower : MonoBehaviour
         if (!isRegening)
             StartCoroutine(RegenHolyPower());
 
-        EventsManager.instance.InvokeOnBarEvent(currentHolyPower, 0, maxHolyPower, gameObject);
+        EventsManager.instance.InvokeHealthUpdateEvent(id, currentHolyPower, 0, maxHolyPower, gameObject);
     }
 
     private IEnumerator RegenHolyPower()
@@ -39,7 +42,7 @@ public class HolyPower : MonoBehaviour
             yield return new WaitForSeconds(1f / powerRegenSpeed);
             currentHolyPower++;
 
-            EventsManager.instance.InvokeOnBarEvent(currentHolyPower, 0, maxHolyPower, gameObject);
+            EventsManager.instance.InvokeHealthUpdateEvent(id, currentHolyPower, 0, maxHolyPower, gameObject);
         }
         isRegening = false;
     }

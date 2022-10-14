@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 396.417, g: 376.1792, b: 398.81836, a: 1}
+  m_IndirectSpecularColor: {r: 396.42236, g: 376.17676, b: 398.8291, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 79728141}
   - component: {fileID: 79728145}
   - component: {fileID: 79728146}
+  - component: {fileID: 79728147}
   m_Layer: 0
   m_Name: EnemyTest
   m_TagString: Untagged
@@ -266,6 +267,27 @@ MonoBehaviour:
     playOnStart: 0
     playRandomClip: 1
     source: {fileID: 0}
+--- !u!114 &79728147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79728140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0714f08bcd8e944ba00a6b39bfd9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  reductionSpeed: 1
+  reductionDelay: 1.25
+  fadeInAndOut: 0
+  fadeSpeed: 0
+  canvasGroup: {fileID: 0}
+  mainBar: {fileID: 0}
+  reductionBar: {fileID: 0}
+  damageAmountText: {fileID: 0}
 --- !u!1 &123139814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,10 +1542,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: lookAt
-      value: 
-      objectReference: {fileID: 227457142}
     - target: {fileID: 7174915534021370341, guid: 3e82ab2f61c68314189bab5bc510a67a,
         type: 3}
       propertyPath: m_Layer
@@ -1738,10 +1756,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: lookAt
-      value: 
-      objectReference: {fileID: 227457142}
     - target: {fileID: 7174915534021370341, guid: 3e82ab2f61c68314189bab5bc510a67a,
         type: 3}
       propertyPath: m_Layer

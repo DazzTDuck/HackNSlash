@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class OnBarArgs : EventArgs
+public class HealthUpdateArgs : EventArgs
 {
+    public int id;
     public int currentAmount;
     public int minAmount;
     public int maxAmount;
@@ -19,10 +20,10 @@ public class EventsManager : MonoBehaviour
         instance = this;
     }
 
-    public event EventHandler<OnBarArgs> OnBarUpdateEvent;
-    public void InvokeOnBarEvent(int currentAmount, int minAmount, int maxAmount, object sender)
+    public event EventHandler<HealthUpdateArgs> HealthUpdateEvent;
+    public void InvokeHealthUpdateEvent(int id, int currentAmount, int minAmount, int maxAmount, object sender)
     {
-        OnBarUpdateEvent?.Invoke(sender, new OnBarArgs{currentAmount = currentAmount, minAmount = minAmount, maxAmount = maxAmount});
+        HealthUpdateEvent?.Invoke(sender, new HealthUpdateArgs{id = id, currentAmount = currentAmount, minAmount = minAmount, maxAmount = maxAmount});
     }
 
     // public event Action<int> onDeath;

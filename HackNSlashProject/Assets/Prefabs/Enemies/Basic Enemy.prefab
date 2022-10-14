@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 5371670885630812043}
   - component: {fileID: 5371670885630812041}
   - component: {fileID: 8946464363782170671}
-  - component: {fileID: 7180859570735841606}
   m_Layer: 8
   m_Name: Basic Enemy
   m_TagString: Untagged
@@ -106,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 150
   currentHP: 0
-  characterId: 0
+  characterId: 74512
 --- !u!114 &5371670885630812085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,26 +216,6 @@ MonoBehaviour:
   personalSpaceRadius: 5
   maxMove: 4.5
   moveTimeMinMax: {x: 5, y: 7}
---- !u!114 &7180859570735841606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5371670885630812093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0714f08bcd8e944ba00a6b39bfd9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reductionSpeed: 1
-  reductionDelay: 1.25
-  fadeInAndOut: 1
-  fadeSpeed: 5
-  canvasGroup: {fileID: 0}
-  mainBar: {fileID: 0}
-  reductionBar: {fileID: 0}
-  damageAmountText: {fileID: 0}
 --- !u!1001 &7131916296447741487
 PrefabInstance:
   m_ObjectHideFlags: 0

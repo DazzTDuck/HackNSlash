@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 527167556049320953}
   - component: {fileID: 8592667256885950928}
   - component: {fileID: 8895655545175884005}
-  - component: {fileID: 904751856806388814}
   m_Layer: 8
   m_Name: Ranged Enemy
   m_TagString: Untagged
@@ -92,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 110
   currentHP: 0
-  characterId: 0
+  characterId: 1305
 --- !u!114 &527167556049320949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,26 +201,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   engageRangeMinMax: {x: 4, y: 14}
---- !u!114 &904751856806388814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527167556049320958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0714f08bcd8e944ba00a6b39bfd9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reductionSpeed: 1
-  reductionDelay: 1.25
-  fadeInAndOut: 1
-  fadeSpeed: 5
-  canvasGroup: {fileID: 0}
-  mainBar: {fileID: 0}
-  reductionBar: {fileID: 0}
-  damageAmountText: {fileID: 0}
 --- !u!1 &527167556412384313
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 6612438804823176728}
   - component: {fileID: 47394073716787469}
   - component: {fileID: 741614479734032549}
-  - component: {fileID: 7860741268678058831}
   m_Layer: 8
   m_Name: Big Enemy
   m_TagString: Untagged
@@ -92,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 450
   currentHP: 0
-  characterId: 0
+  characterId: 14563
 --- !u!114 &6612438804823176724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,26 +216,6 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &7860741268678058831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6612438804823176748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0714f08bcd8e944ba00a6b39bfd9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reductionSpeed: 1
-  reductionDelay: 1.25
-  fadeInAndOut: 1
-  fadeSpeed: 5
-  canvasGroup: {fileID: 0}
-  mainBar: {fileID: 0}
-  reductionBar: {fileID: 0}
-  damageAmountText: {fileID: 0}
 --- !u!1001 &881608629065119266
 PrefabInstance:
   m_ObjectHideFlags: 0

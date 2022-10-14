@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 430739590448728304}
   - component: {fileID: 4676723767296573237}
   - component: {fileID: 1622988169909230179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gate Door Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5093359244665040479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 6486459293246908653}
   - component: {fileID: 2616476687368416899}
   - component: {fileID: 2355442552876872955}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 6225780920481281446}
   - component: {fileID: 8203673893337733801}
   - component: {fileID: 8447270867580428107}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gate Door Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

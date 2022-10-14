@@ -11,4 +11,9 @@ public class MenuManager : MonoBehaviour
         //activate black screen
         LoadingScreenManager.instance.StartLoadingSequence(loadingDelay, i);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

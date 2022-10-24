@@ -1545,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f45a5472bcad674e8d457ac5666aea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyDir: {x: 0.3826835, y: 0, z: 0, w: -0.9238795}
+  flyDir: {x: 0.37940958, y: 0.12059048, z: 0.04995022, w: -0.91597563}
   flySpeed: 7
 --- !u!1 &542827075189666636
 GameObject:

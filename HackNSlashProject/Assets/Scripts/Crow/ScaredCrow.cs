@@ -44,7 +44,7 @@ public class ScaredCrow : MonoBehaviour
 
     IEnumerator Flying()
     {
-        yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
+        yield return new WaitForSeconds(Random.Range(0.1f, 1.5f));
         animator.SetTrigger("Fly");
         yield return new WaitForSeconds(0.3f);
         float time = 0;

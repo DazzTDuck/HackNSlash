@@ -19,6 +19,9 @@ public class PlayerHolyWater : MonoBehaviour
     public float qTime;
     bool attackQ;
 
+    public Transform particleOrigin;
+    public ParticleManager particleManager;
+
     private void Start()
     {
         remainingUses = MaxUses;
@@ -48,6 +51,7 @@ public class PlayerHolyWater : MonoBehaviour
         player.canAct = false;
         //animator.SetTrigger();
         yield return new WaitForSeconds(delay);
+        particleManager.GetParticle(particleOrigin);
         Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemylayer);
         foreach (Collider enemyColider in enemies)
         {

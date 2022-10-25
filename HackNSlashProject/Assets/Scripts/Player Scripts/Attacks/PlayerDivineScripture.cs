@@ -20,6 +20,9 @@ public class PlayerDivineScripture : MonoBehaviour
     public int powerConsumption;
     PlayerMovement player;
 
+    public Transform particleOrigin;
+    public ParticleManager particleManager;
+
 
     public void ReadScripture(PlayerMovement player_)
     {
@@ -48,6 +51,7 @@ public class PlayerDivineScripture : MonoBehaviour
         player.canAct = false;
         //animator.SetTrigger();
         yield return new WaitForSeconds(delay);
+        particleManager.GetParticle(particleOrigin);
         Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemyLayer);
         foreach (Collider enemyColider in enemies)
         {

@@ -120,7 +120,9 @@ public class PlayerMovement : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.started && canAct && interactable && !PauseGameHandler.isPaused)
-            interactable.Interact();
+            interactable.Interact(true);
+        else if (callbackContext.canceled && interactable && !PauseGameHandler.isPaused)
+            interactable.Interact(false);
     }
 
     private void FixedUpdate()

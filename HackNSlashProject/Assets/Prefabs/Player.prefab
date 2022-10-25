@@ -176,6 +176,8 @@ Transform:
   - {fileID: 4506580401001672263}
   - {fileID: 4107335095819662250}
   - {fileID: 583535082898865648}
+  - {fileID: 9032232398811946396}
+  - {fileID: 3682464905993918635}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -515,6 +517,8 @@ MonoBehaviour:
     m_Bits: 256
   animator: {fileID: 0}
   qTime: 0.3
+  particleOrigin: {fileID: 9032232398811946396}
+  particleManager: {fileID: 0}
 --- !u!114 &1999507315301634516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,6 +544,8 @@ MonoBehaviour:
   qTime: 0.3
   animator: {fileID: 0}
   powerConsumption: 45
+  particleOrigin: {fileID: 3682464905993918635}
+  particleManager: {fileID: 0}
 --- !u!114 &1999201281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +737,68 @@ MonoBehaviour:
   damage: 30
   animator: {fileID: 4107335096541107347}
   powerConsumption: 12
+--- !u!1 &8922260416773504046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3682464905993918635}
+  m_Layer: 7
+  m_Name: BookOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3682464905993918635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922260416773504046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4107335096402957392}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9050866023432318988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9032232398811946396}
+  m_Layer: 7
+  m_Name: splashOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9032232398811946396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9050866023432318988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.9, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4107335096402957392}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1958273749
 PrefabInstance:
   m_ObjectHideFlags: 0

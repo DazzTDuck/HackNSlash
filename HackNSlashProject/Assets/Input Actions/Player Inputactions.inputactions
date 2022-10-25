@@ -6,9 +6,18 @@
             "id": "0ee44ec6-7d57-4e68-a301-ca06133ea1f0",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "Move (mouse)",
                     "type": "Value",
                     "id": "e0c09168-733a-4e72-bb66-dbe2417b3421",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Move (controller)",
+                    "type": "Value",
+                    "id": "335dd995-a667-47f7-9afc-9fb8f2e8fdb1",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -104,7 +113,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Move (mouse)",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -115,7 +124,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Move (mouse)",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -126,7 +135,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Move (mouse)",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -137,7 +146,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Move (mouse)",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -148,20 +157,9 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Move (mouse)",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "66edf1f9-96e2-413e-9ea8-a32f60b72a54",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -325,6 +323,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Rez",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca900875-e1bb-460a-8c20-9f2963a64984",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move (controller)",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class InputChecker : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static bool usesController;
 
-    // Update is called once per frame
-    void Update()
+    public void UseKeyboardAndMouse()
     {
-        
+        usesController = false;
+        Debug.Log("Keyboard & Mouse");
+    }
+    public void UseGamepad()
+    {
+        usesController = true;
+        Debug.Log("controller");
     }
 }

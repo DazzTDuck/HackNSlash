@@ -62,9 +62,22 @@ public class CleansingUIHandler : MonoBehaviour
     private void ChangeButtonUI()
     {   
         //Check if input is from keyboard of controller
+        if (InputChecker.usesController)
+        {
+            f_Key.gameObject.SetActive(false);
+            buttonImage.gameObject.SetActive(true);
 
-        if(buttonImage.IsActive())
-            buttonImage.sprite = isCleansing ? b_Pressed : b_Normal;
+            if(buttonImage.gameObject.activeSelf)
+                buttonImage.sprite = isCleansing ? b_Pressed : b_Normal;
+        }
+        else
+        {
+            buttonImage.gameObject.SetActive(false);
+            f_Key.gameObject.SetActive(true);
+        }
+
+
+        
     }
 
     private void OnDisable()

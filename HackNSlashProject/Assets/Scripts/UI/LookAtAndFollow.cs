@@ -15,6 +15,7 @@ public class LookAtAndFollow : MonoBehaviour
         transform.LookAt(lookAt);
         
         //follow object
-        transform.position = follow.position + offset;
+        if(follow)
+            transform.position = follow.position + offset;
     }
 }

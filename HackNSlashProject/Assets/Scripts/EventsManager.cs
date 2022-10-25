@@ -11,6 +11,12 @@ public class HealthUpdateArgs : EventArgs
     public int maxAmount;
 }
 
+public class CleanseUpdateArgs : EventArgs
+{
+    public bool isCleansing;
+    public bool isCleanseCompleted;
+}
+
 public class EventsManager : MonoBehaviour
 {
     public static EventsManager instance;
@@ -26,9 +32,9 @@ public class EventsManager : MonoBehaviour
         HealthUpdateEvent?.Invoke(sender, new HealthUpdateArgs{id = id, currentAmount = currentAmount, minAmount = minAmount, maxAmount = maxAmount});
     }
 
-    // public event Action<int> onDeath;
-    // public void OnDeath(int id)
-    // {
-    //     onDeath?.Invoke(id);
-    // }
+    public event EventHandler<CleanseUpdateArgs> CleanseUpdateEvent;
+    public void InvokeCleanseUpdateEvent(bool isCleansing, bool isCleanseCompleted, object sender)
+    {
+        CleanseUpdateEvent?.Invoke(sender, new CleanseUpdateArgs{isCleansing = isCleansing, isCleanseCompleted = isCleanseCompleted});
+    }
 }

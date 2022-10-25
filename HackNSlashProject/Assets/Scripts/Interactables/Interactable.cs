@@ -6,7 +6,7 @@ public class Interactable : MonoBehaviour
 {
     public bool canInteract;
 
-    public virtual void Interact()
+    public virtual void Interact(bool pressDown)
     {
 
     }

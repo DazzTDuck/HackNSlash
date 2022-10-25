@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public float mouseSensitivity;
     public float controllerSinsitivity;
     public float playerRotSpeed;
-    bool useController;
 
     [Header("Camera")]
     public float minCamAngle = 0;
@@ -71,12 +70,6 @@ public class PlayerMovement : MonoBehaviour
     public void OnLookMouse(InputAction.CallbackContext callbackContext)
     {
         lookVector = callbackContext.ReadValue<Vector2>();
-        useController = false;
-    }
-    public void OnLookController(InputAction.CallbackContext callbackContext)
-    {
-        lookVector = callbackContext.ReadValue<Vector2>();
-        useController = true;
     }
     public void OnLockOn(InputAction.CallbackContext callbackContext)
     {
@@ -120,7 +113,9 @@ public class PlayerMovement : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.started && canAct && interactable && !PauseGameHandler.isPaused)
-            interactable.Interact();
+            interactable.Interact(true);
+        else if (callbackContext.canceled && interactable && !PauseGameHandler.isPaused)
+            interactable.Interact(false);
     }
 
     private void FixedUpdate()
@@ -131,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
         if (CombatManager.combatManager.engagedEnemies.Count == 0 && lockedOn)
             lockedOn = false;
 
-        float rotSpeed = useController ? controllerSinsitivity : mouseSensitivity;
+        float rotSpeed = InputChecker.usesController ? controllerSinsitivity : mouseSensitivity;
         camRot.x -= lookVector.y * rotSpeed;
         camRot.x = Mathf.Clamp(camRot.x, minCamAngle, maxCamAngle);
         camRot.z = 0;
@@ -228,7 +223,6 @@ public class PlayerMovement : MonoBehaviour
 
         inputCrossVelocity = Quaternion.AngleAxis(90, curWorldInput) * inputCrossVelocity;
         finalForce += inputCrossVelocity * moveAccel * 0.5f;
-        //Debug.Log(finalForce);
         rb.AddForce(finalForce, ForceMode.Acceleration);
     }
     void GForceCalculation()
@@ -236,6 +230,5 @@ public class PlayerMovement : MonoBehaviour
         var playerAccel = (rb.velocity - velLastFrame) / Time.fixedDeltaTime;
         gForceVector = transform.InverseTransformVector(playerAccel) / -Physics.gravity.y;
         velLastFrame = rb.velocity;
-        //Debug.Log(gForceVector);
     }
 }

@@ -4,11 +4,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.VFX;
 
 public class CleansingUIHandler : MonoBehaviour
 {
     public float timeToCleanse = 4;
+    public float activateDistance = 1;
     [Header("References")]
+    public VisualEffect cleansingParticle;
+    public GameObject player;
+    public GameObject uiCanvas;
     public Image progressImage;
     public Image buttonImage;
     public TMP_Text f_Key;
@@ -23,8 +28,6 @@ public class CleansingUIHandler : MonoBehaviour
     private void Start()
     {
         EventsManager.instance.CleanseUpdateEvent += OnCleanseUpdateEvent;
-        isCleansing = true;
-        timer = timeToCleanse;
     }
     private void OnCleanseUpdateEvent(object sender, CleanseUpdateArgs e)
     {
@@ -32,6 +35,11 @@ public class CleansingUIHandler : MonoBehaviour
             return;
 
         isCleansing = e.isCleansing;
+
+        if (e.isCleansing)
+        {
+            timer = timeToCleanse;
+        }
     }
 
     private void Update()
@@ -40,6 +48,12 @@ public class CleansingUIHandler : MonoBehaviour
 
         if (!isCleansing && !isComplete)
             return;
+
+        if (player)
+        {
+            bool active = Vector3.Distance(gameObject.transform.position, player.transform.position) < activateDistance;
+            uiCanvas.SetActive(active);
+        }
 
         switch (timer)
         {
@@ -53,6 +67,7 @@ public class CleansingUIHandler : MonoBehaviour
                 //cleansing is complete
                 isCleansing = false;
                 isComplete = true;
+                cleansingParticle.Play();
 
                 EventsManager.instance.InvokeCleanseUpdateEvent(isCleansing, isComplete, this);
                 break;
@@ -75,9 +90,6 @@ public class CleansingUIHandler : MonoBehaviour
             buttonImage.gameObject.SetActive(false);
             f_Key.gameObject.SetActive(true);
         }
-
-
-        
     }
 
     private void OnDisable()

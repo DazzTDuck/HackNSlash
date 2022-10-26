@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 6245177648820937904}
   - component: {fileID: 9182469408965315636}
   - component: {fileID: 7804173792684271627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Church
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ Transform:
   - {fileID: 4286553749345813546}
   m_Father: {fileID: 4800221149471669461}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00767, y: 31.140675, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -53.13005, z: 0}
 --- !u!1 &5347884106683907539
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,4 +710,4 @@ Transform:
   - {fileID: 8960556807291334924}
   m_Father: {fileID: 341621331578622708}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.000055963086, y: -0.00004356751, z: 10.3205595}
+  m_LocalEulerAnglesHint: {x: -0.0000701184, y: 4.8853313e-12, z: -28.07249}

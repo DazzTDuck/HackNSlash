@@ -12,6 +12,7 @@ public class PlayerSwordAttack : MonoBehaviour
     bool attackQ;
     public int powerConsumption;
     PlayerMovement player;
+    public HolySwordVisual swordVisual;
     
 
     public void Attack(PlayerMovement player_)
@@ -39,6 +40,7 @@ public class PlayerSwordAttack : MonoBehaviour
     IEnumerator Swinging()
     {
         player.canAct = false;
+        swordVisual.StartAttackVisual();
         GetComponentInParent<Rigidbody>().isKinematic = true;
         animator.SetTrigger("whack");
         yield return new WaitForSeconds(attackDuration);
@@ -49,6 +51,5 @@ public class PlayerSwordAttack : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage);
-        //other.GetComponent<ActorStunned>()?.GetStunned(5, 5, GetComponentInParent<PlayerMovement>().transform);
     }
 }

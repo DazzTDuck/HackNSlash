@@ -7,8 +7,9 @@ public class CleanseCorruption : Interactable
     public GameObject shine;
     bool hasCleansed;
 
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
+        base.FixedUpdate();
         bool b = false;
         if (!hasCleansed)
             b = CheckForLiveEnemies();
@@ -17,9 +18,9 @@ public class CleanseCorruption : Interactable
             canInteract = true;
             shine.SetActive(true);
         }
-        else if (!b)
+        else if (!b && canInteract)
         {
-            hasCleansed = true;
+            //hasCleansed = true;
             canInteract = false;
             shine.SetActive(false);
         }

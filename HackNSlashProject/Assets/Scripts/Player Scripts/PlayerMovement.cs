@@ -48,9 +48,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public HolyPower holyPower;
 
     [Header("Interactions")]
-    public float interactRadius;
-    public LayerMask interactLayer;
-    Interactable interactable;
+    public Interactable interactable;
 
     private void Start()
     {
@@ -161,28 +159,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.LookAt(transform.position + moveDir, Vector3.up);
-
-        Collider[] colliders = Physics.OverlapSphere(transform.position, interactRadius, interactLayer);
-        float dstToTarget = interactRadius;
-        foreach (Collider collider in colliders)
-        {
-            if (collider.gameObject.GetComponent<Interactable>() && Vector3.Distance(collider.transform.position, transform.position) < dstToTarget)
-            {
-                interactable = collider.gameObject.GetComponent<Interactable>();
-                dstToTarget = Vector3.Distance(collider.transform.position, transform.position);
-            }
-        }
-        if (interactable)
-        {
-            if (Vector3.Distance(interactable.transform.position, transform.position) > interactRadius || interactable.canInteract == false)
-            {
-                interactable = null;
-                //Debug.Log("you can no longer interact");
-            }
-            //else
-                //Debug.Log("you can interact;");
-        }
-
     }
 
     void Movement()

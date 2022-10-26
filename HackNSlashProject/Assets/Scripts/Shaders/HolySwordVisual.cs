@@ -47,7 +47,6 @@ public class HolySwordVisual : MonoBehaviour
     private IEnumerator AttackVisual()
     {
         height = 0;
-        yield return new WaitForSeconds(attackDuration * 2); //debug delay
 
         Debug.Log("Starting Visual");
 

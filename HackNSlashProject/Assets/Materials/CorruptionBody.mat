@@ -207,7 +207,7 @@ Material:
     - _MetallicRemapMax: 1
     - _MetallicRemapMin: 0
     - _NoiseEdge: 0.649
-    - _NoiseInstensity: 2
+    - _NoiseInstensity: 1.69
     - _NoiseScale: 15
     - _NoiseScrollSpeed: 0.1
     - _NormalMapSpace: 0

@@ -3006,7 +3006,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "6dd1ba5418e14f89a48a87a4d5a0ba9e",
     "m_Id": 0,
-    "m_DisplayName": "NoiseInstensity",
+    "m_DisplayName": "NoiseIntensity",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -3911,10 +3911,10 @@
     "m_Guid": {
         "m_GuidSerialized": "b9c0ad9d-bcc2-4ff3-81d8-e70f17096c89"
     },
-    "m_Name": "NoiseInstensity",
+    "m_Name": "NoiseIntensity",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "NoiseInstensity",
-    "m_DefaultReferenceName": "_NoiseInstensity",
+    "m_RefNameGeneratedByDisplayName": "NoiseIntensity",
+    "m_DefaultReferenceName": "_NoiseIntensity",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,

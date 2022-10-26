@@ -16,10 +16,10 @@ public class CleansingUIHandler : MonoBehaviour
     public GameObject uiCanvas;
     public Image progressImage;
     public Image buttonImage;
-    public TMP_Text f_Key;
     [Header("Sprites")]
     public Sprite b_Pressed;
     public Sprite b_Normal;
+    public Sprite f_Key;
 
     private float timer;
     private bool isCleansing;
@@ -28,6 +28,7 @@ public class CleansingUIHandler : MonoBehaviour
     private void Start()
     {
         EventsManager.instance.CleanseUpdateEvent += OnCleanseUpdateEvent;
+        uiCanvas.SetActive(false);
     }
     private void OnCleanseUpdateEvent(object sender, CleanseUpdateArgs e)
     {
@@ -67,7 +68,9 @@ public class CleansingUIHandler : MonoBehaviour
                 //cleansing is complete
                 isCleansing = false;
                 isComplete = true;
+                uiCanvas.SetActive(false);
                 cleansingParticle.Play();
+
 
                 EventsManager.instance.InvokeCleanseUpdateEvent(isCleansing, isComplete, this);
                 break;
@@ -78,18 +81,9 @@ public class CleansingUIHandler : MonoBehaviour
     {   
         //Check if input is from keyboard of controller
         if (InputChecker.usesController)
-        {
-            f_Key.gameObject.SetActive(false);
-            buttonImage.gameObject.SetActive(true);
-
-            if(buttonImage.gameObject.activeSelf)
-                buttonImage.sprite = isCleansing ? b_Pressed : b_Normal;
-        }
+            buttonImage.sprite = isCleansing ? b_Pressed : b_Normal; 
         else
-        {
-            buttonImage.gameObject.SetActive(false);
-            f_Key.gameObject.SetActive(true);
-        }
+            buttonImage.sprite = f_Key;
     }
 
     private void OnDisable()

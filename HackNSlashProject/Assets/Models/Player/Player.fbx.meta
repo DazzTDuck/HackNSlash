@@ -4,11 +4,20 @@ ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: 6623151210433736486
-    second: PlayerRig|Armature|0_T-Pose
+      74: -20613852636992674
+    second: HolyKnight|Cleansing
   - first:
-      74: -5409123259863206634
-    second: PlayerRig|Key|0_T-Pose
+      74: -4009970004309628951
+    second: PlayerRig|Cleansing
+  - first:
+      74: 4292510674569227458
+    second: PlayerRig|Idle
+  - first:
+      74: 852866790152276425
+    second: PlayerRig|Running
+  - first:
+      74: 3799110176455820014
+    second: PlayerRig|Walking
   externalObjects: {}
   materials:
     materialImportMode: 2

@@ -59,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
         holyPower = GetComponentInChildren<HolyPower>();
         divineScripture = GetComponent<PlayerDivineScripture>();
         canAct = true;
+        EventsManager.instance.CleanseUpdateEvent += Cleanse;
+    }
+    private void OnDestroy()
+    {
+        EventsManager.instance.CleanseUpdateEvent -= Cleanse;
     }
 
     public void OnMove(InputAction.CallbackContext callbackContext)
@@ -114,6 +119,20 @@ public class PlayerMovement : MonoBehaviour
             interactable.Interact(true);
         else if (callbackContext.canceled && interactable && !PauseGameHandler.isPaused)
             interactable.Interact(false);
+    }
+
+    void Cleanse(object sender, CleanseUpdateArgs cleanseUpdateArgs)
+    {
+        if (cleanseUpdateArgs.isCleansing == true)
+        {
+            animator.SetBool("Cleansing", true);
+            canAct = false;
+        }
+        else if (cleanseUpdateArgs.isCleanseCompleted == true || cleanseUpdateArgs.isCleansing == false)
+        {
+            animator.SetBool("Cleansing", false);
+            canAct = true;
+        }
     }
 
     private void FixedUpdate()

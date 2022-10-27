@@ -182,7 +182,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()
     {
-        curWorldInput = transform.TransformDirection(0, 0, moveVector.normalized.magnitude);
+        curWorldInput = transform.TransformDirection(0, 0, moveVector.magnitude);
         inputmagnitude = curWorldInput.magnitude;
         curWorldInput = new Vector3(curWorldInput.x, 0, curWorldInput.z).normalized;
 

@@ -241,9 +241,9 @@ MonoBehaviour:
   shaderType: 3
   editorWindAlways: 0
   editorWindEnabled: 0
-  windType: 0
+  windType: 3
   windQuality: 3
-  localWindAmplitude: 0.82
+  localWindAmplitude: 0.4
   sproutTurbulance: 0.845
   sproutSway: 1
-  windScale: 1
+  windScale: 0.2

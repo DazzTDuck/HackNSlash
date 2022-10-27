@@ -255,7 +255,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255818593}
-  m_LocalRotation: {x: 0.14734964, y: 0.78665566, z: 0.5631058, w: -0.2058466}
+  m_LocalRotation: {x: 0.00011312372, y: 0.9997289, z: 0.022746403, w: -0.0049719103}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -291,8 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aabe479c0aa0be8479a62b9f74c905b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToCleanse: 4
-  activateDistance: 0.5
+  timeToCleanse: 2.7
+  activateDistance: 2
   cleansingParticle: {fileID: 512305224069848217}
   player: {fileID: 0}
   uiCanvas: {fileID: 1502589963}
@@ -664,7 +664,7 @@ BoxCollider:
   m_GameObject: {fileID: 5883407258167683048}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ec103abcf47cc44ac29fb52a6fdb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canInteract: 0
+  canInteract: 1
   interactRadius: 2
   shine: {fileID: 176019898950236353}
 --- !u!1001 &7061561278337142802

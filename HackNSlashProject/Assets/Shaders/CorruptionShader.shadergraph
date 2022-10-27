@@ -2387,7 +2387,7 @@
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.SystemData",
     "m_ObjectId": "4fef796fdc1e4c3291bd4f2020dd2df3",
-    "m_MaterialNeedsUpdateHash": 529,
+    "m_MaterialNeedsUpdateHash": 0,
     "m_SurfaceType": 0,
     "m_RenderingPass": 1,
     "m_BlendMode": 0,
@@ -2412,7 +2412,7 @@
     "m_TessellationBackFaceCullEpsilon": -0.25,
     "m_TessellationMaxDisplacement": 0.009999999776482582,
     "m_Version": 1,
-    "inspectorFoldoutMask": 0
+    "inspectorFoldoutMask": 1
 }
 
 {
@@ -4095,7 +4095,7 @@
     "m_NormalDropOffSpace": 0,
     "m_BlendPreserveSpecular": true,
     "m_ReceiveDecals": true,
-    "m_ReceiveSSR": true,
+    "m_ReceiveSSR": false,
     "m_ReceiveSSRTransparent": false,
     "m_SpecularAA": false,
     "m_SpecularOcclusionMode": 1,
@@ -4589,7 +4589,7 @@
         }
     ],
     "m_CustomEditorGUI": "",
-    "m_SupportVFX": false
+    "m_SupportVFX": true
 }
 
 {
@@ -5149,7 +5149,7 @@
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.HDLitData",
     "m_ObjectId": "fb70425e052d4d3fbe0c92a7e85ebf2a",
-    "m_RayTracing": false,
+    "m_RayTracing": true,
     "m_MaterialType": 0,
     "m_RefractionModel": 0,
     "m_SSSTransmission": true,

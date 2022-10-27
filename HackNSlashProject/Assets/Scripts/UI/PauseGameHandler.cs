@@ -79,9 +79,14 @@ public class PauseGameHandler : MonoBehaviour
         eventSystem.SetSelectedGameObject(firstButtonPauseMenu);     
     }
     
-    public void LoadMainMenu()
+    public void BackToMainMenu()
     {
         SwitchPauseMenu();
+        LoadMenuScene();
+    }
+    
+    public void LoadMenuScene()
+    {
         LoadingScreenManager.instance.StartLoadingSequence(2f, 0);
     }
 }

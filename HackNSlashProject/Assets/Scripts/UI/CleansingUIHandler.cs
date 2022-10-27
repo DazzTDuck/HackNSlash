@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.VFX;
 
@@ -20,15 +21,20 @@ public class CleansingUIHandler : MonoBehaviour
     public Sprite b_Pressed;
     public Sprite b_Normal;
     public Sprite f_Key;
+    
+    [Space]
+    public UnityEvent onCleansed;
 
     private float timer;
     private bool isCleansing;
     private bool isComplete;
+    CleanseCorruption handler;
 
     private void Start()
     {
         EventsManager.instance.CleanseUpdateEvent += OnCleanseUpdateEvent;
         uiCanvas.SetActive(false);
+        handler = GetComponentInParent<CleanseCorruption>();
     }
     private void OnCleanseUpdateEvent(object sender, CleanseUpdateArgs e)
     {
@@ -38,23 +44,26 @@ public class CleansingUIHandler : MonoBehaviour
         isCleansing = e.isCleansing;
 
         if (e.isCleansing)
-        {
             timer = timeToCleanse;
+        else
+        {
+            if(progressImage.fillAmount != 0)
+                progressImage.fillAmount = 0;    
         }
     }
 
     private void Update()
     {
         ChangeButtonUI();
-
-        if (!isCleansing && !isComplete)
-            return;
-
-        if (player)
+        
+        if (player && handler.canInteract)
         {
             bool active = Vector3.Distance(gameObject.transform.position, player.transform.position) < activateDistance;
             uiCanvas.SetActive(active);
         }
+
+        if (!isCleansing && !isComplete)
+            return;
 
         switch (timer)
         {
@@ -73,6 +82,7 @@ public class CleansingUIHandler : MonoBehaviour
 
 
                 EventsManager.instance.InvokeCleanseUpdateEvent(isCleansing, isComplete, this);
+                onCleansed?.Invoke();
                 break;
         }
     }

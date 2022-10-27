@@ -42,9 +42,4 @@ public class Interactable : MonoBehaviour
         else if (player.interactable == this)
             player.interactable = null;
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(transform.position, interactRadius);
-    }
 }

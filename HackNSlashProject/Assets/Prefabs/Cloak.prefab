@@ -528,14 +528,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3124058088507795733}
-  m_LocalRotation: {x: -0.000000029802322, y: -0.00000008940697, z: 0.7071066, w: 0.70710707}
-  m_LocalPosition: {x: 0, y: 1.144, z: 0}
+  m_LocalRotation: {x: 0.005404055, y: -0.0054041743, z: 0.70708597, w: 0.7070864}
+  m_LocalPosition: {x: 0, y: 0.965, z: 0.031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3229181239678809938}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0.876, y: 0, z: 90}
 --- !u!114 &3124058088507795731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,9 +551,9 @@ MonoBehaviour:
   isGlobal: 0
   center: {x: 0, y: 0, z: 0}
   axis: 0
-  length: 0.327
-  startRadius: 0.196
-  endRadius: 0.146
+  length: 0.439
+  startRadius: 0.2
+  endRadius: 0.2
 --- !u!1 &3169410815898413304
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b926eb37fed1d748b80e3b4756bc569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataHash: 242037578
+  dataHash: 249687990
   dataVersion: 7
   teamData:
     colliderList:
@@ -897,7 +897,7 @@ MonoBehaviour:
     drag:
       startValue: 0.01
       endValue: 0.001
-      useEndValue: 1
+      useEndValue: 0
       curveValue: 0
       useCurveValue: 0
     useMaxVelocity: 1
@@ -908,10 +908,10 @@ MonoBehaviour:
       curveValue: 0
       useCurveValue: 0
     influenceTarget: {fileID: 0}
-    maxMoveSpeed: 3
+    maxMoveSpeed: 2
     maxRotationSpeed: 720
     worldMoveInfluence:
-      startValue: 0.7
+      startValue: 0.5
       endValue: 0.5
       useEndValue: 0
       curveValue: 0
@@ -1009,7 +1009,7 @@ MonoBehaviour:
       curveValue: 0
       useCurveValue: 0
     restoreRotation2:
-      startValue: 0.04
+      startValue: 0.05
       endValue: 0.01
       useEndValue: 1
       curveValue: 0
@@ -1093,8 +1093,8 @@ MonoBehaviour:
       useCurveValue: 0
     useLineAvarageRotation: 1
     useFixedNonRotation: 0
-  clothParamDataHashList: 000000000000000000000000000000000000000000000000f61b993700000000ec37326f00000000ec37326f000000000000000000000000e153cba600000000932d03d100000000000000000000000000000000f61b993700000000
-  clothData: {fileID: 266115380}
+  clothParamDataHashList: 000000000000000000000000000000000000000000000000f61b993700000000ec37326f00000000ec37326f000000000000000000000000e153cba600000000ffe977d100000000000000000000000000000000f61b993700000000
+  clothData: {fileID: 1870084013}
   clothDataHash: 1450076111
   clothDataVersion: 5
   clothSelection: {fileID: 418600055}
@@ -1102,7 +1102,7 @@ MonoBehaviour:
   clothSelectionVersion: 2
   cullRendererList:
   - {fileID: 3015340343113366229}
-  meshData: {fileID: 1382759279}
+  meshData: {fileID: 1137249993}
   meshDataHash: 600315719
   meshDataVersion: 2
   clothTarget:
@@ -1626,7 +1626,53 @@ Transform:
   m_Father: {fileID: 7400031474563933992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &266115380
+--- !u!114 &418600055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5479bb56a42b7f94bbae5d75fe03f75d, type: 3}
+  m_Name: SelectionData_CloakRig
+  m_EditorClassIdentifier: 
+  dataHash: -108949187
+  dataVersion: 2
+  selectionList:
+  - selectData: 020000000100000001000000010000000100000001000000010000000100000002000000010000000100000001000000010000000100000001000000010000000200000002000000020000000100000001000000010000000100000001000000010000000100000002000000020000000200000002000000
+    vertexHashList: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!114 &1137249993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8ed8fdca875474bbc1b8d6dcfb79bc, type: 3}
+  m_Name: BoneClothMeshData_CloakRig
+  m_EditorClassIdentifier: 
+  dataHash: 600315719
+  dataVersion: 2
+  isSkinning: 0
+  vertexCount: 30
+  vertexInfoList: 000000100100001002000010030000100400001005000010060000100700001008000010090000100a0000100b0000100c0000100d0000100e0000100f000010100000101100001012000010130000101400001015000010160000101700001018000010190000101a0000101b0000101c0000101d000010
+  vertexWeightList: []
+  vertexHashList: 
+  uvList: []
+  lineCount: 24
+  lineList: 00000000010000000100000002000000020000000300000003000000040000000400000005000000050000000600000006000000070000000800000009000000090000000a0000000a0000000b0000000b0000000c0000000c0000000d0000000d0000000e0000000e0000000f000000100000001100000012000000130000001300000014000000140000001500000015000000160000001600000017000000170000001800000018000000190000001a0000001b0000001c0000001d000000
+  triangleCount: 0
+  triangleList: 
+  boneCount: 0
+  vertexToTriangleInfoList: 
+  vertexToTriangleIndexList: 
+  childDataList: []
+  baseScale: {x: 0, y: 0, z: 0}
+--- !u!114 &1870084013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2604,49 +2650,3 @@ MonoBehaviour:
   baseSkinningDataList: []
   baseSkinningBindPoseList: []
   initScale: {x: 18.957258, y: 18.957258, z: 18.957256}
---- !u!114 &418600055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5479bb56a42b7f94bbae5d75fe03f75d, type: 3}
-  m_Name: SelectionData_CloakRig
-  m_EditorClassIdentifier: 
-  dataHash: -108949187
-  dataVersion: 2
-  selectionList:
-  - selectData: 020000000100000001000000010000000100000001000000010000000100000002000000010000000100000001000000010000000100000001000000010000000200000002000000020000000100000001000000010000000100000001000000010000000100000002000000020000000200000002000000
-    vertexHashList: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!114 &1382759279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b8ed8fdca875474bbc1b8d6dcfb79bc, type: 3}
-  m_Name: BoneClothMeshData_CloakRig
-  m_EditorClassIdentifier: 
-  dataHash: 600315719
-  dataVersion: 2
-  isSkinning: 0
-  vertexCount: 30
-  vertexInfoList: 000000100100001002000010030000100400001005000010060000100700001008000010090000100a0000100b0000100c0000100d0000100e0000100f000010100000101100001012000010130000101400001015000010160000101700001018000010190000101a0000101b0000101c0000101d000010
-  vertexWeightList: []
-  vertexHashList: 
-  uvList: []
-  lineCount: 24
-  lineList: 00000000010000000100000002000000020000000300000003000000040000000400000005000000050000000600000006000000070000000800000009000000090000000a0000000a0000000b0000000b0000000c0000000c0000000d0000000d0000000e0000000e0000000f000000100000001100000012000000130000001300000014000000140000001500000015000000160000001600000017000000170000001800000018000000190000001a0000001b0000001c0000001d000000
-  triangleCount: 0
-  triangleList: 
-  boneCount: 0
-  vertexToTriangleInfoList: 
-  vertexToTriangleIndexList: 
-  childDataList: []
-  baseScale: {x: 0, y: 0, z: 0}

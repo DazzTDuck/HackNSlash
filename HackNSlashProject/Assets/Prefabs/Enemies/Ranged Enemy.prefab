@@ -66,7 +66,7 @@ MonoBehaviour:
   visionConeWidth: 50
   layerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 1216
   hpThreshold: 0
   attackThreshold: 3
   backoff: 0

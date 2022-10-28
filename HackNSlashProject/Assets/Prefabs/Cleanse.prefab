@@ -293,14 +293,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToCleanse: 2.7
   activateDistance: 2
-  cleansingParticle: {fileID: 512305224069848217}
   player: {fileID: 0}
   uiCanvas: {fileID: 1502589963}
   progressImage: {fileID: 572747164}
   buttonImage: {fileID: 977983231}
   b_Pressed: {fileID: 21300000, guid: 554281f0d2a61a64a9f19c37c490d011, type: 3}
   b_Normal: {fileID: 21300000, guid: c06f093b88ad1924fbc3d0d128b5015e, type: 3}
-  f_Key: {fileID: 21300000, guid: 472d2a8add9f7ba45866355a09741a04, type: 3}
+  f_Key: {fileID: 21300000, guid: ec97f1dc19e79f44287ad12766f72b89, type: 3}
+  onCleansed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1502589963
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,12 +779,6 @@ PrefabInstance:
 --- !u!4 &512305224069848198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7413952423153290388, guid: 9817acd854c32944e93040ddbe9e428e,
-    type: 3}
-  m_PrefabInstance: {fileID: 7061561278337142802}
-  m_PrefabAsset: {fileID: 0}
---- !u!2083052967 &512305224069848217 stripped
-VisualEffect:
-  m_CorrespondingSourceObject: {fileID: 7413952423153290379, guid: 9817acd854c32944e93040ddbe9e428e,
     type: 3}
   m_PrefabInstance: {fileID: 7061561278337142802}
   m_PrefabAsset: {fileID: 0}

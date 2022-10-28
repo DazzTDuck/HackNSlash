@@ -12,7 +12,6 @@ public class CleansingUIHandler : MonoBehaviour
     public float timeToCleanse = 4;
     public float activateDistance = 1;
     [Header("References")]
-    public VisualEffect cleansingParticle;
     public GameObject player;
     public GameObject uiCanvas;
     public Image progressImage;
@@ -62,7 +61,7 @@ public class CleansingUIHandler : MonoBehaviour
             uiCanvas.SetActive(active);
         }
 
-        if (!isCleansing && !isComplete)
+        if (!isCleansing || isComplete)
             return;
 
         switch (timer)
@@ -78,11 +77,10 @@ public class CleansingUIHandler : MonoBehaviour
                 isCleansing = false;
                 isComplete = true;
                 uiCanvas.SetActive(false);
-                cleansingParticle.Play();
 
-
-                EventsManager.instance.InvokeCleanseUpdateEvent(isCleansing, isComplete, this);
+                EventsManager.instance.InvokeCleanseUpdateEvent(false, isComplete, this);
                 onCleansed?.Invoke();
+                Debug.Log("Completed");
                 break;
         }
     }

@@ -7,6 +7,15 @@ public class CleanseCorruption : Interactable
     public GameObject shine;
     bool hasCleansed;
 
+    protected override void Start()
+    {
+        base.Start();
+        EventsManager.instance.CleanseUpdateEvent += Cleanse;
+    }
+    private void OnDestroy()
+    {
+        EventsManager.instance.CleanseUpdateEvent -= Cleanse;
+    }
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
@@ -34,5 +43,10 @@ public class CleanseCorruption : Interactable
     public override void Interact(bool pressDown)
     {
         EventsManager.instance.InvokeCleanseUpdateEvent(pressDown, false, this);
+    }
+
+    void Cleanse(object sender, CleanseUpdateArgs cleanseUpdateArgs)
+    {
+        hasCleansed = true;
     }
 }

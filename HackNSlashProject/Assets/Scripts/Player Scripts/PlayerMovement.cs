@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
@@ -49,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Interactions")]
     public Interactable interactable;
+    bool finishCleanse;
 
     private void Start()
     {
@@ -128,11 +130,23 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Cleansing", true);
             canAct = false;
         }
-        else if (cleanseUpdateArgs.isCleanseCompleted == true || cleanseUpdateArgs.isCleansing == false)
+        else if (cleanseUpdateArgs.isCleanseCompleted == true)
+        {
+            finishCleanse = true;
+            StartCoroutine(FinishCleansing());
+        }
+        else if (cleanseUpdateArgs.isCleansing == false && !finishCleanse)
         {
             animator.SetBool("Cleansing", false);
             canAct = true;
         }
+    }
+    
+    IEnumerator FinishCleansing()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canAct = true;
+        finishCleanse = false;
     }
 
     private void FixedUpdate()

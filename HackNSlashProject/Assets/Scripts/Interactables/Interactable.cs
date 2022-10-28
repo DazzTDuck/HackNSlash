@@ -8,7 +8,7 @@ public class Interactable : MonoBehaviour
     public float interactRadius;
     PlayerMovement player;
 
-    private void Start()
+    protected virtual void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
     }

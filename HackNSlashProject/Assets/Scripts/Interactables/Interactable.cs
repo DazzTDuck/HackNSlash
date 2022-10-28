@@ -31,7 +31,6 @@ public class Interactable : MonoBehaviour
 
     void CheckInteract()
     {
-        Debug.Log(Vector3.Distance(player.transform.position, transform.position));
         if (Vector3.Distance(player.transform.position, transform.position) <= interactRadius)
         {
             if (player.interactable == null || (player.interactable != this && 

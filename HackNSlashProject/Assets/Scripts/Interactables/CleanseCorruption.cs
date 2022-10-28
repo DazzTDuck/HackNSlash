@@ -29,7 +29,6 @@ public class CleanseCorruption : Interactable
         }
         else if (!b && canInteract)
         {
-            //hasCleansed = true;
             canInteract = false;
             shine.SetActive(false);
         }
@@ -47,6 +46,7 @@ public class CleanseCorruption : Interactable
 
     void Cleanse(object sender, CleanseUpdateArgs cleanseUpdateArgs)
     {
-        hasCleansed = true;
+        if (cleanseUpdateArgs.isCleanseCompleted)
+            hasCleansed = true;
     }
 }

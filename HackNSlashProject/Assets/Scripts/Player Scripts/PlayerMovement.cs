@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (cleanseUpdateArgs.isCleansing == true)
         {
-            animator.SetBool("Cleansing", true);
+            animator.SetTrigger("Cleansing");
             canAct = false;
         }
         else if (cleanseUpdateArgs.isCleanseCompleted == true)
@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (cleanseUpdateArgs.isCleansing == false && !finishCleanse)
         {
-            animator.SetBool("Cleansing", false);
+            animator.SetTrigger("Stop Cleansing");
             canAct = true;
         }
     }

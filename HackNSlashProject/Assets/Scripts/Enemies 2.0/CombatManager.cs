@@ -232,12 +232,21 @@ public class CombatManager : MonoBehaviour
 
     public void RezAllEnemies()
     {
-        foreach (EnemyActor actor in deadEnemies)
+        for (int i = deadEnemies.Count; i > 0; i--)
         {
+            EnemyActor actor = deadEnemies[i - 1];
             livingEnemies.Add(actor);
             deadEnemies.Remove(actor);
             actor.gameObject.SetActive(true);
             actor.TurnActive();
+        }
+    }
+
+    public void KillAllEnemies()
+    {
+        for (int i = livingEnemies.Count; i > 0; i--)
+        {
+            livingEnemies[i - 1].GetComponent<CharacterHealth>().TakeDamage(100000);
         }
     }
 }

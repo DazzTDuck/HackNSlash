@@ -79,7 +79,7 @@ public class EnemyActor : MonoBehaviour
         {
             //TurnInactive();
         }
-        else if (state == Enemystates.Partoling && (GameObject)sender == gameObject)
+        else if (state == Enemystates.Partoling && (GameObject)sender == gameObject && e.currentAmount != e.maxAmount)
         {
             CombatManager.combatManager.EnemyJoinsFight(this);
         }

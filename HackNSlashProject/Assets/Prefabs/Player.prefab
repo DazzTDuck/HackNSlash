@@ -654,35 +654,11 @@ MonoBehaviour:
     m_ActionId: 9a8ad8ac-b05e-40aa-96d5-74f34e852e24
     m_ActionName: Main/Look(controller)
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4107335096402957423}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnLockOn
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 355276d3-d887-4a25-be8b-c9c23e1f4fba
     m_ActionName: Main/LockOn[/XInputControllerWindows/leftStickPress,/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4107335096402957423}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnLockonSwitch
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 80502b70-16ed-46f9-b2d2-03a23b77c784
     m_ActionName: Main/SwitchLockOn[/Keyboard/e,/XInputControllerWindows/rightStickPress]
   - m_PersistentCalls:
@@ -765,6 +741,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 335dd995-a667-47f7-9afc-9fb8f2e8fdb1
     m_ActionName: Main/Move (controller)[/XInputControllerWindows/leftStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a1d5a428-757b-4153-8bd9-96f001838650
+    m_ActionName: Main/Kill[/Keyboard/backspace]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main

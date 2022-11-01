@@ -12,7 +12,11 @@ public class InputChecker : MonoBehaviour
     /// </summary>
     public void UseKeyboardAndMouse()
     {
-        usesController = false;
+        if (usesController == true)
+        {
+            usesController = false;
+            EventsManager.instance.InvokeInputSwitchEvent(this, true);
+        }
         //Debug.Log("Keyboard & Mouse");
     }
     /// <summary>
@@ -20,7 +24,11 @@ public class InputChecker : MonoBehaviour
     /// </summary>
     public void UseGamepad()
     {
-        usesController = true;
+        if (usesController == false)
+        {
+            usesController = true;
+            EventsManager.instance.InvokeInputSwitchEvent(this, true);
+        }
         //Debug.Log("controller");
     }
 }

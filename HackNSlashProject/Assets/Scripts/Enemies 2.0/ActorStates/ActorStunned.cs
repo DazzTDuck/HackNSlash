@@ -24,7 +24,6 @@ public class ActorStunned : MonoBehaviour
         //animator.SetBool("IsStunned", true);
         //animator.SetTrigger("GetStunned");
         rb.AddForce(staggerDir * stunPower, ForceMode.Impulse);
-        Debug.Log(1);
         yield return new WaitForSeconds(stunDuration);
         rb.isKinematic = true;
         agent.isStopped = false;

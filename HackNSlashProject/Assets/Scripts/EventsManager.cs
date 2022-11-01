@@ -17,6 +17,11 @@ public class CleanseUpdateArgs : EventArgs
     public bool isCleanseCompleted;
 }
 
+public class InputSwitchArgs : EventArgs
+{
+    public bool usesController;
+}
+
 public class EventsManager : MonoBehaviour
 {
     public static EventsManager instance;
@@ -36,5 +41,11 @@ public class EventsManager : MonoBehaviour
     public void InvokeCleanseUpdateEvent(bool isCleansing, bool isCleanseCompleted, object sender)
     {
         CleanseUpdateEvent?.Invoke(sender, new CleanseUpdateArgs{isCleansing = isCleansing, isCleanseCompleted = isCleanseCompleted});
+    }
+
+    public event EventHandler<InputSwitchArgs> InputSwitchEvent;
+    public void InvokeInputSwitchEvent(object sender, bool usesController_)
+    {
+        InputSwitchEvent?.Invoke(sender, new InputSwitchArgs { usesController = usesController_ });
     }
 }

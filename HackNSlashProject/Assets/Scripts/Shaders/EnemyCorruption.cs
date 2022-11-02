@@ -21,6 +21,9 @@ public class EnemyCorruption : MonoBehaviour
     public CorruptionState engageState;
     private void Update()
     {
+        if(!enemyActor)
+            return;
+
         switch (enemyActor.state)
         {
             case Enemystates.Partoling:

@@ -19,13 +19,14 @@ GameObject:
   - component: {fileID: 6612438804823176728}
   - component: {fileID: 47394073716787469}
   - component: {fileID: 741614479734032549}
+  - component: {fileID: 1449520463}
   m_Layer: 8
   m_Name: Big Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6612438804823176726
 Transform:
   m_ObjectHideFlags: 0
@@ -216,6 +217,29 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &1449520463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612438804823176748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f81a14316eb9754a94e17c424c9a301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corruptionMaterial: {fileID: 2100000, guid: 34ad242db06beed4a936fafd49c95474, type: 2}
+  enemyActor: {fileID: 6612438804823176722}
+  changeStateSpeed: 5
+  patrolState:
+    noiseScale: 10
+    noiseIntensity: 0.3
+    noiseScrollSpeed: 0.1
+  engageState:
+    noiseScale: 15
+    noiseIntensity: 1.69
+    noiseScrollSpeed: 0.12
 --- !u!1001 &881608629065119266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1022,7 +1046,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1d7c25e972c896f488be722d08529fd4, type: 2}
+      objectReference: {fileID: 2100000, guid: 34ad242db06beed4a936fafd49c95474, type: 2}
     - target: {fileID: 8920442339021159678, guid: 9b01ae5485e23ce42a818b4c9d17c695,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1091,6 +1115,34 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 881608629065119266}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1560808817710435322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7379991069318578728, guid: 9b01ae5485e23ce42a818b4c9d17c695,
+    type: 3}
+  m_PrefabInstance: {fileID: 881608629065119266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3631670880928603444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560808817710435322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debfe8824b72fb749bb35631a31b5fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 8506438698590789624}
+  dissolveTopMaterial: {fileID: 2100000, guid: c119be4bcfb777443ac053a628f12b45, type: 2}
+  dissolveBottomMaterial: {fileID: 2100000, guid: 5269a4258c4cbeb47b5592132c009b05,
+    type: 2}
+  normalMaterial: {fileID: 2100000, guid: 34ad242db06beed4a936fafd49c95474, type: 2}
+  corruption: {fileID: 1449520463}
+  dissolveSpeed: 0.7
+  propertyValue: _DissolveAmount
+  dissolvedValue: -0.2
+  unDissolvedValue: 0.2
 --- !u!1 &7897550257519168285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7036213049465896255, guid: 9b01ae5485e23ce42a818b4c9d17c695,
@@ -1117,3 +1169,9 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!137 &8506438698590789624 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8804795166771358170, guid: 9b01ae5485e23ce42a818b4c9d17c695,
+    type: 3}
+  m_PrefabInstance: {fileID: 881608629065119266}
+  m_PrefabAsset: {fileID: 0}

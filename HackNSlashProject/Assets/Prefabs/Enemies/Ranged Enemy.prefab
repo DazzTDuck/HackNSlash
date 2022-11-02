@@ -18,13 +18,14 @@ GameObject:
   - component: {fileID: 527167556049320953}
   - component: {fileID: 8592667256885950928}
   - component: {fileID: 8895655545175884005}
+  - component: {fileID: 2130636896}
   m_Layer: 8
   m_Name: Ranged Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &527167556049320946
 Transform:
   m_ObjectHideFlags: 0
@@ -201,6 +202,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   engageRangeMinMax: {x: 4, y: 14}
+--- !u!114 &2130636896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527167556049320958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f81a14316eb9754a94e17c424c9a301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corruptionMaterial: {fileID: 2100000, guid: 704a50694702ae1489ada8ce4ac78095, type: 2}
+  enemyActor: {fileID: 527167556049320950}
+  changeStateSpeed: 5
+  patrolState:
+    noiseScale: 10
+    noiseIntensity: 0.3
+    noiseScrollSpeed: 0.1
+  engageState:
+    noiseScale: 15
+    noiseIntensity: 1.69
+    noiseScrollSpeed: 0.12
 --- !u!1 &527167556412384313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,7 +1047,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1d7c25e972c896f488be722d08529fd4, type: 2}
+      objectReference: {fileID: 2100000, guid: 704a50694702ae1489ada8ce4ac78095, type: 2}
     - target: {fileID: 8920442339021159678, guid: 9b01ae5485e23ce42a818b4c9d17c695,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1112,9 +1136,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!137 &2267542626530818541 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8804795166771358170, guid: 9b01ae5485e23ce42a818b4c9d17c695,
+    type: 3}
+  m_PrefabInstance: {fileID: 7297806724077408311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7119555431590672348 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9b01ae5485e23ce42a818b4c9d17c695,
     type: 3}
   m_PrefabInstance: {fileID: 7297806724077408311}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8994257685048372719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7379991069318578728, guid: 9b01ae5485e23ce42a818b4c9d17c695,
+    type: 3}
+  m_PrefabInstance: {fileID: 7297806724077408311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5239500146987448781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994257685048372719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debfe8824b72fb749bb35631a31b5fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 2267542626530818541}
+  dissolveTopMaterial: {fileID: 2100000, guid: d6597bc34bbf6904696a7956a3c01c26, type: 2}
+  dissolveBottomMaterial: {fileID: 2100000, guid: 0cd345fb1277e1b4dbd05254e7bbb60d,
+    type: 2}
+  normalMaterial: {fileID: 2100000, guid: 704a50694702ae1489ada8ce4ac78095, type: 2}
+  corruption: {fileID: 2130636896}
+  dissolveSpeed: 0.7
+  propertyValue: _DissolveAmount
+  dissolvedValue: -0.2
+  unDissolvedValue: 0.2

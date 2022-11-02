@@ -277,10 +277,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1570729562400990221, guid: 6ccd110cbda85ff449047af15e16477c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1570729563846867382, guid: 6ccd110cbda85ff449047af15e16477c,
         type: 3}
       propertyPath: m_Intensity
       value: 29.07373
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570729563846867386, guid: 6ccd110cbda85ff449047af15e16477c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccd110cbda85ff449047af15e16477c, type: 3}

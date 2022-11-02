@@ -199,6 +199,7 @@ MonoBehaviour:
   newEnemies: []
   cleanseGame: []
   tutUI: {fileID: 0}
+  wall: {fileID: 2130177833889915396}
 --- !u!1 &2892109465790935858
 GameObject:
   m_ObjectHideFlags: 0

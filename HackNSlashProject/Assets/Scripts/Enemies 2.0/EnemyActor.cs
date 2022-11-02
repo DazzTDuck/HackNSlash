@@ -275,6 +275,7 @@ public class EnemyActor : MonoBehaviour
         state = Enemystates.Dead;
         CombatManager.combatManager.EnemyDied(this);
         GetComponent<Collider>().enabled = false;
+        GetComponentInChildren<EnemyDissolve>().StartDissolve();
     }
     public void TurnActive()
     {
@@ -284,6 +285,7 @@ public class EnemyActor : MonoBehaviour
         agent.destination = patrolling.patrolPosition;
         GetComponent<CharacterHealth>()?.ReturnToMaxHP();
         playerInSight = false;
+        GetComponentInChildren<EnemyDissolve>().ResetMaterials();
         ReturnToPatrol();
     }
 }

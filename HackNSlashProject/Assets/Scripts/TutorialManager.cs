@@ -11,6 +11,7 @@ public class TutorialManager : MonoBehaviour
     public EnemyActor[] newEnemies;
     public GameObject[] cleanseGame;
     public GameObject tutUI;
+    public GameObject wall;
 
     private void Start()
     {
@@ -72,6 +73,12 @@ public class TutorialManager : MonoBehaviour
         FindObjectOfType<PlayerHolyWater>().remainingUses = FindObjectOfType<PlayerHolyWater>().maxUses;
         EventsManager.instance.CleanseUpdateEvent -= CheckCleanse;
         tutUI.SetActive(false);
+        wall.SetActive(false);
+        Invoke("RemoveTutorial", 5f);
+    }
+
+    void RemoveTutorial()
+    {
         gameObject.SetActive(false);
     }
 }

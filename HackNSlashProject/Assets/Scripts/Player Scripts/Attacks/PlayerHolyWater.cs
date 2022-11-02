@@ -8,7 +8,7 @@ public class PlayerHolyWater : MonoBehaviour
     public float lockoutAfter;
     public float knockBack;
     public float duration;
-    public int MaxUses;
+    public int maxUses;
     public int remainingUses;
     public int radius;
     public int damage;
@@ -24,7 +24,7 @@ public class PlayerHolyWater : MonoBehaviour
 
     private void Start()
     {
-        remainingUses = MaxUses;
+        remainingUses = maxUses;
     }
     public void UseHolyWater(PlayerMovement player_)
     {

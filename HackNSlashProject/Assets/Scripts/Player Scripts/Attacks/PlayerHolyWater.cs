@@ -56,7 +56,8 @@ public class PlayerHolyWater : MonoBehaviour
         foreach (Collider enemyColider in enemies)
         {
             enemyColider.GetComponentInParent<ActorStunned>()?.GetStunned(duration, knockBack, transform);
-            enemyColider.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage);
+            int i = Random.Range(-5, 5);
+            enemyColider.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage + 1);
         }
         remainingUses--;
         yield return new WaitForSeconds(lockoutAfter);

@@ -50,6 +50,7 @@ public class PlayerSwordAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage);
+        int i = Random.Range(-5, 5);
+        other.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage + i);
     }
 }

@@ -59,7 +59,8 @@ public class PlayerDivineScripture : MonoBehaviour
             if (angle_ < angle /2)
             {
                 enemyColider.GetComponentInParent<ActorStunned>()?.GetStunned(duration, knockBack, transform);
-                enemyColider.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage);
+                int i = Random.Range(-5, 5);
+                enemyColider.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage + i);
             }
         }
         yield return new WaitForSeconds(lockoutAfter);

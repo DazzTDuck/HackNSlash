@@ -32,8 +32,10 @@ public class CharacterHealth : MonoBehaviour
     {
         if (gameObject.CompareTag("Player"))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        else
+        else if (GetComponent<EnemyActor>())
             GetComponent<EnemyActor>().TurnInactive();
+        else
+            gameObject.SetActive(false);
     }
 
     public void ReturnToMaxHP()

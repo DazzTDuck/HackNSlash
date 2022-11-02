@@ -15,9 +15,8 @@ public class InputChecker : MonoBehaviour
         if (usesController == true)
         {
             usesController = false;
-            EventsManager.instance.InvokeInputSwitchEvent(this, true);
+            EventsManager.instance.InvokeInputSwitchEvent(this, false);
         }
-        //Debug.Log("Keyboard & Mouse");
     }
     /// <summary>
     /// Sets user mode to Controller
@@ -29,6 +28,5 @@ public class InputChecker : MonoBehaviour
             usesController = true;
             EventsManager.instance.InvokeInputSwitchEvent(this, true);
         }
-        //Debug.Log("controller");
     }
 }

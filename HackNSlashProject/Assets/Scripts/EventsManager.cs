@@ -46,6 +46,6 @@ public class EventsManager : MonoBehaviour
     public event EventHandler<InputSwitchArgs> InputSwitchEvent;
     public void InvokeInputSwitchEvent(object sender, bool usesController_)
     {
-        InputSwitchEvent?.Invoke(sender, new InputSwitchArgs { usesController = usesController_ });
+        InputSwitchEvent?.Invoke(sender, new InputSwitchArgs {usesController = usesController_ });
     }
 }

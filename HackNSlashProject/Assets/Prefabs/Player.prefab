@@ -781,7 +781,7 @@ MonoBehaviour:
   lockoutAfter: 0.1
   knockBack: 5
   duration: 7
-  MaxUses: 3
+  maxUses: 3
   remainingUses: 3
   radius: 5
   damage: 50

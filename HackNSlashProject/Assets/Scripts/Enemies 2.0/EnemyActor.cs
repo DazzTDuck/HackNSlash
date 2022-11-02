@@ -272,12 +272,14 @@ public class EnemyActor : MonoBehaviour
         if (backup)
             backup.enabled = false;
         agent.isStopped = true;
+        state = Enemystates.Dead;
         CombatManager.combatManager.EnemyDied(this);
-        gameObject.SetActive(false);
+        GetComponent<Collider>().enabled = false;
     }
     public void TurnActive()
     {
         transform.position = patrolling.patrolPosition;
+        GetComponent<Collider>().enabled = true;
         agent.isStopped = false;
         agent.destination = patrolling.patrolPosition;
         GetComponent<CharacterHealth>()?.ReturnToMaxHP();

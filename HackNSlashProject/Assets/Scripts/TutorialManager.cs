@@ -10,10 +10,12 @@ public class TutorialManager : MonoBehaviour
     public GameObject[] tutorialStage;
     public EnemyActor[] newEnemies;
     public GameObject[] cleanseGame;
+    public GameObject tutUI;
 
     private void Start()
     {
         EventsManager.instance.InputSwitchEvent += SwitchInput;
+        EventsManager.instance.CleanseUpdateEvent += CheckCleanse;
     }
 
     void SwitchInput(object sender, InputSwitchArgs e)
@@ -68,6 +70,8 @@ public class TutorialManager : MonoBehaviour
             cleanseGame[i].SetActive(true);
         }
         FindObjectOfType<PlayerHolyWater>().remainingUses = FindObjectOfType<PlayerHolyWater>().maxUses;
+        EventsManager.instance.CleanseUpdateEvent -= CheckCleanse;
+        tutUI.SetActive(false);
         gameObject.SetActive(false);
     }
 }

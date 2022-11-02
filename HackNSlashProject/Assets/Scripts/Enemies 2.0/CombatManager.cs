@@ -237,7 +237,6 @@ public class CombatManager : MonoBehaviour
             EnemyActor actor = deadEnemies[i - 1];
             livingEnemies.Add(actor);
             deadEnemies.Remove(actor);
-            actor.gameObject.SetActive(true);
             actor.TurnActive();
         }
     }
@@ -256,5 +255,6 @@ public enum Enemystates
     Partoling,
     BackUp,
     Engaged,
-    Attacking
+    Attacking,
+    Dead
 }

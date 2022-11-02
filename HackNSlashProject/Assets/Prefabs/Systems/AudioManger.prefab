@@ -107,7 +107,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BackroundSound
     clips:
-    - {fileID: 8300000, guid: 9f6c7af5710447e41a6313db8fe8ee33, type: 3}
+    - {fileID: 8300000, guid: 25be964d3abdaaa48a16e05790e3a949, type: 3}
     mixer: {fileID: 9083341430800621645, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
     volume: 0.05
     pitch: 1
@@ -115,5 +115,66 @@ MonoBehaviour:
     maxSoundDistance: 500
     loop: 1
     playOnStart: 1
+    playRandomClip: 0
+    source: {fileID: 0}
+  - name: GlassSmash
+    clips:
+    - {fileID: 8300000, guid: 268c3b3b87eaac243980b21a6f95c8a5, type: 3}
+    - {fileID: 8300000, guid: 3975ed4d39ffae34baa5684a9b5bc375, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.1
+    pitch: 1
+    spacialBlend: 0
+    maxSoundDistance: 500
+    loop: 0
+    playOnStart: 0
+    playRandomClip: 1
+    source: {fileID: 0}
+  - name: ObjectiveComplete
+    clips:
+    - {fileID: 8300000, guid: 44b14abd9b1eacb40bb80ac85d92188e, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.1
+    pitch: 1
+    spacialBlend: 0
+    maxSoundDistance: 500
+    loop: 0
+    playOnStart: 0
+    playRandomClip: 0
+    source: {fileID: 0}
+  - name: Cleanse
+    clips:
+    - {fileID: 8300000, guid: b8cc3b238637d7549823b437995da3a0, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.07
+    pitch: 1
+    spacialBlend: 0
+    maxSoundDistance: 500
+    loop: 0
+    playOnStart: 0
+    playRandomClip: 0
+    source: {fileID: 0}
+  - name: Cleanse
+    clips:
+    - {fileID: 8300000, guid: 9f67d36c6c9ef4241ba946e04dde876a, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.1
+    pitch: 1
+    spacialBlend: 0
+    maxSoundDistance: 500
+    loop: 0
+    playOnStart: 0
+    playRandomClip: 0
+    source: {fileID: 0}
+  - name: WaterSplash
+    clips:
+    - {fileID: 8300000, guid: 4d425a6503c5c8047af99de7565a76e0, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.1
+    pitch: 1
+    spacialBlend: 0
+    maxSoundDistance: 500
+    loop: 0
+    playOnStart: 0
     playRandomClip: 0
     source: {fileID: 0}

@@ -38,6 +38,12 @@ public class HolyWaterUIVisual : MonoBehaviour
         }        
     }
     
+    public void ResetUI()
+    {
+        currentIndex = holyWater.remainingUses;
+        UpdateSprite();    
+    }
+    
     private void UpdateSprite()
     {
         holyWaterImage.sprite = sprites[currentIndex];

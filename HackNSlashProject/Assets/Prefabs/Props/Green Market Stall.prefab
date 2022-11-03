@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8583783039396450448}
   - component: {fileID: 4661334084972224309}
   - component: {fileID: 7445740936071506943}
+  - component: {fileID: 5116204093805424182}
   m_Layer: 0
   m_Name: Green Market Stall
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5116204093805424182
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958901688598514218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2362676, y: 1.9227002, z: 2.62928}
+  m_Center: {x: 0.26789087, y: 0.9632719, z: 0.028169086}

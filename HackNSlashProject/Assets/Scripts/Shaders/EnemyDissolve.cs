@@ -30,7 +30,9 @@ public class EnemyDissolve : MonoBehaviour
 
     public void StartDissolve()
     {
-        corruption.enabled = false;
+        if(corruption)
+            corruption.enabled = false;
+        
         meshRenderer.material = dissolveTopMaterial;
         dissolve = true;
     }
@@ -39,8 +41,10 @@ public class EnemyDissolve : MonoBehaviour
     {
         dissolve = false;
         meshRenderer.material = normalMaterial;
-        corruption.enabled = true;
         ResetValues();
+        
+        if(corruption)
+            corruption.enabled = true;
     }
 
     public void MaterialVariableLerpToNewValue(string variableName, float newValue, Material material)

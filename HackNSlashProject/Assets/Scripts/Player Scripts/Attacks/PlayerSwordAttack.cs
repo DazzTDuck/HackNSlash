@@ -13,7 +13,13 @@ public class PlayerSwordAttack : MonoBehaviour
     public int powerConsumption;
     PlayerMovement player;
     public HolySwordVisual swordVisual;
-    
+    Collider hurtBox;
+
+    private void Start()
+    {
+        hurtBox = GetComponent<Collider>();
+        hurtBox.enabled = false;
+    }
 
     public void Attack(PlayerMovement player_)
     {
@@ -41,16 +47,21 @@ public class PlayerSwordAttack : MonoBehaviour
     {
         player.canAct = false;
         swordVisual.StartAttackVisual();
+        hurtBox.enabled = true;
         GetComponentInParent<Rigidbody>().isKinematic = true;
-        animator.SetTrigger("whack");
+        animator.SetTrigger("Attack");
         yield return new WaitForSeconds(attackDuration);
+        hurtBox.enabled = false;
         GetComponentInParent<Rigidbody>().isKinematic = false;
         player.canAct = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        int i = Random.Range(-5, 5);
-        other.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage + i);
+        if (other.gameObject.tag == "Enemy")
+        {
+            int i = Random.Range(-5, 5);
+            other.GetComponentInParent<CharacterHealth>()?.TakeDamage(damage + i);
+        }
     }
 }

@@ -49,7 +49,7 @@ public class PlayerDivineScripture : MonoBehaviour
     IEnumerator Begone()
     {
         player.canAct = false;
-        //animator.SetTrigger();
+        animator.SetTrigger("Book");
         yield return new WaitForSeconds(delay);
         particleManager.GetParticle(particleOrigin);
         Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemyLayer);

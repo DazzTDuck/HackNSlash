@@ -49,7 +49,7 @@ public class PlayerHolyWater : MonoBehaviour
     IEnumerator HolyWaterSplash()
     {
         player.canAct = false;
-        //animator.SetTrigger();
+        animator.SetTrigger("Flask");
         yield return new WaitForSeconds(delay);
         particleManager.GetParticle(particleOrigin);
         Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemylayer);

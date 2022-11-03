@@ -43,11 +43,16 @@ public class CleansingUIHandler : MonoBehaviour
         isCleansing = e.isCleansing;
 
         if (e.isCleansing)
+        {
             timer = timeToCleanse;
+            StartCoroutine(nameof(CleanseSound));
+        }
         else
         {
             if(progressImage.fillAmount != 0)
-                progressImage.fillAmount = 0;    
+                progressImage.fillAmount = 0;   
+            
+            StopCoroutine(nameof(CleanseSound));
         }
     }
 
@@ -77,12 +82,19 @@ public class CleansingUIHandler : MonoBehaviour
                 isCleansing = false;
                 isComplete = true;
                 uiCanvas.SetActive(false);
+                AudioManager.instance.PlaySound("ObjectiveComplete");
 
                 EventsManager.instance.InvokeCleanseUpdateEvent(false, isComplete, this);
                 onCleansed?.Invoke();
                 Debug.Log("Completed");
                 break;
         }
+    }
+    
+    private IEnumerator CleanseSound()
+    {
+        yield return new WaitForSeconds(0.6f);
+        AudioManager.instance.PlaySound("Cleanse");
     }
 
     private void ChangeButtonUI()

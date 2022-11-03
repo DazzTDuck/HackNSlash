@@ -51,19 +51,11 @@ public class EnemyActor : MonoBehaviour
         agent = GetComponentInChildren<NavMeshAgent>();
         patrolling = GetComponentInChildren<ActorPatrolling>();
         patrolling.StartPatrolling();
-        //if (enemyType == EnemyType.Ranged)
-        //{
-        //    rangeEngage = GetComponent<ActorREngage>();
-        //    rangeEngage.enabled = false;
-        //}
-        //else
-        {
-            engaged = GetComponentInChildren<ActorEngaged>();
-            engaged.enabled = false;
-            backup = GetComponentInChildren<ActorBackup>();
-            if (backup)
-                backup.enabled = false;
-        }
+        engaged = GetComponentInChildren<ActorEngaged>();
+        engaged.enabled = false;
+        backup = GetComponentInChildren<ActorBackup>();
+        if (backup)
+            backup.enabled = false;
         attacking = GetComponentInChildren<ActorAttacking>();
         attacking.enabled = false;
         canSee = true;
@@ -89,9 +81,7 @@ public class EnemyActor : MonoBehaviour
             if ((GameObject)sender == gameObject)
             {
                 if (e.currentAmount <= hpThreshold)
-                {
                     backingOff = CombatManager.combatManager.CheckToFallBack(this);
-                }
             }
             else if (currentAttacks >= attackThreshold)
             {
@@ -191,9 +181,7 @@ public class EnemyActor : MonoBehaviour
         engaged.enabled = true;
         engaged.Engage();
         if (backoff)
-        {
             GoBackup();
-        }
     }
     public void GoBackup()
     {
@@ -228,9 +216,7 @@ public class EnemyActor : MonoBehaviour
     public void ReturnToPatrol()
     {
         if (state == Enemystates.BackUp && backup)
-        {
             backup.enabled = false;
-        }
         else if (state == Enemystates.Engaged)
         {
             engaged.Disengage();
@@ -274,8 +260,6 @@ public class EnemyActor : MonoBehaviour
         agent.isStopped = true;
         state = Enemystates.Dead;
         CombatManager.combatManager.EnemyDied(this);
-        GetComponent<Collider>().enabled = false;
-        GetComponentInChildren<EnemyDissolve>().StartDissolve();
     }
     public void TurnActive()
     {

@@ -14,7 +14,7 @@ public class ParticleManager : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            particles.Add(Instantiate(example));
+            particles.Add(Instantiate(example, transform.position + Vector3.down * 10, Quaternion.identity, transform));
         }
     }
 

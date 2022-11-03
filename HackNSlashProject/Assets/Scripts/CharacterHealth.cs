@@ -10,6 +10,7 @@ public class CharacterHealth : MonoBehaviour
     public int maxHP;
     public int currentHP;
     public int characterId;
+    public ParticleManager particleManager;
 
     private void Start()
     {
@@ -34,8 +35,9 @@ public class CharacterHealth : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         else if (GetComponent<EnemyActor>())
             GetComponent<EnemyActor>().TurnInactive();
-        else
-            gameObject.SetActive(false);
+        GetComponent<Collider>().enabled = false;
+        GetComponentInChildren<EnemyDissolve>().StartDissolve();
+        particleManager?.GetParticle(transform);
     }
 
     public void ReturnToMaxHP()

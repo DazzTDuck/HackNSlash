@@ -209,7 +209,7 @@ public class CombatManager : MonoBehaviour
     {
         if (actor.enemyType == EnemyType.Ranged)
             rangedEnemies.Remove(actor);
-        else if (actor.state == Enemystates.Attacking || actor.state == Enemystates.Engaged)
+        else if (actor.state != Enemystates.Partoling)
         {
             engagedEnemies.Remove(actor);
             int space = engagedMaxValue;

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7569983593386256694}
   - component: {fileID: 7973556925732818927}
   - component: {fileID: 4358887927771358425}
+  - component: {fileID: 8532460969601847214}
   m_Layer: 0
   m_Name: BottleBreak
   m_TagString: Untagged
@@ -110,3 +111,16 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8532460969601847214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6010143426090214247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d71ec5e1e12bb24aaca86ffad008ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyDelay: 5

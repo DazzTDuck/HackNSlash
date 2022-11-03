@@ -28,6 +28,8 @@ public class ActorAttacking : MonoBehaviour
         {
             yield return new WaitForSeconds(0.05f);
         }
+        GetComponentInChildren<Animator>().SetInteger("Var", Random.Range(0, 2));
+        GetComponentInChildren<Animator>().SetTrigger("Attack");
         yield return new WaitForSeconds(attackDuration);
         if (Vector3.Distance(transform.position, CombatManager.combatManager.player.position) <= attackRange)
             CombatManager.combatManager.player.GetComponent<CharacterHealth>().TakeDamage(damage);

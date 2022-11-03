@@ -12,6 +12,7 @@ public class ActorThrowProjectile : ActorAttacking
     {
         agent.SetDestination(transform.position);
         transform.LookAt(CombatManager.combatManager.player.position);
+        GetComponentInChildren<Animator>().SetTrigger("Throw");
         yield return new WaitForSeconds(attackDuration);
         GameObject liveProjectile = Instantiate(projectile, throwPosition.position, throwPosition.rotation);
         liveProjectile.GetComponent<Projectile>()?.Throw(damage, splashRadius);

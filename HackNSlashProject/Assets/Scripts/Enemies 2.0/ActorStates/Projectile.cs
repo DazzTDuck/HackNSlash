@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     Vector3 startPos;
 
     public LayerMask playerLayer;
+    public GameObject splashEffect;
     float radius;
     int damage;
 
@@ -81,6 +82,7 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Instantiate(splashEffect, transform.position, Quaternion.identity);
         Collider[] players = Physics.OverlapSphere(transform.position, radius, playerLayer);
         foreach (Collider player in players)
         {

@@ -115,6 +115,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  splashEffect: {fileID: 6010143426090214247, guid: 08c0f480384a1b249bec5a5c7a0ea358,
+    type: 3}
 --- !u!54 &872672770192952940
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -1,7 +1,6 @@
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +9,8 @@ public class CharacterHealth : MonoBehaviour
     public int maxHP;
     public int currentHP;
     public int characterId;
-    public ParticleManager particleManager;
+    public ParticleManager hurtParticle;
+    public ParticleManager deathParticle;
 
     private void Start()
     {
@@ -20,12 +20,12 @@ public class CharacterHealth : MonoBehaviour
     {
         if (currentHP - damageToDo <= 0)
         {
-            //death
             currentHP = 0;
             Death();
         }
         else
             currentHP -= damageToDo;
+        hurtParticle.GetParticle(transform);
 
         EventsManager.instance.InvokeHealthUpdateEvent(characterId, currentHP, 0, maxHP, gameObject);
     }
@@ -37,7 +37,9 @@ public class CharacterHealth : MonoBehaviour
             GetComponent<EnemyActor>().TurnInactive();
         GetComponent<Collider>().enabled = false;
         GetComponentInChildren<EnemyDissolve>().StartDissolve();
-        particleManager?.GetParticle(transform);
+        deathParticle?.GetParticle(transform);
+        GetComponentInChildren<Animator>().SetInteger("Var", Random.Range(0, 4));
+        GetComponentInChildren<Animator>().SetTrigger("Death");
     }
 
     public void ReturnToMaxHP()

@@ -14,6 +14,7 @@ public class EnemyActor : MonoBehaviour
     public Animator animator;
     public float animationSmoothing;
     Vector3 animationVector;
+    bool isDead;
     [Header("Line of sight")]
     public bool playerInSight;
     public float visionRadius;
@@ -44,6 +45,8 @@ public class EnemyActor : MonoBehaviour
     ActorREngage rangeEngage;
     ActorBackup backup;
     ActorAttacking attacking;
+    EnemyRunningSounds sounds;
+    bool walkSound;
 
     private void Start()
     {
@@ -58,6 +61,7 @@ public class EnemyActor : MonoBehaviour
             backup.enabled = false;
         attacking = GetComponentInChildren<ActorAttacking>();
         attacking.enabled = false;
+        sounds = GetComponent<EnemyRunningSounds>();
         canSee = true;
     }
     private void OnDestroy()
@@ -101,6 +105,17 @@ public class EnemyActor : MonoBehaviour
     {
         animationVector = Vector3.Lerp(animationVector, agent.velocity, Time.fixedDeltaTime * animationSmoothing);
         animator?.SetFloat("Blend", animationVector.magnitude / agent.speed);
+
+        if (agent.velocity.magnitude > 0.1f && !walkSound)
+        {
+            sounds.StartRunning();
+            walkSound = true;
+        }
+        else if (agent.velocity.magnitude <= 0.1f && walkSound)
+        {
+            sounds.StopRunning();
+            walkSound = false;
+        }
 
         if (state == Enemystates.Engaged || state == Enemystates.BackUp)
         {
@@ -259,11 +274,23 @@ public class EnemyActor : MonoBehaviour
             backup.enabled = false;
         agent.isStopped = true;
         state = Enemystates.Dead;
+        isDead = true;
+        StartCoroutine(Dead());
         CombatManager.combatManager.EnemyDied(this);
+    }
+
+    IEnumerator Dead()
+    {
+        while (isDead)
+        {
+            state = Enemystates.Dead;
+            yield return new WaitForFixedUpdate();
+        }
     }
     public void TurnActive()
     {
         transform.position = patrolling.patrolPosition;
+        isDead = false;
         GetComponent<Collider>().enabled = true;
         agent.isStopped = false;
         agent.destination = patrolling.patrolPosition;

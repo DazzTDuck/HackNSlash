@@ -50,6 +50,7 @@ public class PlayerSwordAttack : MonoBehaviour
         hurtBox.enabled = true;
         GetComponentInParent<Rigidbody>().isKinematic = true;
         animator.SetTrigger("Attack");
+        AudioManager.instance.PlaySound("SwordSlash");
         yield return new WaitForSeconds(attackDuration);
         hurtBox.enabled = false;
         GetComponentInParent<Rigidbody>().isKinematic = false;

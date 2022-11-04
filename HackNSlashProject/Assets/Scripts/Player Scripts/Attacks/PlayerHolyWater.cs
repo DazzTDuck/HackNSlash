@@ -52,6 +52,8 @@ public class PlayerHolyWater : MonoBehaviour
         animator.SetTrigger("Flask");
         yield return new WaitForSeconds(delay);
         particleManager.GetParticle(particleOrigin);
+        AudioManager.instance.PlaySound("GlassSmash");
+        AudioManager.instance.PlaySound("WaterSplash");
         Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemylayer);
         foreach (Collider enemyColider in enemies)
         {

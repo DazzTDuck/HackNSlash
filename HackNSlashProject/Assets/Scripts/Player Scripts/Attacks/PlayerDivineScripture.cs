@@ -50,6 +50,7 @@ public class PlayerDivineScripture : MonoBehaviour
     {
         player.canAct = false;
         animator.SetTrigger("Book");
+        AudioManager.instance.PlaySound("Cleanse");
         yield return new WaitForSeconds(delay);
         particleManager.GetParticle(particleOrigin);
         Collider[] enemies = Physics.OverlapSphere(transform.position, radius, enemyLayer);

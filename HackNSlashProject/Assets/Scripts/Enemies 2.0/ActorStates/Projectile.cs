@@ -83,6 +83,7 @@ public class Projectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Instantiate(splashEffect, transform.position, Quaternion.identity);
+        AudioManager.instance.PlaySound("GlassSmash");
         Collider[] players = Physics.OverlapSphere(transform.position, radius, playerLayer);
         foreach (Collider player in players)
         {

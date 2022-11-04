@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveVector;
     Vector2 lookVector;
     Vector3 moveDir;
+    RunningSounds sounds;
+    bool walkSounds;
 
     [HideInInspector] public Vector3 gForceVector = Vector3.zero;
     [HideInInspector] public bool isStationary;
@@ -60,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         holyWater = GetComponentInChildren<PlayerHolyWater>();
         holyPower = GetComponentInChildren<HolyPower>();
         divineScripture = GetComponent<PlayerDivineScripture>();
+        sounds = GetComponent<RunningSounds>();
         canAct = true;
         EventsManager.instance.CleanseUpdateEvent += Cleanse;
     }
@@ -169,6 +172,17 @@ public class PlayerMovement : MonoBehaviour
 
         //moveAnim = Vector3.Lerp(moveAnim, rb.velocity, Time.fixedDeltaTime * animationSmoothing);
         animator.SetFloat("Blend", rb.velocity.magnitude / moveSpeed);
+
+        if (rb.velocity.magnitude >= moveSpeed * 0.5f && !walkSounds)
+        {
+            sounds.StartRunning();
+            walkSounds = true;
+        }
+        else if (rb.velocity.magnitude <= moveSpeed * 0.5f && walkSounds)
+        {
+            sounds.StopRunning();
+            walkSounds = false;
+        }
 
         Vector3 camAngle = cam.forward;
         lookDir.LookAt(lookDir.position + new Vector3(camAngle.x, 0, camAngle.z));

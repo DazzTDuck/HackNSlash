@@ -22,6 +22,8 @@ public class HolySwordVisual : MonoBehaviour
 
     private Material[] materials;
     private float height;
+    
+    private bool isPlaying;
 
     private void Start()
     {
@@ -41,37 +43,52 @@ public class HolySwordVisual : MonoBehaviour
 
     public void StartAttackVisual()
     {
-        StartCoroutine(nameof(AttackVisual));    
+        StartCoroutine(nameof(AttackVisualUp));    
+    }
+    
+    public void StopAttackVisual()
+    {
+        StartCoroutine(nameof(AttackVisualDown));    
     }
 
-    private IEnumerator AttackVisual()
+    private IEnumerator AttackVisualUp()
     {
-        height = 0;
-
-        Debug.Log("Starting Visual");
-
-        bladeParticle.Play();
-        SetParticleForce(forceValueCastOut);
+        StopCoroutine(nameof(AttackVisualDown));
+        
+        if(!isPlaying)
+        {
+            bladeParticle.Play();
+            SetParticleForce(forceValueCastOut);
+            isPlaying = true;
+        }
 
         //show sword
-        while (Math.Abs(height - minAndMaxValue.y) > 0)
+        while (height < minAndMaxValue.y)
         {
             height = Mathf.MoveTowards(height, minAndMaxValue.y, dissolveSpeed * Time.deltaTime);
             SetCutoffHeight(height - 1); //to change 0:2 range to -1:1
             yield return null;
         }
-
-        yield return new WaitForSeconds(attackDuration / 2);
-
+    }
+    
+    private IEnumerator AttackVisualDown()
+    {
+        StopCoroutine(nameof(AttackVisualUp));
+        
         //dissolve sword
-        while (Math.Abs(height - minAndMaxValue.x) > 0)
+        while (height > minAndMaxValue.x)
         {
             height = Mathf.MoveTowards(height, minAndMaxValue.x, dissolveSpeed * Time.deltaTime);
             SetCutoffHeight(height - 1); //to change 0:2 range to -1:1
             yield return null;
         }
 
-        bladeParticle.Stop();
+        if(isPlaying)
+        {
+            bladeParticle.Stop();
+            isPlaying = false;
+        }
+        
     }
 
     private void SetCutoffHeight(float value)

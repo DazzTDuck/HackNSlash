@@ -36,6 +36,7 @@ public class PlayerSwordAttack : MonoBehaviour
             {
                 player.holyPower.UseHolyPower(powerConsumption);
                 StartCoroutine(Swinging());
+                swordVisual.StartAttackVisual();
                 break;
             }
             yield return new WaitForFixedUpdate();
@@ -46,7 +47,6 @@ public class PlayerSwordAttack : MonoBehaviour
     IEnumerator Swinging()
     {
         player.canAct = false;
-        swordVisual.StartAttackVisual();
         hurtBox.enabled = true;
         GetComponentInParent<Rigidbody>().isKinematic = true;
         animator.SetTrigger("Attack");
@@ -55,6 +55,7 @@ public class PlayerSwordAttack : MonoBehaviour
         hurtBox.enabled = false;
         GetComponentInParent<Rigidbody>().isKinematic = false;
         player.canAct = true;
+        swordVisual.StopAttackVisual();
     }
 
     private void OnTriggerEnter(Collider other)

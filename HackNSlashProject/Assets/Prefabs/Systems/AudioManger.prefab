@@ -53,9 +53,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 41df3b53bd605ba499739edd61e36ddf, type: 3}
     - {fileID: 8300000, guid: 2469366c9cb9c7145b9bf26be07e2999, type: 3}
     mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
-    volume: 0.2
+    volume: 0.05
     pitch: 1
-    spacialBlend: 1
+    spacialBlend: 0
     maxSoundDistance: 100
     loop: 0
     playOnStart: 0
@@ -69,9 +69,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: edc335e4b2795ca449d350f6806521f9, type: 3}
     - {fileID: 8300000, guid: 5f2b0d373e1396e44bf1b73c3083a474, type: 3}
     mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
-    volume: 0.2
+    volume: 0.05
     pitch: 1
-    spacialBlend: 1
+    spacialBlend: 0
     maxSoundDistance: 100
     loop: 0
     playOnStart: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
     mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
     volume: 0.1
     pitch: 1
-    spacialBlend: 0
+    spacialBlend: 1
     maxSoundDistance: 500
     loop: 0
     playOnStart: 0
@@ -169,6 +169,44 @@ MonoBehaviour:
   - name: WaterSplash
     clips:
     - {fileID: 8300000, guid: 4d425a6503c5c8047af99de7565a76e0, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.07
+    pitch: 1
+    spacialBlend: 0
+    maxSoundDistance: 500
+    loop: 0
+    playOnStart: 0
+    playRandomClip: 0
+    source: {fileID: 0}
+  - name: HolyBook2
+    clips:
+    - {fileID: 8300000, guid: 88a7d454b9311ea42a19c4597daa2e4c, type: 3}
+    - {fileID: 8300000, guid: 55fdc57f14446e741b36adf2de22ff25, type: 3}
+    - {fileID: 8300000, guid: 9c1a2a7cfe119684dbc7d5cb1f60a276, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.1
+    pitch: 1
+    spacialBlend: 0
+    maxSoundDistance: 500
+    loop: 0
+    playOnStart: 0
+    playRandomClip: 1
+    source: {fileID: 0}
+  - name: HolyBook1
+    clips:
+    - {fileID: 8300000, guid: 44b14abd9b1eacb40bb80ac85d92188e, type: 3}
+    mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
+    volume: 0.1
+    pitch: 1
+    spacialBlend: 0
+    maxSoundDistance: 500
+    loop: 0
+    playOnStart: 0
+    playRandomClip: 0
+    source: {fileID: 0}
+  - name: HolyBook2
+    clips:
+    - {fileID: 8300000, guid: b8cc3b238637d7549823b437995da3a0, type: 3}
     mixer: {fileID: 2708481813632619113, guid: 2cb4670379441be4995645c5726e91cb, type: 2}
     volume: 0.1
     pitch: 1

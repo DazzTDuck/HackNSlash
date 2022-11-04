@@ -13,6 +13,8 @@ public class RunningSounds : MonoBehaviour
 
     public void StartRunning()
     {
+        StopCoroutine(nameof(PlayingSounds));
+        
         StartCoroutine(nameof(PlayingSounds));
         running = true;
     }

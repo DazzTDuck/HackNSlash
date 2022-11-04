@@ -438,7 +438,7 @@ Transform:
   m_GameObject: {fileID: 2854028265647599080}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.010000001, y: 0.010000002, z: 0.010000002}
+  m_LocalScale: {x: 0.010000001, y: 0.009999998, z: 0.009999999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7661563214354670042}
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateTime:
-    updatePerSeccond: 60
+    updatePerSeccond: 90
     updateMode: 0
-    updateLocation: 0
+    updateLocation: 1
     futurePredictionRate: 1
     updateBoneScale: 0
   useFasterWrite: 0
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b926eb37fed1d748b80e3b4756bc569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataHash: -662483826
+  dataHash: -662483816
   dataVersion: 7
   teamData:
     colliderList:
@@ -822,7 +822,7 @@ MonoBehaviour:
     penetrationIgnoreColliderList: []
     mergeAvatarCollider: 1
   userBlendWeight: 1
-  updateMode: 1
+  updateMode: 0
   cullingMode: 0
   skinningMode: 1
   clothParams:
@@ -1048,15 +1048,15 @@ MonoBehaviour:
     useLineAvarageRotation: 1
     useFixedNonRotation: 0
   clothParamDataHashList: 000000000000000000000000000000000000000000000000f61b993700000000ec37326f00000000ec37326f000000000000000000000000e153cba600000000db46199b00000000000000000000000000000000f61b993700000000
-  clothData: {fileID: -829594531936733368}
-  clothDataHash: 1450076107
+  clothData: {fileID: -1748652925577628916}
+  clothDataHash: 1450076117
   clothDataVersion: 5
   clothSelection: {fileID: 418600055}
   clothSelectionHash: -108949187
   clothSelectionVersion: 2
   cullRendererList:
   - {fileID: 3015340343113366229}
-  meshData: {fileID: 3432023953220502064}
+  meshData: {fileID: -5879170449697571795}
   meshDataHash: 600315719
   meshDataVersion: 2
   clothTarget:
@@ -1580,7 +1580,36 @@ Transform:
   m_Father: {fileID: 7400031474563933992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-829594531936733368
+--- !u!114 &-5879170449697571795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8ed8fdca875474bbc1b8d6dcfb79bc, type: 3}
+  m_Name: BoneClothMeshData_CloakRig
+  m_EditorClassIdentifier: 
+  dataHash: 600315719
+  dataVersion: 2
+  isSkinning: 0
+  vertexCount: 30
+  vertexInfoList: 000000100100001002000010030000100400001005000010060000100700001008000010090000100a0000100b0000100c0000100d0000100e0000100f000010100000101100001012000010130000101400001015000010160000101700001018000010190000101a0000101b0000101c0000101d000010
+  vertexWeightList: []
+  vertexHashList: 
+  uvList: []
+  lineCount: 24
+  lineList: 00000000010000000100000002000000020000000300000003000000040000000400000005000000050000000600000006000000070000000800000009000000090000000a0000000a0000000b0000000b0000000c0000000c0000000d0000000d0000000e0000000e0000000f000000100000001100000012000000130000001300000014000000140000001500000015000000160000001600000017000000170000001800000018000000190000001a0000001b0000001c0000001d000000
+  triangleCount: 0
+  triangleList: 
+  boneCount: 0
+  vertexToTriangleInfoList: 
+  vertexToTriangleIndexList: 
+  childDataList: []
+  baseScale: {x: 0, y: 0, z: 0}
+--- !u!114 &-1748652925577628916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1592,7 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0548f9dc46468d94c96cbbd1e5c05f74, type: 3}
   m_Name: BoneClothData_CloakRig
   m_EditorClassIdentifier: 
-  dataHash: 1450076107
+  dataHash: 1450076117
   dataVersion: 5
   triangleBendAlgorithm: 1
   restoreRotationAlgorithm: 1
@@ -1637,70 +1666,70 @@ MonoBehaviour:
   structDistanceDataList:
   - vertexIndex: 0
     targetVertexIndex: 1
-    length: 0.18571715
+    length: 0.18571734
   - vertexIndex: 1
     targetVertexIndex: 0
-    length: 0.18571715
+    length: 0.18571734
   - vertexIndex: 1
     targetVertexIndex: 2
-    length: 0.16492182
+    length: 0.16492154
   - vertexIndex: 2
     targetVertexIndex: 1
-    length: 0.16492182
+    length: 0.16492154
   - vertexIndex: 2
     targetVertexIndex: 3
-    length: 0.14012437
+    length: 0.14012434
   - vertexIndex: 3
     targetVertexIndex: 2
-    length: 0.14012437
+    length: 0.14012434
   - vertexIndex: 3
     targetVertexIndex: 4
-    length: 0.13225059
+    length: 0.13225043
   - vertexIndex: 4
     targetVertexIndex: 3
-    length: 0.13225059
+    length: 0.13225043
   - vertexIndex: 4
     targetVertexIndex: 5
-    length: 0.13661076
+    length: 0.13661072
   - vertexIndex: 5
     targetVertexIndex: 4
-    length: 0.13661076
+    length: 0.13661072
   - vertexIndex: 5
     targetVertexIndex: 6
-    length: 0.17618984
+    length: 0.17618996
   - vertexIndex: 6
     targetVertexIndex: 5
-    length: 0.17618984
+    length: 0.17618996
   - vertexIndex: 6
     targetVertexIndex: 7
-    length: 0.16751628
+    length: 0.16751623
   - vertexIndex: 7
     targetVertexIndex: 6
-    length: 0.16751628
+    length: 0.16751623
   - vertexIndex: 8
     targetVertexIndex: 9
-    length: 0.18571703
+    length: 0.18571733
   - vertexIndex: 9
     targetVertexIndex: 8
-    length: 0.18571703
+    length: 0.18571733
   - vertexIndex: 9
     targetVertexIndex: 10
-    length: 0.16492182
+    length: 0.16492143
   - vertexIndex: 10
     targetVertexIndex: 9
-    length: 0.16492182
+    length: 0.16492143
   - vertexIndex: 10
     targetVertexIndex: 11
-    length: 0.14012466
+    length: 0.14012434
   - vertexIndex: 11
     targetVertexIndex: 10
-    length: 0.14012466
+    length: 0.14012434
   - vertexIndex: 11
     targetVertexIndex: 12
-    length: 0.13225043
+    length: 0.1322505
   - vertexIndex: 12
     targetVertexIndex: 11
-    length: 0.13225043
+    length: 0.1322505
   - vertexIndex: 12
     targetVertexIndex: 13
     length: 0.1366107
@@ -1709,58 +1738,58 @@ MonoBehaviour:
     length: 0.1366107
   - vertexIndex: 13
     targetVertexIndex: 14
-    length: 0.17619008
+    length: 0.17619003
   - vertexIndex: 14
     targetVertexIndex: 13
-    length: 0.17619008
+    length: 0.17619003
   - vertexIndex: 14
     targetVertexIndex: 15
-    length: 0.16751598
+    length: 0.16751601
   - vertexIndex: 15
     targetVertexIndex: 14
-    length: 0.16751598
+    length: 0.16751601
   - vertexIndex: 18
     targetVertexIndex: 19
-    length: 0.18612188
+    length: 0.18612191
   - vertexIndex: 19
     targetVertexIndex: 18
-    length: 0.18612188
+    length: 0.18612191
   - vertexIndex: 19
     targetVertexIndex: 20
-    length: 0.16501807
+    length: 0.16501828
   - vertexIndex: 20
     targetVertexIndex: 19
-    length: 0.16501807
+    length: 0.16501828
   - vertexIndex: 20
     targetVertexIndex: 21
-    length: 0.14003752
+    length: 0.14003716
   - vertexIndex: 21
     targetVertexIndex: 20
-    length: 0.14003752
+    length: 0.14003716
   - vertexIndex: 21
     targetVertexIndex: 22
-    length: 0.13224329
+    length: 0.13224328
   - vertexIndex: 22
     targetVertexIndex: 21
-    length: 0.13224329
+    length: 0.13224328
   - vertexIndex: 22
     targetVertexIndex: 23
-    length: 0.13646643
+    length: 0.13646644
   - vertexIndex: 23
     targetVertexIndex: 22
-    length: 0.13646643
+    length: 0.13646644
   - vertexIndex: 23
     targetVertexIndex: 24
-    length: 0.1759941
+    length: 0.175994
   - vertexIndex: 24
     targetVertexIndex: 23
-    length: 0.1759941
+    length: 0.175994
   - vertexIndex: 24
     targetVertexIndex: 25
-    length: 0.16751662
+    length: 0.16751675
   - vertexIndex: 25
     targetVertexIndex: 24
-    length: 0.16751662
+    length: 0.16751675
   structDistanceReferenceList:
   - startIndex: 0
     count: 1
@@ -1829,67 +1858,67 @@ MonoBehaviour:
   rootDistanceDataList:
   - vertexIndex: 1
     targetVertexIndex: 0
-    length: 0.18571715
+    length: 0.18571734
   - vertexIndex: 2
     targetVertexIndex: 0
-    length: 0.35055843
+    length: 0.35055834
   - vertexIndex: 3
     targetVertexIndex: 0
-    length: 0.49057192
+    length: 0.4905719
   - vertexIndex: 4
     targetVertexIndex: 0
-    length: 0.6227699
+    length: 0.6227696
   - vertexIndex: 5
     targetVertexIndex: 0
-    length: 0.759231
+    length: 0.7592307
   - vertexIndex: 6
     targetVertexIndex: 0
-    length: 0.93525416
+    length: 0.9352539
   - vertexIndex: 7
     targetVertexIndex: 0
-    length: 1.1027685
+    length: 1.1027683
   - vertexIndex: 9
     targetVertexIndex: 8
-    length: 0.18571703
+    length: 0.18571733
   - vertexIndex: 10
     targetVertexIndex: 8
-    length: 0.3505583
+    length: 0.35055825
   - vertexIndex: 11
     targetVertexIndex: 8
-    length: 0.49057204
+    length: 0.49057174
   - vertexIndex: 12
     targetVertexIndex: 8
-    length: 0.6227698
+    length: 0.62276953
   - vertexIndex: 13
     targetVertexIndex: 8
-    length: 0.7592308
+    length: 0.7592307
   - vertexIndex: 14
     targetVertexIndex: 8
-    length: 0.9352542
+    length: 0.93525404
   - vertexIndex: 15
     targetVertexIndex: 8
-    length: 1.1027683
+    length: 1.1027682
   - vertexIndex: 19
     targetVertexIndex: 18
-    length: 0.18612188
+    length: 0.18612191
   - vertexIndex: 20
     targetVertexIndex: 18
-    length: 0.35110563
+    length: 0.35110587
   - vertexIndex: 21
     targetVertexIndex: 18
-    length: 0.49112818
+    length: 0.49112803
   - vertexIndex: 22
     targetVertexIndex: 18
-    length: 0.62327355
+    length: 0.62327343
   - vertexIndex: 23
     targetVertexIndex: 18
-    length: 0.75972193
+    length: 0.7597218
   - vertexIndex: 24
     targetVertexIndex: 18
-    length: 0.93551856
+    length: 0.9355184
   - vertexIndex: 25
     targetVertexIndex: 18
-    length: 1.1030328
+    length: 1.1030326
   rootDistanceReferenceList:
   - startIndex: 0
     count: 0
@@ -1961,165 +1990,165 @@ MonoBehaviour:
   - vertexIndex: 1
     parentVertexIndex: 0
     localPos:
-      x: -0.000000071604845
-      y: 1.0000002
-      z: -0.00001703949
+      x: 0.0000035727087
+      y: 1.0000001
+      z: -0.0000008642605
     localRot:
       value:
-        x: 0.0054750587
-        y: 0.0001087951
-        z: -0.020757126
-        w: 0.99976957
+        x: 0.005475094
+        y: 0.00010879016
+        z: -0.020757152
+        w: 0.9997696
   - vertexIndex: 2
     parentVertexIndex: 1
     localPos:
-      x: -0.000000006942846
+      x: 0.0000074598915
       y: 1.0000001
-      z: 0.0000020171644
+      z: 0.00000032369454
     localRot:
       value:
-        x: 0.007978462
-        y: -0.0004967209
-        z: -0.0098730875
+        x: 0.007978359
+        y: -0.0004967152
+        z: -0.009873081
         w: 0.99991935
   - vertexIndex: 3
     parentVertexIndex: 2
     localPos:
-      x: 0.00000026698177
-      y: 1.0000002
-      z: -0.0000040689138
+      x: -0.000015352367
+      y: 1
+      z: -0.00000015184129
     localRot:
       value:
-        x: -0.018894274
-        y: 0.00017373603
-        z: 0.0035444496
+        x: -0.01889421
+        y: 0.00017373177
+        z: 0.0035444526
         w: 0.9998152
   - vertexIndex: 4
     parentVertexIndex: 3
     localPos:
-      x: -0.00000015201317
+      x: 0.000012606382
       y: 1
-      z: 0.00002897745
+      z: 0.00000049543956
     localRot:
       value:
-        x: 0.030659033
-        y: -0.00030235734
-        z: -0.0047736447
+        x: 0.03065893
+        y: -0.0003023523
+        z: -0.004773648
         w: 0.99951845
   - vertexIndex: 5
     parentVertexIndex: 4
     localPos:
-      x: 0.00000017340982
-      y: 0.99999994
-      z: -0.00000031296818
+      x: -0.000007009957
+      y: 1.0000001
+      z: 0.00000005726514
     localRot:
       value:
-        x: -0.02216115
-        y: -0.0011464439
-        z: -0.012487136
-        w: 0.99967575
+        x: -0.022161085
+        y: -0.0011464417
+        z: -0.012487135
+        w: 0.9996758
   - vertexIndex: 6
     parentVertexIndex: 5
     localPos:
-      x: 0.000000085945
+      x: 0.000007996412
       y: 1
-      z: -0.000007982932
+      z: -0.00000017823133
     localRot:
       value:
-        x: 0.0038447566
-        y: 0.001351563
-        z: 0.021830667
+        x: 0.0038447946
+        y: 0.0013515594
+        z: 0.021830665
         w: 0.9997534
   - vertexIndex: 7
     parentVertexIndex: 6
     localPos:
-      x: -0.00000017134249
-      y: 1.0000002
-      z: -0.000006352581
+      x: 0.0000054085303
+      y: 1.0000001
+      z: 0.0000010095467
     localRot:
       value:
         x: 0
         y: 0
         z: 0
-        w: 1
+        w: 1.0000001
   - vertexIndex: 9
     parentVertexIndex: 8
     localPos:
-      x: 0.0000002487019
-      y: 1.0000002
-      z: -0.000016987884
+      x: -0.000009977276
+      y: 0.99999994
+      z: -0.0000014788911
     localRot:
       value:
-        x: 0.0054750512
-        y: -0.000108790744
-        z: 0.020757137
-        w: 0.99976957
+        x: 0.005475055
+        y: -0.00010879278
+        z: 0.02075714
+        w: 0.9997696
   - vertexIndex: 10
     parentVertexIndex: 9
     localPos:
-      x: -0.00000011985401
-      y: 1
-      z: 0.0000020329494
+      x: -0.000007304954
+      y: 1.0000002
+      z: 0.00000060237625
     localRot:
       value:
-        x: 0.007978502
-        y: 0.0004967182
-        z: 0.009873082
-        w: 0.9999193
+        x: 0.007978409
+        y: 0.000496716
+        z: 0.009873085
+        w: 0.99991935
   - vertexIndex: 11
     parentVertexIndex: 10
     localPos:
-      x: -0.00000025917268
-      y: 1
-      z: 0.000023003267
+      x: 0.00000054909907
+      y: 1.0000001
+      z: 0.00000006181637
     localRot:
       value:
-        x: -0.018894276
-        y: -0.00017373594
-        z: -0.003544448
-        w: 0.99981517
+        x: -0.018894235
+        y: -0.00017373476
+        z: -0.0035444554
+        w: 0.9998152
   - vertexIndex: 12
     parentVertexIndex: 11
     localPos:
-      x: 0.00000014834939
-      y: 1
-      z: 0.000000086335014
+      x: 0.0000018358329
+      y: 1.0000001
+      z: 0.00000089071784
     localRot:
       value:
-        x: 0.030658994
-        y: 0.00030235766
-        z: 0.004773652
+        x: 0.03065895
+        y: 0.00030235277
+        z: 0.0047736554
         w: 0.9995185
   - vertexIndex: 13
     parentVertexIndex: 12
     localPos:
-      x: -0.000000036139973
-      y: 1.0000002
-      z: -0.00000020778084
+      x: 0.0000063380303
+      y: 1
+      z: -0.0000009986311
     localRot:
       value:
-        x: -0.022161169
-        y: 0.0011464369
-        z: 0.012487128
+        x: -0.022161076
+        y: 0.0011464444
+        z: 0.012487127
         w: 0.9996758
   - vertexIndex: 14
     parentVertexIndex: 13
     localPos:
-      x: -0.00000003849184
-      y: 1.0000001
-      z: -0.000008047778
+      x: 0.0000044481158
+      y: 1.0000002
+      z: 0.00000025621134
     localRot:
       value:
-        x: 0.0038447937
-        y: -0.0013515581
+        x: 0.0038447645
+        y: -0.0013515609
         z: -0.021830669
         w: 0.9997534
   - vertexIndex: 15
     parentVertexIndex: 14
     localPos:
-      x: 0.00000010782696
-      y: 1.0000001
-      z: -0.000006190701
+      x: -0.000010810367
+      y: 1
+      z: 0.0000013947081
     localRot:
       value:
         x: 0
@@ -2129,87 +2158,87 @@ MonoBehaviour:
   - vertexIndex: 19
     parentVertexIndex: 18
     localPos:
-      x: 0.0000000060772813
+      x: -0.00000975717
       y: 1.0000001
-      z: 0.00000000791744
+      z: 0.000000070170124
     localRot:
       value:
-        x: -0.014002024
-        y: -7.210584e-10
-        z: 0.000000004791652
-        w: 0.999902
+        x: -0.01400206
+        y: 0.0000000011943497
+        z: 0.00000000318599
+        w: 0.99990207
   - vertexIndex: 20
     parentVertexIndex: 19
     localPos:
-      x: -0.0000000048320645
+      x: -0.0000040800555
       y: 1.0000001
-      z: -0.0000075511803
+      z: -0.00000069910595
     localRot:
       value:
-        x: -0.001238779
-        y: -0.0000000010477668
-        z: 4.3431414e-10
+        x: -0.0012387981
+        y: 4.9220245e-10
+        z: -2.4144167e-10
         w: 0.9999993
   - vertexIndex: 21
     parentVertexIndex: 20
     localPos:
-      x: -0.0000000094426635
-      y: 1.0000001
-      z: 0.000024823885
+      x: 0.0000150950555
+      y: 1
+      z: 0.000000029261468
     localRot:
       value:
-        x: -0.015482808
-        y: 0.0000000023238804
-        z: 0.0000000032804288
-        w: 0.9998802
+        x: -0.015482745
+        y: -0.000000002048845
+        z: 0.000000005100552
+        w: 0.99988014
   - vertexIndex: 22
     parentVertexIndex: 21
     localPos:
-      x: 0.000000024260338
+      x: 0.00000270654
       y: 1
-      z: -0.0000040777977
+      z: 0.0000016824159
     localRot:
       value:
-        x: 0.026046377
-        y: -0.0000000015136278
-        z: -0.000000005472255
+        x: 0.026046345
+        y: 7.648736e-10
+        z: -0.0000000069945827
         w: 0.99966073
   - vertexIndex: 23
     parentVertexIndex: 22
     localPos:
-      x: -0.000000003105775
-      y: 0.99999994
-      z: -0.000005175154
+      x: -0.00000017788435
+      y: 1
+      z: -0.000001666279
     localRot:
       value:
-        x: -0.033643417
-        y: -4.7139576e-10
-        z: 0.000000007131541
+        x: -0.033643432
+        y: -7.809212e-10
+        z: 0.000000007962148
         w: 0.99943393
   - vertexIndex: 24
     parentVertexIndex: 23
     localPos:
-      x: -0.000000004183673
+      x: -0.000008095406
       y: 1.0000001
-      z: 0.000004532119
+      z: 0.0000009404583
     localRot:
       value:
-        x: 0.024302626
-        y: -0.0000000011356117
-        z: -0.0000000059215046
-        w: 0.99970466
+        x: 0.024302604
+        y: 8.043533e-10
+        z: -0.000000005897787
+        w: 0.9997047
   - vertexIndex: 25
     parentVertexIndex: 24
     localPos:
-      x: 0.0000000020174722
-      y: 0.99999994
-      z: -0.000013190738
+      x: 0.000004748163
+      y: 1.0000002
+      z: 0.00000024859185
     localRot:
       value:
         x: 0
         y: 0
         z: 0
-        w: 1
+        w: 1.0000001
   compositeRotationRootInfoList:
   - startIndex: 0
     dataLength: 7
@@ -2244,93 +2273,93 @@ MonoBehaviour:
     childCount: 1
     childStartDataIndex: 2
     localPos:
-      x: -0.000000013832639
-      y: 0.1857172
-      z: -0.0000031643617
+      x: 0.0000006644456
+      y: 0.18571737
+      z: -0.0000001612121
     localRot:
       value:
-        x: 0.0054750587
-        y: 0.0001087951
-        z: -0.020757126
-        w: 0.99976957
+        x: 0.005475094
+        y: 0.00010879016
+        z: -0.020757152
+        w: 0.9997696
   - vertexIndex: 2
     childCount: 1
     childStartDataIndex: 3
     localPos:
-      x: -0.0000000016475806
-      y: 0.16492184
-      z: 0.0000003332219
+      x: 0.0000012297146
+      y: 0.16492157
+      z: 0.000000054368105
     localRot:
       value:
-        x: 0.007978462
-        y: -0.0004967209
-        z: -0.0098730875
+        x: 0.007978359
+        y: -0.0004967152
+        z: -0.009873081
         w: 0.99991935
   - vertexIndex: 3
     childCount: 1
     childStartDataIndex: 4
     localPos:
-      x: 0.000000037443964
-      y: 0.1401244
-      z: -0.00000057005997
+      x: -0.0000021509686
+      y: 0.14012435
+      z: -0.000000022674964
     localRot:
       value:
-        x: -0.018894274
-        y: 0.00017373603
-        z: 0.0035444496
+        x: -0.01889421
+        y: 0.00017373177
+        z: 0.0035444526
         w: 0.9998152
   - vertexIndex: 4
     childCount: 1
     childStartDataIndex: 5
     localPos:
-      x: -0.000000019800293
-      y: 0.13225059
-      z: 0.000003832374
+      x: 0.0000016672448
+      y: 0.13225043
+      z: 0.00000006436247
     localRot:
       value:
-        x: 0.030659033
-        y: -0.00030235734
-        z: -0.0047736447
+        x: 0.03065893
+        y: -0.0003023523
+        z: -0.004773648
         w: 0.99951845
   - vertexIndex: 5
     childCount: 1
     childStartDataIndex: 6
     localPos:
-      x: 0.000000023639172
-      y: 0.13661076
-      z: -0.000000042681904
+      x: -0.0000009577079
+      y: 0.13661072
+      z: 0.000000009030215
     localRot:
       value:
-        x: -0.02216115
-        y: -0.0011464439
-        z: -0.012487136
-        w: 0.99967575
+        x: -0.022161085
+        y: -0.0011464417
+        z: -0.012487135
+        w: 0.9996758
   - vertexIndex: 6
     childCount: 1
     childStartDataIndex: 7
     localPos:
-      x: 0.000000015381683
-      y: 0.17618985
-      z: -0.0000014067128
+      x: 0.0000014088935
+      y: 0.17618996
+      z: -0.00000003209907
     localRot:
       value:
-        x: 0.0038447566
-        y: 0.001351563
-        z: 0.021830667
+        x: 0.0038447946
+        y: 0.0013515594
+        z: 0.021830665
         w: 0.9997534
   - vertexIndex: 7
     childCount: 0
     childStartDataIndex: 0
     localPos:
-      x: -0.000000029296112
-      y: 0.1675163
-      z: -0.0000010642985
+      x: 0.00000090597655
+      y: 0.16751626
+      z: 0.00000016738109
     localRot:
       value:
         x: 0
         y: 0
         z: 0
-        w: 1
+        w: 1.0000001
   - vertexIndex: 8
     childCount: 1
     childStartDataIndex: 9
@@ -2348,87 +2377,87 @@ MonoBehaviour:
     childCount: 1
     childStartDataIndex: 10
     localPos:
-      x: 0.00000004654473
-      y: 0.18571708
-      z: -0.0000031544052
+      x: -0.0000018530068
+      y: 0.18571731
+      z: -0.00000027472532
     localRot:
       value:
-        x: 0.0054750512
-        y: -0.000108790744
-        z: 0.020757137
-        w: 0.99976957
+        x: 0.005475055
+        y: -0.00010879278
+        z: 0.02075714
+        w: 0.9997696
   - vertexIndex: 10
     childCount: 1
     childStartDataIndex: 11
     localPos:
-      x: -0.000000019497408
-      y: 0.16492182
-      z: 0.00000033582617
+      x: -0.0000012046228
+      y: 0.16492146
+      z: 0.000000099419196
     localRot:
       value:
-        x: 0.007978502
-        y: 0.0004967182
-        z: 0.009873082
-        w: 0.9999193
+        x: 0.007978409
+        y: 0.000496716
+        z: 0.009873085
+        w: 0.99991935
   - vertexIndex: 11
     childCount: 1
     childStartDataIndex: 12
     localPos:
-      x: -0.000000036407183
-      y: 0.14012466
-      z: 0.0000032234761
+      x: 0.00000007698657
+      y: 0.14012435
+      z: 0.0000000093705586
     localRot:
       value:
-        x: -0.018894276
-        y: -0.00017373594
-        z: -0.003544448
-        w: 0.99981517
+        x: -0.018894235
+        y: -0.00017373476
+        z: -0.0035444554
+        w: 0.9998152
   - vertexIndex: 12
     childCount: 1
     childStartDataIndex: 13
     localPos:
-      x: 0.000000019500733
-      y: 0.13225044
-      z: 0.000000011303463
+      x: 0.00000024269394
+      y: 0.13225052
+      z: 0.00000011726087
     localRot:
       value:
-        x: 0.030658994
-        y: 0.00030235766
-        z: 0.004773652
+        x: 0.03065895
+        y: 0.00030235277
+        z: 0.0047736554
         w: 0.9995185
   - vertexIndex: 13
     childCount: 1
     childStartDataIndex: 14
     localPos:
-      x: -0.0000000049080913
-      y: 0.13661073
-      z: -0.00000002838955
+      x: 0.00000086583873
+      y: 0.1366107
+      z: -0.00000013707447
     localRot:
       value:
-        x: -0.022161169
-        y: 0.0011464369
-        z: 0.012487128
+        x: -0.022161076
+        y: 0.0011464444
+        z: 0.012487127
         w: 0.9996758
   - vertexIndex: 14
     childCount: 1
     childStartDataIndex: 15
     localPos:
-      x: -0.0000000066101737
-      y: 0.1761901
-      z: -0.0000014177159
+      x: 0.00000078362166
+      y: 0.17619006
+      z: 0.000000045047415
     localRot:
       value:
-        x: 0.0038447937
-        y: -0.0013515581
+        x: 0.0038447645
+        y: -0.0013515609
         z: -0.021830669
         w: 0.9997534
   - vertexIndex: 15
     childCount: 0
     childStartDataIndex: 0
     localPos:
-      x: 0.000000018203904
+      x: -0.0000018105975
       y: 0.16751601
-      z: -0.000001037603
+      z: 0.00000023531227
     localRot:
       value:
         x: 0
@@ -2452,93 +2481,93 @@ MonoBehaviour:
     childCount: 1
     childStartDataIndex: 18
     localPos:
-      x: 0.0000000011311151
-      y: 0.1861219
-      z: 0.0000000013615207
+      x: -0.0000018160289
+      y: 0.18612194
+      z: 0.000000012878986
     localRot:
       value:
-        x: -0.014002024
-        y: -7.210584e-10
-        z: 0.000000004791652
-        w: 0.999902
+        x: -0.01400206
+        y: 0.0000000011943497
+        z: 0.00000000318599
+        w: 0.99990207
   - vertexIndex: 20
     childCount: 1
     childStartDataIndex: 19
     localPos:
-      x: -7.973778e-10
-      y: 0.16501808
-      z: -0.0000012455395
+      x: -0.00000067328705
+      y: 0.16501829
+      z: -0.00000011561885
     localRot:
       value:
-        x: -0.001238779
-        y: -0.0000000010477668
-        z: 4.3431414e-10
+        x: -0.0012387981
+        y: 4.9220245e-10
+        z: -2.4144167e-10
         w: 0.9999993
   - vertexIndex: 21
     childCount: 1
     childStartDataIndex: 20
     localPos:
-      x: -0.0000000013223272
-      y: 0.14003752
-      z: 0.0000034762716
+      x: 0.0000021138658
+      y: 0.14003716
+      z: 0.0000000037411336
     localRot:
       value:
-        x: -0.015482808
-        y: 0.0000000023238804
-        z: 0.0000000032804288
-        w: 0.9998802
+        x: -0.015482745
+        y: -0.000000002048845
+        z: 0.000000005100552
+        w: 0.99988014
   - vertexIndex: 22
     childCount: 1
     childStartDataIndex: 21
     localPos:
-      x: 0.000000003208267
-      y: 0.13224329
-      z: -0.00000053938857
+      x: 0.00000035791675
+      y: 0.13224328
+      z: 0.000000221401
     localRot:
       value:
-        x: 0.026046377
-        y: -0.0000000015136278
-        z: -0.000000005472255
+        x: 0.026046345
+        y: 7.648736e-10
+        z: -0.0000000069945827
         w: 0.99966073
   - vertexIndex: 23
     childCount: 1
     childStartDataIndex: 22
     localPos:
-      x: -4.2383397e-10
-      y: 0.13646643
-      z: -0.00000070616255
+      x: -0.000000024273485
+      y: 0.13646644
+      z: -0.00000022799298
     localRot:
       value:
-        x: -0.033643417
-        y: -4.7139576e-10
-        z: 0.000000007131541
+        x: -0.033643432
+        y: -7.809212e-10
+        z: 0.000000007962148
         w: 0.99943393
   - vertexIndex: 24
     childCount: 1
     childStartDataIndex: 23
     localPos:
-      x: -7.363016e-10
-      y: 0.17599411
-      z: 0.0000007981793
+      x: -0.0000014247461
+      y: 0.17599401
+      z: 0.0000001644748
     localRot:
       value:
-        x: 0.024302626
-        y: -0.0000000011356117
-        z: -0.0000000059215046
-        w: 0.99970466
+        x: 0.024302604
+        y: 8.043533e-10
+        z: -0.000000005897787
+        w: 0.9997047
   - vertexIndex: 25
     childCount: 0
     childStartDataIndex: 0
     localPos:
-      x: 3.3796013e-10
-      y: 0.1675166
-      z: -0.0000022097909
+      x: 0.0000007953946
+      y: 0.16751678
+      z: 0.000000041270305
     localRot:
       value:
         x: 0
         y: 0
         z: 0
-        w: 1
+        w: 1.0000001
   lineRotationRootInfoList:
   - startIndex: 0
     dataLength: 8
@@ -2557,7 +2586,7 @@ MonoBehaviour:
   penetrationMode: 0
   baseSkinningDataList: []
   baseSkinningBindPoseList: []
-  initScale: {x: 18.957258, y: 18.957256, z: 18.957258}
+  initScale: {x: 18.957262, y: 18.957256, z: 18.957253}
 --- !u!114 &418600055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2575,32 +2604,3 @@ MonoBehaviour:
   selectionList:
   - selectData: 020000000100000001000000010000000100000001000000010000000100000002000000010000000100000001000000010000000100000001000000010000000200000002000000020000000100000001000000010000000100000001000000010000000100000002000000020000000200000002000000
     vertexHashList: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!114 &3432023953220502064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b8ed8fdca875474bbc1b8d6dcfb79bc, type: 3}
-  m_Name: BoneClothMeshData_CloakRig
-  m_EditorClassIdentifier: 
-  dataHash: 600315719
-  dataVersion: 2
-  isSkinning: 0
-  vertexCount: 30
-  vertexInfoList: 000000100100001002000010030000100400001005000010060000100700001008000010090000100a0000100b0000100c0000100d0000100e0000100f000010100000101100001012000010130000101400001015000010160000101700001018000010190000101a0000101b0000101c0000101d000010
-  vertexWeightList: []
-  vertexHashList: 
-  uvList: []
-  lineCount: 24
-  lineList: 00000000010000000100000002000000020000000300000003000000040000000400000005000000050000000600000006000000070000000800000009000000090000000a0000000a0000000b0000000b0000000c0000000c0000000d0000000d0000000e0000000e0000000f000000100000001100000012000000130000001300000014000000140000001500000015000000160000001600000017000000170000001800000018000000190000001a0000001b0000001c0000001d000000
-  triangleCount: 0
-  triangleList: 
-  boneCount: 0
-  vertexToTriangleInfoList: 
-  vertexToTriangleIndexList: 
-  childDataList: []
-  baseScale: {x: 0, y: 0, z: 0}

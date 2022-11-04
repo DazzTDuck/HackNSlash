@@ -31,6 +31,7 @@ public class LoadingScreenManager : MonoBehaviour
     
     public void StartLoadingSequence(float delay, int index)
     {
+        StopCoroutine(nameof(LoadingSequence));
         StartCoroutine(LoadingSequence(delay, index));    
     }
     
@@ -39,7 +40,7 @@ public class LoadingScreenManager : MonoBehaviour
         //fade in
         while (loadingPanel.color.a < fadeDifference)
         {
-            loadingPanel.color = Color.Lerp(loadingPanel.color, fadeInColour, fadeSpeed * Time.deltaTime);
+            loadingPanel.color = Color.Lerp(loadingPanel.color, fadeInColour, fadeSpeed * Time.unscaledDeltaTime);
             yield return false;
         }
 
@@ -50,7 +51,7 @@ public class LoadingScreenManager : MonoBehaviour
         //fade to black
         while (loadingPanel.color.r < fadeDifference)
         {
-            loadingPanel.color = Color.Lerp(loadingPanel.color, fadeOutColour, fadeSpeed * Time.deltaTime);
+            loadingPanel.color = Color.Lerp(loadingPanel.color, fadeOutColour, fadeSpeed * Time.unscaledDeltaTime);
             yield return false;
         }
 
@@ -63,7 +64,7 @@ public class LoadingScreenManager : MonoBehaviour
         //fade out
         while (loadingPanel.color.a > 0.05f)
         {
-            loadingPanel.color = Color.Lerp(loadingPanel.color, ColourReset, fadeSpeed * Time.deltaTime);
+            loadingPanel.color = Color.Lerp(loadingPanel.color, ColourReset, fadeSpeed * Time.unscaledDeltaTime);
             yield return false;
         }
         loadingPanel.color = ColourReset;

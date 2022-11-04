@@ -764,7 +764,8 @@ MonoBehaviour:
   maxHP: 300
   currentHP: 0
   characterId: 4541
-  particleManager: {fileID: 0}
+  hurtParticle: {fileID: 0}
+  deathParticle: {fileID: 0}
 --- !u!114 &5178249521022387282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,21 +1508,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3229181239678809938, guid: 3554b3ff2d0d83d4ca4346cb8c61e2f0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.010000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3229181239678809938, guid: 3554b3ff2d0d83d4ca4346cb8c61e2f0,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.009999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 3229181239678809938, guid: 3554b3ff2d0d83d4ca4346cb8c61e2f0,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.009999999
       objectReference: {fileID: 0}
     - target: {fileID: 3229181239678809938, guid: 3554b3ff2d0d83d4ca4346cb8c61e2f0,
         type: 3}
